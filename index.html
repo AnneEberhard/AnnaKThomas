@@ -6,14 +6,21 @@
     <title>AnnaKThomas</title>
     <script src="scripts/script.js"></script>
     <link rel="icon" type="image/png" href="assets/img/logo/Anna-reverse-transparent.png">
+    <link rel="stylesheet" href="styles/fonts.css"/>
     <link rel="stylesheet" href="styles/styles-templates.css"/>
     <link rel="stylesheet" href="styles/styles.css"/>
 </head>
-<body onload="includeHTML()"></body>
-<div class="backgroundImage">
+<body onload="includeHTML()">
     <div w3-include-html="templates/header.html"></div>
     <div w3-include-html="templates/mobile-menu.html"></div>
-    <div class="mainContainer">main Content</div>
+
+    
+    <div class="mainContainer">
+        <div class="background">
+            <img id="backgroundImage" src="assets/img/background.JPG" alt="stormy baltic sea">
+        </div>
+    </div>
+
     
     <div w3-include-html="templates/footer.html"></div>
 </div>  
