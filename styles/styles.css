@@ -4,13 +4,24 @@ body {
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Abhaya Libre';
+  font-family: 'Raleway';
   overflow-x: hidden;
+}
+
+.dNone {
+  display: none !important;
 }
 
 h1 {
     font-size: 48px;
     font-family: 'Acme';
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+h2 {
+  font-size: 36px;
+  font-family: 'Acme';
 }
 
 .mainContainer {
@@ -25,9 +36,13 @@ a {
 
 a:hover {
   color: lightcyan;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px rgba(250, 250, 250, 0.8);
 }
 
 #backgroundImage {
     opacity: 0.2;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
