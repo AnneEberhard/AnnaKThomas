@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnnaKThomas-Fantasy</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnnaKThomas - Fantasy</title>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/template.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/logo/Anna-reverse-transparent.png"
+    />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/styles-templates.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body onload="includeHTML(), init()">
+    <div w3-include-html="templates/header.html"></div>
+    <div w3-include-html="templates/mobile-menu.html"></div>
+    <div w3-include-html="templates/background.html"></div>
+    <div class="mainContainer">Fantasy</div>
+    <div w3-include-html="templates/footer.html"></div>
+  </body>
 </html>

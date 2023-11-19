@@ -38,6 +38,16 @@ nav {
     justify-content: space-evenly;
 }
 
+#languageSelection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top:32px;
+    right: 32px;
+    cursor: pointer;
+}
+
 
 /*mobile menu*/
 #mobileNav {
@@ -68,7 +78,7 @@ nav {
 
 footer {
     background-color: #0097B2;
-    height: 200px;
+    height: 100px;
     width: 100%;
     box-sizing: border-box;
     padding: 16px 16px 16px 16px;

@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AnnaKThomas</title>
     <script src="scripts/script.js"></script>
-    <link rel="icon" type="image/png" href="assets/img/logo/Anna-reverse-transparent.png">
-    <link rel="stylesheet" href="styles/fonts.css"/>
-    <link rel="stylesheet" href="styles/styles-templates.css"/>
-    <link rel="stylesheet" href="styles/styles.css"/>
-</head>
-<body onload="includeHTML()">
+    <script src="scripts/template.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/logo/Anna-reverse-transparent.png"
+    />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/styles-templates.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body onload="includeHTML(), init()">
     <div w3-include-html="templates/header.html"></div>
     <div w3-include-html="templates/mobile-menu.html"></div>
+    <div w3-include-html="templates/background.html"></div>
 
-    
-    <div class="mainContainer">
-        <div class="background">
-            <img id="backgroundImage" src="assets/img/background.JPG" alt="stormy baltic sea">
-        </div>
-    </div>
+    <div class="mainContainer">This is me</div>
 
-    
     <div w3-include-html="templates/footer.html"></div>
-</div>  
-</body>
+  </body>
 </html>

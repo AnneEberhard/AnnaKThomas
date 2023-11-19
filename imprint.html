@@ -4,10 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnnaKThomas-Imprint</title>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/template.js"></script>
+  <link rel="icon" type="image/png" href="assets/img/logo/Anna-reverse-transparent.png">
+  <link rel="stylesheet" href="styles/fonts.css"/>
+  <link rel="stylesheet" href="styles/styles-templates.css"/>
+  <link rel="stylesheet" href="styles/styles.css"/>
 </head>
-<body>
+<body onload="includeHTML(), init()">
+  <div w3-include-html="templates/header.html"></div>
+  <div w3-include-html="templates/mobile-menu.html"></div>
   
+  <div class="mainContainer">
 
-  <a target="_blank" href="https://icons8.com/icon/31761/amazon">Amazon</a> Icon von <a target="_blank" href="https://icons8.com">Icons8</a>
+      <a target="_blank" href="https://icons8.com/icon/31761/amazon">Amazon</a> Icon von <a target="_blank" href="https://icons8.com">Icons8</a>
+
+  </div>
+  
+  <div w3-include-html="templates/footer.html"></div>
+</div>  
 </body>
 </html>
