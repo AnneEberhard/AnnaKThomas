@@ -101,3 +101,32 @@ p {
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1; /* Hintergrundfarbe des Scrollbalken-Tracks (der nicht bewegliche Teil) */
 }
+
+.scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.scrollToTopButton.show {
+  display: block;
+}
+
+.arrowUp {
+  width: 39px;
+  height: 39px;
+  cursor: pointer;
+}
+
+.arrowUp:hover path {
+  fill: rgb(19, 79, 92);
+}
+
+.arrowUp:hover rect {
+  stroke: rgb(19, 79, 92);
+}
+
+path,
+rect {
+  transition: fill 0.3s, stroke 0.3s;
+}

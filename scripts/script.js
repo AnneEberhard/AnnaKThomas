@@ -23,3 +23,8 @@ function german() {
 function english() {
   //switch text to english
 }
+
+
+function  scrollToTop(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
