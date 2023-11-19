@@ -113,7 +113,14 @@ table {
 
 .glossary {
   text-align: start;
+  border-collapse: collapse;
+  width: 100%;
+} 
+
+tr {
+  border-bottom: 1px solid black;
 }
+
 
 /*scroll*/
 ::-webkit-scrollbar {
