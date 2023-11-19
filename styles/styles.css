@@ -116,11 +116,18 @@ table {
   border-collapse: collapse;
   width: 100%;
 } 
+th {
+  text-align: start;
+}
 
 tr {
   border-bottom: 1px solid black;
 }
 
+.maps {
+  display: flex;
+  justify-content: space-around;
+}
 
 /*scroll*/
 ::-webkit-scrollbar {
