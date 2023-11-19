@@ -37,6 +37,12 @@ a:hover {
   text-shadow: 2px 2px 4px rgba(92, 175, 198, 0.8);
 }
 
+p {
+  margin-block-start: 0.7em;
+  margin-block-end: 0.7em;
+  font-size: 22px;
+}
+
 table {
   width: 100%;
   font-size: 20px;
@@ -56,13 +62,19 @@ table {
   z-index: -1;
 }
 
-p {
-  font-size: 24px;
-}
-
 .mainContainer {
   flex: 1;
   padding: 16px 60px 16px 60px;
+}
+
+.siteNavTop {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.siteNavTopLink {
+  font-size: 22px;
 }
 
 .toTheBooksSites {
@@ -74,6 +86,7 @@ p {
 .bookContainer {
   display: flex;
   gap: 16px;
+  align-items: center;
 }
 
 .cover {
@@ -88,10 +101,18 @@ p {
   font-style: italic;
 }
 
+.amazonLink {
+  font-size: 20px;
+}
+
 .siteNav {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
+}
+
+.glossary {
+  text-align: start;
 }
 
 /*scroll*/
