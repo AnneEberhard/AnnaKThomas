@@ -88,6 +88,12 @@ p {
   font-style: italic;
 }
 
+.siteNav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
 /*scroll*/
 ::-webkit-scrollbar {
   width: 12px; /* Breite des Scrollbalkens */
