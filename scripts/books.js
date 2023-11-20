@@ -1,5 +1,8 @@
-let historicalBooks = [
+let allBooks = [
   {
+    "genre": "historical",
+    "books": [
+      {
     "bookId": "mask",
     "translationExists": "true",
     "languages": {
@@ -119,7 +122,21 @@ let historicalBooks = [
         }
     }
   }
-];
+    ]},
+  {
+    "genre": "fantasy",
+    "books": [
+      // Hier können Fantasy-Bücher hinzugefügt werden
+    ]
+  },
+  {
+    "genre": "novellas",
+    "books": [
+      // Hier können Novellen hinzugefügt werden
+    ]
+  }
+  // Weitere Genres können hier hinzugefügt werden
+]
   
 
   

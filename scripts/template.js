@@ -127,10 +127,51 @@ let topSites = [
       }
     }
   },
+  {
+    "siteId": "novellas",
+    "translationExists": "true",
+    "languages": {
+      "de": {
+        "title": "Novellen und Kurzgeschichten",
+        "paragraphs": [
+          "Mit Kurzgeschichten fing es an - unser Start in die Welt der Veröffentlichungen. Zwei Kurzgeschichten gab ich her, damit wir ausprobieren konnten, wie alles funktionierte, bevor wir uns an die größeren Werke wagten. Am liebsten hätte ich sie umsonst angeboten, aber das war nicht erlaubt. So kosten sie eben den Mindestpreis.",
+          "Beide veröffentlichte Geschichten sind ins Englische übersetzt worden.",
+          "Und als Bonus gibt es noch eine Geschichte, die ich nach einem Traum niederschrieb. Wie so viele Geschichten, die ich eigentlich geträumt habe, hat auch diese sich ein wenig verselbständigt."
+        ],
+        "links": [
+        ]
+      },
+      "en": {
+        "title": "Novellas and short stories",
+        "paragraphs": [
+          "It all started with short stories - our start in the world of publishing. I gave away two short stories so that we could try out how everything worked before we ventured into the larger works. I would have preferred to offer them for free, but that wasn't allowed. So they cost the minimum price.",
+          "Both published stories have been translated into English.",
+          "And as a bonus, there's another story that I wrote down after a dream (but only in German). Like so many stories that I actually dreamt, this one also took on a life of its own."
+        ],
+        "links": [
+        ]
+      }
+    }
+  },
 ];
 
 
 let navSites = [
+  {
+    "siteId": "general",
+    "languages": {
+      "de": {
+        "links": [
+          {"text": "Zurück zur Homepage", "url": "/index.html"},
+        ]
+      },
+      "en": {
+        "links": [
+          {"text": "Back to Homepage", "url": "/index.html"},
+        ]
+      }
+    }
+  },
   {
     "siteId": "historical",
     "languages": {
@@ -224,6 +265,7 @@ let navSites = [
       }
     }
   },
+
 
 ];
 

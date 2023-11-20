@@ -1,6 +1,7 @@
 let browserLanguage = navigator.language || navigator.userLanguage;
 let defaultLanguage = "en";
 let globalSiteId;
+let globalGenre;
 
 function init() {
   checkBrowserLanguage();
@@ -18,22 +19,73 @@ function checkBrowserLanguage() {
 
 function german() {
   defaultLanguage = "de";
-  renderBookSite(globalSiteId)
+  renderBookSite(globalGenre, globalSiteId);
 }
 
 function english() {
   defaultLanguage = "en";
-  renderBookSite(globalSiteId)
+  renderBookSite(globalGenre, globalSiteId);
 }
 
-function renderBookSite(siteId) {
+function renderBookSite(genre, siteId) {
   globalSiteId = siteId;
+  globalGenre = genre;
+  let bookData = findBooksByGenre(genre);
+  if (!bookData) {
+    console.log(`Unknown genre: ${genre}`);
+    return;
+  }
+
   renderSiteDetails(topSites, siteId, `${siteId}Top`);
-  renderBookDetails(historicalBooks, siteId, `${siteId}Bottom`);
+  renderBookDetails(bookData, siteId, `${siteId}Bottom`);
   renderNav(navSites, siteId, `${siteId}Nav`);
 }
 
+function findBooksByGenre(targetGenre) {
+  for (let i = 0; i < allBooks.length; i++) {
+    if (allBooks[i].genre === targetGenre) {
+      return allBooks[i].books;
+    }
+  }
+  return null;
+}
 
+function findBookIndexById(bookArray, bookId) {
+  for (let i = 0; i < bookArray.length; i++) {
+    if (bookArray[i].bookId === bookId) {
+      return i;
+    }
+  }
+  return -1;
+}
+function renderSiteDetails(siteData, siteId, divId) {
+  let topDiv = document.getElementById(divId);
+  let siteIndex = findSiteIndexById(siteData, siteId);
+  if (siteIndex !== -1) {
+    let site = siteData[siteIndex].languages[defaultLanguage];
+    let translationStatusText = getTranslationStatusText(
+      siteData[siteIndex].translationExists,
+      defaultLanguage
+    );
+    let templateHTML = `
+      <h3>${site.title}</h3>
+      <div class="siteParagraphs">
+        ${site.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
+      </div>
+      <p>${translationStatusText}</p>
+      <div class="siteNavTop">
+        ${site.links
+          .map(
+            (link) =>
+              `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`
+          )
+          .join("")}
+      </div>`;
+    topDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`SiteId '${siteId}' not found`);
+  }
+}
 
 function findSiteIndexById(siteArray, siteId) {
   for (let i = 0; i < siteArray.length; i++) {
@@ -42,27 +94,6 @@ function findSiteIndexById(siteArray, siteId) {
     }
   }
   return -1;
-}
-
-function renderSiteDetails(siteData, siteId, divId) {
-  let topDiv = document.getElementById(divId);
-  let siteIndex = findSiteIndexById(siteData, siteId);
-  if (siteIndex !== -1) {
-    let site = siteData[siteIndex].languages[defaultLanguage];
-    let translationStatusText = getTranslationStatusText(siteData[siteIndex].translationExists, defaultLanguage);
-    let templateHTML = `
-      <h3>${site.title}</h3>
-      <div class="siteParagraphs">
-        ${site.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
-      </div>
-      <p>${translationStatusText}</p>
-      <div class="siteNavTop">
-        ${site.links.map(link => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`).join('')}
-      </div>`;
-    topDiv.innerHTML = templateHTML;
-  } else {
-    console.log(`SiteId '${siteId}' not found`);
-  }
 }
 
 function getTranslationStatusText(translationExists, defaultLanguage) {
@@ -77,7 +108,6 @@ function getTranslationStatusText(translationExists, defaultLanguage) {
   }
 }
 
-
 function findBookIndexById(bookArray, bookId) {
   for (let i = 0; i < bookArray.length; i++) {
     if (bookArray[i].bookId === bookId) {
@@ -86,7 +116,6 @@ function findBookIndexById(bookArray, bookId) {
   }
   return -1;
 }
-
 
 function renderBookDetails(bookData, bookId, divId) {
   let bottomDiv = document.getElementById(divId);
@@ -109,17 +138,18 @@ function renderBookDetails(bookData, bookId, divId) {
   }
 }
 
-
 function renderNav(navData, siteId, divId) {
   let navDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(navData, siteId);
-  
+
   if (siteIndex !== -1) {
     let site = navData[siteIndex].languages[defaultLanguage];
     let templateHTML = `
       <div class="siteNav">
         <h3>Navigation</h3>
-        ${site.links.map(link => `<a href="${link.url}">${link.text}</a>`).join('')}
+        ${site.links
+          .map((link) => `<a href="${link.url}">${link.text}</a>`)
+          .join("")}
       </div>`;
     navDiv.innerHTML = templateHTML;
   } else {
