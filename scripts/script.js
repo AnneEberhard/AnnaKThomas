@@ -1,5 +1,6 @@
 let browserLanguage = navigator.language || navigator.userLanguage;
 let defaultLanguage = "en";
+let globalSiteId;
 
 function init() {
   checkBrowserLanguage();
@@ -15,30 +16,24 @@ function checkBrowserLanguage() {
   }
 }
 
-function renderMasks() {
-  //renderBookDetails(historicalBooks,"Die Masken von Florenz","maskBottom");
-  renderMasksTops();
-  renderMasksBottom();
-}
-
 function german() {
   defaultLanguage = "de";
-  renderMasksTops();
-  renderMasksBottom();
+  renderBookSite(globalSiteId)
 }
 
 function english() {
   defaultLanguage = "en";
-  renderMasksTops();
-  renderMasksBottom();
+  renderBookSite(globalSiteId)
+}
+
+function renderBookSite(siteId) {
+  globalSiteId = siteId;
+  renderSiteDetails(topSites, siteId, `${siteId}Top`);
+  renderBookDetails(historicalBooks, siteId, `${siteId}Bottom`);
+  renderNav(navSites, siteId, `${siteId}Nav`);
 }
 
 
-function renderMasksTops() {
-  let siteIdToRender = "Die Masken von Florenz";
-  let targetDivIdTop = "maskTop";
-  renderSiteDetails(topSites, siteIdToRender, targetDivIdTop);
-}
 
 function findSiteIndexById(siteArray, siteId) {
   for (let i = 0; i < siteArray.length; i++) {
@@ -54,11 +49,13 @@ function renderSiteDetails(siteData, siteId, divId) {
   let siteIndex = findSiteIndexById(siteData, siteId);
   if (siteIndex !== -1) {
     let site = siteData[siteIndex].languages[defaultLanguage];
+    let translationStatusText = getTranslationStatusText(siteData[siteIndex].translationExists, defaultLanguage);
     let templateHTML = `
       <h3>${site.title}</h3>
       <div class="siteParagraphs">
         ${site.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
       </div>
+      <p>${translationStatusText}</p>
       <div class="siteNavTop">
         ${site.links.map(link => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`).join('')}
       </div>`;
@@ -68,16 +65,18 @@ function renderSiteDetails(siteData, siteId, divId) {
   }
 }
 
-
-function renderMasksBottom() {
-  let bookIdToRender = "Die Masken von Florenz";
-  let targetDivId = "maskBottom";
-  renderBookDetails(
-    historicalBooks,
-    bookIdToRender,
-    targetDivId
-  );
+function getTranslationStatusText(translationExists, defaultLanguage) {
+  if (translationExists === "true") {
+    return defaultLanguage === "de"
+      ? "Eine Übersetzung ins Englische ist vorhanden."
+      : "An English translation is available.";
+  } else {
+    return defaultLanguage === "de"
+      ? "Bis jetzt ist keine Übersetzung ins Englische verfügbar."
+      : "There is no English translation available yet.";
+  }
 }
+
 
 function findBookIndexById(bookArray, bookId) {
   for (let i = 0; i < bookArray.length; i++) {
@@ -87,6 +86,7 @@ function findBookIndexById(bookArray, bookId) {
   }
   return -1;
 }
+
 
 function renderBookDetails(bookData, bookId, divId) {
   let bottomDiv = document.getElementById(divId);
@@ -106,6 +106,24 @@ function renderBookDetails(bookData, bookId, divId) {
     bottomDiv.innerHTML = templateHTML;
   } else {
     console.log(`BookID '${bookId}' not found`);
+  }
+}
+
+
+function renderNav(navData, siteId, divId) {
+  let navDiv = document.getElementById(divId);
+  let siteIndex = findSiteIndexById(navData, siteId);
+  
+  if (siteIndex !== -1) {
+    let site = navData[siteIndex].languages[defaultLanguage];
+    let templateHTML = `
+      <div class="siteNav">
+        <h3>Navigation</h3>
+        ${site.links.map(link => `<a href="${link.url}">${link.text}</a>`).join('')}
+      </div>`;
+    navDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`SiteId '${siteId}' not found in navigation data`);
   }
 }
 
