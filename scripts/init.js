@@ -79,18 +79,15 @@ function renderMobileMenu() {
     } else if (path === "/historical.html" ) {
         renderMainSite('historical', 'historicalTop')
     } else if (path === "/novellas.html") {
-        renderMainSite('novellas', 'novellasTop')
-    } else if (path === "/booksites/odyssee.html") {
-        renderBookSite(globalGenre, globalSiteId);
-    } else if (path === "/novellas.html") {
-        renderNovellas();
+        renderMainSite('novellas', 'novellasTop');
+        renderNovellas(); 
     } else if (path === "/about-me.html") {
-
-      // Weitere spezifische Funktionen für die About Me-Seite, wenn nötig
-    }
-    // Fügen Sie weitere Bedingungen für andere Seiten hinzu, falls erforderlich
+        renderAboutMe();
+    } else if (path === "/booksites/odyssee.html") {
+    renderBookSite(globalGenre, globalSiteId);
   }
-  
+}
+
   async function includeHTML() {
     var z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");

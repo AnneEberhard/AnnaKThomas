@@ -33,6 +33,7 @@ function renderMainSite(siteId, divId) {
   renderNav(navSites, 'general', `${siteId}Nav`);
 }
 
+
 //Functions for books sites
 function renderBookSite(genre, siteId) {
   globalSiteId = siteId;
