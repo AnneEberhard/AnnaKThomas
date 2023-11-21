@@ -7,6 +7,7 @@
     <script src="scripts/books.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/template.js"></script>
+    <script src="scripts/init.js"></script>
     <link
       rel="icon"
       type="image/png"
@@ -16,16 +17,15 @@
     <link rel="stylesheet" href="styles/styles-templates.css" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
-  <body onload="includeHTML(), renderNovellas()">
+  <body onload="init()">
     <div w3-include-html="templates/header.html"></div>
     <div w3-include-html="templates/mobile-menu.html"></div>
     <div w3-include-html="templates/background.html"></div>
     <div class="mainContainer">
       <div id="novellasTop"></div>
       <div id="novellasBottom"></div>
-      <div id="novellasNav"></div>
+
       <div class="toTheBooksSites">
-        <h3>Veröffentlichte Novellen und Kurzgeschichten</h3>
         <div class="bookContainer">
             <img class="cover" src="/assets/img/covers/LebensAbschnitt.jpg" alt="cover LebensAbschnitt">
             <div class="bookContainerText">
@@ -44,15 +44,10 @@
             <a class="amazonLink" href="https://amzn.eu/d/inQbcmE">Link zu Amazon</a>
         </div>
         </div>
- 
- 
         <h3>Bonusgeschichte</h3>
         <a href="/booksites/girl-with-gentle-eyes.html">Das Mädchen mit den sanften Augen</a>
       </div>
-      <div class="siteNav">
-        <h3>Navigation</h3>
-        <a href="/index.html">Zurück zur Homepage</a>
-      </div>
+      <div id="novellasNav"></div>
     </div>
     <div class="scrollToTopButton">
         <svg onclick="scrollToTop()" class="arrowUp" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,39 @@
+//functions for main sites - some subfunctions are tbf in booksites section
+function renderMainSite(siteId, divId) {
+  let topDiv = document.getElementById(divId);
+  let siteIndex = findSiteIndexById(mainSites, siteId);
+  if (siteIndex !== -1) {
+    let site = mainSites[siteIndex].languages[defaultLanguage];
+    let templateHTML = `
+      <h2>${site.title}</h2>
+      <div class="siteParagraphs">
+        ${site.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
+      </div>`;
+    for (let section of site.sections) {
+      templateHTML += `
+        <h3>${section.subtitle}</h3>
+          <div class="sectionParagraphs">
+            ${section.paragraphs
+              .map((paragraph) => `<p>${paragraph}</p>`)
+              .join("")}
+          </div>
+          <div class="siteNavTop">
+            ${section.links
+              .map(
+                (link) =>
+                  `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`)
+              .join("")}
+          </div>
+        </div>`;
+    }
+    topDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`SiteId '${siteId}' not found`);
+  }
+  renderNav(navSites, 'general', `${siteId}Nav`);
+}
 
-
+//Functions for books sites
 function renderBookSite(genre, siteId) {
   globalSiteId = siteId;
   globalGenre = genre;
@@ -8,7 +42,6 @@ function renderBookSite(genre, siteId) {
     console.log(`Unknown genre: ${genre}`);
     return;
   }
-
   renderSiteDetails(topSites, siteId, `${siteId}Top`);
   renderBookDetails(bookData, siteId, `${siteId}Bottom`);
   renderNav(navSites, siteId, `${siteId}Nav`);
@@ -21,15 +54,6 @@ function findBooksByGenre(targetGenre) {
     }
   }
   return null;
-}
-
-function findBookIndexById(bookArray, bookId) {
-  for (let i = 0; i < bookArray.length; i++) {
-    if (bookArray[i].bookId === bookId) {
-      return i;
-    }
-  }
-  return -1;
 }
 
 function renderSiteDetails(siteData, siteId, divId) {
@@ -82,15 +106,6 @@ function getTranslationStatusText(translationExists, defaultLanguage) {
   }
 }
 
-function findBookIndexById(bookArray, bookId) {
-  for (let i = 0; i < bookArray.length; i++) {
-    if (bookArray[i].bookId === bookId) {
-      return i;
-    }
-  }
-  return -1;
-}
-
 function renderBookDetails(bookData, bookId, divId) {
   let bottomDiv = document.getElementById(divId);
   let bookIndex = findBookIndexById(bookData, bookId);
@@ -110,6 +125,15 @@ function renderBookDetails(bookData, bookId, divId) {
   } else {
     console.log(`BookID '${bookId}' not found`);
   }
+}
+
+function findBookIndexById(bookArray, bookId) {
+  for (let i = 0; i < bookArray.length; i++) {
+    if (bookArray[i].bookId === bookId) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 function renderNav(navData, siteId, divId) {

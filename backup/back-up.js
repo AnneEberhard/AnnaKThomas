@@ -41,6 +41,18 @@ function renderMasksTops() {
     return -1;
   }
   
+  function getTranslationStatusText(translationExists, defaultLanguage) {
+    if (translationExists === "true") {
+      return defaultLanguage === "de"
+        ? "Eine Übersetzung ins Englische ist vorhanden."
+        : "An English translation is available.";
+    } else {
+      return defaultLanguage === "de"
+        ? "Bis jetzt ist keine Übersetzung ins Englische verfügbar."
+        : "There is no English translation available yet.";
+    }
+  }
+
   function renderSiteDetails(siteData, siteId, divId) {
     let topDiv = document.getElementById(divId);
     let siteIndex = findSiteIndexById(siteData, siteId);
@@ -80,5 +92,53 @@ function renderMasksTops() {
       bottomDiv.innerHTML = templateHTML;
     } else {
       console.log(`BookID '${bookId}' not found`);
+    }
+  }
+
+  async function includeHTML2() {
+    var z, i, elmnt, file, xhttp;
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+              elmnt.innerHTML = this.responseText;
+            }
+            if (this.status == 404) {
+              elmnt.innerHTML = "Page not found.";
+            }
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        };
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        return;
+      }
+    }
+  }
+
+  function renderMainSite2(siteId, divId) {
+    let topDiv = document.getElementById(divId);
+    let siteIndex = findSiteIndexById(mainSites, siteId);
+  
+    if (siteIndex !== -1) {
+      let site = mainSites[siteIndex].languages[defaultLanguage];
+      let templateHTML = `
+        <h2>${site.title}</h2>
+        <div class="siteParagraphs">
+          ${site.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
+        </div>
+        <h3>${site.subtitle}</h3>
+        <div class="siteNavTop">
+          ${site.links.map(link => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`).join('')}
+        </div>`;
+      topDiv.innerHTML = templateHTML;
+    } else {
+      console.log(`SiteId '${siteId}' not found`);
     }
   }

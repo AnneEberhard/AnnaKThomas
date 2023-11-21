@@ -10,29 +10,32 @@ async function init() {
 
 function checkBrowserLanguage() {
   if (browserLanguage.startsWith("de")) {
+    console.log(browserLanguage);
     defaultLanguage = "de";
-    //german();
+    german();
   } else {
+    console.log(browserLanguage);
     defaultLanguage = "en";
-    //english();
+    english();
   }
 }
 
 function german() {
-  defaultLanguage = "de";
-  renderMenu();
-  renderMobileMenu();
-  //renderBookSite(globalGenre, globalSiteId);
-}
-
-function english() {
-  defaultLanguage = "en";
-  renderMenu();
-  renderMobileMenu();
-  //renderBookSite(globalGenre, globalSiteId);
-}
-
-
+    defaultLanguage = "de";
+    renderSharedContent();
+    renderContentBasedOnPage();
+  }
+  
+  function english() {
+    defaultLanguage = "en";
+    renderSharedContent();
+    renderContentBasedOnPage();
+  }
+  
+  function renderSharedContent() {
+    renderMenu();
+    renderMobileMenu();
+  }
 
 function renderMenu() {
   const navElement = document.getElementById("desktopNav");
@@ -62,36 +65,54 @@ function renderMobileMenu() {
       link.classList.add("mobileNavLink");
       link.href = `/${menuItem.link}`;
       link.innerHTML = title;
-  
       mobileNavElement.appendChild(link);
     });
   }
   
+
+  function renderContentBasedOnPage() {
+    const path = window.location.pathname;
+    if (path === "/index.html") {
+        renderMainSite('home', 'homeTop');
+    } else if (path === "/fantasy.html") {
+        renderMainSite('fantasy', 'fantasyTop')
+    } else if (path === "/historical.html" ) {
+        renderMainSite('historical', 'historicalTop')
+    } else if (path === "/novellas.html") {
+        renderMainSite('novellas', 'novellasTop')
+    } else if (path === "/booksites/odyssee.html") {
+        renderBookSite(globalGenre, globalSiteId);
+    } else if (path === "/novellas.html") {
+        renderNovellas();
+    } else if (path === "/about-me.html") {
+
+      // Weitere spezifische Funktionen für die About Me-Seite, wenn nötig
+    }
+    // Fügen Sie weitere Bedingungen für andere Seiten hinzu, falls erforderlich
+  }
   
-async function includeHTML() {
+  async function includeHTML() {
     var z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");
     for (i = 0; i < z.length; i++) {
       elmnt = z[i];
       file = elmnt.getAttribute("w3-include-html");
       if (file) {
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState == 4) {
-            if (this.status == 200) {
-              elmnt.innerHTML = this.responseText;
-            }
-            if (this.status == 404) {
-              elmnt.innerHTML = "Page not found.";
-            }
+        await fetch(file)
+          .then(response => response.text())
+          .then(data => {
+            elmnt.innerHTML = data;
             elmnt.removeAttribute("w3-include-html");
-            includeHTML();
-          }
-        };
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        return;
+          })
+          .catch(error => {
+            console.error(`Error fetching HTML: ${error}`);
+          });
       }
     }
   }
+  
+
+
+
+
   
