@@ -82,7 +82,7 @@ function renderAboutMe(id) {
   }
 
 // function for special sites novellas
-  function renderNovellas(genre) {
+  function renderSeries(genre) {
     currentSiteId = genre;
     currentGenre = genre;
     let topDivId = genre+'Top';
@@ -92,37 +92,91 @@ function renderAboutMe(id) {
     console.log(genreData);
     renderMainSite(genre, topDivId);
     renderBookDetails(genreData, bookId, bottomDivID)
-    //renderNovellasBottom(genre);
+ 
   }
   
-  function renderNovellasBottom(genre) {
 
-    let bookData = findBooksByGenre(genre);
-    if (!bookData) {
-      console.log(`Unknown genre: ${genre}`);
-      return;
-    }
-    let bottomDiv = document.getElementById('novellasBottom');
-    let templateHTML = '';
-    let novellasGenre = bookData.find(genre => genre.genre === 'novellas');
-  
-    if (novellasGenre && novellasGenre.books) {
-      // Loop through the novellas and render each one
-      for (let novella of novellasGenre.books) {
-        let novellaInfo = novella.languages[defaultLanguage];
-  
-        templateHTML += `
-          <div class="bookContainer">
-            <img class="cover" src="${novellaInfo.imageURL}" alt="">
-            <div class="bookContainerText">
-              <h3>${novellaInfo.title}</h3> 
-              <p>${novellaInfo.paragraphs[0]}</p>
-              <p>${novellaInfo.paragraphs[1]}</p>
-              <a class="amazonLink" href="${novellaInfo.externalLink}">Link to Amazon</a>
-            </div>
-          </div>`;
-      }
-    }
-  
-    bottomDiv.innerHTML = templateHTML;
+  //function for navMenu on home Page
+
+function renderHomePage() {
+  renderMainSite('home');
+  renderHomeOverview();
+}
+
+  function renderHomeOverview() {
+  let homeBottom = document.getElementById('homeBottom');
+  homeBottom.innerHTML = templateOverview();
+  fillOverviewColumns();
   }
+
+  function templateOverview() {
+    let columns = '';
+    for (let i = 0; i < overview.length; i++) {
+      if (defaultLanguage == 'de') {
+        columnHeader = overview[i].de;
+      } else {
+       columnHeader = overview[i].en;
+      }
+      let genreLink = overview[i].genreLink;
+      columns += `<div class="column" id="homeBottomColumn${i}">
+      <a class="columnHeader" href="${genreLink}" >${columnHeader}</a> </div>`
+    }
+    return columns;
+  }
+
+  function fillOverviewColumns() {
+    for (let i = 0; i < overview.length; i++) {
+      targetdiv = document.getElementById(`homeBottomColumn${i}`)
+      booksArray = overview[i].books;
+      for (let j = 0; j < booksArray.length; j++) {
+        if (defaultLanguage == 'de') {
+          bookName = booksArray[j].languages.de;
+        } else {
+          bookName = booksArray[j].languages.en;
+        }
+          bookLink = booksArray[j].internalLink;
+          targetdiv.innerHTML += /*html*/ `<a class="columnContent" href="${bookLink}" >${bookName}</a>`;
+      }
+   
+    }
+  }
+
+
+
+
+
+  function generateOverviewColumns(overviewData) {
+    let columnsHTML = '';
+  
+    // Iterate over each genre
+    overviewData.forEach(genre => {
+      const genreHTML = generateGenreHTML(genre.genre);
+      const booksHTML = generateBooksHTML(genre.genre.books);
+      columnsHTML += `<div class="genre-column">${genreHTML}${booksHTML}</div>`;
+    });
+  
+    return columnsHTML;
+  }
+  
+  function generateGenreHTML(genre) {
+    return `<h2 class="center"><a href="${genre.genreLink}">${genre[defaultLanguage]}</a></h2>`;
+  }
+  
+  function generateBooksHTML(books) {
+    let booksHTML = '<ul>';
+  
+    books.forEach(book => {
+      const bookHTML = generateBookHTML(book.languages[defaultLanguage], book.internalLink);
+      booksHTML += `<li>${bookHTML}</li>`;
+    });
+  
+    booksHTML += '</ul>';
+    return booksHTML;
+  }
+  
+  function generateBookHTML(book, link) {
+    return `<a href="${link}">${book}</a>`;
+  }
+  
+
+  

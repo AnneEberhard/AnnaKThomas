@@ -86,10 +86,10 @@ function renderSubHeaderBottom () {
 
 function renderContentBasedOnPage() {
     let pageFunctions = [
-        { path: "/index.html", function: renderMainSite, params: ['home'] },
+        { path: "/index.html", function: renderHomePage, params: [] },
         { path: "/fantasy.html", function: renderMainSite, params: ['fantasy'] },
         { path: "/historical.html", function: renderMainSite, params: ['historical'] },
-        { path: "/novellas.html", function: renderNovellas, params: ['novellas'] },
+        { path: "/novellas.html", function: renderSeries, params: ['novellas'] },
         { path: "/about-me.html", function: renderAboutMe, params: ['aboutMe'] },
         { path: "/booksites/odyssee.html", function: renderBookSite, params: ['historical', 'odyssee'] },
         { path: "/booksites/mind-on-fire.html", function: renderBookSite, params: ['historical', 'mind'] },

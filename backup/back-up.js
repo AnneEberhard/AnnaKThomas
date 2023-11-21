@@ -239,3 +239,27 @@ function renderBookDetails2(bookData, bookId, divId) {
     console.log(`BookID '${bookId}' not found`);
   }
 }
+
+
+
+
+function renderBookDetails3(bookData, bookId, divId) {
+  let bottomDiv = document.getElementById(divId);
+  let bookIndex = findBookIndexById(bookData, bookId);
+  if (bookIndex !== -1) {
+    let book = bookData[bookIndex].languages[defaultLanguage];
+    let templateHTML = `
+      <div class="bookContainer">
+        <img class="cover" src="${book.imageURL}" alt="">
+        <div class="bookContainerText">
+          <h3>${book.title}</h3> 
+          <p>${book.paragraphs[0]}</p>
+          <p>${book.paragraphs[1]}</p>
+          <a class="amazonLink" href="${book.externalLink}">Link zu Amazon</a>
+        </div>
+      </div>`;
+    bottomDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`BookID '${bookId}' not found`);
+  }
+}

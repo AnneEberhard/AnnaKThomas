@@ -4,7 +4,7 @@ let menuTitles = [
   { de: "Fantasy", en: "Fantasy", link: "/fantasy.html" },
   { de: "Historisch", en: "Historical", link: "/historical.html" },
   { de: "Novellen", en: "Novellas", link: "/novellas.html" },
-  { de: "Über mich", en: "About Me", link: "/about-me.html" }
+  { de: "Über mich", en: "About Me", link: "/about-me.html" },
 ];
 
 //for booksites
@@ -130,7 +130,7 @@ let topSites = [
         ],
       },
     },
-  }
+  },
 ];
 
 //for bottom nav
@@ -292,18 +292,20 @@ let mainSites = [
           "Und willkommen auf meiner Webseite!",
           "Ich schreibe schon seit Jahrzehnten Geschichten, aber 2017 habe ich mich nach draußen in die Welt getraut und angefangen, online Bücher zu veröffentlichen. Da ich so viel drum herum geschrieben und gebaut habe, und auch noch so vieles plane, entstand die Idee zu dieser Webseite, um ein wenig mehr Info zu geben, ein bisschen mehr zu teilen - und vielleicht ebenso ein bisschen mehr zu hören ...",
           "Ich schreibe auf deutsch, aber mittlerweile gibt es englische Übersetzungen einiger meiner Werke. Wo dies der Fall ist, könnt Ihr Euch die englischen Texte anzeigen lassen.",
-          ""
+          "",
         ],
         sections: [
           {
             paragraphs: ["", ""],
             subtitle: "Der Überblick über meine Bücher:",
-            links: [{
-              text: "",
-              url: ""
-            }],
-          }
-        ]
+            links: [
+              {
+                text: "",
+                url: "",
+              },
+            ],
+          },
+        ],
       },
       en: {
         title: "Hello!",
@@ -311,18 +313,20 @@ let mainSites = [
           "And welcome to my website!",
           "I've been writing stories for decades, but in 2017 I ventured out into the world and started publishing books online. Since I've written and built so much around it, and still have so much planned, the idea for this website was born to give a little more info, a little more to share - and maybe a little more to hear ...",
           "I write in German, but there are now English translations of some of my works. Where this is the case, you can view the English texts.",
-          ""
+          "",
         ],
         sections: [
           {
             paragraphs: ["", ""],
             subtitle: "The overview of my books:",
-            links: [{
-              text: "",
-              url: "/booksites/"
-            }],
-          }
-        ]
+            links: [
+              {
+                text: "",
+                url: "/booksites/",
+              },
+            ],
+          },
+        ],
       },
     },
   },
@@ -335,62 +339,68 @@ let mainSites = [
         paragraphs: [
           "An dem Genre Fantasy fasziniert mich, dass einem keine Grenzen gesetzt sind - außer irgendwann die Grenzen der Logik innerhalb einer Geschichte. Ich habe drei Trilogien geschrieben, davon zwei Urban Fantasy und eine klassische Fantasy.",
           "Die Von Elfen und Wölfen Trilogie ist ins Englische übersetzt worden und wurde dort zu neun Büchern.",
-          "Auf jeder der nachfolgenden Seiten findet Ihr Links zu den Büchern, Hintergrundinfos, Bonuskapitel und vieles mehr."
+          "Auf jeder der nachfolgenden Seiten findet Ihr Links zu den Büchern, Hintergrundinfos, Bonuskapitel und vieles mehr.",
         ],
         sections: [
           {
             paragraphs: ["", ""],
             subtitle: "Klassische Fantasy",
-            links: [{
-              text: "Die Sänger von Thurán",
-              url: "/booksites/bards-of-thuran.html"
-            }],
-          },   
+            links: [
+              {
+                text: "Die Sänger von Thurán",
+                url: "/booksites/bards-of-thuran.html",
+              },
+            ],
+          },
           {
             paragraphs: ["", ""],
             subtitle: "Urban Fantasy",
             links: [
               {
                 text: "Die Kinder der Engel",
-                url: "/booksites/children-of-angels.html"
+                url: "/booksites/children-of-angels.html",
               },
               {
                 text: "Von Elfen und Wölfen",
-                url: "/booksites/of-elves-and-wolves.html"
-              }
+                url: "/booksites/of-elves-and-wolves.html",
+              },
             ],
-          }
-        ]
+          },
+        ],
       },
       en: {
         title: "Fantasy",
         paragraphs: [
           "What fascinates me about the fantasy genre is that there are no limits - except at some point the limits of logic within a story. I have written three trilogies, two of them urban fantasy and one classic fantasy.",
           "The Of Elves and Wolves trilogy has been translated into English, where it became nine books in three arcs.",
-          "On each of the following pages you will find links to the books, background information, bonus chapters and much more."
+          "On each of the following pages you will find links to the books, background information, bonus chapters and much more.",
         ],
         sections: [
           {
             paragraphs: ["", ""],
             subtitle: "Classic fantasy",
-            links: [{
-              text: "The Bards of Thurán",
-              url: "/booksites/bards-of-thuran.html"
-            }],
+            links: [
+              {
+                text: "The Bards of Thurán",
+                url: "/booksites/bards-of-thuran.html",
+              },
+            ],
           },
           {
             paragraphs: ["", ""],
             subtitle: "Urban Fantasy",
-            links: [     {
-              text: "Children Of Angels",
-              url: "/booksites/children-of-angels.html"
-            },
-            {
-              text: "Of Elves and Wolves",
-              url: "/booksites/of-elves-and-wolves.html"
-            }],
-          }
-        ]
+            links: [
+              {
+                text: "Children Of Angels",
+                url: "/booksites/children-of-angels.html",
+              },
+              {
+                text: "Of Elves and Wolves",
+                url: "/booksites/of-elves-and-wolves.html",
+              },
+            ],
+          },
+        ],
       },
     },
   },
@@ -403,55 +413,64 @@ let mainSites = [
         paragraphs: [
           "Ich liebe historische Romane - vorausgesetzt, sie sind gut recherchiert. Für die meinen bin ich tief in die jeweiligen Zeiten eingestiegen und habe mir hoffentlich keine groben Patzer geleistet. Solltet Ihr etwas finden, lasst es mich wissen!",
           "Von meinen historischen Büchern sind die Alsterdiamanten und Die Masken von Florenz ins Englische übersetzt worden.",
-          "Auf jeder der nachfolgenden Seiten findet Ihr Links zu den Büchern, Hintergrundinfos, Bonuskapitel und vieles mehr."
+          "Auf jeder der nachfolgenden Seiten findet Ihr Links zu den Büchern, Hintergrundinfos, Bonuskapitel und vieles mehr.",
         ],
         sections: [
           {
             paragraphs: ["", ""],
             subtitle: "Historische Romane",
-            links: [{
-              text: "Irrfahrt ins Gelobte Land",
-              url: "/booksites/odyssee.html"
-            },{
-              text: "Die Masken von Florenz",
-              url: "/booksites/masks-of-florence.html"
-            },{
-              text: "Alsterdiamanten",
-              url: "/booksites/alster-diamonds.html"
-            },{
-              text: "Der Geist in Brand",
-              url: "/booksites/mind-on-fire.html"
-            }],
-          }
-        ]
+            links: [
+              {
+                text: "Irrfahrt ins Gelobte Land",
+                url: "/booksites/odyssee.html",
+              },
+              {
+                text: "Die Masken von Florenz",
+                url: "/booksites/masks-of-florence.html",
+              },
+              {
+                text: "Alsterdiamanten",
+                url: "/booksites/alster-diamonds.html",
+              },
+              {
+                text: "Der Geist in Brand",
+                url: "/booksites/mind-on-fire.html",
+              },
+            ],
+          },
+        ],
       },
       en: {
         title: "Historical novels",
         paragraphs: [
           "I love historical novels - provided they are well researched. For mine, I delved deep into the respective periods and hopefully didn't make any major blunders. If you find anything, let me know!",
           "Of my historic books, the Alster Diamonds and The Masks of Florence have been translated into English.",
-          "On each of the following pages you will find links to the books, background information, bonus chapters and much more."
+          "On each of the following pages you will find links to the books, background information, bonus chapters and much more.",
         ],
         sections: [
           {
             paragraphs: ["", ""],
             subtitle: "Historical novels",
-            links: [{
-              text: "Irrfahrt ins Gelobte Land",
-              url: "/booksites/odyssee.html"
-            },{
-              text: "The Masks of Florence",
-              url: "/booksites/masks-of-florence.html"
-            },{
-              text: "Alster Diamonds",
-              url: "/booksites/alster-diamonds.html"
-            },{
-              text: "Der Geist in Brand",
-              url: "/booksites/mind-on-fire.html"
-            }
-          ],
-          }
-        ]
+            links: [
+              {
+                text: "Irrfahrt ins Gelobte Land",
+                url: "/booksites/odyssee.html",
+              },
+              {
+                text: "The Masks of Florence",
+                url: "/booksites/masks-of-florence.html",
+              },
+              {
+                text: "Alster Diamonds",
+                url: "/booksites/alster-diamonds.html",
+              },
+              {
+                text: "Der Geist in Brand",
+                url: "/booksites/mind-on-fire.html",
+              },
+            ],
+          },
+        ],
       },
     },
   },
@@ -470,12 +489,14 @@ let mainSites = [
           {
             paragraphs: ["", ""],
             subtitle: "Veröffentlichte Novellen und Kurzgeschichten",
-            links: [{
-              text: "",
-              url: ""
-            }],
-          }
-        ]
+            links: [
+              {
+                text: "",
+                url: "",
+              },
+            ],
+          },
+        ],
       },
       en: {
         title: "Novellas and short stories",
@@ -488,16 +509,121 @@ let mainSites = [
           {
             paragraphs: ["", ""],
             subtitle: "Published novellas and short stories",
-            links: [{
-              text: "",
-              url: ""
-            }],
-          }
-        ]
+            links: [
+              {
+                text: "",
+                url: "",
+              },
+            ],
+          },
+        ],
       },
     },
   },
 ];
 
-
-
+// for home page
+let overview = [
+  {
+    de: "Fantasy",
+    en: "Fantasy",
+    genreLink: "/fantasy.html",
+    books: [
+      {
+        bookId: "bards",
+        internalLink: "/booksites/bards-of-thuran.html",
+        translationExists: "false",
+        languages: {
+          de: "Die Sänger von Thurán Trilogie",
+          en: "Bards of Thurán Trilogie",
+        },
+      },
+      {
+        bookId: "children",
+        internalLink: "/booksites/children-of-angels.html",
+        translationExists: "false",
+        languages: {
+          de: "Die Kinder der Engel Trilogie",
+          en: "Children of Angels Trilogy",
+        },
+      },
+      {
+        bookId: "elves",
+        internalLink: "/booksites/of-elves-and-wolves.html",
+        translationExists: "false",
+        languages: {
+          de: "Von Elfen und Wölfen Trilogie",
+          en: "Of Elves and Wolves in three arcs",
+        },
+      },
+    ],
+  },
+  {
+    de: "Historisch",
+    en: "Historical",
+    genreLink: "/historical.html",
+    books: [
+      {
+        bookId: "odyssee",
+        internalLink: "/booksites/odyssee.html",
+        translationExists: "false",
+        languages: {
+          de: "Irrfahrt ins Gelobte Land",
+          en: "Odyssee to the Promised Land",
+        },
+      },
+      {
+        bookId: "masks",
+        internalLink: "/booksites/masks-of-florence.html",
+        translationExists: "true",
+        languages: {
+          de: "Die Masken von Florenz",
+          en: "The Masks of Florence",
+        },
+      },
+      {
+        bookId: "alster",
+        internalLink: "/booksites/alster-diamonds.html",
+        translationExists: "true",
+        languages: {
+          de: "Alsterdiamanten",
+          en: "Alster Diamonds",
+        },
+      },
+      {
+        bookId: "mind",
+        internalLink: "/booksites/mind-on-fire.html",
+        translationExists: "true",
+        languages: {
+          de: "Der Geist in Brand",
+          en: "The Mind on Fire",
+        },
+      },
+    ],
+  },
+  {
+    de: "Kurzgeschichten",
+    en: "Short Stories",
+    genreLink: "/novellas.html",
+    books: [
+      {
+        bookId: "life",
+        internalLink: "/booksites/masks-of-florence.html",
+        translationExists: "true",
+        languages: {
+          de: "LebensAbschnitt",
+          en: "LifeStages",
+        },
+      },
+      {
+        bookId: "dance",
+        internalLink: "/novellas.html",
+        translationExists: "true",
+        languages: {
+          de: "Tanz mit dem Wind",
+          en: "Dance the Wind",
+        },
+      },
+    ],
+  },
+];

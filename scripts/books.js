@@ -4,6 +4,7 @@ let allBooks = [
     "books": [
       {
     "bookId": "masks",
+    "internalLink": "/booksites/masks-of-florence.html",
     "seriesId": "", 
     "translationExists": "true",
     "languages": {
@@ -35,6 +36,7 @@ let allBooks = [
   },
   {
     "bookId": "alster",
+    "internalLink": "/booksites/alster-diamonds.html",
     "seriesId": "",  
     "translationExists": "true",
     "languages": {
@@ -66,6 +68,7 @@ let allBooks = [
   },
   {
     "bookId": "odyssee",
+    "internalLink": "/booksites/odyssee.html",
     "seriesId": "", 
     "translationExists": "false",
     "languages": {
@@ -96,6 +99,7 @@ let allBooks = [
   },
   {
     "bookId": "mind",
+    "internalLink": "/booksites/mind-on-fire.html",
     "seriesId": "", 
     "translationExists": "false",
     "languages": {
@@ -132,6 +136,7 @@ let allBooks = [
     "books": [
       {
         "bookId": "",
+        "internalLink": "",
         "seriesId": "", 
         "translationExists": "true",
         "languages": {
@@ -163,6 +168,7 @@ let allBooks = [
       },{
         "bookId": "",
         "seriesId": "", 
+        "internalLink": "",
         "translationExists": "true",
         "languages": {
           "de": 
@@ -193,6 +199,7 @@ let allBooks = [
       },
       {
         "bookId": "",
+        "internalLink": "",
         "seriesId": "", 
         "translationExists": "true",
         "languages": {
@@ -229,6 +236,7 @@ let allBooks = [
     "books": [
       {
         "bookId": "life",
+        "internalLink": "/novellas.html",
         "seriesId": "novellas", 
         "translationExists": "true",
         "languages": {
@@ -259,6 +267,7 @@ let allBooks = [
         }
       }, {
         "bookId": "dance",
+        "internalLink": "/novellas.html",
         "seriesId": "novellas", 
         "translationExists": "true",
         "languages": {
