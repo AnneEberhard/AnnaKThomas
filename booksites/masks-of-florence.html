@@ -7,6 +7,7 @@
     <script src="../scripts/books.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="../scripts/template.js"></script>
+    <script src="../scripts/special-sites.js"></script>
     <script src="../scripts/init.js"></script>
     <link
       rel="icon"
@@ -17,14 +18,14 @@
     <link rel="stylesheet" href="../styles/styles-templates.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
   </head>
-  <body onload="includeHTML(), renderBookSite('mask')">
+  <body onload="init()">
     <div w3-include-html="../templates/header.html"></div>
     <div w3-include-html="../templates/mobile-menu.html"></div>
     <div w3-include-html="../templates/background.html"></div>
     <div class="mainContainer">
-      <div id="maskTop"></div>
-      <div id="maskBottom"></div>
-      <div id="maskNav"></div>
+      <div id="masksTop"></div>
+      <div id="masksBottom"></div>
+      <div id="masksNav"></div>
     </div>
     <div w3-include-html="../templates/footer.html"></div>
     <div class="scrollToTopButton">

@@ -78,3 +78,43 @@ function renderAboutMe() {
   `;
     return template
   }
+
+
+  function renderNovellas(genre, divId) {
+    currentSiteId = genre;
+    currentGenre = genre;
+    renderMainSite(genre, divId);
+    renderNovellasBottom(genre);
+  }
+  
+  function renderNovellasBottom(genre) {
+
+    let bookData = findBooksByGenre(genre);
+    if (!bookData) {
+      console.log(`Unknown genre: ${genre}`);
+      return;
+    }
+    let bottomDiv = document.getElementById('novellasBottom');
+    let templateHTML = '';
+    let novellasGenre = bookData.find(genre => genre.genre === 'novellas');
+  
+    if (novellasGenre && novellasGenre.books) {
+      // Loop through the novellas and render each one
+      for (let novella of novellasGenre.books) {
+        let novellaInfo = novella.languages[defaultLanguage];
+  
+        templateHTML += `
+          <div class="bookContainer">
+            <img class="cover" src="${novellaInfo.imageURL}" alt="">
+            <div class="bookContainerText">
+              <h3>${novellaInfo.title}</h3> 
+              <p>${novellaInfo.paragraphs[0]}</p>
+              <p>${novellaInfo.paragraphs[1]}</p>
+              <a class="amazonLink" href="${novellaInfo.externalLink}">Link to Amazon</a>
+            </div>
+          </div>`;
+      }
+    }
+  
+    bottomDiv.innerHTML = templateHTML;
+  }

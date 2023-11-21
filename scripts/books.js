@@ -3,7 +3,8 @@ let allBooks = [
     "genre": "historical",
     "books": [
       {
-    "bookId": "mask",
+    "bookId": "masks",
+    "seriesId": "", 
     "translationExists": "true",
     "languages": {
       "de": 
@@ -34,6 +35,7 @@ let allBooks = [
   },
   {
     "bookId": "alster",
+    "seriesId": "",  
     "translationExists": "true",
     "languages": {
       "de": 
@@ -64,6 +66,7 @@ let allBooks = [
   },
   {
     "bookId": "odyssee",
+    "seriesId": "", 
     "translationExists": "false",
     "languages": {
       "de": 
@@ -93,6 +96,7 @@ let allBooks = [
   },
   {
     "bookId": "mind",
+    "seriesId": "", 
     "translationExists": "false",
     "languages": {
       "de": 
@@ -126,13 +130,164 @@ let allBooks = [
   {
     "genre": "fantasy",
     "books": [
-      // Hier können Fantasy-Bücher hinzugefügt werden
+      {
+        "bookId": "",
+        "seriesId": "", 
+        "translationExists": "true",
+        "languages": {
+          "de": 
+            {
+              "title": "",
+              "subgenre": "",
+              "imageURL": "/",
+              "externalLink": "",
+              "paragraphs": 
+              [
+                "",
+                ""
+    ],
+            },
+          "en":
+            {
+              "title": "",
+              "subgenre": "",
+              "imageURL": "/",
+              "externalLink": "",
+              "paragraphs":  [
+                "",
+                "",
+                ""
+                ]            
+            }
+        }
+      },{
+        "bookId": "",
+        "seriesId": "", 
+        "translationExists": "true",
+        "languages": {
+          "de": 
+            {
+              "title": "",
+              "subgenre": "",
+              "imageURL": "/",
+              "externalLink": "",
+              "paragraphs": 
+              [
+                "",
+                ""
+    ],
+            },
+          "en":
+            {
+              "title": "",
+              "subgenre": "",
+              "imageURL": "/",
+              "externalLink": "",
+              "paragraphs":  [
+                "",
+                "",
+                ""
+                ]            
+            }
+        }
+      },
+      {
+        "bookId": "",
+        "seriesId": "", 
+        "translationExists": "true",
+        "languages": {
+          "de": 
+            {
+              "title": "",
+              "subgenre": "",
+              "imageURL": "/",
+              "externalLink": "",
+              "paragraphs": 
+              [
+                "",
+                ""
+    ],
+            },
+          "en":
+            {
+              "title": "",
+              "subgenre": "",
+              "imageURL": "/",
+              "externalLink": "",
+              "paragraphs":  [
+                "",
+                "",
+                ""
+                ]            
+            }
+        }
+      },
     ]
   },
   {
     "genre": "novellas",
     "books": [
-      // Hier können Novellen hinzugefügt werden
+      {
+        "bookId": "life",
+        "seriesId": "novellas", 
+        "translationExists": "true",
+        "languages": {
+          "de": 
+            {
+              "title": "LebensAbschnitt - Eine Reise durch die Zeit",
+              "subgenre": "",
+              "imageURL": "/assets/img/covers/lebensabschnitt.jpg",
+              "externalLink": "https://amzn.eu/d/4cYoev1",
+              "paragraphs": 
+              [
+                "Eine Zeitreisende zieht durch die Geschichte der Menschheit, begleitet vom toten Alexander dem Großen. Ihr gemeinsamer Weg führt sie von den Ursprüngen des sichtbaren Lebens bis in die Neuzeit – beobachtend, manchmal auch teilhabend und dabei Antworten suchend auf Fragen, die sie sich selber gar nicht stellen mag: Wer ist sie, und warum ist sie weder an Zeit noch Raum gebunden?",
+                "Novelle über die Entstehung der Welt"
+    ],
+            },
+          "en":
+            {
+              "title": "LifeStages - A Journey Through Time",
+              "subgenre": "",
+              "imageURL": "/assets/img/covers/lifestages.jpg",
+              "externalLink": "https://mybook.to/LifeStages  ",
+              "paragraphs":  [
+                "A time traveller moves through the history of mankind, accompanied by the dead Alexander the Great. Their journey together takes them from the origins of visible life to modern times - observing, sometimes participating and seeking answers to questions that she doesn't even want to ask herself: Who is she, and why is she not bound by time or space?",
+                "Novella about the genesis of the world",
+                ""
+                ]            
+            }
+        }
+      }, {
+        "bookId": "dance",
+        "seriesId": "novellas", 
+        "translationExists": "true",
+        "languages": {
+          "de": 
+            {
+              "title": "Tanz mit dem Wind – Eine Kurzgeschichte",
+              "subgenre": "",
+              "imageURL": "/assets/img/covers/tanz-mit-dem-wind.jpg",
+              "externalLink": "https://amzn.eu/d/2V45VoE",
+              "paragraphs": 
+              [
+                "Sie ist eine Tänzerin auf Marktplätzen, bei Festen und Feiern, Teil einer kleinen Gauklertruppe. Tessa tanzt zu allem, was Jo, der Fiedler, spielen kann. Aber das Leben auf der Straße ist nicht leicht, vor allem, wenn man viel verloren hat und sich vor weiteren Enttäuschungen schützen will…",
+                "Tanz mit dem Wind ist eine Kurzgeschichte von ca. 8.000 Wörtern."
+    ],
+            },
+          "en":
+            {
+              "title": "",
+              "subgenre": "",
+              "imageURL": "/assets/img/covers/dance-the-wind.jpg",
+              "externalLink": "https://mybook.to/DanceTheWind  ",
+              "paragraphs":  [
+                "She is a dancer in marketplaces, at festivals and fairs, part of a small troupe of gleemen. Tessa dances to everything the fiddler Jo plays. But life on the roads is not easy, especially when you have lost a lot and want to protect yourself from further disappointment.",
+                "Dance the Wind is a short story of app. 8,000 words.",
+                ""
+                ]            
+            }
+        }
+      },
     ]
   }
   // Weitere Genres können hier hinzugefügt werden

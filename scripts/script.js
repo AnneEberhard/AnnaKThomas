@@ -1,5 +1,7 @@
 //functions for main sites - some subfunctions are tbf in booksites section
 function renderMainSite(siteId, divId) {
+  currentSiteId = siteId;
+  currentGenre = siteId;
   let topDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(mainSites, siteId);
   if (siteIndex !== -1) {
@@ -35,23 +37,40 @@ function renderMainSite(siteId, divId) {
 
 
 //Functions for books sites
-function renderBookSite(genre, siteId) {
-  globalSiteId = siteId;
-  globalGenre = genre;
-  let bookData = findBooksByGenre(genre);
+function renderBookSite(genre, bookId) {
+  console.log(genre, bookId)
+  currentSiteId = bookId;
+  currentGenre = genre;
+  let bookData = findBookById(genre, bookId);
+  let genreData = findBooksByGenre(genre);
+  console.log(bookData);
+  console.log(genreData);
   if (!bookData) {
-    console.log(`Unknown genre: ${genre}`);
+    console.log(`Unknown book: ${genre}`);
     return;
   }
-  renderSiteDetails(topSites, siteId, `${siteId}Top`);
-  renderBookDetails(bookData, siteId, `${siteId}Bottom`);
-  renderNav(navSites, siteId, `${siteId}Nav`);
+  renderSiteDetails(topSites, bookId, `${bookId}Top`);
+  renderBookDetails(genreData, bookId, `${bookId}Bottom`);
+  renderNav(navSites, bookId, `${bookId}Nav`);
 }
 
 function findBooksByGenre(targetGenre) {
+
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].genre === targetGenre) {
       return allBooks[i].books;
+    }
+  }
+  return null;
+}
+
+function findBookById(targetGenre, targetBook) {
+  for (let i = 0; i < allBooks.length; i++) {
+    if (allBooks[i].genre === targetGenre) {
+      for (let j = 0; j < allBooks[i].books.length; j++)
+      if (allBooks[i].books[j].bookId === targetBook) {
+      return allBooks[i].books[j];
+      }
     }
   }
   return null;
@@ -108,6 +127,37 @@ function getTranslationStatusText(translationExists, defaultLanguage) {
 }
 
 function renderBookDetails(bookData, bookId, divId) {
+  let bottomDiv = document.getElementById(divId);
+  let bookIndex = findBookIndexById(bookData, bookId);
+
+  if (bookIndex !== -1) {
+    let book = bookData[bookIndex].languages[defaultLanguage];
+    let templateHTML = `
+      <div class="bookContainer">
+        <img class="cover" src="${book.imageURL}" alt="">
+        <div class="bookContainerText">
+          <h3>${book.title}</h3> 
+          <p>${book.paragraphs[0]}</p>
+          <p>${book.paragraphs[1]}</p>
+          <a class="amazonLink" href="${book.externalLink}">Link to Amazon</a>`;
+
+    // Check if the book is part of a series
+    if (bookData[bookIndex].seriesId) {
+      templateHTML += `<p>Part of series with ID: ${bookData[bookIndex].seriesId}</p>`;
+    }
+
+    templateHTML += `</div>
+      </div>`;
+
+    bottomDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`BookID '${bookId}' not found`);
+  }
+}
+
+
+
+function renderBookDetails2(bookData, bookId, divId) {
   let bottomDiv = document.getElementById(divId);
   let bookIndex = findBookIndexById(bookData, bookId);
   if (bookIndex !== -1) {

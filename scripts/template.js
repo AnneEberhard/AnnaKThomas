@@ -10,7 +10,7 @@ let menuTitles = [
 //for booksites
 let topSites = [
   {
-    siteId: "mask",
+    siteId: "masks",
     translationExists: "true",
     languages: {
       de: {
@@ -167,7 +167,7 @@ let navSites = [
     },
   },
   {
-    siteId: "mask",
+    siteId: "masks",
     languages: {
       de: {
         links: [
@@ -498,7 +498,6 @@ let mainSites = [
     },
   },
 ];
-
 
 
 

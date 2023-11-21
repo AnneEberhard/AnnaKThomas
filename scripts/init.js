@@ -1,7 +1,10 @@
+// for path navigation
+
+
 let browserLanguage = navigator.language || navigator.userLanguage;
 let defaultLanguage = "en";
-let globalSiteId;
-let globalGenre;
+let currentSiteId;
+let currentGenre;
 
 async function init() {
   await includeHTML();
@@ -21,8 +24,9 @@ function checkBrowserLanguage() {
 }
 
 function german() {
+
     defaultLanguage = "de";
-    renderSharedContent();
+    renderSharedContent();  
     renderContentBasedOnPage();
   }
   
@@ -80,8 +84,30 @@ function renderSubHeaderBottom () {
     }
 }
 
+function renderContentBasedOnPage() {
+    let pageFunctions = [
+        { path: "/index.html", function: renderMainSite, params: ['home', 'homeTop'] },
+        { path: "/fantasy.html", function: renderMainSite, params: ['fantasy', 'fantasyTop'] },
+        { path: "/historical.html", function: renderMainSite, params: ['historical', 'historicalTop'] },
+        { path: "/novellas.html", function: renderNovellas, params: ['novellas', 'novellasTop'] },
+        { path: "/about-me.html", function: renderAboutMe, params: [] },
+        { path: "/booksites/odyssee.html", function: renderBookSite, params: ['historical', 'odyssee'] },
+        { path: "/booksites/mind-on-fire.html", function: renderBookSite, params: ['historical', 'mind'] },
+        { path: "/booksites/alster-diamonds.html", function: renderBookSite, params: ['historical', 'alster'] },
+        { path: "/booksites/masks-of-florence.html", function: renderBookSite, params: ['historical', 'masks'] }
+      ];
+    const path = window.location.pathname;
+    const matchingFunction = pageFunctions.find(entry => path.includes(entry.path));
+    if (matchingFunction) {
+      const { function: renderFunction, params } = matchingFunction;
+      renderFunction(...params);
+    }
+    console.log(currentGenre, currentSiteId);
+  }
+  
 
-  function renderContentBasedOnPage() {
+
+function renderContentBasedOnPage2() {
     const path = window.location.pathname;
     if (path === "/index.html") {
         renderMainSite('home', 'homeTop');
@@ -94,7 +120,8 @@ function renderSubHeaderBottom () {
         renderNovellas(); 
     } else if (path === "/about-me.html") {
         renderAboutMe();
-    } else if (path === "/booksites/odyssee.html") {
+    } else if (path === "/booksites/odyssee.html" || path === "/booksites/mind-on-fire.html" || path === "/booksites/alster-diamonds.html" || path === "/booksites/masks-of-florence.html") {
+        
     renderBookSite(globalGenre, globalSiteId);
   }
 }
