@@ -35,6 +35,7 @@ function german() {
   function renderSharedContent() {
     renderMenu();
     renderMobileMenu();
+    renderSubHeaderBottom();
   }
 
 function renderMenu() {
@@ -69,6 +70,16 @@ function renderMobileMenu() {
     });
   }
   
+function renderSubHeaderBottom () {
+    let subHeaderBottom = document.getElementById('subHeaderBottom');
+    subHeaderBottom.innerHTML = '';
+    if (defaultLanguage == 'de') {
+        subHeaderBottom.innerHTML = 'Geschichten - Hintergründe - Bonuskapitel';
+    } else {
+        subHeaderBottom.innerHTML = 'Stories - Backgrounds - Bonus chapter';
+    }
+}
+
 
   function renderContentBasedOnPage() {
     const path = window.location.pathname;
