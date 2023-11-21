@@ -142,3 +142,100 @@ function renderMasksTops() {
       console.log(`SiteId '${siteId}' not found`);
     }
   }
+
+  
+
+function renderMainSite2(siteId) {
+  currentSiteId = siteId;
+  currentGenre = siteId;
+  let divId = siteId+'Top';
+  let topDiv = document.getElementById(divId);
+  let siteIndex = findSiteIndexById(mainSites, siteId);
+  if (siteIndex !== -1) {
+    let site = mainSites[siteIndex].languages[defaultLanguage];
+    let templateHTML = `
+      <h2>${site.title}</h2>
+      <div class="siteParagraphs">
+        ${site.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
+      </div>`;
+    for (let section of site.sections) {
+      templateHTML += `
+        <h3>${section.subtitle}</h3>
+          <div class="sectionParagraphs">
+            ${section.paragraphs
+              .map((paragraph) => `<p>${paragraph}</p>`)
+              .join("")}
+          </div>
+          <div class="siteNavTop">
+            ${section.links
+              .map(
+                (link) =>
+                  `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`)
+              .join("")}
+          </div>
+        </div>`;
+    }
+    topDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`SiteId '${siteId}' not found`);
+  }
+  renderNav(navSites, 'general', `${siteId}Nav`);
+}
+
+function renderBookSiteDetails2(siteData, siteId, divId) {
+  let topDiv = document.getElementById(divId);
+  let siteIndex = findSiteIndexById(siteData, siteId);
+  if (siteIndex !== -1) {
+    let site = siteData[siteIndex].languages[defaultLanguage];
+    let translationStatusText = getTranslationStatusText(
+      siteData[siteIndex].translationExists,
+      defaultLanguage
+    );
+    let templateHTML = `
+      <h3>${site.title}</h3>
+      <div class="siteParagraphs">
+        ${site.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
+      </div>
+      <p>${translationStatusText}</p>
+      <div class="siteNavTop">
+        ${site.links
+          .map(
+            (link) =>
+              `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`
+          )
+          .join("")}
+      </div>`;
+    topDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`SiteId '${siteId}' not found`);
+  }
+}
+
+function renderBookDetails2(bookData, bookId, divId) {
+  let bottomDiv = document.getElementById(divId);
+  let bookIndex = findBookIndexById(bookData, bookId);
+
+  if (bookIndex !== -1) {
+    let book = bookData[bookIndex].languages[defaultLanguage];
+    let templateHTML = `
+      <div class="bookContainer">
+        <img class="cover" src="${book.imageURL}" alt="">
+        <div class="bookContainerText">
+          <h3>${book.title}</h3> 
+          <p>${book.paragraphs[0]}</p>
+          <p>${book.paragraphs[1]}</p>
+          <a class="amazonLink" href="${book.externalLink}">Link to Amazon</a>`;
+
+    // Check if the book is part of a series
+    if (bookData[bookIndex].seriesId) {
+      templateHTML += `<p>Part of series with ID: ${bookData[bookIndex].seriesId}</p>`;
+    }
+
+    templateHTML += `</div>
+      </div>`;
+
+    bottomDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`BookID '${bookId}' not found`);
+  }
+}

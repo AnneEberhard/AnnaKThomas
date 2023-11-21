@@ -86,11 +86,11 @@ function renderSubHeaderBottom () {
 
 function renderContentBasedOnPage() {
     let pageFunctions = [
-        { path: "/index.html", function: renderMainSite, params: ['home', 'homeTop'] },
-        { path: "/fantasy.html", function: renderMainSite, params: ['fantasy', 'fantasyTop'] },
-        { path: "/historical.html", function: renderMainSite, params: ['historical', 'historicalTop'] },
-        { path: "/novellas.html", function: renderNovellas, params: ['novellas', 'novellasTop'] },
-        { path: "/about-me.html", function: renderAboutMe, params: [] },
+        { path: "/index.html", function: renderMainSite, params: ['home'] },
+        { path: "/fantasy.html", function: renderMainSite, params: ['fantasy'] },
+        { path: "/historical.html", function: renderMainSite, params: ['historical'] },
+        { path: "/novellas.html", function: renderNovellas, params: ['novellas'] },
+        { path: "/about-me.html", function: renderAboutMe, params: ['aboutMe'] },
         { path: "/booksites/odyssee.html", function: renderBookSite, params: ['historical', 'odyssee'] },
         { path: "/booksites/mind-on-fire.html", function: renderBookSite, params: ['historical', 'mind'] },
         { path: "/booksites/alster-diamonds.html", function: renderBookSite, params: ['historical', 'alster'] },
@@ -102,7 +102,8 @@ function renderContentBasedOnPage() {
       const { function: renderFunction, params } = matchingFunction;
       renderFunction(...params);
     }
-    console.log(currentGenre, currentSiteId);
+    console.log('currentGenre', currentGenre); 
+    console.log('currentSiteId', currentSiteId);
   }
   
 

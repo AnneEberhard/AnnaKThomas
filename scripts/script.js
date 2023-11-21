@@ -1,38 +1,64 @@
-//functions for main sites - some subfunctions are tbf in booksites section
-function renderMainSite(siteId, divId) {
+//functions used by several sections
+
+function findSiteIndexById(siteArray, siteId) {
+  for (let i = 0; i < siteArray.length; i++) {
+    if (siteArray[i].siteId === siteId) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function getTranslationStatusText(translationExists, defaultLanguage) {
+  if (translationExists === "true") {
+    return defaultLanguage === "de"
+     ? '<p>Eine Übersetzung ins Englische ist vorhanden.</p>'
+    :  '<p>An English translation is available.</p>'
+     } else {
+    return defaultLanguage === "de"
+      ? "<p>Bis jetzt ist keine Übersetzung ins Englische verfügbar.</p>"
+      : "<p>There is no English translation available yet.</p>";
+  }
+}
+
+//functions for main sites
+
+function renderMainSite(siteId) {
   currentSiteId = siteId;
   currentGenre = siteId;
+  let divId = siteId + 'Top';
   let topDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(mainSites, siteId);
   if (siteIndex !== -1) {
     let site = mainSites[siteIndex].languages[defaultLanguage];
-    let templateHTML = `
-      <h2>${site.title}</h2>
-      <div class="siteParagraphs">
-        ${site.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
-      </div>`;
+    let templateHTML = generateSiteTitle(site.title) + generateSiteParagraphs(site.paragraphs);
     for (let section of site.sections) {
-      templateHTML += `
-        <h3>${section.subtitle}</h3>
-          <div class="sectionParagraphs">
-            ${section.paragraphs
-              .map((paragraph) => `<p>${paragraph}</p>`)
-              .join("")}
-          </div>
-          <div class="siteNavTop">
-            ${section.links
-              .map(
-                (link) =>
-                  `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`)
-              .join("")}
-          </div>
-        </div>`;
+      templateHTML += generateSection(section);
     }
     topDiv.innerHTML = templateHTML;
   } else {
     console.log(`SiteId '${siteId}' not found`);
   }
   renderNav(navSites, 'general', `${siteId}Nav`);
+}
+
+function generateSiteTitle(title) {
+  return `<h2>${title}</h2>`;
+}
+
+function generateSiteParagraphs(paragraphs) {
+  return `<div class="siteParagraphs">${paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}</div>`;
+}
+
+function generateSection(section) {
+  return `
+    <h3>${section.subtitle}</h3>
+    <div class="sectionParagraphs">
+      ${section.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
+    </div>
+    <div class="siteNavTop">
+      ${section.links.map((link) => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`).join("")}
+    </div>`;
 }
 
 
@@ -49,7 +75,7 @@ function renderBookSite(genre, bookId) {
     console.log(`Unknown book: ${genre}`);
     return;
   }
-  renderSiteDetails(topSites, bookId, `${bookId}Top`);
+  renderBookSiteTop(topSites, bookId, `${bookId}Top`);
   renderBookDetails(genreData, bookId, `${bookId}Bottom`);
   renderNav(navSites, bookId, `${bookId}Nav`);
 }
@@ -76,55 +102,35 @@ function findBookById(targetGenre, targetBook) {
   return null;
 }
 
-function renderSiteDetails(siteData, siteId, divId) {
+function renderBookSiteTop(siteData, siteId, divId) {
   let topDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(siteData, siteId);
+
   if (siteIndex !== -1) {
     let site = siteData[siteIndex].languages[defaultLanguage];
-    let translationStatusText = getTranslationStatusText(
-      siteData[siteIndex].translationExists,
-      defaultLanguage
-    );
-    let templateHTML = `
-      <h3>${site.title}</h3>
-      <div class="siteParagraphs">
-        ${site.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
-      </div>
-      <p>${translationStatusText}</p>
-      <div class="siteNavTop">
-        ${site.links
-          .map(
-            (link) =>
-              `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`
-          )
-          .join("")}
-      </div>`;
-    topDiv.innerHTML = templateHTML;
+    let translationExists = siteData[siteIndex].translationExists
+    topDiv.innerHTML  =
+      generateBookSiteTitle(site.title) +
+      generateBookSiteParagraphs(site.paragraphs) +
+      getTranslationStatusText(translationExists,defaultLanguage) +
+      generateBookSiteNavTop(site.links);
   } else {
     console.log(`SiteId '${siteId}' not found`);
   }
 }
 
-function findSiteIndexById(siteArray, siteId) {
-  for (let i = 0; i < siteArray.length; i++) {
-    if (siteArray[i].siteId === siteId) {
-      return i;
-    }
-  }
-  return -1;
+function generateBookSiteTitle(title) {
+  return `<h3>${title}</h3>`;
 }
 
-function getTranslationStatusText(translationExists, defaultLanguage) {
-  if (translationExists === "true") {
-    return defaultLanguage === "de"
-      ? "Eine Übersetzung ins Englische ist vorhanden."
-      : "An English translation is available.";
-  } else {
-    return defaultLanguage === "de"
-      ? "Bis jetzt ist keine Übersetzung ins Englische verfügbar."
-      : "There is no English translation available yet.";
-  }
+function generateBookSiteParagraphs(paragraphs) {
+  return `<div class="siteParagraphs">${paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}</div>`;
 }
+
+function generateBookSiteNavTop(links) {
+  return `<div class="siteNavTop">${links.map((link) => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`).join("")}</div>`;
+}
+
 
 function renderBookDetails(bookData, bookId, divId) {
   let bottomDiv = document.getElementById(divId);
@@ -132,28 +138,35 @@ function renderBookDetails(bookData, bookId, divId) {
 
   if (bookIndex !== -1) {
     let book = bookData[bookIndex].languages[defaultLanguage];
-    let templateHTML = `
-      <div class="bookContainer">
-        <img class="cover" src="${book.imageURL}" alt="">
-        <div class="bookContainerText">
-          <h3>${book.title}</h3> 
-          <p>${book.paragraphs[0]}</p>
-          <p>${book.paragraphs[1]}</p>
-          <a class="amazonLink" href="${book.externalLink}">Link to Amazon</a>`;
+    let templateHTML = generateBookDetailsTemplate(book);
 
-    // Check if the book is part of a series
     if (bookData[bookIndex].seriesId) {
-      templateHTML += `<p>Part of series with ID: ${bookData[bookIndex].seriesId}</p>`;
+      let seriesBooks = bookData.filter(
+        (b) => b.seriesId === bookData[bookIndex].seriesId && b.bookId !== bookId
+      );
+      for (let seriesBook of seriesBooks) {
+        templateHTML += generateBookDetailsTemplate(seriesBook.languages[defaultLanguage]);
+      }
     }
-
-    templateHTML += `</div>
-      </div>`;
-
     bottomDiv.innerHTML = templateHTML;
   } else {
     console.log(`BookID '${bookId}' not found`);
   }
 }
+
+function generateBookDetailsTemplate(book) {
+  return `
+    <div class="bookContainer">
+      <img class="cover" src="${book.imageURL}" alt="">
+      <div class="bookContainerText">
+        <h3>${book.title}</h3> 
+        <p>${book.paragraphs[0]}</p>
+        <p>${book.paragraphs[1]}</p>
+        <a class="amazonLink" href="${book.externalLink}">Link to Amazon</a>
+      </div>
+    </div>`;
+}
+
 
 
 

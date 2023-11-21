@@ -1,5 +1,7 @@
-// function for special sites
-function renderAboutMe() {
+// function for special sites about me
+function renderAboutMe(id) {
+  currentSiteId = id;
+  currentGenre = id;
     let headline = document.getElementById('aboutMeHeadline');
     let aboutMeText = document.getElementById('aboutMeText');
     headline.innerHTML = '';
@@ -79,12 +81,18 @@ function renderAboutMe() {
     return template
   }
 
-
-  function renderNovellas(genre, divId) {
+// function for special sites novellas
+  function renderNovellas(genre) {
     currentSiteId = genre;
     currentGenre = genre;
-    renderMainSite(genre, divId);
-    renderNovellasBottom(genre);
+    let topDivId = genre+'Top';
+    let bottomDivID = genre+'Bottom';
+    let genreData = findBooksByGenre(genre);
+    let bookId = genreData[0].bookId;
+    console.log(genreData);
+    renderMainSite(genre, topDivId);
+    renderBookDetails(genreData, bookId, bottomDivID)
+    //renderNovellasBottom(genre);
   }
   
   function renderNovellasBottom(genre) {
