@@ -1,31 +1,4 @@
-let browserLanguage = navigator.language || navigator.userLanguage;
-let defaultLanguage = "en";
-let globalSiteId;
-let globalGenre;
 
-function init() {
-  checkBrowserLanguage();
-}
-
-function checkBrowserLanguage() {
-  if (browserLanguage.startsWith("de")) {
-    defaultLanguage = "de";
-    german();
-  } else {
-    defaultLanguage = "en";
-    english();
-  }
-}
-
-function german() {
-  defaultLanguage = "de";
-  renderBookSite(globalGenre, globalSiteId);
-}
-
-function english() {
-  defaultLanguage = "en";
-  renderBookSite(globalGenre, globalSiteId);
-}
 
 function renderBookSite(genre, siteId) {
   globalSiteId = siteId;
@@ -58,6 +31,7 @@ function findBookIndexById(bookArray, bookId) {
   }
   return -1;
 }
+
 function renderSiteDetails(siteData, siteId, divId) {
   let topDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(siteData, siteId);
