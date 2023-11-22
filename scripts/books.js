@@ -11,7 +11,7 @@ let allBooks = [
       "de": 
         {
           "title": "Die Masken von Florenz",
-          "subgenre": "",
+          "seriesTitle": "",
           "imageURL": "/assets/img/covers/die-masken-von-florenz.jpg",
           "externalLink": "https://mybook.to/DieMaskenvonFlorenz",
           "paragraphs": 
@@ -23,7 +23,7 @@ let allBooks = [
       "en":
         {
           "title": "The Masks of Florence",
-          "subgenre": "",
+          "seriesTitle": "",
           "imageURL": "/assets/img/covers/the-masks-of-florence.jpg",
           "externalLink": "https://mybook.to/MasksOfFlorence",
           "paragraphs":  [
@@ -43,7 +43,7 @@ let allBooks = [
       "de": 
         {
           "title": "Alsterdiamanten",
-          "subgenre": "",
+          "seriesTitle": "",
           "imageURL": "/assets/img/covers/alsterdiamanten.jpg",
           "externalLink": "https://mybook.to/Alsterdiamanten",
           "paragraphs": 
@@ -55,7 +55,7 @@ let allBooks = [
       "en":
         {
           "title": "Alsterdiamonds",
-          "subgenre": "",
+          "seriesTitle": "",
           "imageURL": "/assets/img/covers/alsterdiamonds.jpg",
           "externalLink": "https://mybook.to/AlsterDiamonds",
           "paragraphs":  [
@@ -70,12 +70,12 @@ let allBooks = [
     "bookId": "odyssee",
     "internalLink": "/booksites/odyssee.html",
     "seriesId": "", 
-    "translationExists": "false",
+    "translationExists": "planned",
     "languages": {
       "de": 
         {
           "title": "Irrfahrt ins Gelobte Land",
-          "subgenre": "",
+          "seriesTitle": "",
           "imageURL": "/assets/img/covers/irrfahrt.jpg",
           "externalLink": "https://mybook.to/IrrfahrtInsGelobteLand",
           "paragraphs": 
@@ -87,7 +87,7 @@ let allBooks = [
       "en":
         {
           "title": "Odyssee to the Promised Land",
-          "subgenre": "",
+          "seriesTitle": "",
           "imageURL": "/assets/img/covers/irrfahrt.jpg",
           "externalLink": "https://mybook.to/IrrfahrtInsGelobteLand",
           "paragraphs":  [
@@ -106,7 +106,7 @@ let allBooks = [
       "de": 
         {
           "title": "Der Geist in Brand",
-          "subgenre": "",
+          "seriesTitle": "",
           "imageURL": "/assets/img/covers/der-geist-in-brand.jpg",
           "externalLink": "https://mybook.to/DerGeistInBrand",
           "paragraphs": 
@@ -119,7 +119,7 @@ let allBooks = [
       "en":
         {
           "title": "The Mind on Fire",
-          "subgenre": "",
+          "seriesTitle": "",
           "imageURL": "/assets/img/covers/der-geist-in-brand.jpg",
           "externalLink": "https://mybook.to/DerGeistInBrand",
           "paragraphs":  [
@@ -135,37 +135,114 @@ let allBooks = [
     "genre": "fantasy",
     "books": [
       {
-        "bookId": "",
-        "internalLink": "",
-        "seriesId": "", 
-        "translationExists": "true",
+        "bookId": "demonRide",
+        "internalLink": "/booksites/children-of-angels.html",
+        "seriesId": "children", 
+        "translationExists": "progress",
         "languages": {
           "de": 
             {
-              "title": "",
-              "subgenre": "",
-              "imageURL": "/",
-              "externalLink": "",
+              "title": "Dämonenjagd",
+              "seriesTitle": "Die Kinder der Engel",
+              "imageURL": "/assets/img/covers/daemonenritt.jpg",
+              "externalLink": "https://mybook.to/Daemonenritt",
               "paragraphs": 
               [
-                "",
-                ""
-    ],
+                "Wer hätte gedacht, dass es Dämonen wirklich gibt? Und nicht nur sie – auch Dämonenjäger?",
+                "Daniel begegnet gleich dreien von ihnen, als er sich auf der Suche nach seinem Bruder mit einem Dämon einlässt. Mit den Jägern, so hofft er, hat er eine größere Chance, Zach aufzuspüren.",
+                "Aber diese Entscheidung zieht ihn zunehmend tiefer in einen alten Konflikt zwischen den verfeindeten Spezies. Was ist geschehen, dass die Dämonen ihre jahrtausendalte Deckung überhaupt aufgaben? Welche Rolle hat dabei die Jägerin Miriam gespielt, die von ihren Mitstreitern mit extremer Verachtung behandelt wird – und welche Rolle hatte ihr einstiger Partner Flo?",
+                "Die Suche nach Zach führt Daniel und die Jäger nicht nur in die Vergangenheit, sondern quer über zwei Kontinente – und an ihrem Ende steht etwas ganz anderes, als sie alle erwartet hatten …"
+              ],
             },
           "en":
             {
-              "title": "",
-              "subgenre": "",
-              "imageURL": "/",
-              "externalLink": "",
+              "title": "Demon Ride",
+              "seriesTitle": "Children of Angels",
+              "imageURL": "/assets/img/covers/demon-ride.jpg",
+              "externalLink": "https://mybook.to/DemonRide",
               "paragraphs":  [
-                "",
-                "",
-                ""
+                "Books are currently in translation",
+                "Who would have thought that demons really exist? And not just them - demon hunters too?",
+                "Daniel encounters three of them when he gets involved with a demon while searching for his brother. With the hunters, he hopes he has a better chance of tracking down Zach.",
+                "But this decision draws him deeper and deeper into an old conflict between the opposing species. What happened to make the demons abandon their millennia-old cover in the first place? What role did the hunter Miriam play, who is treated with extreme contempt by her fellow hunters - and what role did her former partner Flo play?",
+                "The search for Zach leads Daniel and the hunters not only into the past, but across two continents - and ends with something completely different from what they all expected ..."
                 ]            
             }
         }
-      },{
+      },
+      {
+        "bookId": "demonLeap",
+        "internalLink": "/booksites/children-of-angels.html",
+        "seriesId": "children", 
+        "translationExists": "progress",
+        "languages": {
+          "de": 
+            {
+              "title": "Dämonensprung",
+              "seriesTitle": "Die Kinder der Engel",
+              "imageURL": "/assets/img/covers/daemonensprung.jpg",
+              "externalLink": "https://mybook.to/Daemonensprung",
+              "paragraphs": 
+              [
+                "Die Reise der Kinder der Engel geht weiter…",
+                "Flo, Miriam und Daniel haben es getan – sie haben einen der verlorenen Splitter in das Herz der Engel eingesetzt, wie die Prophezeiungen es besagten. Aber dies hat ungeahnte Konsequenzen, und zwar vor allem für Daniel, der damit als erster Mensch der ungebremsten Kraft der Wandler ausgesetzt war.",
+                "Was wird aus einem Menschen, der auf einmal Energie manipulieren kann? Wie reagiert der Rat der Jäger auf die Rebellion seiner Verheißenen? Und was wollen die Dämonen? Oder sollte man sie besser Schattenwandler nennen?",
+                "Flo, Miriam und Daniel fangen zunehmend an, alte Legenden herauszufordern …"
+               ],
+            },
+          "en":
+            {
+              "title": "Demon Leap",
+              "seriesTitle": "Children of Angels",
+              "imageURL": "/assets/img/covers/demon-leap.jpg",
+              "externalLink": "https://mybook.to/Demonleap",
+              "paragraphs":  [
+                "Books are currently in translation",
+                "The journey of the children of angels continues...",
+                "Flo, Miriam and Daniel did it - they inserted one of the lost shards into the Heart of the Angels, as the prophecies said they would. But this has unforeseen consequences, especially for Daniel, who is the first human to be exposed to the unrestrained power of the channelers.",
+                "What becomes of a human who can suddenly manipulate energy? How does the Council of Hunters react to the rebellion of their promised ones? And what do the demons want? Or should they better be called shadow channelers?",
+                "Flo, Miriam, and Daniel increasingly start to challenge old legends..."
+                ]            
+            }
+        }
+      },
+      {
+        "bookId": "demonDream",
+        "internalLink": "/booksites/children-of-angels.html",
+        "seriesId": "children", 
+        "translationExists": "progress",
+        "languages": {
+          "de": 
+            {
+              "title": "Dämonentraum",
+              "seriesTitle": "Die Kinder der Engel",
+              "imageURL": "/assets/img/covers/daemonentraum.jpg",
+              "externalLink": "https://mybook.to/Daemonentraum",
+              "paragraphs": 
+              [
+                "Die Reise der Kinder der Engel erreicht ihren Höhepunkt …",
+                "Flo, Miriam und Daniel tun ihr Bestes, die Welt vor einem Krieg der Wandler zu bewahren, den diese vermutlich nicht überstehen würde. Doch plötzlich taucht eine neue Mitspielerin auf und verlangt ihre Unterstützung.",
+                "Wer ist diese Bell, und warum ist sie gekommen? Ist es überhaupt möglich, den Krieg aufzuhalten? Und falls nicht – gelingt es, zumindest die Welt der Menschen vor der Vernichtung zu schützen?",
+                "Flo, Miriam und Daniel sehen sich immer mehr genötigt, am Ende doch noch das ultimative Opfer bringen zu müssen …"
+    ],
+            },
+          "en":
+            {
+              "title": "Demon Dream",
+              "seriesTitle": "Children of Angels",
+              "imageURL": "/assets/img/covers/demon dream.jpg",
+              "externalLink": "https://mybook.to/Demondream",
+              "paragraphs":  [
+                "Books are currently in translation",
+                "The journey of the children of angels reaches its climax...",
+                "Flo, Miriam, and Daniel try their best to save the world from a war of channelers, which it would probably not survive. But suddenly a new player appears and demands their support.",
+                "Who is this Bell, and why has she come? Is it even possible to stop the war? And if not - is it possible to at least protect the human world from annihilation?",
+                "Flo, Miriam, and Daniel feel more and more compelled to make the ultimate sacrifice..."
+                ]            
+            }
+        }
+      },
+      {
         "bookId": "",
         "seriesId": "", 
         "internalLink": "",
@@ -174,7 +251,7 @@ let allBooks = [
           "de": 
             {
               "title": "",
-              "subgenre": "",
+              "seriesTitle": "",
               "imageURL": "/",
               "externalLink": "",
               "paragraphs": 
@@ -186,7 +263,7 @@ let allBooks = [
           "en":
             {
               "title": "",
-              "subgenre": "",
+              "seriesTitle": "",
               "imageURL": "/",
               "externalLink": "",
               "paragraphs":  [
@@ -206,7 +283,7 @@ let allBooks = [
           "de": 
             {
               "title": "",
-              "subgenre": "",
+              "seriesTitle": "",
               "imageURL": "/",
               "externalLink": "",
               "paragraphs": 
@@ -218,7 +295,7 @@ let allBooks = [
           "en":
             {
               "title": "",
-              "subgenre": "",
+              "seriesTitle": "",
               "imageURL": "/",
               "externalLink": "",
               "paragraphs":  [
@@ -243,7 +320,7 @@ let allBooks = [
           "de": 
             {
               "title": "LebensAbschnitt - Eine Reise durch die Zeit",
-              "subgenre": "",
+              "seriesTitle": "",
               "imageURL": "/assets/img/covers/lebensabschnitt.jpg",
               "externalLink": "https://amzn.eu/d/4cYoev1",
               "paragraphs": 
@@ -255,7 +332,7 @@ let allBooks = [
           "en":
             {
               "title": "LifeStages - A Journey Through Time",
-              "subgenre": "",
+              "seriesTitle": "",
               "imageURL": "/assets/img/covers/lifestages.jpg",
               "externalLink": "https://mybook.to/LifeStages  ",
               "paragraphs":  [
@@ -274,7 +351,7 @@ let allBooks = [
           "de": 
             {
               "title": "Tanz mit dem Wind – Eine Kurzgeschichte",
-              "subgenre": "",
+              "seriesTitle": "",
               "imageURL": "/assets/img/covers/tanz-mit-dem-wind.jpg",
               "externalLink": "https://amzn.eu/d/2V45VoE",
               "paragraphs": 
@@ -286,7 +363,7 @@ let allBooks = [
           "en":
             {
               "title": "",
-              "subgenre": "",
+              "seriesTitle": "",
               "imageURL": "/assets/img/covers/dance-the-wind.jpg",
               "externalLink": "https://mybook.to/DanceTheWind  ",
               "paragraphs":  [

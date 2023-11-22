@@ -68,7 +68,7 @@ let topSites = [
   },
   {
     siteId: "odyssee",
-    translationExists: "false",
+    translationExists: "planned",
     languages: {
       de: {
         title:
@@ -121,6 +121,99 @@ let topSites = [
         title: "The Mind on Fire - A Krautjunker between Rococo and Revolution",
         paragraphs: [
           "Twelve years of writing and spanning almost two decades.",
+        ],
+        links: [
+          { text: "Background info", url: "/" },
+          { text: "Bonus chapter", url: "/" },
+          { text: "Personage", url: "/" },
+          { text: "Sources", url: "/" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "children",
+    translationExists: "progress",
+    languages: {
+      de: {
+        title:
+          "Die Kinder der Engel - eine Urban Fantasy Trilogie",
+        paragraphs: [
+          "Eigentlich wollte ich nach den Sängern nie wieder Fantasy schreiben. Ich wollte nie wieder eine Welt erfinden, sondern mich lieber auf historische Werke stürzen. Aber dann begegnete mir Flo - und tja, was soll ich sagen ... Hier sind sie: meine Dämonenjäger!",
+        ],
+        links: [
+          { text: "HintergrundInfo", url: "/" },
+          { text: "Bonuskapitel", url: "/" },
+          { text: "Personenverzeichnis", url: "/" },
+          { text: "Quellen", url: "/" },
+        ],
+      },
+      en: {
+        title: "The Children of Angels - an Urban Fantasy Trilogy",
+        paragraphs: [
+          "Actually, I never wanted to write fantasy again after The Singers. I never wanted to invent a world again, but would rather focus on historical works. But then I met Flo - and well, what can I say ... Here they are: my demon hunters!",
+        ],
+        links: [
+          { text: "Background info", url: "/" },
+          { text: "Bonus chapter", url: "/" },
+          { text: "Personage", url: "/" },
+          { text: "Sources", url: "/" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "elves",
+    translationExists: "true",
+    languages: {
+      de: {
+        title:
+          "Von Elfen und Wölfen - eine Urban Fantasy Trilogie",
+        paragraphs: [
+          "",
+        ],
+        links: [
+          { text: "HintergrundInfo", url: "/" },
+          { text: "Bonuskapitel", url: "/" },
+          { text: "Personenverzeichnis", url: "/" },
+          { text: "Quellen", url: "/" },
+        ],
+      },
+      en: {
+        title: "Of Elves and Wolves - an Urban Fantasy Story in three arcs and nine books",
+        paragraphs: [
+          "",
+        ],
+        links: [
+          { text: "Background info", url: "/" },
+          { text: "Bonus chapter", url: "/" },
+          { text: "Personage", url: "/" },
+          { text: "Sources", url: "/" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "bards",
+    translationExists: "false",
+    languages: {
+      de: {
+        title:
+          "Die Sänger von Thurán - eine klassische Fantasytrilogie",
+        paragraphs: [
+          "",
+        ],
+        links: [
+          { text: "HintergrundInfo", url: "/" },
+          { text: "Bonuskapitel", url: "/" },
+          { text: "Personenverzeichnis", url: "/" },
+          { text: "Quellen", url: "/" },
+        ],
+      },
+      en: {
+        title: "The Bards of Thurán - a Classic Fantasy Trilogy",
+        paragraphs: [
+          "",
         ],
         links: [
           { text: "Background info", url: "/" },
@@ -273,6 +366,90 @@ let navSites = [
           {
             text: "Back to The Mind on Fire",
             url: "/booksites/mind-on-fire.html",
+          },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "children",
+    languages: {
+      de: {
+        links: [
+          { text: "Zurück zur Homepage", url: "/index.html" },
+          {
+            text: "Zurück zu Fantasy",
+            url: "/fantasy.html",
+          },
+          {
+            text: "Zurück zu Die Kinder der Engel",
+            url: "/booksites/children-of-angels.html",
+          },
+        ],
+      },
+      en: {
+        links: [
+          { text: "Back to Homepage", url: "/index.html" },
+          { text: "Back to Fantasy", url: "/fantasy.html" },
+          {
+            text: "Back to The Children of Angels",
+            url: "/booksites/children-of-angels.html",
+          },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "elves",
+    languages: {
+      de: {
+        links: [
+          { text: "Zurück zur Homepage", url: "/index.html" },
+          {
+            text: "Zurück zu Fantasy",
+            url: "/fantasy.html",
+          },
+          {
+            text: "Zurück zu Von Elfen und Wölfen",
+            url: "/booksites/of-elves-and-wolves.html",
+          },
+        ],
+      },
+      en: {
+        links: [
+          { text: "Back to Homepage", url: "/index.html" },
+          { text: "Back to Fantasy", url: "/fantasy.html" },
+          {
+            text: "Back to The Children of Angels",
+            url: "/booksites/of-elves-and-wolves.html",
+          },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "elves",
+    languages: {
+      de: {
+        links: [
+          { text: "Zurück zur Homepage", url: "/index.html" },
+          {
+            text: "Zurück zu Fantasy",
+            url: "/fantasy.html",
+          },
+          {
+            text: "Zurück zu Die Sänger von Thurán",
+            url: "/booksites/bards-of-thuran.html",
+          },
+        ],
+      },
+      en: {
+        links: [
+          { text: "Back to Homepage", url: "/index.html" },
+          { text: "Back to Fantasy", url: "/fantasy.html" },
+          {
+            text: "Back to The Bards of Thurán",
+            url: "/booksites/bards-of-thuran.html",
           },
         ],
       },

@@ -14,7 +14,16 @@ function getTranslationStatusText(translationExists, defaultLanguage) {
     return defaultLanguage === "de"
      ? '<p>Eine Übersetzung ins Englische ist vorhanden.</p>'
     :  '<p>An English translation is available.</p>'
-     } else {
+     } else if (translationExists === "progress") {
+      return defaultLanguage === "de"
+      ? '<p>Eine Übersetzung ins Englische ist in Arbeit.</p>'
+      :  '<p>A translation into English is in progress.</p>'
+     }  else if (translationExists === "planned") {
+      return defaultLanguage === "de"
+      ? '<p>Eine Übersetzung ins Englische ist geplant.</p>'
+      :  '<p>A translation into English is planned.</p>'
+     }
+     else {
     return defaultLanguage === "de"
       ? "<p>Bis jetzt ist keine Übersetzung ins Englische verfügbar.</p>"
       : "<p>There is no English translation available yet.</p>";
@@ -63,25 +72,28 @@ function generateSection(section) {
 
 
 //Functions for books sites
-function renderBookSite(genre, bookId) {
-  console.log(genre, bookId)
-  currentSiteId = bookId;
+function renderBookSite(genre, id, seriesExists) {
+  console.log(genre, id, seriesExists)
+  currentSiteId = id;
   currentGenre = genre;
-  let bookData = findBookById(genre, bookId);
-  let genreData = findBooksByGenre(genre);
-  console.log(bookData);
-  console.log(genreData);
-  if (!bookData) {
-    console.log(`Unknown book: ${genre}`);
+  if (seriesExists == true) {
+    data = findBooksBySeries(genre, id);
+    bookId = data[0].bookId;
+  } else {
+    data = findBooksByGenre(genre);
+    bookId = id;
+  }
+  console.log(data);
+  if (!data) {
+    console.log(`Unknown book: ${id}`);
     return;
   }
-  renderBookSiteTop(topSites, bookId, `${bookId}Top`);
-  renderBookDetails(genreData, bookId, `${bookId}Bottom`);
-  renderNav(navSites, bookId, `${bookId}Nav`);
+  renderBookSiteTop(topSites, id, `${id}Top`);
+  renderBookDetails(data, bookId, `${id}Bottom`);
+  renderNav(navSites, id, `${id}Nav`);
 }
 
 function findBooksByGenre(targetGenre) {
-
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].genre === targetGenre) {
       return allBooks[i].books;
@@ -89,6 +101,23 @@ function findBooksByGenre(targetGenre) {
   }
   return null;
 }
+
+function findBooksBySeries(targetGenre, targetSeries) {
+  let seriesArray = [];
+  for (let i = 0; i < allBooks.length; i++) {
+    if (allBooks[i].genre === targetGenre) {
+      for (let j = 0; j < allBooks[i].books.length; j++) {
+        if (allBooks[i].books[j].seriesId === targetSeries) {
+          let seriesBook = allBooks[i].books[j];
+          seriesArray.push(seriesBook);
+        }
+      }
+    }
+  }
+  console.log(seriesArray);
+  return seriesArray.length > 0 ? seriesArray : null;
+}
+
 
 function findBookById(targetGenre, targetBook) {
   for (let i = 0; i < allBooks.length; i++) {
@@ -155,17 +184,19 @@ function renderBookDetails(bookData, bookId, divId) {
 }
 
 function generateBookDetailsTemplate(book) {
+  let paragraphsHTML = book.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('');
+
   return `
     <div class="bookContainer">
       <img class="cover" src="${book.imageURL}" alt="">
       <div class="bookContainerText">
         <h3>${book.title}</h3> 
-        <p>${book.paragraphs[0]}</p>
-        <p>${book.paragraphs[1]}</p>
+        ${paragraphsHTML}
         <a class="amazonLink" href="${book.externalLink}">Link to Amazon</a>
       </div>
     </div>`;
 }
+
 
 
 

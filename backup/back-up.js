@@ -239,8 +239,29 @@ function renderBookDetails2(bookData, bookId, divId) {
     console.log(`BookID '${bookId}' not found`);
   }
 }
+  
+function renderSeries(genre, series) {
+  currentSiteId = series;
+  currentGenre = genre;
+  let seriesData = findBooksBySeries(genre, series);
+  console.log(seriesData);
+  let bookId = seriesData[0].bookId;
+  renderBookSite(genre, series);
+}
 
 
+function generateBookDetailsTemplate2(book) {
+  return `
+    <div class="bookContainer">
+      <img class="cover" src="${book.imageURL}" alt="">
+      <div class="bookContainerText">
+        <h3>${book.title}</h3> 
+        <p>${book.paragraphs[0]}</p>
+        <p>${book.paragraphs[1]}</p>
+        <a class="amazonLink" href="${book.externalLink}">Link to Amazon</a>
+      </div>
+    </div>`;
+}
 
 
 function renderBookDetails3(bookData, bookId, divId) {

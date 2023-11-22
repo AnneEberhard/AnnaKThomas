@@ -82,18 +82,20 @@ function renderAboutMe(id) {
   }
 
 // function for special sites novellas
-  function renderSeries(genre) {
+  function renderNovellas(genre) {
     currentSiteId = genre;
     currentGenre = genre;
     let topDivId = genre+'Top';
     let bottomDivID = genre+'Bottom';
     let genreData = findBooksByGenre(genre);
+    console.log(genreData);
     let bookId = genreData[0].bookId;
     console.log(genreData);
     renderMainSite(genre, topDivId);
     renderBookDetails(genreData, bookId, bottomDivID)
  
   }
+
   
 
   //function for navMenu on home Page

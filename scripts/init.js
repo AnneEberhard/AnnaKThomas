@@ -89,12 +89,13 @@ function renderContentBasedOnPage() {
         { path: "/index.html", function: renderHomePage, params: [] },
         { path: "/fantasy.html", function: renderMainSite, params: ['fantasy'] },
         { path: "/historical.html", function: renderMainSite, params: ['historical'] },
-        { path: "/novellas.html", function: renderSeries, params: ['novellas'] },
+        { path: "/novellas.html", function: renderNovellas, params: ['novellas'] },
         { path: "/about-me.html", function: renderAboutMe, params: ['aboutMe'] },
-        { path: "/booksites/odyssee.html", function: renderBookSite, params: ['historical', 'odyssee'] },
-        { path: "/booksites/mind-on-fire.html", function: renderBookSite, params: ['historical', 'mind'] },
-        { path: "/booksites/alster-diamonds.html", function: renderBookSite, params: ['historical', 'alster'] },
-        { path: "/booksites/masks-of-florence.html", function: renderBookSite, params: ['historical', 'masks'] }
+        { path: "/booksites/odyssee.html", function: renderBookSite, params: ['historical', 'odyssee', false] },
+        { path: "/booksites/mind-on-fire.html", function: renderBookSite, params: ['historical', 'mind', false] },
+        { path: "/booksites/alster-diamonds.html", function: renderBookSite, params: ['historical', 'alster', false] },
+        { path: "/booksites/masks-of-florence.html", function: renderBookSite, params: ['historical', 'masks', false] },
+        { path: "/booksites/children-of-angels.html", function: renderBookSite, params: ['fantasy','children', true] }
       ];
     const path = window.location.pathname;
     const matchingFunction = pageFunctions.find(entry => path.includes(entry.path));
