@@ -189,7 +189,7 @@ function renderPersonageTop(genre, siteId) {
     let site = personSitesHeader[siteIndex].languages[defaultLanguage];
     topDiv.innerHTML += `<h2>${site.header}</h2>`;
     for (let subHeader of site.subHeaders) {
-      topDiv.innerHTML += `<h3><a href="${subHeader.subHeaderLink}">${subHeader.subHeaderText}</a></h3>`;
+      topDiv.innerHTML += `<h3><a href="#${subHeader.subHeaderLink}">${subHeader.subHeaderText}</a></h3>`;
     }
     for (let paragraph of site.paragraphs) {
       topDiv.innerHTML += `<p>${paragraph}</p>`;
@@ -216,8 +216,36 @@ return templateHTML;
 }
 
 function generatePersonTableTemplate(siteId, personGroup, defaultLanguage) {
+  let subHeaderId = siteId + personGroup.groupId; // unique ID for each header even if naming in JSON is similar
+  let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
+  
+  // Die Tabelle und die erste Zeile außerhalb der Schleife platzieren
+  templateHTML += `
+    <table class="personageTable">
+      <tr>
+        <th class="personageName">Name</th>
+        <th>${defaultLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
+      </tr>`;
+
+  for (let member of personGroup.members) {
+    templateHTML += `
+      <tr>
+        <td class="personageName">${member.name}</td>
+        <td>${member[defaultLanguage]}</td>
+      </tr>`;
+  }
+
+  // Die Tabelle schließen
+  templateHTML += `</table>`;
+
+  return templateHTML;
+}
+
+
+
+function generatePersonTableTemplate2(siteId, personGroup, defaultLanguage) {
   let subHeaderId = siteId + personGroup.groupId; //unique ID for each header even if naming in JSON is similiar
-  let templateHTML = `<h3 id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
+  let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
   for (let member of personGroup.members) {
     templateHTML += `
       <table class="personageTable">

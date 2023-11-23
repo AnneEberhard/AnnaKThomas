@@ -181,6 +181,10 @@ tr {
   vertical-align: text-top;
 }
 
+.personGroup {
+  padding-top: 36px;
+}
+
 /*scroll*/
 ::-webkit-scrollbar {
   width: 12px; /* Breite des Scrollbalkens */
