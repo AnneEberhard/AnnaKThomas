@@ -97,6 +97,11 @@ function renderContentBasedOnPage() {
         { path: "/booksites/bards-of-thuran.html", function: renderBookSite, params: ['fantasy','bards', true] },
         { path: "/subsitesElves/elves-persons.html", function: renderPersonage, params: ['fantasy','elves', 'elvesPersons', personsElves] },
         { path: "/subsitesAlster/alster-persons.html", function: renderPersonage, params: ['fantasy','alster', 'alsterPersons', personsAlster] },
+        { path: "/subsitesMind/mind-persons.html", function: renderPersonage, params: ['fantasy','mind', 'mindPersons', personsMind] },
+        { path: "/subsitesOdyssee/odyssee-persons.html", function: renderPersonage, params: ['fantasy','odyssee', 'odysseePersons', personsOdyssee] },
+        { path: "/subsitesMasks/masks-persons.html", function: renderPersonage, params: ['fantasy','masks', 'masksPersons', personsMasks] },
+        { path: "/subsitesBards/bards-persons.html", function: renderPersonage, params: ['fantasy','bards', 'bardsPersons', personsBards] },
+        { path: "/subsitesChildren/children-persons.html", function: renderPersonage, params: ['fantasy','children', 'childrenPersons', personsChildren] },
 
       ];
     const path = window.location.pathname;
