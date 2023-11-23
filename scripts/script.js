@@ -1,5 +1,9 @@
 //functions used by several sections
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function findSiteIndexById(siteArray, siteId) {
   for (let i = 0; i < siteArray.length; i++) {
     if (siteArray[i].siteId === siteId) {
@@ -27,6 +31,25 @@ function getTranslationStatusText(translationExists, defaultLanguage) {
     return defaultLanguage === "de"
       ? "<p>Bis jetzt ist keine Übersetzung ins Englische verfügbar.</p>"
       : "<p>There is no English translation available yet.</p>";
+  }
+}
+
+function renderNav(navData, siteId, divId) {
+  let navDiv = document.getElementById(divId);
+  let siteIndex = findSiteIndexById(navData, siteId);
+
+  if (siteIndex !== -1) {
+    let site = navData[siteIndex].languages[defaultLanguage];
+    let templateHTML = `
+      <div class="siteNav">
+        <h3>Navigation</h3>
+        ${site.links
+          .map((link) => `<a href="${link.url}">${link.text}</a>`)
+          .join("")}
+      </div>`;
+    navDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`SiteId '${siteId}' not found in navigation data`);
   }
 }
 
@@ -80,7 +103,6 @@ function renderBookSite(genre, id, seriesExists) {
     data = findBooksBySeries(genre, id);
     bookId = data[0].bookId;
   } else {
-    //data = findBooksByGenre(genre);
     data = findBookById(genre, id);
     bookId = id;
   }
@@ -195,7 +217,6 @@ function renderBookDetails(bookData, divId) {
     bottomDiv.innerHTML = templateHTML;
 }
 
-
 function generateBookDetailsTemplate(book) {
   console.log('generating data:',book);
   console.log(book.title);
@@ -207,11 +228,10 @@ function generateBookDetailsTemplate(book) {
       <div class="bookContainerText">
         <h3>${book.title}</h3> 
         ${paragraphsHTML}
-        <a class="amazonLink" href="${book.externalLink}">Link to Amazon</a>
+        <a target="_blank" class="amazonLink" href="${book.externalLink}">Link to Amazon</a>
       </div>
     </div>`;
 }
-
 
 function findBookIndexById(bookArray, bookId) {
   for (let i = 0; i < bookArray.length; i++) {
@@ -222,25 +242,5 @@ function findBookIndexById(bookArray, bookId) {
   return -1;
 }
 
-function renderNav(navData, siteId, divId) {
-  let navDiv = document.getElementById(divId);
-  let siteIndex = findSiteIndexById(navData, siteId);
 
-  if (siteIndex !== -1) {
-    let site = navData[siteIndex].languages[defaultLanguage];
-    let templateHTML = `
-      <div class="siteNav">
-        <h3>Navigation</h3>
-        ${site.links
-          .map((link) => `<a href="${link.url}">${link.text}</a>`)
-          .join("")}
-      </div>`;
-    navDiv.innerHTML = templateHTML;
-  } else {
-    console.log(`SiteId '${siteId}' not found in navigation data`);
-  }
-}
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}

@@ -306,3 +306,24 @@ function renderBookDetails3(bookData, bookId, divId) {
     console.log(`BookID '${bookId}' not found`);
   }
 }
+
+
+
+function renderContentBasedOnPage2() {
+  const path = window.location.pathname;
+  if (path === "/index.html") {
+      renderMainSite('home', 'homeTop');
+  } else if (path === "/fantasy.html") {
+      renderMainSite('fantasy', 'fantasyTop')
+  } else if (path === "/historical.html" ) {
+      renderMainSite('historical', 'historicalTop')
+  } else if (path === "/novellas.html") {
+      renderMainSite('novellas', 'novellasTop');
+      renderNovellas(); 
+  } else if (path === "/about-me.html") {
+      renderAboutMe();
+  } else if (path === "/booksites/odyssee.html" || path === "/booksites/mind-on-fire.html" || path === "/booksites/alster-diamonds.html" || path === "/booksites/masks-of-florence.html") {
+      
+  renderBookSite(globalGenre, globalSiteId);
+}
+}

@@ -2,32 +2,32 @@
 function renderAboutMe(id) {
   currentSiteId = id;
   currentGenre = id;
-    let headline = document.getElementById('aboutMeHeadline');
-    let aboutMeText = document.getElementById('aboutMeText');
-    headline.innerHTML = '';
-    aboutMeText.innerHTML = '';
-    if (defaultLanguage == 'de') {
-      headline.innerHTML = templateAboutMeHeadGerman();
-      aboutMeText.innerHTML = templateAboutMeTextGerman();
-    } else {
-      headline.innerHTML = templateAboutMeHeadEnglish();
-      aboutMeText.innerHTML = templateAboutMeTextEnglish();
-    }
-    renderNav(navSites, 'general', `aboutMeNav`);
+  let headline = document.getElementById("aboutMeHeadline");
+  let aboutMeText = document.getElementById("aboutMeText");
+  headline.innerHTML = "";
+  aboutMeText.innerHTML = "";
+  if (defaultLanguage == "de") {
+    headline.innerHTML = templateAboutMeHeadGerman();
+    aboutMeText.innerHTML = templateAboutMeTextGerman();
+  } else {
+    headline.innerHTML = templateAboutMeHeadEnglish();
+    aboutMeText.innerHTML = templateAboutMeTextEnglish();
   }
+  renderNav(navSites, "general", `aboutMeNav`);
+}
 
-  function templateAboutMeHeadGerman() {
-    let template = `<h2>Was gibt es über mich zu sagen ...</h2>`;
-    return template
-  }
+function templateAboutMeHeadGerman() {
+  let template = `<h2>Was gibt es über mich zu sagen ...</h2>`;
+  return template;
+}
 
-  function templateAboutMeHeadEnglish() {
-    let template = `<h2>What is there to say about me ...</h2>`;
-    return template
-  }
+function templateAboutMeHeadEnglish() {
+  let template = `<h2>What is there to say about me ...</h2>`;
+  return template;
+}
 
-  function templateAboutMeTextGerman() {
-    let template = /*html*/ `<p>
+function templateAboutMeTextGerman() {
+  let template = /*html*/ `<p>
     Es gab keine Zeit in meinem Leben, in der ich mir nicht Geschichten
     ausgedacht habe. So richtig zu schreiben begann ich mit zwölf, als
     der erste Computer Einzug in unsere Familie hielt und meine Finger
@@ -50,11 +50,11 @@ function renderAboutMe(id) {
   <p>Über lange Jahre schrieb ich nur für mich selbst, schrieb, wie andere Leute lesen, schrieb und gönnte meinen Geschichten eine eigenständige Existenz. Ich war geizig damit, rückte so gut wie nie etwas heraus, und erst die Sänger änderten meine Einstellung: Ich hatte zum ersten Mal eine Geschichte, die ich teilen wollte.</p>
   <p>In meinem „anderen“ Leben habe ich eine naturwissenschaftliche Karriere gemacht, brauche Analytik und Logik und kann der Fantasie nur einen kleinen Platz einräumen. In meinem „anderen“ Leben würden die wenigsten Menschen verstehen, was meine Geschichten mir bedeuten.</p>
   <p>Und deshalb, lieber Leser, verzeih, wenn es nur wenige Informationen über „die“ Anna K. Thomas gibt. Glaube mir einfach, wenn ich sage, ich bin analytisch und emotional, logisch und empathisch, ganz verrückt und ganz normal, schreibe für mein Leben gerne, und lese, lese, lese…</p>`;
-  return template
-  }
+  return template;
+}
 
-  function templateAboutMeTextEnglish() {
-    let template = `
+function templateAboutMeTextEnglish() {
+  let template = `
     <p>
     There was never a time in my life when I didn't make up stories.
     made up stories. I really started writing when I was twelve, when the first computer
@@ -78,107 +78,95 @@ function renderAboutMe(id) {
   <p>In my "other" life, I have made a career in science, need analytics and logic and can only give a small place to fantasy. In my "other" life, very few people would understand what my stories mean to me.</p>
   <p>And so, dear reader, forgive me if there is little information about "the" Anna K. Thomas. Just believe me when I say that I am analytical and emotional, logical and empathetic, completely crazy and completely normal, love to write for a living, and read, read, read...</p>
   `;
-    return template
-  }
+  return template;
+}
 
 // function for special sites novellas
-  function renderNovellas(genre) {
-    currentSiteId = genre;
-    currentGenre = genre;
-    let topDivId = genre+'Top';
-    let bottomDivID = genre+'Bottom';
-    let genreData = findBooksByGenre(genre);
-    console.log(genreData);
-    let bookId = genreData[0].bookId;
-    console.log(genreData);
-    renderMainSite(genre, topDivId);
-    renderBookDetails(genreData, bottomDivID)
- 
-  }
+function renderNovellas(genre) {
+  currentSiteId = genre;
+  currentGenre = genre;
+  let topDivId = genre + "Top";
+  let bottomDivID = genre + "Bottom";
+  let genreData = findBooksByGenre(genre);
+  console.log(genreData);
+  let bookId = genreData[0].bookId;
+  console.log(genreData);
+  renderMainSite(genre, topDivId);
+  renderBookDetails(genreData, bottomDivID);
+}
 
-  
-
-  //function for navMenu on home Page
+//function for navMenu on home Page
 
 function renderHomePage() {
-  renderMainSite('home');
+  renderMainSite("home");
   renderHomeOverview();
 }
 
-  function renderHomeOverview() {
-  let homeBottom = document.getElementById('homeBottom');
+function renderHomeOverview() {
+  let homeBottom = document.getElementById("homeBottom");
   homeBottom.innerHTML = templateOverview();
   fillOverviewColumns();
-  }
+}
 
-  function templateOverview() {
-    let columns = '';
-    for (let i = 0; i < overview.length; i++) {
-      if (defaultLanguage == 'de') {
-        columnHeader = overview[i].de;
+function templateOverview() {
+  let columns = "";
+  for (let i = 0; i < overview.length; i++) {
+    if (defaultLanguage == "de") {
+      columnHeader = overview[i].de;
+    } else {
+      columnHeader = overview[i].en;
+    }
+    let genreLink = overview[i].genreLink;
+    columns += `<div class="column" id="homeBottomColumn${i}">
+      <a class="columnHeader" href="${genreLink}" >${columnHeader}</a> </div>`;
+  }
+  return columns;
+}
+
+function fillOverviewColumns() {
+  for (let i = 0; i < overview.length; i++) {
+    targetdiv = document.getElementById(`homeBottomColumn${i}`);
+    booksArray = overview[i].books;
+    for (let j = 0; j < booksArray.length; j++) {
+      if (defaultLanguage == "de") {
+        bookName = booksArray[j].languages.de;
       } else {
-       columnHeader = overview[i].en;
+        bookName = booksArray[j].languages.en;
       }
-      let genreLink = overview[i].genreLink;
-      columns += `<div class="column" id="homeBottomColumn${i}">
-      <a class="columnHeader" href="${genreLink}" >${columnHeader}</a> </div>`
-    }
-    return columns;
-  }
-
-  function fillOverviewColumns() {
-    for (let i = 0; i < overview.length; i++) {
-      targetdiv = document.getElementById(`homeBottomColumn${i}`)
-      booksArray = overview[i].books;
-      for (let j = 0; j < booksArray.length; j++) {
-        if (defaultLanguage == 'de') {
-          bookName = booksArray[j].languages.de;
-        } else {
-          bookName = booksArray[j].languages.en;
-        }
-          bookLink = booksArray[j].internalLink;
-          targetdiv.innerHTML += /*html*/ `<a class="columnContent" href="${bookLink}" >${bookName}</a>`;
-      }
-   
+      bookLink = booksArray[j].internalLink;
+      targetdiv.innerHTML += /*html*/ `<a class="columnContent" href="${bookLink}" >${bookName}</a>`;
     }
   }
+}
 
+function generateOverviewColumns(overviewData) {
+  let columnsHTML = "";
+  overviewData.forEach((genre) => {
+    const genreHTML = generateGenreHTML(genre.genre);
+    const booksHTML = generateBooksHTML(genre.genre.books);
+    columnsHTML += `<div class="genre-column">${genreHTML}${booksHTML}</div>`;
+  });
+  return columnsHTML;
+}
 
+function generateGenreHTML(genre) {
+  return `<h2 class="center"><a href="${genre.genreLink}">${genre[defaultLanguage]}</a></h2>`;
+}
 
+function generateBooksHTML(books) {
+  let booksHTML = "<ul>";
+  books.forEach((book) => {
+    const bookHTML = generateBookHTML(
+      book.languages[defaultLanguage],
+      book.internalLink
+    );
+    booksHTML += `<li>${bookHTML}</li>`;
+  });
 
+  booksHTML += "</ul>";
+  return booksHTML;
+}
 
-  function generateOverviewColumns(overviewData) {
-    let columnsHTML = '';
-  
-    // Iterate over each genre
-    overviewData.forEach(genre => {
-      const genreHTML = generateGenreHTML(genre.genre);
-      const booksHTML = generateBooksHTML(genre.genre.books);
-      columnsHTML += `<div class="genre-column">${genreHTML}${booksHTML}</div>`;
-    });
-  
-    return columnsHTML;
-  }
-  
-  function generateGenreHTML(genre) {
-    return `<h2 class="center"><a href="${genre.genreLink}">${genre[defaultLanguage]}</a></h2>`;
-  }
-  
-  function generateBooksHTML(books) {
-    let booksHTML = '<ul>';
-  
-    books.forEach(book => {
-      const bookHTML = generateBookHTML(book.languages[defaultLanguage], book.internalLink);
-      booksHTML += `<li>${bookHTML}</li>`;
-    });
-  
-    booksHTML += '</ul>';
-    return booksHTML;
-  }
-  
-  function generateBookHTML(book, link) {
-    return `<a href="${link}">${book}</a>`;
-  }
-  
-
-  
+function generateBookHTML(book, link) {
+  return `<a href="${link}">${book}</a>`;
+}

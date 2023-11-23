@@ -195,31 +195,43 @@ let topSites = [
   },
   {
     siteId: "bards",
-    translationExists: "false",
+    translationExists: "planned",
     languages: {
       de: {
         title:
           "Die Sänger von Thurán - eine klassische Fantasytrilogie",
         paragraphs: [
-          "",
+          "Dies ist mein Erstlingswerk, der Grund, weshalb ich mich überhaupt jemals dazu durchringen konnte, eine meiner Geschichten loszulassen. Es hat sicher eine Menge Erstlingsfehler - aber willkommen in der Welt von Thurán!",
+          "Und weil ich so lange daran geschrieben habe, so viel damit zu tun hatte, gibt es hier ein paar kleine Extras und ein bisschen was zum Nachschlagen. Darunter ist die Geschichte, wie es überhaupt dazu kam, sowie auch vier Kapitel, von denen es eines nie in die Bücher schaffte und drei, die den Kürzungen von Elfenweg und Weltenringen am Ende zum Opfer fielen.",
+          "Hinweis: Die Unterseiten sind derzeit nur auf deutsch verfügbar."
         ],
         links: [
-          { text: "HintergrundInfo", url: "/" },
-          { text: "Bonuskapitel", url: "/" },
-          { text: "Personenverzeichnis", url: "/" },
-          { text: "Quellen", url: "/" },
+          { text: "HintergrundInfo", url: "/subsitesThuran/background-thuran.html" },
+          { text: "Bonuskapitel Elfenweg", url: "/subsitesThuran/bonus-elven-way.html" },
+          { text: "Bonuskapitel Elfenweg - Sumpfzauber", url: "/subsitesThuran/bonus-elven-swamp.html" },
+          { text: "Bonuskapitel Weltenringen: Irionne und Niturio", url: "/subsitesThuran/bonus-world-irionne.html" },
+          { text: "Bonuskapitel Bonuskapitel Weltenringen: Syl und Nycas", url: "/subsitesThuran/bonus-world-syl.html" },
+          { text: "Karten", url: "/subsitesThuran/thuran-maps.html" },
+          { text: "Personenverzeichnis", url: "/subsitesThuran/thuran-persons.html" },
+          { text: "Begriffsverzeichnis", url: "/subsitesThuran/thuran-glossary.html" },
         ],
       },
       en: {
         title: "The Bards of Thurán - a Classic Fantasy Trilogy",
         paragraphs: [
-          "",
+          "This is my debut work, the reason I could ever bring myself to release one of my stories in the first place. It certainly has a lot of first-time mistakes - but welcome to the world of Thurán!",
+          "And because I spent so long writing it and had so much to do with it, here are a few little extras and a few things to look up. These include the story of how it came about in the first place, as well as four chapters, one of which never made it into the books and three that fell victim to the shortening of Elfenweg and Weltenringen at the end.",
+          "Note: The subpages are currently only available in German."
         ],
         links: [
-          { text: "Background info", url: "/" },
-          { text: "Bonus chapter", url: "/" },
-          { text: "Personage", url: "/" },
-          { text: "Sources", url: "/" },
+          { text: "Background info", url: "/subsitesThuran/background-thuran.html" },
+          { text: "Bonus chapter Elven Way", url: "/subsitesThuran/bonus-elven-way.html" },
+          { text: "Bonus chapter Eleven Way - Swamp Magic", url: "/subsitesThuran/bonus-elven-swamp.html" },
+          { text: "Bonus chapter World Struggle - Irionne and Niturio", url: "/subsitesThuran/bonus-world-irionne.html" },
+          { text: "Bonus chapter World Struggle - Syl and Nycas", url: "/subsitesThuran/bonus-world-syl.html" },
+          { text: "Maps", url: "/subsitesThuran/thuran-maps.html" },
+          { text: "Personage", url: "/subsitesThuran/thuran-persons.html" },
+          { text: "Glossary", url: "/subsitesThuran/thuran-glossary.html" },
         ],
       },
     },
@@ -428,7 +440,7 @@ let navSites = [
     },
   },
   {
-    siteId: "elves",
+    siteId: "bards",
     languages: {
       de: {
         links: [

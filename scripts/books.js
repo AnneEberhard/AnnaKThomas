@@ -135,6 +135,99 @@ let allBooks = [
     "genre": "fantasy",
     "books": [
       {
+        "bookId": "elvenWay",
+        "internalLink": "/booksites/bards-of-thuran.html",
+        "seriesId": "bards", 
+        "translationExists": "planned",
+        "languages": {
+          "de": 
+            {
+              "title": "Elfenweg",
+              "seriesTitle": "Die Sänger von Thurán",
+              "imageURL": "/assets/img/covers/elfenweg.jpg",
+              "externalLink": "https://amzn.eu/d/3fNK4Qe",
+              "paragraphs": 
+              [
+                "Thurán ist eine mittelalterliche Welt voller fremdartiger Geschöpfe und Zauberei. Sie untersteht der Obhut der Schwestern Weega und Cassiopeia, die allerdings nur auf bestimmte Art und Weise in das Schicksal ihrer Schutzbefohlenen eingreifen. Um auf Thurán überleben zu können, muss man manchmal zu ungewöhnlichen Mitteln greifen.",
+                "Jann Deren ist dreizehn Jahre alt, als er bei einem Brand seine gesamte Familie verliert. Um den Erinnerungen zu entkommen, hängt er sich an die Fersen seiner Retterin, der Halbelfe Acanà von Anabellánien. Acanà nimmt ihn nur widerwillig mit, denn sie wird von einem ganz persönlichen Ziel getrieben, von dem sie sich nicht abbringen lassen will. In ihr steckt mehr, als man auf den ersten Blick vermutet – und Jann wird dies bald herausfinden."
+              ],
+            },
+          "en":
+            {
+              "title": "Elven Way",
+              "seriesTitle": "The Bards of Thurán",
+              "imageURL": "/assets/img/covers/elfenweg.jpg",
+              "externalLink": "https://amzn.eu/d/3fNK4Qe",
+              "paragraphs":  [
+                "Thurán is a medieval world full of strange creatures and magic. It is under the care of the sisters Weega and Cassiopeia, who only intervene in the fate of their wards in certain ways. In order to survive on Thurán, you sometimes have to resort to unusual means.",
+                "Jann Deren is thirteen years old when he loses his entire family in a fire. To escape the memories, he follows in the footsteps of his saviour, the half-elf Acanà of Anabellánia. Acanà is reluctant to take him with her, as she is driven by a very personal goal from which she refuses to be dissuaded. There is more to her than meets the eye - and Jann will soon find out."
+                ]            
+            }
+        }
+      },
+      {
+        "bookId": "swampMagic",
+        "internalLink": "/booksites/bards-of-thuran.html",
+        "seriesId": "bards", 
+        "translationExists": "planned",
+        "languages": {
+          "de": 
+            {
+              "title": "Sumpfzauber",
+              "seriesTitle": "Die Sänger von Thurán",
+              "imageURL": "/assets/img/covers/sumpfzauber.jpg",
+              "externalLink": "https://amzn.eu/d/e9XLrpG",
+              "paragraphs": 
+              [
+                "Anabellánien ist befreit, und Acanà hat mit Janns Hilfe einen Weg gefunden, ihre Aufgaben zu vereinen. Alles könnte in Ordnung sein – doch da wird Jann entführt. Ein neuer Auftrag wartet auf ihn: Diesmal soll er die Sumpfhexe Irionne über Thurán eskortieren, um deren verschwundene Schwester Ayrelie zu retten. Jann und Acanà hatten unwissentlich die Entführung ermöglicht, als sie den Kupferstern bargen. Damit war Ayrelie ihres Schutzes beraubt – und nun könnten ihre Geheimnisse in den falschen Händen ganz Thurán gefährden…",
+                ""
+              ],
+            },
+          "en":
+            {
+              "title": "Swamp Magic",
+              "seriesTitle": "The Bards of Thurán",
+              "imageURL": "/assets/img/covers/sumpfzauber.jpg",
+              "externalLink": "https://amzn.eu/d/e9XLrpG",
+              "paragraphs":  [
+                "Anabellánia is freed, and Acanà has found a way to unite their tasks with Jann's help. Everything could be all right - but then Jann is kidnapped. A new mission awaits him: this time he is to escort the swamp witch Irionne across Thurán to rescue her missing sister Ayrelie. Jann and Acanà had unwittingly facilitated the abduction when they retrieved the Copper Star. Ayrelie was thus deprived of her protection - and now her secrets could jeopardise the whole of Thurán in the wrong hands...",
+                ""
+                ]            
+            }
+        }
+      },
+      {
+        "bookId": "worldStruggle",
+        "internalLink": "/booksites/bards-of-thuran.html",
+        "seriesId": "bards", 
+        "translationExists": "planned",
+        "languages": {
+          "de": 
+            {
+              "title": "Weltenringen",
+              "seriesTitle": "Die Sänger von Thurán",
+              "imageURL": "/assets/img/covers/weltenringen.jpg",
+              "externalLink": "https://amzn.eu/d/inQbcmE",
+              "paragraphs": 
+              [
+                "Nach Janns Rückkehr zu Acanà ist ihnen bewusst, dass Thurán sich einer gefährlichen Bedrohung ausgesetzt sieht, die es mit allen Mitteln zu bekämpfen gilt. Um ein notwendiges Bündnis zu erkaufen, muss Jann jedoch zunächst das größte Opfer selber bringen. Jahre später brechen seine Kinder Nycas und Mia mit dem Ziel auf, ihn zurückzuholen, und damit wird eine neue Kette von Ereignissen in Gang gesetzt, die zu dem bisher gefährlichsten Wagnis führen. Es bedarf eines ungewöhnlichen Schrittes, um mehr über den Feind zu erfahren: Jann und Nycas wechseln die Welten…",
+                ""
+              ],
+            },
+          "en":
+            {
+              "title": "World Struggle",
+              "seriesTitle": "The Bards of Thurán",
+              "imageURL": "/assets/img/covers/weltenringen.jpg",
+              "externalLink": "https://amzn.eu/d/inQbcmE",
+              "paragraphs":  [
+                "After Jann's return to Acanà, they realise that Thurán is facing a dangerous threat that must be fought by any means necessary. In order to buy a necessary alliance, however, Jann must first make the greatest sacrifice himself. Years later, his children Nycas and Mia set out to get him back, setting in motion a new chain of events that lead to the most dangerous venture yet. It takes an unusual move to find out more about the enemy: Jann and Nycas switch worlds...",
+                ""
+                ]            
+            }
+        }
+      },
+      {
         "bookId": "demonRide",
         "internalLink": "/booksites/children-of-angels.html",
         "seriesId": "children", 

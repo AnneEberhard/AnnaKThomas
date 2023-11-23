@@ -1,0 +1,31 @@
+All books with details for booksites are in the JSON allBooks in the books.js
+All other JSONs for the sites on first level are in the template.js
+    for header: let menuTitles
+    for booksites top part: let topSites
+    for all sites bottom nav: let navSites
+    for pages on first level content: let mainSites
+    for the homepage navigation content: let overview
+
+All main sites will be started with onload=init()
+
+Init (init.js) includes footer, header, background and mobile templates, then checks for browser language
+    for german default language will be set to de and the function german will be called
+    for all other languages, default language will be set to en and function english will be called
+    functions english and german render 
+        the shared content (templates, using the JSON menuTitles) and 
+        the individual content in the default language
+            renderContentBasedOnPage() works on the basis of the windows.path and assigns the respective function
+            (This could also be solved by assigning different onload functions to the pages and change init())
+
+Script.js includes the functions used by several sites 
+    such as the
+        renderNav for the bottom navigation (using the JSON navSites )
+    as well as
+        main sites (using the JSON mainSites) 
+        book sites (using the JSON topSites and allBooks)
+
+special-sites.js contains the logic for
+    the about-me page, including the translation
+    the speical logic for novellas, interlinked with booksites ( renderMainSite and renderBookDetails )
+    the special logic for the homepage (using the JSON overview)
+ 
