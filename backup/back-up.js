@@ -263,6 +263,28 @@ function generateBookDetailsTemplate2(book) {
     </div>`;
 }
 
+function renderBookDetails4(bookData, bookId, divId) {
+  console.log(bookData);
+  let bottomDiv = document.getElementById(divId);
+  let bookIndex = findBookIndexById(bookData, bookId);
+
+  if (bookIndex !== -1) {
+    let book = bookData[bookIndex].languages[defaultLanguage];
+    let templateHTML = generateBookDetailsTemplate(book);
+
+    if (bookData[bookIndex].seriesId) {
+      let seriesBooks = bookData.filter(
+        (b) => b.seriesId === bookData[bookIndex].seriesId && b.bookId !== bookId
+      );
+      for (let seriesBook of seriesBooks) {
+        templateHTML += generateBookDetailsTemplate(seriesBook.languages[defaultLanguage]);
+      }
+    }
+    bottomDiv.innerHTML = templateHTML;
+  } else {
+    console.log(`BookID '${bookId}' not found`);
+  }
+}
 
 function renderBookDetails3(bookData, bookId, divId) {
   let bottomDiv = document.getElementById(divId);

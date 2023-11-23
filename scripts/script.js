@@ -195,28 +195,6 @@ function renderBookDetails(bookData, divId) {
     bottomDiv.innerHTML = templateHTML;
 }
 
-function renderBookDetails2(bookData, bookId, divId) {
-  console.log(bookData);
-  let bottomDiv = document.getElementById(divId);
-  let bookIndex = findBookIndexById(bookData, bookId);
-
-  if (bookIndex !== -1) {
-    let book = bookData[bookIndex].languages[defaultLanguage];
-    let templateHTML = generateBookDetailsTemplate(book);
-
-    if (bookData[bookIndex].seriesId) {
-      let seriesBooks = bookData.filter(
-        (b) => b.seriesId === bookData[bookIndex].seriesId && b.bookId !== bookId
-      );
-      for (let seriesBook of seriesBooks) {
-        templateHTML += generateBookDetailsTemplate(seriesBook.languages[defaultLanguage]);
-      }
-    }
-    bottomDiv.innerHTML = templateHTML;
-  } else {
-    console.log(`BookID '${bookId}' not found`);
-  }
-}
 
 function generateBookDetailsTemplate(book) {
   console.log('generating data:',book);
@@ -233,8 +211,6 @@ function generateBookDetailsTemplate(book) {
       </div>
     </div>`;
 }
-
-
 
 
 function findBookIndexById(bookArray, bookId) {

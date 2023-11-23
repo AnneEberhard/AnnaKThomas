@@ -92,7 +92,7 @@ function renderAboutMe(id) {
     let bookId = genreData[0].bookId;
     console.log(genreData);
     renderMainSite(genre, topDivId);
-    renderBookDetails(genreData, bookId, bottomDivID)
+    renderBookDetails(genreData, bottomDivID)
  
   }
 
