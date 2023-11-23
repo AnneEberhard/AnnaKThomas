@@ -151,7 +151,7 @@ let topSites = [
       en: {
         title: "The Children of Angels - an Urban Fantasy Trilogy",
         paragraphs: [
-          "Actually, I never wanted to write fantasy again after The Singers. I never wanted to invent a world again, but would rather focus on historical works. But then I met Flo - and well, what can I say ... Here they are: my demon hunters!",
+          "Actually, I never wanted to write fantasy again after The Bards. I never wanted to invent a world again, but would rather focus on historical works. But then I met Flo - and well, what can I say ... Here they are: my demon hunters!",
         ],
         links: [
           { text: "Background info", url: "/" },

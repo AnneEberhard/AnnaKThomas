@@ -80,16 +80,21 @@ function renderBookSite(genre, id, seriesExists) {
     data = findBooksBySeries(genre, id);
     bookId = data[0].bookId;
   } else {
-    data = findBooksByGenre(genre);
+    //data = findBooksByGenre(genre);
+    data = findBookById(genre, id);
     bookId = id;
   }
-  console.log(data);
+  console.log('data found:', data);
   if (!data) {
     console.log(`Unknown book: ${id}`);
     return;
   }
+  if(defaultLanguage == 'en' && id =='elves') {
+    renderSeriesEnglish(data, `${id}Bottom`);
+  } else {
+    renderBookDetails(data,`${id}Bottom`);
+  }
   renderBookSiteTop(topSites, id, `${id}Top`);
-  renderBookDetails(data, bookId, `${id}Bottom`);
   renderNav(navSites, id, `${id}Nav`);
 }
 
@@ -114,10 +119,8 @@ function findBooksBySeries(targetGenre, targetSeries) {
       }
     }
   }
-  console.log(seriesArray);
   return seriesArray.length > 0 ? seriesArray : null;
 }
-
 
 function findBookById(targetGenre, targetBook) {
   for (let i = 0; i < allBooks.length; i++) {
@@ -160,8 +163,40 @@ function generateBookSiteNavTop(links) {
   return `<div class="siteNavTop">${links.map((link) => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`).join("")}</div>`;
 }
 
+function renderSeriesEnglish(seriesData, divId) {
+  console.log('data for english series:', seriesData)
+  let bottomDiv = document.getElementById(divId);
+  let templateHTML ='';
+  for (let i = 0; i < seriesData.length; i++) {
+    let bookEnglishArray = seriesData[i].languages[defaultLanguage];
+        for (let seriesEnglishBook of bookEnglishArray) {
+          console.log('english book:', seriesEnglishBook);
+          templateHTML += generateBookDetailsTemplate(seriesEnglishBook);
+        }
+    bottomDiv.innerHTML = templateHTML;
+  }
+}
 
-function renderBookDetails(bookData, bookId, divId) {
+
+function renderBookDetails(bookData, divId) {
+  console.log('exists', bookData);
+  let bottomDiv = document.getElementById(divId);
+  let templateHTML ='';
+  if (bookData.length > 0 && bookData[0].seriesId) {
+    let seriesBooks = bookData.filter(
+      (b) => b.seriesId === bookData[0].seriesId);
+    for (let seriesBook of seriesBooks) {
+      templateHTML += generateBookDetailsTemplate(seriesBook.languages[defaultLanguage]);
+    }
+  } else {
+    let book = bookData.languages[defaultLanguage];
+    templateHTML = generateBookDetailsTemplate(book);
+    }
+    bottomDiv.innerHTML = templateHTML;
+}
+
+function renderBookDetails2(bookData, bookId, divId) {
+  console.log(bookData);
   let bottomDiv = document.getElementById(divId);
   let bookIndex = findBookIndexById(bookData, bookId);
 
@@ -184,6 +219,8 @@ function renderBookDetails(bookData, bookId, divId) {
 }
 
 function generateBookDetailsTemplate(book) {
+  console.log('generating data:',book);
+  console.log(book.title);
   let paragraphsHTML = book.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('');
 
   return `

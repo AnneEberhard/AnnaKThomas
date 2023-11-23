@@ -243,67 +243,169 @@ let allBooks = [
         }
       },
       {
-        "bookId": "",
-        "seriesId": "", 
-        "internalLink": "",
+        "bookId": "Lucie",
+        "seriesId": "elves", 
+        "internalLink": "/booksites/of-elves-and-wolves.html",
         "translationExists": "true",
         "languages": {
           "de": 
             {
-              "title": "",
-              "seriesTitle": "",
-              "imageURL": "/",
-              "externalLink": "",
+              "title": "Von Elfen und Wölfen",
+              "seriesTitle": "Von Elfen und Wölfen",
+              "imageURL": "/assets/img/covers/von-elfen-und-woelfen.jpg",
+              "externalLink": "https://mybook.to/VonElfenUndWoelfen  ",
               "paragraphs": 
               [
-                "",
-                ""
+                "Lucie Martin ist neu – das ist ihr nicht unbekannt. Normalerweise hat sie keine Probleme, Freunde zu finden. Aber bei den Kindern des Nachbarhauses stößt sie auf eine echte Herausforderung. Dabei sind diese ungewöhnlich genug: eine Tochter mit Aggressionsproblemen, ein Haufen Pflegekinder, der Älteste von ihnen ein verschlossener Junge mit schlohweißen Haaren, die sich nicht färben lassen. Lucie ist wider Willen fasziniert von Noel Tyll. Da ist noch etwas anders an ihm, etwas, das seine Pflegeschwester Cara alle Geschütze ausfahren lässt, etwas, das über seine Haare und seine seltsam betörende Stimme hinausgeht.",
+                "Aber als Lucie schließlich herausfindet, was Noels Geheimnis ist, erfährt sie mehr, als sie wissen wollte – und auch mehr über ihre eigene Familie und ihre eigenen Wurzeln …"
     ],
             },
-          "en":
+            "en": [
+              {
+                "title": "Lucie is New",
+                "seriesTitle": "Of Elves and Wolves",
+                "imageURL": "/assets/img/covers/lucie-new.jpg",
+                "externalLink": "https://mybook.to/Lucie_is_New",
+                "paragraphs": [
+                  "Lucie Martin is new – she is familiar with that. Normally, she has no problems making friends, but the children of the neighboring house pose a real challenge. They are unusual enough: an aggressive daughter, a bunch of foster kids, the oldest of them a withdrawn boy with snow-white hair. Lucie is intrigued, against her will, by Noel Tyll. There's something else about him, something that makes his foster sister pull out all the stops, something beyond his hair and strangely beguiling voice.",
+                  "But when Lucie finally finds out what Noel's secret is, she learns more than she wanted to know – and more about her own family and roots...",
+                  "Lucie is New is the first book of the series “Of Elves and Wolves” and the first of the Lucie arc."
+                ]
+              },
+              {
+                "title": "Lucie, Force of Nature",
+                "seriesTitle": "Of Elves and Wolves",
+                "imageURL": "/assets/img/covers/lucie-nature.jpg",
+                "externalLink": "https://mybook.to/Lucie_force_of_Nature",
+                "paragraphs": [
+                  "",
+                  "",
+                  ""
+                ]
+              },
+              {
+                "title": "Lucie on the Loose",
+                "seriesTitle": "Of Elves and Wolves",
+                "imageURL": "/assets/img/covers/lucie-loose.jpg",
+                "externalLink": "https://mybook.to/Lucie_on_the_Loose",
+                "paragraphs": [
+                  "",
+                  "",
+                  ""
+                ]
+              },
+              {
+                "title": "Lucie on Secret Mission",
+                "seriesTitle": "Of Elves and Wolves",
+                "imageURL": "/assets/img/covers/lucie-secret.jpg",
+                "externalLink": "https://mybook.to/Lucie_on_SecretMission",
+                "paragraphs": [
+                  "",
+                  "",
+                  ""
+                ]
+              }
+            ]
+          }
+        },
+      {
+        "bookId": "Bina",
+        "internalLink": "/booksites/of-elves-and-wolves.html",
+        "seriesId": "elves", 
+        "translationExists": "true",
+        "languages": {
+          "de": 
             {
-              "title": "",
-              "seriesTitle": "",
-              "imageURL": "/",
-              "externalLink": "",
+              "title": "Hexen mittendrin im Mix",
+              "seriesTitle": "Von Elfen und Wölfen",
+              "imageURL": "/assets/img/covers/hexen-mittendrin-im-mix.jpg",
+              "externalLink": "https://mybook.to/HexenMittendrinImMix  ",
+              "paragraphs": 
+              [
+                "Bina Birnbaum ist die stärkste Hexe ihrer Generation – nur leider weiß das kaum einer. Umso begeisterter stürzt sich Bina auf ihren neusten Auftrag: das Heben des Fluches, mit dem die benachbarten Werwölfe, die Martins, belegt sind. Ihr zur Seite steht der Waldelf Cianán, der selber gerade erst die Welt außer seines Waldes entdeckt.",
+                "Allerdings stellt sich ihr Auftrag als nicht so einfach wie gedacht heraus, und weckt zudem Geister der Vergangenheit, die Bina und ihre Freunde bald in ziemliche Bedrängnis bringen …"
+    ],
+            },
+          "en": [
+            {
+              "title": "Bina and the Darn Curiosity",
+              "seriesTitle": "Of Elves and Wolves",
+              "imageURL": "/assets/img/covers/bina-curiosity.jpg",
+              "externalLink": "https://mybook.to/Bina_Curse",
               "paragraphs":  [
                 "",
                 "",
                 ""
                 ]            
             }
+            ,
+            {
+              "title": "Bina and the Darn Curse",
+              "seriesTitle": "Of Elves and Wolves",
+              "imageURL": "/assets/img/covers/bina-curse.jpg",
+              "externalLink": "https://mybook.to/Bina_Curse",
+              "paragraphs": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "title": "Bina and the Darn Drama",
+              "seriesTitle": "Of Elves and Wolves",
+              "imageURL": "/assets/img/covers/bina-drama.jpg",
+              "externalLink": "https://mybook.to/Bina_Drama",
+              "paragraphs": [
+                "",
+                "",
+                ""
+              ]
+            }]
         }
       },
       {
-        "bookId": "",
-        "internalLink": "",
-        "seriesId": "", 
+        "bookId": "Lena",
+        "internalLink": "/booksites/of-elves-and-wolves.html",
+        "seriesId": "elves", 
         "translationExists": "true",
         "languages": {
           "de": 
             {
-              "title": "",
-              "seriesTitle": "",
-              "imageURL": "/",
-              "externalLink": "",
+              "title": "Im Namen der Menschen",
+              "seriesTitle": "Von Elfen und Wölfen",
+              "imageURL": "/assets/img/covers/im-namen-der-menschen.jpg",
+              "externalLink": "https://mybook.to/ImNamenDerMenschen  ",
               "paragraphs": 
               [
-                "",
-                ""
+                "Lena Meyer hat genug von Elfen und Wölfen und allem, was dazu gehört. Sie will studieren, nach ihrer verkorksten Jugend als Essgestörte endlich normal sein, und in ihrem Pflegebruder Noel nur den Bruder sehen, nicht den geheimen Prinzen der Elfen.",
+                "Aber dann stößt sie in ihrer WG auf ein gefährliches Buch, ihre Mitbewohner entpuppen sich nicht alle als menschlich, und plötzlich ist Lena sich nicht einmal mehr sicher, inwieweit sie noch sie selber ist.",
+                "Ernsthaft – normal sein bedeutet nicht, eine mystische Maid mit einem Vampir als Ritter zu werden. Und die auf die Geister der Vergangenheit – sowohl ihre eigenen als auch die ihres Vampirs – hätte sie wirklich gut verzichten können!"
     ],
             },
-          "en":
+          "en":[
             {
-              "title": "",
-              "seriesTitle": "",
-              "imageURL": "/",
-              "externalLink": "",
+              "title": "Lena Wants to Live",
+              "seriesTitle": "Of Elves and Wolves",
+              "imageURL": "/assets/img/covers/lena-justice.jpg",
+              "externalLink": "https://mybook.to/Lena_wantstolive",
               "paragraphs":  [
                 "",
                 "",
                 ""
                 ]            
             }
+            ,
+            {
+              "title": "Lena Wants Justice",
+              "seriesTitle": "Of Elves and Wolves",
+              "imageURL": "/assets/img/covers/lucie-new.jpg",
+              "externalLink": "https://mybook.to/Lena_wantsJustice",
+              "paragraphs": [
+                "",
+                "",
+                ""
+              ]
+            }]
         }
       },
     ]

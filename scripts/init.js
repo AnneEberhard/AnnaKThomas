@@ -95,7 +95,8 @@ function renderContentBasedOnPage() {
         { path: "/booksites/mind-on-fire.html", function: renderBookSite, params: ['historical', 'mind', false] },
         { path: "/booksites/alster-diamonds.html", function: renderBookSite, params: ['historical', 'alster', false] },
         { path: "/booksites/masks-of-florence.html", function: renderBookSite, params: ['historical', 'masks', false] },
-        { path: "/booksites/children-of-angels.html", function: renderBookSite, params: ['fantasy','children', true] }
+        { path: "/booksites/children-of-angels.html", function: renderBookSite, params: ['fantasy','children', true] },
+        { path: "/booksites/of-elves-and-wolves.html", function: renderBookSite, params: ['fantasy','elves', true] }
       ];
     const path = window.location.pathname;
     const matchingFunction = pageFunctions.find(entry => path.includes(entry.path));
