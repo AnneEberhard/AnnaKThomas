@@ -10,190 +10,6 @@ let menuTitles = [
 //for booksites
 let topSites = [
   {
-    siteId: "masks",
-    translationExists: "true",
-    languages: {
-      de: {
-        title:
-          "Die Masken von Florenz - Historischer Roman zur Zeit der Renaissance",
-        paragraphs: ["Mein zweiter historischer Roman."],
-        links: [
-          { text: "HintergrundInfo", url: "/" },
-          { text: "Bonuskapitel", url: "/" },
-          { text: "Personenverzeichnis", url: "/" },
-          { text: "Zeittafel", url: "/" },
-          { text: "Stammbaum der Medici", url: "/" },
-          { text: "Begriffe und Quellen", url: "/" },
-        ],
-      },
-      en: {
-        title:
-          "The Masks of Florence - Historical novel set during the Renaissance",
-        paragraphs: ["My second historical novel."],
-        links: [
-          { text: "Background info", url: "/" },
-          { text: "Bonus chapter", url: "/" },
-          { text: "Personage", url: "/" },
-          { text: "Timeline", url: "/" },
-          { text: "Family trees of the Medici", url: "/" },
-          { text: "Glossary and Sources", url: "/" },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "alster",
-    translationExists: "true",
-    languages: {
-      de: {
-        title:
-          "Alsterdiamanten - Historischer Roman im Hamburg des Biedermeiers",
-        paragraphs: ["Mein zweiter historischer Roman."],
-        links: [
-          { text: "HintergrundInfo", url: "/" },
-          { text: "Personenverzeichnis", url: "/subsitesAlster/alster-persons.html" },
-          { text: "Quellen und Links zu den Karten", url: "/" },
-        ],
-      },
-      en: {
-        title: "Alster Diamonds - Historical novel set during the Renaissance",
-        paragraphs: ["My second historical novel."],
-        links: [
-          { text: "Background info", url: "/" },
-          { text: "Personage", url: "/subsitesAlster/alster-persons.html" },
-          { text: "Sources and links to maps", url: "/" },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "odyssee",
-    translationExists: "planned",
-    languages: {
-      de: {
-        title:
-          "Irrfahrt ins Gelobte Land - Historischer Roman aus der Zeit des Kreuzzüge",
-        paragraphs: ["Mein erster historischer Roman."],
-        links: [
-          { text: "HintergrundInfo", url: "/" },
-          { text: "Bonuskapitel", url: "/" },
-          { text: "Personenverzeichnis", url: "/" },
-          { text: "Zeittafel", url: "/" },
-          { text: "Konflikt zwischen Staufer und Welfen", url: "/" },
-          { text: "Stammbäume der Staufer und Welfen", url: "/" },
-          { text: "Begriffe und Quellen", url: "/" },
-        ],
-      },
-      en: {
-        title:
-          "Odyssee to the Promised Land - Historical novel at the time of the Crusades",
-        paragraphs: ["My second historical novel."],
-        links: [
-          { text: "Background info", url: "/" },
-          { text: "Bonus chapter", url: "/" },
-          { text: "Personage", url: "/" },
-          { text: "Timeline", url: "/" },
-          { text: "Conflict between Staufer and Welfen", url: "/" },
-          { text: "Family tress of Staufer and Welfen", url: "/" },
-          { text: "Glossary and Sources", url: "/" },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "mind",
-    translationExists: "false",
-    languages: {
-      de: {
-        title:
-          "Der Geist in Brand - Ein Krautjunker zwischen Rokoko und Revolution",
-        paragraphs: [
-          "Zwölf Jahre Schreibzeit und fast zwei Dekaden umspannend.",
-        ],
-        links: [
-          { text: "HintergrundInfo", url: "/" },
-          { text: "Bonuskapitel", url: "/" },
-          { text: "Personenverzeichnis", url: "/" },
-          { text: "Quellen", url: "/" },
-        ],
-      },
-      en: {
-        title: "The Mind on Fire - A Krautjunker between Rococo and Revolution",
-        paragraphs: [
-          "Twelve years of writing and spanning almost two decades.",
-        ],
-        links: [
-          { text: "Background info", url: "/" },
-          { text: "Bonus chapter", url: "/" },
-          { text: "Personage", url: "/" },
-          { text: "Sources", url: "/" },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "children",
-    translationExists: "progress",
-    languages: {
-      de: {
-        title:
-          "Die Kinder der Engel - eine Urban Fantasy Trilogie",
-        paragraphs: [
-          "Eigentlich wollte ich nach den Sängern nie wieder Fantasy schreiben. Ich wollte nie wieder eine Welt erfinden, sondern mich lieber auf historische Werke stürzen. Aber dann begegnete mir Flo - und tja, was soll ich sagen ... Hier sind sie: meine Dämonenjäger!",
-        ],
-        links: [
-          { text: "HintergrundInfo", url: "/" },
-          { text: "Bonuskapitel", url: "/" },
-          { text: "Personenverzeichnis", url: "/" },
-          { text: "Quellen", url: "/" },
-        ],
-      },
-      en: {
-        title: "The Children of Angels - an Urban Fantasy Trilogy",
-        paragraphs: [
-          "Actually, I never wanted to write fantasy again after The Bards. I never wanted to invent a world again, but would rather focus on historical works. But then I met Flo - and well, what can I say ... Here they are: my demon hunters!",
-        ],
-        links: [
-          { text: "Background info", url: "/" },
-          { text: "Bonus chapter", url: "/" },
-          { text: "Personage", url: "/" },
-          { text: "Sources", url: "/" },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "elves",
-    translationExists: "true",
-    languages: {
-      de: {
-        title:
-          "Von Elfen und Wölfen - eine Urban Fantasy Trilogie",
-        paragraphs: [
-          "",
-        ],
-        links: [
-          { text: "HintergrundInfo", url: "/" },
-          { text: "Bonuskapitel", url: "/" },
-          { text: "Personenverzeichnis", url: "/subsitesElves/elves-persons.html" },
-          { text: "Quellen", url: "/" },
-        ],
-      },
-      en: {
-        title: "Of Elves and Wolves - an Urban Fantasy Story in three arcs and nine books",
-        paragraphs: [
-          "",
-        ],
-        links: [
-          { text: "Background info", url: "/" },
-          { text: "Bonus chapter", url: "/" },
-          { text: "Personage", url: "/subsitesElves/elves-persons.html" },
-          { text: "Sources", url: "/" },
-        ],
-      },
-    },
-  },
-  {
     siteId: "bards",
     translationExists: "planned",
     languages: {
@@ -236,6 +52,194 @@ let topSites = [
       },
     },
   },
+  {
+    siteId: "children",
+    translationExists: "progress",
+    languages: {
+      de: {
+        title:
+          "Die Kinder der Engel - eine Urban Fantasy Trilogie",
+        paragraphs: [
+          "Eigentlich wollte ich nach den Sängern nie wieder Fantasy schreiben. Ich wollte nie wieder eine Welt erfinden, sondern mich lieber auf historische Werke stürzen. Aber dann begegnete mir Flo - und tja, was soll ich sagen ... Hier sind sie: meine Dämonenjäger!",
+        ],
+        links: [
+          { text: "HintergrundInfo", url: "/subsitesChildren/children-background.html" },
+          { text: "Bonuskapitel", url: "/subsitesChildren/children-bonus.html" },
+          { text: "Personenverzeichnis", url: "/subsitesChildren/children-persons.html" },
+          { text: "Quellen", url: "/subsitesChildren/children-sources.html" },
+        ],
+      },
+      en: {
+        title: "The Children of Angels - an Urban Fantasy Trilogy",
+        paragraphs: [
+          "Actually, I never wanted to write fantasy again after The Bards. I never wanted to invent a world again, but would rather focus on historical works. But then I met Flo - and well, what can I say ... Here they are: my demon hunters!",
+        ],
+        links: [
+          { text: "Background info", url: "/subsitesChildren/children-background.html" },
+          { text: "Bonus chapter", url: "/subsitesChildren/children-bonus.html" },
+          { text: "Personage", url: "/subsitesChildren/children-persons.html" },
+          { text: "Sources", url: "/subsitesChildren/children-sources.html" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "elves",
+    translationExists: "true",
+    languages: {
+      de: {
+        title:
+          "Von Elfen und Wölfen - eine Urban Fantasy Trilogie",
+        paragraphs: [
+          "",
+        ],
+        links: [
+          { text: "HintergrundInfo", url: "/subsitesElves/elves-background.html" },
+          { text: "Bonuskapitel Von Elfen und Wölfen: Noel", url: "/subsitesElves/elves-bonus-Noel.html" },
+          { text: "Bonuskapitel Im Namen der Menschen: Diana", url: "/subsitesElves/elves-bonus-diana.html" },
+          { text: "Personenverzeichnis", url: "/subsitesElves/elves-persons.html" },
+          { text: "Stammbäume", url: "/subsitesElves/elves-familytrees.html" },
+        ],
+      },
+      en: {
+        title: "Of Elves and Wolves - an Urban Fantasy Story in three arcs and nine books",
+        paragraphs: [
+          "",
+        ],
+        links: [
+          { text: "Background info", url: "/subsitesElves/elves-background.html" },
+          { text: "Bonus chapter - Lucie arc: Noel", url: "/subsitesElves/elves-bonus-Noel.html" },
+          { text: "Bonus chapter - Lena arc: Diana", url: "/subsitesElves/elves-bonus-diana.html" },
+          { text: "Personage", url: "/subsitesElves/elves-persons.html" },
+          { text: "Family Trees", url: "/subsitesElves/elves-familytrees.html" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "odyssee",
+    translationExists: "planned",
+    languages: {
+      de: {
+        title:
+          "Irrfahrt ins Gelobte Land - Historischer Roman aus der Zeit des Kreuzzüge",
+        paragraphs: ["Mein erster historischer Roman."],
+        links: [
+          { text: "HintergrundInfo", url: "/subsitesOdyssee/odyssee-background.html" },
+          { text: "Bonuskapitel", url: "/subsitesOdyssee/odyssee-bonus.html" },
+          { text: "Personenverzeichnis", url: "/subsitesOdyssee/odyssee-persons.html" },
+          { text: "Zeittafel", url: "/subsitesOdyssee/odyssee-timeline.html" },
+          { text: "Konflikt zwischen Staufer und Welfen", url: "/subsitesOdyssee/odyssee.conflict.html" },
+          { text: "Stammbäume der Staufer und Welfen", url: "/subsitesOdyssee/odyssee-familytrees.html" },
+          { text: "Begriffe und Quellen", url: "/subsitesOdyssee/odyssee.glossary.html" },
+        ],
+      },
+      en: {
+        title:
+          "Odyssee to the Promised Land - Historical novel at the time of the Crusades",
+        paragraphs: ["My second historical novel."],
+        links: [
+          { text: "Background info", url: "/subsitesOdyssee/odyssee-background.html" },
+          { text: "Bonus chapter", url: "/subsitesOdyssee/odyssee-bonus.html" },
+          { text: "Personage", url: "/subsitesOdyssee/odyssee-persons.html" },
+          { text: "Timeline", url: "/subsitesOdyssee/odyssee-timeline.html" },
+          { text: "Conflict between Staufer and Welfen", url: "/subsitesOdyssee/odyssee.conflict.html" },
+          { text: "Family trees of Staufer and Welfen", url: "/subsitesOdyssee/odyssee-familytrees.html" },
+          { text: "Glossary and Sources", url: "/subsitesOdyssee/odyssee.glossary.html" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "masks",
+    translationExists: "true",
+    languages: {
+      de: {
+        title:
+          "Die Masken von Florenz - Historischer Roman zur Zeit der Renaissance",
+        paragraphs: ["Mein zweiter historischer Roman."],
+        links: [
+          { text: "HintergrundInfo", url: "/subsitesMasks/masks-background.html" },
+          { text: "Bonuskapitel", url: "/subsitesMasks/masks-bonus.html" },
+          { text: "Personenverzeichnis", url: "/subsitesMasks/masks-persons.html" },
+          { text: "Zeittafel", url: "/subsitesMasks/masks-timeline.html" },
+          { text: "Stammbaum der Medici", url: "/subsitesMasks/masks-familytrees.html" },
+          { text: "Begriffe und Quellen", url: "/subsitesMasks/masks-glossary.html" },
+        ],
+      },
+      en: {
+        title:
+          "The Masks of Florence - Historical novel set during the Renaissance",
+        paragraphs: ["My second historical novel."],
+        links: [
+          { text: "Background info", url: "/subsitesMasks/masks-background.html" },
+          { text: "Bonus chapter", url: "/subsitesMasks/masks-bonus.html" },
+          { text: "Personage", url: "/subsitesMasks/masks-persons.html" },
+          { text: "Timeline", url: "/subsitesMasks/masks-timeline.html" },
+          { text: "Family trees of the Medici", url: "/subsitesMasks/masks-familytrees.html" },
+          { text: "Glossary and Sources", url: "/subsitesMasks/masks-glossary.html" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "alster",
+    translationExists: "true",
+    languages: {
+      de: {
+        title:
+          "Alsterdiamanten - Historischer Roman im Hamburg des Biedermeiers",
+        paragraphs: ["Mein zweiter historischer Roman."],
+        links: [
+          { text: "HintergrundInfo", url: "/subsitesAlster/alster-background.html" },
+          { text: "Personenverzeichnis", url: "/subsitesAlster/alster-persons.html" },
+          { text: "Quellen und Links zu den Karten", url: "/subsitesAlster/alster-sources.html" },
+        ],
+      },
+      en: {
+        title: "Alster Diamonds - Historical novel set during the Renaissance",
+        paragraphs: ["My second historical novel."],
+        links: [
+          { text: "Background info", url: "/subsitesAlster/alster-background.html" },
+          { text: "Personage", url: "/subsitesAlster/alster-persons.html" },
+          { text: "Sources and links to maps", url: "/subsitesAlster/alster-sources.html" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "mind",
+    translationExists: "false",
+    languages: {
+      de: {
+        title:
+          "Der Geist in Brand - Ein Krautjunker zwischen Rokoko und Revolution",
+        paragraphs: [
+          "Zwölf Jahre Schreibzeit und fast zwei Dekaden umspannend.",
+        ],
+        links: [
+          { text: "HintergrundInfo", url: "/subsitesMind/mind-background.html" },
+          { text: "Bonuskapitel", url: "/subsitesMind/mind-bonus.html" },
+          { text: "Personenverzeichnis", url: "/subsitesMind/mind-persons.html" },
+          { text: "Quellen", url: "/subsitesMind/mind-sources.html" },
+        ],
+      },
+      en: {
+        title: "The Mind on Fire - A Krautjunker between Rococo and Revolution",
+        paragraphs: [
+          "Twelve years of writing and spanning almost two decades.",
+        ],
+        links: [
+          { text: "Background info", url: "/subsitesMind/mind-background.html" },
+          { text: "Bonus chapter", url: "/subsitesMind/mind-bonus.html" },
+          { text: "Personage", url: "/subsitesMind/mind-persons.html" },
+          { text: "Sources", url: "/subsitesMind/mind-sources.html" },
+        ],
+      },
+    },
+  },
+ 
+ 
 ];
 
 //for bottom nav
