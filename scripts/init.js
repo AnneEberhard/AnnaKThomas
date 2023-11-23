@@ -94,7 +94,10 @@ function renderContentBasedOnPage() {
         { path: "/booksites/masks-of-florence.html", function: renderBookSite, params: ['historical', 'masks', false] },
         { path: "/booksites/children-of-angels.html", function: renderBookSite, params: ['fantasy','children', true] },
         { path: "/booksites/of-elves-and-wolves.html", function: renderBookSite, params: ['fantasy','elves', true] },
-        { path: "/booksites/bards-of-thuran.html", function: renderBookSite, params: ['fantasy','bards', true] }
+        { path: "/booksites/bards-of-thuran.html", function: renderBookSite, params: ['fantasy','bards', true] },
+        { path: "/subsitesElves/elves-persons.html", function: renderPersonage, params: ['fantasy','elves', 'elvesPersons', personsElves] },
+        { path: "/subsitesAlster/alster-persons.html", function: renderPersonage, params: ['fantasy','alster', 'alsterPersons', personsAlster] },
+
       ];
     const path = window.location.pathname;
     const matchingFunction = pageFunctions.find(entry => path.includes(entry.path));

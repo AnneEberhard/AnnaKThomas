@@ -35,7 +35,7 @@ let topSites = [
           { text: "Bonus chapter", url: "/" },
           { text: "Personage", url: "/" },
           { text: "Timeline", url: "/" },
-          { text: "Family tress of the Medici", url: "/" },
+          { text: "Family trees of the Medici", url: "/" },
           { text: "Glossary and Sources", url: "/" },
         ],
       },
@@ -51,7 +51,7 @@ let topSites = [
         paragraphs: ["Mein zweiter historischer Roman."],
         links: [
           { text: "HintergrundInfo", url: "/" },
-          { text: "Personenverzeichnis", url: "/" },
+          { text: "Personenverzeichnis", url: "/subsitesAlster/alster-persons.html" },
           { text: "Quellen und Links zu den Karten", url: "/" },
         ],
       },
@@ -60,7 +60,7 @@ let topSites = [
         paragraphs: ["My second historical novel."],
         links: [
           { text: "Background info", url: "/" },
-          { text: "Personage", url: "/" },
+          { text: "Personage", url: "/subsitesAlster/alster-persons.html" },
           { text: "Sources and links to maps", url: "/" },
         ],
       },
@@ -175,7 +175,7 @@ let topSites = [
         links: [
           { text: "HintergrundInfo", url: "/" },
           { text: "Bonuskapitel", url: "/" },
-          { text: "Personenverzeichnis", url: "/" },
+          { text: "Personenverzeichnis", url: "/subsitesElves/elves-persons.html" },
           { text: "Quellen", url: "/" },
         ],
       },
@@ -187,7 +187,7 @@ let topSites = [
         links: [
           { text: "Background info", url: "/" },
           { text: "Bonus chapter", url: "/" },
-          { text: "Personage", url: "/" },
+          { text: "Personage", url: "/subsitesElves/elves-persons.html" },
           { text: "Sources", url: "/" },
         ],
       },

@@ -174,7 +174,7 @@ function renderBookSiteTop(siteData, siteId, divId) {
 }
 
 function generateBookSiteTitle(title) {
-  return `<h3>${title}</h3>`;
+  return `<h2>${title}</h2>`;
 }
 
 function generateBookSiteParagraphs(paragraphs) {

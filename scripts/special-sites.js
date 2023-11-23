@@ -170,3 +170,62 @@ function generateBooksHTML(books) {
 function generateBookHTML(book, link) {
   return `<a href="${link}">${book}</a>`;
 }
+
+// for personages sites
+function renderPersonage(genre, navId, siteId, personageObject) {
+  renderPersonageTop(genre, siteId);
+  renderPersonageBottom(siteId , personageObject);
+  renderNav(navSites, navId, `${siteId}Nav`);
+}
+
+function renderPersonageTop(genre, siteId) {
+  currentSiteId = siteId;
+  currentGenre = genre;
+  let divId = siteId + 'Top';
+  let topDiv = document.getElementById(divId);
+  topDiv.innerHTML = '';
+  let siteIndex = personSitesHeader.findIndex(site => site.siteId === siteId);
+  if (siteIndex !== -1) {
+    let site = personSitesHeader[siteIndex].languages[defaultLanguage];
+    topDiv.innerHTML += `<h2>${site.header}</h2>`;
+    for (let subHeader of site.subHeaders) {
+      topDiv.innerHTML += `<h3><a href="${subHeader.subHeaderLink}">${subHeader.subHeaderText}</a></h3>`;
+    }
+    for (let paragraph of site.paragraphs) {
+      topDiv.innerHTML += `<p>${paragraph}</p>`;
+    }
+  } else {
+    console.log(`SiteId '${siteId}' not found`);
+  }
+}
+
+
+function  renderPersonageBottom(siteId, personageObject){
+  let divId = siteId + 'Bottom';
+  let bottomDiv = document.getElementById(divId);
+  bottomDiv.innerHTML = '';
+  bottomDiv.innerHTML = generatePersonAllTemplate (siteId, personageObject);
+}
+
+function generatePersonAllTemplate (siteId, personageId) {
+  let templateHTML = '';
+for (let i = 0; i < personageId.length; i++) {
+  templateHTML += generatePersonTableTemplate(siteId, personageId[i], defaultLanguage)
+}
+return templateHTML;
+}
+
+function generatePersonTableTemplate(siteId, personGroup, defaultLanguage) {
+  let subHeaderId = siteId + personGroup.groupId; //unique ID for each header even if naming in JSON is similiar
+  let templateHTML = `<h3 id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
+  for (let member of personGroup.members) {
+    templateHTML += `
+      <table class="personageTable">
+        <tr>
+          <td class="personageName">${member.name}</td>
+          <td>${member[defaultLanguage]}</td>
+        </tr>
+      </table>`;
+  }
+  return templateHTML;
+}
