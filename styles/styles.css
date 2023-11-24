@@ -185,6 +185,18 @@ tr {
   padding-top: 36px;
 }
 
+/*familytree*/
+.pictureContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+
+.pictureHeader {
+  text-align: center;
+}
+
 /*scroll*/
 ::-webkit-scrollbar {
   width: 12px; /* Breite des Scrollbalkens */

@@ -266,6 +266,42 @@ function findBackgroundInfoById(id) {
       return backgroundInfo[i].languages[defaultLanguage];
       }
     }
-    
+  return null;
+}
+
+// function for picture sites such as family trees
+function renderFamilyTrees(genre, bookId, siteId) {
+  renderFamilyTreeTop(genre, bookId, siteId);
+  renderNav(navSites, bookId, `${siteId}Nav`);
+}
+
+function renderFamilyTreeTop(genre, bookId, siteId) {
+  currentSiteId = siteId;
+  currentGenre = genre;
+  let divId = siteId + 'Top';
+  let topDiv = document.getElementById(divId);
+  topDiv.innerHTML = '';
+  topDiv.innerHTML = generateFamilyTreeTop(bookId)
+}
+
+function generateFamilyTreeTop(backgroundId) {
+ let familyTreeGroup = findDataById(backgroundId, familyTree);
+ console.log(familyTreeGroup);
+ let templateHTML = `<h2 class="personGroup">${familyTreeGroup.headline}</h2>`;
+ templateHTML += `<p>${familyTreeGroup.subheader}</p>`;
+ for (let i = 0; i < familyTreeGroup.images.length; i++) {
+   templateHTML += `<div class="pictureContainer"><h3 class="pictureHeader">${familyTreeGroup.images[i].subheaderImages}</h3>
+   <img src="${familyTreeGroup.images[i].imageUrl}"></div>`;
+ }
+ return templateHTML;
+}
+
+function findDataById(id, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].backgroundId === id) {
+      console.log(array[i].languages[defaultLanguage])
+      return array[i].languages[defaultLanguage];
+      }
+    }
   return null;
 }

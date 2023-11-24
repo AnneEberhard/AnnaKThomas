@@ -1,5 +1,4 @@
 // for books, further down templates for background
-
 let allBooks = [
   {
     genre: "historical",

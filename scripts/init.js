@@ -108,6 +108,10 @@ function renderContentBasedOnPage() {
         { path: "/subsitesMasks/masks-background.html", function: renderBackground, params: ['historical','masks', 'masksBackground'] },
         { path: "/subsitesMind/mind-background.html", function: renderBackground, params: ['historical','mind', 'mindBackground'] },
         { path: "/subsitesOdyssee/odyssee-background.html", function: renderBackground, params: ['historical','odyssee', 'odysseeBackground'] },
+        { path: "/subsitesOdyssee/odyssee-familytrees.html", function: renderFamilyTrees, params: ['historical','odyssee', 'odysseeFamilyTree'] },
+        { path: "/subsitesMasks/masks-familytrees.html", function: renderFamilyTrees, params: ['historical','masks', 'masksFamilyTree'] },
+        { path: "/subsitesAlster/alster-familytrees.html", function: renderFamilyTrees, params: ['historical','alster', 'alsterFamilyTree'] },
+        { path: "/subsitesElves/elves-familytrees.html", function: renderFamilyTrees, params: ['fantasy','elves', 'elvesFamilyTree'] },
 
       ];
     const path = window.location.pathname;
