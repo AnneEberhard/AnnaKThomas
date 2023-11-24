@@ -26,6 +26,9 @@ Script.js includes the functions used by several sites
 
 special-sites.js contains the logic for
     the about-me page, including the translation
-    the speical logic for novellas, interlinked with booksites ( renderMainSite and renderBookDetails )
+    the special logic for novellas, interlinked with booksites ( renderMainSite and renderBookDetails )
     the special logic for the homepage (using the JSON overview)
+    the special logic for personage (using the persons.js with the JSON personSitesHeader und INDIVDUAL JSONs per story)
+    the special logic for family trees (using the JSON familyTree)
+    the special logic for background info (using the JSON backgroundInfo in the books.js)
  
