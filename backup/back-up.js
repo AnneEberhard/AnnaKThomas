@@ -327,3 +327,20 @@ function renderContentBasedOnPage2() {
   renderBookSite(globalGenre, globalSiteId);
 }
 }
+
+
+
+function generatePersonTableTemplate2(siteId, personGroup, defaultLanguage) {
+  let subHeaderId = siteId + personGroup.groupId; //unique ID for each header even if naming in JSON is similiar
+  let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
+  for (let member of personGroup.members) {
+    templateHTML += `
+      <table class="personageTable">
+        <tr>
+          <td class="personageName">${member.name}</td>
+          <td>${member[defaultLanguage]}</td>
+        </tr>
+      </table>`;
+  }
+  return templateHTML;
+}

@@ -199,7 +199,6 @@ function renderPersonageTop(genre, siteId) {
   }
 }
 
-
 function  renderPersonageBottom(siteId, personageObject){
   let divId = siteId + 'Bottom';
   let bottomDiv = document.getElementById(divId);
@@ -210,23 +209,20 @@ function  renderPersonageBottom(siteId, personageObject){
 function generatePersonAllTemplate (siteId, personageId) {
   let templateHTML = '';
 for (let i = 0; i < personageId.length; i++) {
-  templateHTML += generatePersonTableTemplate(siteId, personageId[i], defaultLanguage)
+  templateHTML += generatePersonTableTemplate(siteId, personageId[i])
 }
 return templateHTML;
 }
 
-function generatePersonTableTemplate(siteId, personGroup, defaultLanguage) {
+function generatePersonTableTemplate(siteId, personGroup) {
   let subHeaderId = siteId + personGroup.groupId; // unique ID for each header even if naming in JSON is similar
   let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
-  
-  // Die Tabelle und die erste Zeile außerhalb der Schleife platzieren
   templateHTML += `
     <table class="personageTable">
       <tr>
         <th class="personageName">Name</th>
         <th>${defaultLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
       </tr>`;
-
   for (let member of personGroup.members) {
     templateHTML += `
       <tr>
@@ -234,26 +230,42 @@ function generatePersonTableTemplate(siteId, personGroup, defaultLanguage) {
         <td>${member[defaultLanguage]}</td>
       </tr>`;
   }
-
-  // Die Tabelle schließen
   templateHTML += `</table>`;
-
   return templateHTML;
 }
 
+//Function for background pages
+function renderBackground(genre, bookId, siteId) {
+  renderBackgroundTop(genre, bookId, siteId);
+  renderNav(navSites, bookId, `${siteId}Nav`);
+}
 
+function renderBackgroundTop(genre, bookId, siteId) {
+  currentSiteId = siteId;
+  currentGenre = genre;
+  let divId = siteId + 'Top';
+  let topDiv = document.getElementById(divId);
+  topDiv.innerHTML = '';
+  topDiv.innerHTML = generateBackgroundTemplate(bookId)
+}
 
-function generatePersonTableTemplate2(siteId, personGroup, defaultLanguage) {
-  let subHeaderId = siteId + personGroup.groupId; //unique ID for each header even if naming in JSON is similiar
-  let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
-  for (let member of personGroup.members) {
-    templateHTML += `
-      <table class="personageTable">
-        <tr>
-          <td class="personageName">${member.name}</td>
-          <td>${member[defaultLanguage]}</td>
-        </tr>
-      </table>`;
+function generateBackgroundTemplate(id) {
+  let backgroundInfo = findBackgroundInfoById(id)
+  let templateHTML = `<h2 class="personGroup">${backgroundInfo.headline}</h2>`;
+  templateHTML += `<h3 class="personGroup">${backgroundInfo.subheader}</h3>`;
+  for (let paragraph of backgroundInfo.paragraphs) {
+    templateHTML += `<p>${paragraph}</p>`;
   }
   return templateHTML;
+}
+
+function findBackgroundInfoById(id) {
+  for (let i = 0; i < backgroundInfo.length; i++) {
+    if (backgroundInfo[i].backgroundId === id) {
+      console.log(backgroundInfo[i].languages[defaultLanguage])
+      return backgroundInfo[i].languages[defaultLanguage];
+      }
+    }
+    
+  return null;
 }
