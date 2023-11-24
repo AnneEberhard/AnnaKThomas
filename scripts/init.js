@@ -103,6 +103,7 @@ function renderContentBasedOnPage() {
         { path: "/subsitesBards/bards-persons.html", function: renderPersonage, params: ['fantasy','bards', 'bardsPersons', personsBards] },
         { path: "/subsitesChildren/children-persons.html", function: renderPersonage, params: ['fantasy','children', 'childrenPersons', personsChildren] },
         { path: "/subsitesAlster/alster-background.html", function: renderBackground, params: ['historical','alster', 'alsterBackground'] },
+        { path: "/subsitesBards/bards-background.html", function: renderBackground, params: ['fantasy','bards', 'bardsBackground'] },
         { path: "/subsitesChildren/children-background.html", function: renderBackground, params: ['fantasy','children', 'childrenBackground'] },
         { path: "/subsitesElves/elves-background.html", function: renderBackground, params: ['fantasy','elves', 'elvesBackground'] },
         { path: "/subsitesMasks/masks-background.html", function: renderBackground, params: ['historical','masks', 'masksBackground'] },

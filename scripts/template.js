@@ -22,7 +22,7 @@ let topSites = [
           "Hinweis: Die Unterseiten sind derzeit nur auf deutsch verfügbar."
         ],
         links: [
-          { text: "HintergrundInfo", url: "/subsitesThuran/background-thuran.html" },
+          { text: "HintergrundInfo", url: "/subsitesBards/bards-background.html" },
           { text: "Bonuskapitel Elfenweg", url: "/subsitesThuran/bonus-elven-way.html" },
           { text: "Bonuskapitel Elfenweg - Sumpfzauber", url: "/subsitesThuran/bonus-elven-swamp.html" },
           { text: "Bonuskapitel Weltenringen: Irionne und Niturio", url: "/subsitesThuran/bonus-world-irionne.html" },
@@ -40,7 +40,7 @@ let topSites = [
           "Note: The subpages are currently only available in German."
         ],
         links: [
-          { text: "Background info", url: "/subsitesThuran/background-thuran.html" },
+          { text: "Background info", url: "/subsitesBards/bards-background.html" },
           { text: "Bonus chapter Elven Way", url: "/subsitesThuran/bonus-elven-way.html" },
           { text: "Bonus chapter Eleven Way - Swamp Magic", url: "/subsitesThuran/bonus-elven-swamp.html" },
           { text: "Bonus chapter World Struggle - Irionne and Niturio", url: "/subsitesThuran/bonus-world-irionne.html" },

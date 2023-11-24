@@ -527,7 +527,7 @@ let backgroundInfo = [
     backgroundId: "bards",
     languages: {
       de: {
-        headline: "Hintergrundinfo ffür Die Sänger von Thurán – Elfenweg, Sumpfzauber, Weltenringen",
+        headline: "Hintergrundinfo für Die Sänger von Thurán – Elfenweg, Sumpfzauber, Weltenringen",
         subheader: "2004-2005",
         paragraphs: [
           "Die Sänger waren die ersten Bücher, die ich jemals fertigschrieb – abgesehen von einigen wenigen Kurzgeschichten vorab. Ich habe unglaublich viel während des Schreibens gelernt, und, so hoffe ich, mich nach und nach auch dabei verbessert.", 
