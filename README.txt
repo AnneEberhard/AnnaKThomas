@@ -31,4 +31,5 @@ special-sites.js contains the logic for
     the special logic for personage (using the persons.js with the JSON personSitesHeader und INDIVDUAL JSONs per story)
     the special logic for family trees (using the JSON familyTree)
     the special logic for background info (using the JSON backgroundInfo in the books.js)
+    the source sites containing glossaries, sources and extras (using individual JSONs/Arrays in template.JS)
  

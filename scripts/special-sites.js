@@ -88,9 +88,7 @@ function renderNovellas(genre) {
   let topDivId = genre + "Top";
   let bottomDivID = genre + "Bottom";
   let genreData = findBooksByGenre(genre);
-  console.log(genreData);
   let bookId = genreData[0].bookId;
-  console.log(genreData);
   renderMainSite(genre, topDivId);
   renderBookDetails(genreData, bottomDivID);
 }
@@ -199,7 +197,7 @@ function renderPersonageTop(genre, siteId) {
   }
 }
 
-function  renderPersonageBottom(siteId, personageObject){
+function renderPersonageBottom(siteId, personageObject){
   let divId = siteId + 'Bottom';
   let bottomDiv = document.getElementById(divId);
   bottomDiv.innerHTML = '';
@@ -262,7 +260,6 @@ function generateBackgroundTemplate(id) {
 function findBackgroundInfoById(id) {
   for (let i = 0; i < backgroundInfo.length; i++) {
     if (backgroundInfo[i].backgroundId === id) {
-      console.log(backgroundInfo[i].languages[defaultLanguage])
       return backgroundInfo[i].languages[defaultLanguage];
       }
     }
@@ -286,7 +283,6 @@ function renderFamilyTreeTop(genre, bookId, siteId) {
 
 function generateFamilyTreeTop(backgroundId) {
  let familyTreeGroup = findDataById(backgroundId, familyTree);
- console.log(familyTreeGroup);
  let templateHTML = `<h2 class="personGroup">${familyTreeGroup.headline}</h2>`;
  templateHTML += `<p>${familyTreeGroup.subheader}</p>`;
  for (let i = 0; i < familyTreeGroup.images.length; i++) {
@@ -299,9 +295,134 @@ function generateFamilyTreeTop(backgroundId) {
 function findDataById(id, array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i].backgroundId === id) {
-      console.log(array[i].languages[defaultLanguage])
       return array[i].languages[defaultLanguage];
       }
     }
   return null;
+}
+
+//Function for sites with glossaries and/or sources 
+
+function renderSourcesSite(genre, bookId) {
+  currentSiteId = bookId + 'Sources';
+  currentGenre = genre;
+  const booksWithGlossaries = ['odyssee', 'masks'];
+  const booksWithSources = ['odyssee', 'masks', 'alster', 'mind'];
+if (booksWithGlossaries.includes(bookId)) {
+  renderGlossary(bookId);
+}
+if (booksWithSources.includes(bookId)) {
+  renderSources(bookId);
+}
+  renderNav(navSites, bookId, `${bookId}SourcesNav`);
+}
+
+
+//Function for glossary tables
+function renderGlossary(bookId){
+  let glossaryId = findGlossarybyId(bookId);
+  let divId = bookId + 'Glossary';
+  let targetDiv = document.getElementById(divId);
+  targetDiv.innerHTML = '';
+  targetDiv.innerHTML = generateGlossaryTemplate (glossaryId);
+}
+
+function findGlossarybyId(bookId) {
+  if (bookId == 'masks') {
+    return glossaryMasks;
+  } else if (bookId == 'odyssee') {
+    return glossaryOdyssee;
+  } else {
+    return null;
+  }
+}
+
+function generateGlossaryTemplate(glossaryId) {
+  let templateHTML = generateGlossaryHeader();
+  templateHTML += generateGlossaryTable(glossaryId);
+  return templateHTML;
+}
+
+function generateGlossaryHeader() {
+  let templateHTML = '';
+  let headline;
+  if (defaultLanguage == 'de') {
+    headline = 'Begriffsverzeichnis';
+  } else {
+    headline = 'Glossary';
+  }
+  templateHTML = /*html*/`
+  <h2>${headline}</h2>`;
+  return templateHTML;
+}
+
+function generateGlossaryTable(glossaryId) {
+  let templateHTML = `
+    <table class="personageTable">
+      <tr>
+        <th class="personageName">Name</th>
+        <th>${defaultLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
+      </tr>`;
+  for (let term of glossaryId) {
+    templateHTML += `
+      <tr>
+        <td class="personageName">${term.name}</td> 
+        <td>${term[defaultLanguage]}</td>
+      </tr>`;
+  }
+  templateHTML += `</table>`;
+  return templateHTML;
+}
+
+//Function for Sources paragraphs
+function renderSources(bookId){
+  let sourceId = findSourcesbyId(bookId);
+  let divId = bookId + 'Sources';
+  let targetDiv = document.getElementById(divId);
+  targetDiv.innerHTML = '';
+  targetDiv.innerHTML = generateSourcesTemplate (sourceId);
+}
+
+function findSourcesbyId(bookId) {
+  if (bookId == 'odyssee') {
+    return sourcesOdyssee;
+  } else if (bookId == 'masks') {
+    return sourcesMasks;
+  } else {if (bookId == 'alster') {
+    return sourcesAlster;
+  } if (bookId == 'mind') {
+    return sourcesMind;
+  } 
+    return null;
+  }
+}
+
+
+function generateSourcesTemplate (sourceId) {
+  let templateHTML = generateSourcesHeader();
+  templateHTML += generateSourcesText(sourceId);
+  return templateHTML;
+}
+
+
+function generateSourcesHeader() {
+  let templateHTML = '';
+  let headline;
+  if (defaultLanguage == 'de') {
+    headline = 'Quellen';
+  } else {
+    headline = 'Sources';
+  }
+  templateHTML = /*html*/`
+  <h2>${headline}</h2>`;
+  return templateHTML;
+}
+
+function generateSourcesText(sourceId) {
+  let templateHTML = '';
+   for (let source of sourceId) {
+    templateHTML += `
+      <p>${source}</p>`;
+  }
+  return templateHTML;
 }

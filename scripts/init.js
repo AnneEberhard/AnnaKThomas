@@ -113,6 +113,10 @@ function renderContentBasedOnPage() {
         { path: "/subsitesMasks/masks-familytrees.html", function: renderFamilyTrees, params: ['historical','masks', 'masksFamilyTree'] },
         { path: "/subsitesAlster/alster-familytrees.html", function: renderFamilyTrees, params: ['historical','alster', 'alsterFamilyTree'] },
         { path: "/subsitesElves/elves-familytrees.html", function: renderFamilyTrees, params: ['fantasy','elves', 'elvesFamilyTree'] },
+        { path: "/subsitesMasks/masks-glossary.html", function: renderSourcesSite, params: ['historical','masks'] },
+        { path: "/subsitesOdyssee/odyssee.glossary.html", function: renderSourcesSite, params: ['historical','odyssee'] },
+        { path: "/subsitesAlster/alster-sources.html", function: renderSourcesSite, params: ['historical','alster'] },
+        { path: "/subsitesMind/mind-sources.html", function: renderSourcesSite, params: ['historical','mind'] },
 
       ];
     const path = window.location.pathname;

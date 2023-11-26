@@ -926,3 +926,263 @@ let familyTree = [
     },
   },
 ]
+
+//for glossaries
+let glossaryMasks = [
+      {
+        name: "Auripigment",
+        de: "Gelbe Farbe zum Malen",
+        en: "Yellow color for painting",
+      },
+      {
+        name: "Bargello",
+        de: "Der „Polizeikommandant“, heute ist nach ihm der alte Palazzo del Podesta in Florenz benannt",
+        en: "The 'police commander', today the old Palazzo del Podesta in Florence is named after him",
+      }, 
+      {
+        name: "Bleiweiß",
+        de: "Weiße Farbe zum Malen",
+        en: "White color for painting",
+      },
+      {
+        name: "Capitano del Popolo",
+        de: "Der „Volkshauptmann“",
+        en: "The 'people's captain'",
+      }, 
+      {
+        name: "Carro",
+        de: "Wagen, beinhaltet die Rahmen, Papier und Druckformen",
+        en: "Trolley, includes the frames, paper and printing forms",
+      }, 
+      {
+        name: "Cassa",
+        de: "Kasten, in dem die Typen aufbewahrt werden",
+        en: "Box in which the types are stored",
+      }, 
+      {
+        name: "Cassettinos",
+        de: "Einzelne Boxen in der cassa für die unterschiedlichen Typen",
+        en: "Individual boxes in the cassa for the different types",
+      }, 
+      {
+        name: "Compositoio",
+        de: "Schiene zum Zusammensetzen der Typen für eine Buchstabenreihe",
+        en: "Rail for assembling the types for a row of letters",
+      }, 
+      {
+        name: "Condottiere",
+        de: "Söldnerführer",
+        en: "Mercenary leader",
+      }, 
+      {
+        name: "Florin",
+        de: "Florentische Goldmünze",
+        en: "Florentine gold coin",
+      }, 
+      {
+        name: "Forma",
+        de: "Druckform, Rahmen mit den eingesetzten Schienen und Typen",
+        en: "Printing form, frame with the rails used and types",
+      }, 
+      {
+        name: "Fraschetta",
+        de: "Mit Papier oder Pergament bezogener Rahmen, am timpano befestigt",
+        en: "Frame covered with paper or parchment, attached to the timpano",
+      }, 
+      {
+        name: "Gesso",
+        de: "Feiner Gips zum Herstellen von Abdrücken",
+        en: "Fine plaster for making impressions",
+      }, 
+      {
+        name: "Gonfaloniere",
+        de: "Der „Bannerträger“, oberstes Amt von Florenz, wechselte teilweise alle zwei Monate",
+        en: "The 'standard bearer', the highest office of Florence, sometimes changed every two months",
+      }, 
+      {
+        name: "Karmin/Carmine",
+        de: "Rote Farbe zum Malen",
+        en: "Red color for painting",
+      }, 
+      {
+        name: "Levatrice",
+        de: "Hebamme",
+        en: "Midwife",
+      }, 
+      {
+        name: "Massicot",
+        de: "Grüne Farbe zum Malen",
+        en: "Green paint for painting",
+      }, 
+      {
+        name: "Piano",
+        de: "Tiegel, bringt den nötigen Druck auf die Form",
+        en: "Crucible, brings the necessary pressure to the mold",
+      }, 
+      {
+        name: "Podesta",
+        de: "Der „Stadtvogt“, wurde im Mittelalter in Norditalien gerne mit ortsfremden Personen besetzt",
+        en: "The 'town bailiff', was in the Middle Ages in north-ern Italy gladly filled with non-local persons",
+      }, 
+      {
+        name: "Signoria",
+        de: "Der offiziell regierende Rat",
+        en: "The official ruling council",
+      }, 
+      {
+        name: "Stinche",
+        de: "Eines der Gefängnisse von Florenz",
+        en: "One of the prisons of Florence",
+      },
+      {
+        name: "Strega",
+        de: "Hexe",
+        en: "Witch",
+      }, 
+      {
+        name: "Timpano",
+        de: "Mit Papier oder Pergament bezogener Rahmen, am carro befestigt",
+        en: "Frame covered with paper or parchment, attached to the carro",
+      }, 
+      {
+        name: "Type",
+        de: "Metallene Buchstaben zum Drucken",
+        en: "Metal letters for printing",
+      }
+];
+
+let glossaryOdyssee = [
+  {
+    name: "Al-Quds",
+    de: "arabischer Name für Jerusalem",
+    en: "Arabic name for Jerusalem",
+  },
+  {
+    name: "Ash-Shām",
+    de: "arabischer Name für Norden, wird u.a. für Damaskus oder Syrien verwandt",
+    en: "Arabic name for north, used for Damascus or Syria, among others",
+  }, 
+  {
+    name: "Beinlinge",
+    de: "eher wie einzelne Strumpfhosenbeine als wie eine Hose",
+    en: "Leggings",
+  },
+  {
+    name: "Bruche",
+    de: "eine Art Unterhose für Männer",
+    en: "a kind of underpants for men",
+  }, 
+  {
+    name: "Gebende",
+    de: "Kopfbedeckung, die um Stirn und Kinn gebunden wird",
+    en: "",
+  },
+  {
+    name: "Kotte ",
+    de: "Oberkleid, wird über dem Untergewand oder Hemd getragen",
+    en: "Outer garment, worn over the undergarment or shirt",
+  }, 
+  {
+    name: "Surcout",
+    de: "Mantelartig, über dem Oberkleid getragen",
+    en: "Coat-like, worn over the outer garment",
+  }, 
+  {
+    name: "Hemus",
+    de: "heute: Hoher Balkan",
+    en: "today: Balkan mountain range",
+  }, 
+];
+
+//for sources 
+let sourcesOdyssee = [
+  'A History of the Crusades; Kenneth M. Setton (General Editor), Auszug:',
+  'XV: The Second Crusade, pg. 463-512',
+  'XVI: The Career of Nur-ad-Din pg. 513-527',
+  'Important Dates and Events pg. 622-625',
+  'Chronik der Deutschen, 3. Auflage 1995, s. 212-213',
+  'Die Geschichte der Kreuzzüge; Steven Runciman, dtv, 5. Auflage Juni 2006'
+];
+
+let sourcesMasks = [
+     'Luca Landucci: Ein Florentinisches Tagebuch 1450-1516. Eugen Diederichs Verlag 1978',
+     'E.L. Steely: Stories of the Italien Artists by Vasari. Chatto, Windus & Duffield 1908',
+     'Niccolo Machiavelli: History of Florence and of the affairs of Italy from the earliest times to the death of Lorenzo the Magnificent. Universal Classics Library 1901',
+     'Jacob Burckhardt: Die Kultur der Renaissance in Italien. Sonderausgabe für Nikol Verlags­gesell­schaft 2004',
+     'Richard C. Trexler: Public Life in Renaissance Florence. Cornell University Press 1991',
+     'Peter Burke: Die europäische Renaissance. Verlag C.H. Beck 2005',
+     'Volker Reinhardt: Die Renaissance in Italien – Geschichte und Kultur. Verlag C. H. Beck 2007',
+     'Eugenio Garin (Herausgeber): Der Mensch der Renaissance. Magnus Verlag 2004',
+     'Ingeborg Walter: Der Prächtige. Lorenzo de’ Medici und seine Zeit. Piper Verlag 2005',
+     'James Cleugh: Die Medici. Piper Verlag 2003',
+     'Chiara Basta: Botticelli. Rizzoli International Publications 2005',
+     'Frank Zöllner: Leonardo. Taschen 2005',
+     'Brian Richardson: Printing, Writers and Reader in Renaissance Italy. Cambridge University Press 1999',
+];
+
+let sourcesAlster = [
+  'Arne Cornelius Wasmuth: Hanseatische Dynastien – Alte Hamburger Familien öffnen ihre Alben. Verlag Die Hanse, 2001',
+  'Eckart Klessmann: Geschichte der Stadt Hamburg. Hoffmann und Campe, 1988',
+  'Gabriele Hofmann: Das Haus an der Elbchaussee – Die Geschichte einer Reederfamilie. Piper ebooks, 2018',
+  'Irmtraud Jo Himmelheber: Leben im Biedermeier. Königshausen & Neumann, 2019',
+  'Manfred Görtemaker: Deutschland im 19. Jahrhundert – Entwicklungslinien. Leske + Budrich, 1983',
+  'Matthias Wegner: Hanseaten – Von stolzen Bürgern und schönen Legenden. Pantheon, 2008',
+  'Michael P. Zerres und Christopher Zerres: Entwicklung des Welthandels im 19. Jahrhundert. Rainer Hampp Verlag, 2008',
+  'Bernhard Pabst: Die Familie Anckelmann in Hamburg und Leipzig. Gelehrte, Rats- und Handelsherren. Teil 3: Die Familie Esich aus Bremen und die späten Hamburger Anckelmann. Stand 14.01.2007. 3. verbesserte und erweiterte Auflage, Berlin 2007',
+  'Thomas Mann, 1901: Buddenbrooks. Verfall einer Familie.',
+  'Amalie Sieveking, 1856: Vermächtniß für meine jungen Freundinnen. Gemeinfreies Buch',
+  'https://de.wikipedia.org/wiki/Titularabt [13.08.2022]',
+  'https://de.wikipedia.org/wiki/Reifrock#Krinoline [20.08.2022]',
+  'Blog Koloniales Erbe, 01. März 2019: Opium: Eine Welt verfällt dem Rausch. [11.08.2022]',
+  'https://www.wolfgang-amadeus.at/de/Werke_von_Mozart [15.08.2022]',
+  'https://de.wikipedia.org/wiki/Polizei_Hamburg [16.08.2022]',
+  'Karten: https://www.christian-terstegge.de/hamburg/karten_ereignisse/index.html [August 2022]'
+];
+
+let sourcesMind = [
+  'Werner Schneiders: Das Zeitalter der Aufklärung. C.H. Beck Wissen, 4. Auflage 2008',
+  'Ronald G. Asch: Europäischer Adel in der Frühen Neuzeit. Böhlau Verlag, 2008',
+  'Stefan Zweig: Marie Antoinette – Bildnis eines mittleren Charakters. Fischer Taschenbuch Verlag, 27. Auflage 2007',
+  'Madame de Staël: Über Deutschland. Insel Taschenbuch, nach der deutschen Erstübertragung 1814, herausgegeben von Monika Bosse, 1985',
+  'Amanda Foreman: Die Herzogin von Devonshire – Das Leben einer leidenschaftlichen Frau. Piper, 2003',
+  'Ian Kelly: Beau Brummell – The Ultimate Man of Style. Free press, 2006',
+  'J. Holland Rose: Der jüngere Pitt. Verlag Hermann Rinn München, 1948',
+  'Peter Wende: Englische Könige und Königinnen der Neuzeit. C.H. Beck, 1998',
+  'Matthias Henke: Joseph Haydn. Deutscher Taschenbuchverlag (dtv), 2009',
+  'Michael Wersin: Faszination Klassik – Eine kleine Musikgeschichte. Reclam, 2008',
+  'Gina Kraus: Katharina die Große. Langen Müller, 2006 (Sonderproduktion)',
+  'Vincent Cronin. Katharina die Große. Piper, 2. Auflage 2008',
+  'Martin Winkler. Zarenlegende. Winkler Verlag 1940 (Neuauflage 1948)',
+  'Nikolaus von Sementowsky-Kurilo: Alexander I. von Rußland. Frankfurter Societäts-Druckerei GmbH 1967',
+  'Heinz Ohff: Preußens Könige. Piper 9. Auflage 2008',
+  'Carolin Philipps: Friederike von Preußen – die leidenschaftliche Schwester der Königin Luise. Piper, ungekürzte Taschenbuchausgabe 2009',
+  'Martin Geck: Ludwig van Beethoven. Rowohlt Taschenbuchverlag, 4. Auflage 2008',
+  'Volker Ullrich: Napoleon. Rowohlt Taschenbuchverlag, 2006',
+  'Fanny Deschamps: Louison oder Die köstliche Stunde. Rowohlt Taschenbuchverlag, 1991',
+  'Fanny Deschamps: Louison oder Die Versuchung des Glücks. Rowohlt Taschenbuchverlag, 1994',
+  'Peter Prange: Die Philosophin. Knaur Taschenbuchverlag, 2004',
+  'Margit Walsø: Geliebter Voltaire. Deutscher Taschenbuchverlag (dtv) 2009',
+  'Bettina Hennig: Luise – Königin aus Liebe. Goldmann, 2. Auflage 2009',
+  'Annemarie Selinko: Désirée. Kiepenheuer & Witsch, 6. Auflage 2008',
+  'Sabine Weiß: Die Wachsmalerin – Das Leben der Madame Tussaud. List Taschenbuch, 2008',
+  'Tanja Kinkel: Wahnsinn, der das Herz zerfrißt. Goldmann, 1990'
+];
+
+//for timelines
+let timelinesMasks = [
+  {
+    date: "",
+    de: "",
+    en: "",
+  },
+  {
+    date: "",
+    de: "",
+    en: "",
+  }, 
+  {
+    date: "",
+    de: "",
+    en: "",
+  },
+];
