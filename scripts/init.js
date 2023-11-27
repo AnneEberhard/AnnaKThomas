@@ -119,6 +119,7 @@ function renderContentBasedOnPage() {
         { path: "/subsitesMind/mind-sources.html", function: renderSourcesSite, params: ['historical','mind'] },
         { path: "/subsitesMasks/masks-timeline.html", function: renderTimeline, params: ['historical','masks'] },
         { path: "/subsitesOdyssee/odyssee-timeline.html", function: renderTimeline, params: ['historical','odyssee'] },
+        { path: "/subsitesChildren/children-bonus.html", function: renderBonusChapter, params: ['fantasy','children', 'zach'] },
 
       ];
     const path = window.location.pathname;

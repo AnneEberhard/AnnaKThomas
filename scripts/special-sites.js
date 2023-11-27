@@ -520,3 +520,32 @@ function generateTableRowSingle(previousYear,timeline,event ) {
   </tr>`;
   return templateHTML
 }
+
+// für BonusChapters
+
+async function renderBonusChapter(genre, bookId, bonusId) {
+  currentSiteId = bonusId;
+  currentGenre = genre;
+  url = '/JSONs/bonus-zach.json';
+  targetDiv = bonusId+'Top';
+  await loadAndRenderContent(targetDiv, url);
+  renderNav(navSites, bookId, `${bonusId}Nav`);
+
+}
+async function loadAndRenderContent(targetDiv, url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const languageData = data[defaultLanguage];
+    const targetElement = document.getElementById(targetDiv);
+    targetElement.innerHTML = `<h2>${languageData.header}</h2>`;
+    languageData.text.forEach(paragraph => {
+      targetElement.innerHTML += `<p>${paragraph}</p>`;
+    });
+  } catch (error) {
+    console.error('Fehler beim Laden und Rendern der JSON-Datei:', error);
+  }
+}
+
+
+
