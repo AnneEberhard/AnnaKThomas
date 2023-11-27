@@ -1331,19 +1331,31 @@ let sourcesMind = [
 ];
 
 //for timelines
-let timelinesMasks = [
+let timelineHeaders = [{
+  bookId: 'odyssee',
+  de: 'Zeittafel des Zweiten Kreuzzuges (Auszug)',
+  en: 'Timeline of the Second Crusade (excerpt)'
+},
+{
+  bookId: 'masks',
+  de: 'Zeittafel der historischen Erignisse',
+  en: 'Timetable of historical events'
+},
+]
+
+let timelineMasks = [
   {
     year: "1469",
     event: [
       {
         date: "",
         de: "Venedig gibt Johann von Speyer ein Buchdruck-Monopol über fünf Jahre",
-        en: "",
+        en: "Venice grants Johann of Speyer a monopoly on book printing for five years",
       },
       {
         date: "",
         de: "Leonardo da Vinci kommt mit 17 Jahren zu Andrea del Verrocchio",
-        en: "",
+        en: "Leonardo da Vinci comes to Andrea del Verrocchio at the age of 17",
       },
       {
         date: "",
@@ -1354,7 +1366,7 @@ let timelinesMasks = [
   },
 ];
 
-let timelinesOdyssee = [
+let timelineOdyssee = [
   {
     year: "1144",
     event: [

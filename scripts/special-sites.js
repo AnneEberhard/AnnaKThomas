@@ -216,7 +216,7 @@ function generatePersonTableTemplate(siteId, personGroup) {
   let subHeaderId = siteId + personGroup.groupId; // unique ID for each header even if naming in JSON is similar
   let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
   templateHTML += `
-    <table class="personageTable">
+    <table class="contentTable">
       <tr>
         <th class="personageName">Name</th>
         <th>${defaultLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
@@ -358,7 +358,7 @@ function generateGlossaryHeader() {
 
 function generateGlossaryTable(glossaryId) {
   let templateHTML = `
-    <table class="personageTable">
+    <table class="contentTable">
       <tr>
         <th class="personageName">Name</th>
         <th>${defaultLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
@@ -397,7 +397,6 @@ function findSourcesbyId(bookId) {
   }
 }
 
-
 function generateSourcesTemplate (sourceId) {
   let templateHTML = generateSourcesHeader();
   templateHTML += generateSourcesText(sourceId);
@@ -425,4 +424,115 @@ function generateSourcesText(sourceId) {
       <p>${source}</p>`;
   }
   return templateHTML;
+}
+
+//function for timeline Sites
+function renderTimeline(genre, bookId) {
+  currentSiteId = bookId + 'Timeline';
+  currentGenre = genre;
+  renderTimelineTop(bookId);
+  renderTimelineBottom(bookId);
+  renderNav(navSites, bookId, `${bookId}TimelineNav`);
+}
+
+function renderTimelineTop(bookId) {
+  let divId = bookId + 'TimelineTop';
+  let targetDiv = document.getElementById(divId);
+  targetDiv.innerHTML = '';
+  targetDiv.innerHTML = generateTimelineHeader(bookId);
+}
+
+function generateTimelineTemplate(bookId, timelineId) {
+  let templateHTML = generateTimelineHeader(bookId);
+  templateHTML += generateTimelineTable(timelineId);
+  return templateHTML;
+}
+
+function generateTimelineHeader(bookId) {
+  let templateHTML = '';
+  let headline;
+  let matchingHeader = timelineHeaders.find(header => header.bookId === bookId);
+  if (matchingHeader) {
+    headline = matchingHeader[defaultLanguage] || ''; 
+  } else {
+    headline = defaultLanguage === 'de' ? 'Zeittafel' : 'Timeline';
+  }
+  templateHTML = /*html*/`
+    <h2>${headline}</h2>`;
+  return templateHTML;
+}
+
+
+
+function generateTimelineHeader2(bookId) {
+  let templateHTML = '';
+  let headline;
+  if (defaultLanguage == 'de') {
+    headline = 'Zeittafel';
+  } else {
+    headline = 'Timeline';
+  }
+  templateHTML = /*html*/`
+  <h2>${headline}</h2>`;
+  return templateHTML;
+}
+
+
+function renderTimelineBottom(bookId) {
+  let timelineId = findTimelinebyId(bookId);
+  let divId = bookId + 'TimelineBottom';
+  let targetDiv = document.getElementById(divId);
+  targetDiv.innerHTML = '';
+  targetDiv.innerHTML = generateTimelineTable(timelineId);
+}
+
+function findTimelinebyId(bookId) {
+  if (bookId == 'odyssee') {
+    return timelineOdyssee;
+  } else if (bookId == 'masks') {
+    return timelineMasks;
+  } else { return null;}
+}
+
+function generateTimelineTable(timelineData) {
+  let templateHTML = `
+    <table class="contentTable">
+      ${generateTableHeader()}
+      ${generateTableRows(timelineData)}
+    </table>`;
+  return templateHTML;
+}
+
+function generateTableHeader() {
+  return `
+    <tr>
+      <th class="timelineYear">${defaultLanguage === 'de' ? 'Jahr' : 'Year'}</th>
+      <th class="timelineDate">${defaultLanguage === 'de' ? 'Datum' : 'Date'}</th>
+      <th class="timelineEvent">${defaultLanguage === 'de' ? 'Ereignis' : 'Event'}</th>
+    </tr>`;
+}
+
+function generateTableRows(timelineData) {
+  let templateHTML = '';
+  let previousYear = null;
+
+  for (let timeline of timelineData) {
+    for (let event of timeline.event) {
+      templateHTML +=  generateTableRowSingle(previousYear,timeline,event );
+      if (previousYear !== timeline.year) {
+        previousYear = timeline.year;
+      }
+    }
+  }
+  return templateHTML;
+}
+
+function generateTableRowSingle(previousYear,timeline,event ) {
+  let templateHTML = `
+  <tr>
+    <td class="timelineYear">${previousYear === timeline.year ? '' : timeline.year}</td>
+    <td class="timelineDate">${event.date}</td>
+    <td class="timelineEvent">${event[defaultLanguage]}</td>
+  </tr>`;
+  return templateHTML
 }

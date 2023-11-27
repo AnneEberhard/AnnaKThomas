@@ -117,6 +117,8 @@ function renderContentBasedOnPage() {
         { path: "/subsitesOdyssee/odyssee.glossary.html", function: renderSourcesSite, params: ['historical','odyssee'] },
         { path: "/subsitesAlster/alster-sources.html", function: renderSourcesSite, params: ['historical','alster'] },
         { path: "/subsitesMind/mind-sources.html", function: renderSourcesSite, params: ['historical','mind'] },
+        { path: "/subsitesMasks/masks-timeline.html", function: renderTimeline, params: ['historical','masks'] },
+        { path: "/subsitesOdyssee/odyssee-timeline.html", function: renderTimeline, params: ['historical','odyssee'] },
 
       ];
     const path = window.location.pathname;
