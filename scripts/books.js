@@ -1,4 +1,379 @@
-// for books, further down templates for background
+//for booksites
+let topSites = [
+  {
+    siteId: "bards",
+    translationExists: "planned",
+    languages: {
+      de: {
+        title: "Die Sänger von Thurán - eine klassische Fantasytrilogie",
+        paragraphs: [
+          "Dies ist mein Erstlingswerk, der Grund, weshalb ich mich überhaupt jemals dazu durchringen konnte, eine meiner Geschichten loszulassen. Es hat sicher eine Menge Erstlingsfehler - aber willkommen in der Welt von Thurán!",
+          "Und weil ich so lange daran geschrieben habe, so viel damit zu tun hatte, gibt es hier ein paar kleine Extras und ein bisschen was zum Nachschlagen. Darunter ist die Geschichte, wie es überhaupt dazu kam, sowie auch vier Kapitel, von denen es eines nie in die Bücher schaffte und drei, die den Kürzungen von Elfenweg und Weltenringen am Ende zum Opfer fielen.",
+          "Hinweis: Die Unterseiten sind derzeit nur auf deutsch verfügbar.",
+        ],
+        links: [
+          {
+            text: "HintergrundInfo",
+            url: "/subsitesBards/bards-background.html",
+          },
+          {
+            text: "Bonuskapitel Elfenweg",
+            url: "/subsitesThuran/bonus-elven-way.html",
+          },
+          {
+            text: "Bonuskapitel Elfenweg - Sumpfzauber",
+            url: "/subsitesThuran/bonus-elven-swamp.html",
+          },
+          {
+            text: "Bonuskapitel Weltenringen: Irionne und Niturio",
+            url: "/subsitesThuran/bonus-world-irionne.html",
+          },
+          {
+            text: "Bonuskapitel Bonuskapitel Weltenringen: Syl und Nycas",
+            url: "/subsitesThuran/bonus-world-syl.html",
+          },
+          { text: "Karten", url: "/subsitesThuran/thuran-maps.html" },
+          {
+            text: "Personenverzeichnis",
+            url: "/subsitesThuran/thuran-persons.html",
+          },
+          {
+            text: "Begriffsverzeichnis",
+            url: "/subsitesThuran/thuran-glossary.html",
+          },
+        ],
+      },
+      en: {
+        title: "The Bards of Thurán - a Classic Fantasy Trilogy",
+        paragraphs: [
+          "This is my debut work, the reason I could ever bring myself to release one of my stories in the first place. It certainly has a lot of first-time mistakes - but welcome to the world of Thurán!",
+          "And because I spent so long writing it and had so much to do with it, here are a few little extras and a few things to look up. These include the story of how it came about in the first place, as well as four chapters, one of which never made it into the books and three that fell victim to the shortening of Elfenweg and Weltenringen at the end.",
+          "Note: The subpages are currently only available in German.",
+        ],
+        links: [
+          {
+            text: "Background info",
+            url: "/subsitesBards/bards-background.html",
+          },
+          {
+            text: "Bonus chapter Elven Way",
+            url: "/subsitesThuran/bonus-elven-way.html",
+          },
+          {
+            text: "Bonus chapter Eleven Way - Swamp Magic",
+            url: "/subsitesThuran/bonus-elven-swamp.html",
+          },
+          {
+            text: "Bonus chapter World Struggle - Irionne and Niturio",
+            url: "/subsitesThuran/bonus-world-irionne.html",
+          },
+          {
+            text: "Bonus chapter World Struggle - Syl and Nycas",
+            url: "/subsitesThuran/bonus-world-syl.html",
+          },
+          { text: "Maps", url: "/subsitesThuran/thuran-maps.html" },
+          { text: "Personage", url: "/subsitesThuran/thuran-persons.html" },
+          { text: "Glossary", url: "/subsitesThuran/thuran-glossary.html" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "children",
+    translationExists: "progress",
+    languages: {
+      de: {
+        title: "Die Kinder der Engel - eine Urban Fantasy Trilogie",
+        paragraphs: [
+          "Eigentlich wollte ich nach den Sängern nie wieder Fantasy schreiben. Ich wollte nie wieder eine Welt erfinden, sondern mich lieber auf historische Werke stürzen. Aber dann begegnete mir Flo - und tja, was soll ich sagen ... Hier sind sie: meine Dämonenjäger!",
+        ],
+        links: [
+          {
+            text: "HintergrundInfo",
+            url: "/subsitesChildren/children-background.html",
+          },
+          {
+            text: "Bonuskapitel",
+            url: "/subsitesChildren/children-bonus.html",
+          },
+          {
+            text: "Personenverzeichnis",
+            url: "/subsitesChildren/children-persons.html",
+          },
+          { text: "Quellen", url: "/subsitesChildren/children-sources.html" },
+        ],
+      },
+      en: {
+        title: "The Children of Angels - an Urban Fantasy Trilogy",
+        paragraphs: [
+          "Actually, I never wanted to write fantasy again after The Bards. I never wanted to invent a world again, but would rather focus on historical works. But then I met Flo - and well, what can I say ... Here they are: my demon hunters!",
+        ],
+        links: [
+          {
+            text: "Background info",
+            url: "/subsitesChildren/children-background.html",
+          },
+          {
+            text: "Bonus chapter",
+            url: "/subsitesChildren/children-bonus.html",
+          },
+          { text: "Personage", url: "/subsitesChildren/children-persons.html" },
+          { text: "Sources", url: "/subsitesChildren/children-sources.html" },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "elves",
+    translationExists: "true",
+    languages: {
+      de: {
+        title: "Von Elfen und Wölfen - eine Urban Fantasy Trilogie",
+        paragraphs: [""],
+        links: [
+          {
+            text: "HintergrundInfo",
+            url: "/subsitesElves/elves-background.html",
+          },
+          {
+            text: "Bonuskapitel Von Elfen und Wölfen: Noel",
+            url: "/subsitesElves/elves-bonus-Noel.html",
+          },
+          {
+            text: "Bonuskapitel Im Namen der Menschen: Diana",
+            url: "/subsitesElves/elves-bonus-diana.html",
+          },
+          {
+            text: "Personenverzeichnis",
+            url: "/subsitesElves/elves-persons.html",
+          },
+          { text: "Stammbäume", url: "/subsitesElves/elves-familytrees.html" },
+        ],
+      },
+      en: {
+        title:
+          "Of Elves and Wolves - an Urban Fantasy Story in three arcs and nine books",
+        paragraphs: [""],
+        links: [
+          {
+            text: "Background info",
+            url: "/subsitesElves/elves-background.html",
+          },
+          {
+            text: "Bonus chapter - Lucie arc: Noel",
+            url: "/subsitesElves/elves-bonus-Noel.html",
+          },
+          {
+            text: "Bonus chapter - Lena arc: Diana",
+            url: "/subsitesElves/elves-bonus-diana.html",
+          },
+          { text: "Personage", url: "/subsitesElves/elves-persons.html" },
+          {
+            text: "Family Trees",
+            url: "/subsitesElves/elves-familytrees.html",
+          },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "odyssee",
+    translationExists: "planned",
+    languages: {
+      de: {
+        title:
+          "Irrfahrt ins Gelobte Land - Historischer Roman aus der Zeit des Kreuzzüge",
+        paragraphs: ["Mein erster historischer Roman."],
+        links: [
+          {
+            text: "HintergrundInfo",
+            url: "/subsitesOdyssee/odyssee-background.html",
+          },
+          { text: "Bonuskapitel", url: "/subsitesOdyssee/odyssee-bonus.html" },
+          {
+            text: "Personenverzeichnis",
+            url: "/subsitesOdyssee/odyssee-persons.html",
+          },
+          { text: "Zeittafel", url: "/subsitesOdyssee/odyssee-timeline.html" },
+          {
+            text: "Stammbäume der Staufer und Welfen",
+            url: "/subsitesOdyssee/odyssee-familytrees.html",
+          },
+          {
+            text: "Begriffe und Quellen",
+            url: "/subsitesOdyssee/odyssee.glossary.html",
+          },
+        ],
+      },
+      en: {
+        title:
+          "Odyssee to the Promised Land - Historical novel at the time of the Crusades",
+        paragraphs: ["My second historical novel."],
+        links: [
+          {
+            text: "Background info",
+            url: "/subsitesOdyssee/odyssee-background.html",
+          },
+          { text: "Bonus chapter", url: "/subsitesOdyssee/odyssee-bonus.html" },
+          { text: "Personage", url: "/subsitesOdyssee/odyssee-persons.html" },
+          { text: "Timeline", url: "/subsitesOdyssee/odyssee-timeline.html" },
+          {
+            text: "Conflict between Staufer and Welfen",
+            url: "/subsitesOdyssee/odyssee.conflict.html",
+          },
+          {
+            text: "Family trees of Staufer and Welfen",
+            url: "/subsitesOdyssee/odyssee-familytrees.html",
+          },
+          {
+            text: "Glossary and Sources",
+            url: "/subsitesOdyssee/odyssee.glossary.html",
+          },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "masks",
+    translationExists: "true",
+    languages: {
+      de: {
+        title:
+          "Die Masken von Florenz - Historischer Roman zur Zeit der Renaissance",
+        paragraphs: ["Mein zweiter historischer Roman."],
+        links: [
+          {
+            text: "HintergrundInfo",
+            url: "/subsitesMasks/masks-background.html",
+          },
+          { text: "Bonuskapitel", url: "/subsitesMasks/masks-bonus.html" },
+          {
+            text: "Personenverzeichnis",
+            url: "/subsitesMasks/masks-persons.html",
+          },
+          { text: "Zeittafel", url: "/subsitesMasks/masks-timeline.html" },
+          {
+            text: "Stammbaum der Medici",
+            url: "/subsitesMasks/masks-familytrees.html",
+          },
+          {
+            text: "Begriffe und Quellen",
+            url: "/subsitesMasks/masks-glossary.html",
+          },
+        ],
+      },
+      en: {
+        title:
+          "The Masks of Florence - Historical novel set during the Renaissance",
+        paragraphs: ["My second historical novel."],
+        links: [
+          {
+            text: "Background info",
+            url: "/subsitesMasks/masks-background.html",
+          },
+          { text: "Bonus chapter", url: "/subsitesMasks/masks-bonus.html" },
+          { text: "Personage", url: "/subsitesMasks/masks-persons.html" },
+          { text: "Timeline", url: "/subsitesMasks/masks-timeline.html" },
+          {
+            text: "Family trees of the Medici",
+            url: "/subsitesMasks/masks-familytrees.html",
+          },
+          {
+            text: "Glossary and Sources",
+            url: "/subsitesMasks/masks-glossary.html",
+          },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "alster",
+    translationExists: "true",
+    languages: {
+      de: {
+        title:
+          "Alsterdiamanten - Historischer Roman im Hamburg des Biedermeiers",
+        paragraphs: ["Mein zweiter historischer Roman."],
+        links: [
+          {
+            text: "HintergrundInfo",
+            url: "/subsitesAlster/alster-background.html",
+          },
+          {
+            text: "Personenverzeichnis",
+            url: "/subsitesAlster/alster-persons.html",
+          },
+          { text: "Stammbaum", url: "/subsitesAlster/alster-familytrees.html" },
+          {
+            text: "Quellen und Links zu den Karten",
+            url: "/subsitesAlster/alster-sources.html",
+          },
+        ],
+      },
+      en: {
+        title: "Alster Diamonds - Historical novel set during the Renaissance",
+        paragraphs: ["My second historical novel."],
+        links: [
+          {
+            text: "Background info",
+            url: "/subsitesAlster/alster-background.html",
+          },
+          { text: "Personage", url: "/subsitesAlster/alster-persons.html" },
+          {
+            text: "Family Tree",
+            url: "/subsitesAlster/alster-familytrees.html",
+          },
+          {
+            text: "Quellen und Links zu den Karten",
+            url: "/subsitesAlster/alster-sources.html",
+          },
+        ],
+      },
+    },
+  },
+  {
+    siteId: "mind",
+    translationExists: "false",
+    languages: {
+      de: {
+        title:
+          "Der Geist in Brand - Ein Krautjunker zwischen Rokoko und Revolution",
+        paragraphs: [
+          "Zwölf Jahre Schreibzeit und fast zwei Dekaden umspannend.",
+        ],
+        links: [
+          {
+            text: "HintergrundInfo",
+            url: "/subsitesMind/mind-background.html",
+          },
+          { text: "Bonuskapitel", url: "/subsitesMind/mind-bonus.html" },
+          {
+            text: "Personenverzeichnis",
+            url: "/subsitesMind/mind-persons.html",
+          },
+          { text: "Quellen", url: "/subsitesMind/mind-sources.html" },
+        ],
+      },
+      en: {
+        title: "The Mind on Fire - A Krautjunker between Rococo and Revolution",
+        paragraphs: [
+          "Twelve years of writing and spanning almost two decades.",
+        ],
+        links: [
+          {
+            text: "Background info",
+            url: "/subsitesMind/mind-background.html",
+          },
+          { text: "Bonus chapter", url: "/subsitesMind/mind-bonus.html" },
+          { text: "Personage", url: "/subsitesMind/mind-persons.html" },
+          { text: "Sources", url: "/subsitesMind/mind-sources.html" },
+        ],
+      },
+    },
+  },
+];
+
+// for books
 let allBooks = [
   {
     genre: "historical",
@@ -522,204 +897,3 @@ let allBooks = [
   // Weitere Genres können hier hinzugefügt werden
 ];
 
-let backgroundInfo = [
-  {
-    backgroundId: "bards",
-    languages: {
-      de: {
-        headline: "Hintergrundinfo für Die Sänger von Thurán – Elfenweg, Sumpfzauber, Weltenringen",
-        subheader: "2004-2005",
-        paragraphs: [
-          "Die Sänger waren die ersten Bücher, die ich jemals fertigschrieb – abgesehen von einigen wenigen Kurzgeschichten vorab. Ich habe unglaublich viel während des Schreibens gelernt, und, so hoffe ich, mich nach und nach auch dabei verbessert.", 
-          "Die Geschichte selbst ist sehr alt: Mit circa drei Jahren dachte ich mir Anabellánien aus. Das ist von meiner Mutter so in meinen Kinderalben dokumentiert – wie ich ihr sagte, sie dürfe mich jetzt nicht stören, ich spiele Anna-Land. Einige Jahre später hatte ich eine Brieffreundin, mit der zusammen ich die Geschichte weiterspann: Sie schrieb mir ihre Abenteuer in unserem fernen Land, das damals noch Fantasien hieß (ehrlich, ich kannte die Unendliche Geschichte zu dem Zeitpunkt nicht), und ich schrieb ihr die meinen. Aus dieser Zeit stammen die Schwestern, Acanà, Jann, Derjam, Keito und Rawenzan, sowie Aruna und Caro, die ursprünglich auf das Konto meiner Freundin gingen, und die ich später adaptiert und verändert habe.", 
-          "Das alles geschah, bevor ich ernsthaft zu schreiben begann – ich kann noch keine zehn Jahre alt gewesen sein. Mit zwölf entdeckte ich meine Liebe zu Computern und dem geschriebenen Wort, zu dem Erschaffen von Geschichten. Da ich aber nicht besonders ausdauernd war, blieb es bei Kurzgeschichten und meiner sogenannten „Übungsgeschichte“, die ich sicher niemals veröffentlichen werden (sie handelt von Prinzen und Prinzessinnen, es existieren mittlerweile über elf verschiedene Variationen, und ja, was will man von einer nicht gerade frühreifen Zwölfjährigen denn erwarten…).", 
-          "Ich hatte immer vor, Acanàs und Janns Geschichte eines Tages aufzuschreiben. Über die Jahre startete ich mehrere Versuchen, spielte mit verschiedenen Perspektiven herum, aber nichts klappte so richtig. Und dann, eines Abends im September 2004, stand ich auf meinem Balkon und dachte plötzlich: Jetzt tue ich es. Jetzt bin ich soweit, jetzt schreibe ich sie auf.",
-          "Ich ging hinein, an meinen Computer, fing an zu tippen. Ich hatte da bereits die erste Szene, eine Szene aus dem Mittelteil und das Ende. Was also blieb, war, sechs Jahre Reise zu füllen. Und das tat ich. Die nächsten drei, vier Monate machte ich nichts anderes als zu schreiben (und Vollzeit zu arbeiten, denn Rechnungen müssen schließlich bezahlt werden). Ich träumte von Jann und Acanà, ich lebte praktisch in Janns Kopf. Ich schrieb einen ganzen Urlaub durch, und die Freundin, mit der ich im Urlaub war, lachte und sagte – du schreibst auch noch einen zweiten und dritten Teil.", 
-          "Dann seufzte ich immer nur und sagte – lass mich erst mal diesen fertigstellen. Ich habe noch nie etwas so Großes fertiggestellt.", 
-          "Kurz vor Weihnachten 2004 war ich fertig und über alle Maßen stolz. Ich ließ drei Exemplare im Copyshop ausdrucken und binden (und sie passten gerade so in die Spiralbindung, super-unhandliche Dinger). Ich gab sie Freunden und Familie zum Lesen. Ich kontaktierte Verlage. Und als das Neue Jahr kam (und ich schon zwei Absagen kassiert hatte), wollte ich eine andere Geschichte zu Ende schreiben, meine ewige, nicht-enden-wollende Übungsgeschichte.", 
-          "Aber ich konnte nicht. Ich konnte einfach nicht – Jann und Acanà ließen mich nicht los. Die Geschichte war noch nicht zu Ende. Ich hatte noch so viele Ideen!",
-          "Und so tat ich das, was meine Freundin mir prophezeit hatte: Ich schrieb einen zweiten und dritten Teil. Das dauerte noch einmal jeweils vier Monate, so dass ich im September 2005 voller Stolz meinen letzten Satz schrieb und dachte – das war meine Fantasy-Geschichte. Jetzt ist sie auserzählt, und jetzt konzentriere ich mich voll und ganz auf historische Romane. Nie wieder werde ich ein zweites Thurán schaffen, und Jann und Acanà haben ihren Frieden verdient.", 
-          "So ganz hat sich das nicht bewahrheitet – ich habe zwar kein zweites Thurán geschaffen, aber Urban Fantasy für mich entdeckt. Und ob ich mit Mia schon so fertig bin, weiß ich ebenfalls noch nicht.", 
-          "Was ich weiß: Dies war mein erstes Baby. Es sind immer noch eine Menge Erstlingsfehler drin, dessen bin ich mir bewusst. Ich habe versucht, auszumerzen, was ging, aber es ist eben ein Erstlingswerk und manches, wie zum Beispiel die wechselnden Perspektiven, habe ich erst spät eingesehen.", 
-          "Doch ohne die Sänger, ohne diesen persönlichen Erfolg, eine derart lange Geschichte tatsächlich fertiggestellt zu haben, hätte ich vermutlich niemals meine historischen Romane geschrieben, mir niemals zugetraut, überhaupt etwas zu schreiben, was eines Tages außer mir noch jemand lesen kann.",
-          "Und so, wie die Sänger meine Schreiblust bestärkten, triggerten sie auch die Idee, etwa zu veröffentlichen. Auf meine initialen Bewerbungen hatte ich nur Ablehnungen bekommen und beschloss damals – 2005 – dass ich mir den Stress einfach nicht antun wollte, und außerdem, die Sänger waren mein und ich schrieb sowieso immer noch daran rum.", 
-          "Zehn Jahre später gab es E-Books, und es war plötzlich machbar, etwas ohne einen großen Verlag oder sehr viel Geld im Rücken zu veröffentlichen. Es dauerte natürlich noch etwas – Cover finden, Titelchecks durchführen (und sich von liebgewordenen Titeln verabschieden, weil schon vergeben), lektorieren und hundert andere Kleinigkeiten, die der neue Mini-Verlag initiierte. Wir starteten mit zwei Kurzgeschichten einen Testlauf, bevor wir endlich, im Herbst 2017, die drei Teile hochluden – ohne Karten, weil wir einfach nicht rausfinden konnten, wie das ging, und weil die Zeit inzwischen aus anderen Gründen drängte.", 
-          "Ich hatte nicht vor, danach jemals wieder in die Sänger reinzusehen – ich hatte sie losgelassen, und nun sollte es gut sein. Aber irgendwann tat ich es doch, war entsetzt von den Fehlern, die ich fand, und beschloss, dass dies nicht so bleiben konnte.", 
-          "Deshalb gibt es jetzt eine zweite Auflage, und inzwischen sogar eine dritte, weil der Verlag gewechselt hat."],
-      },
-      en: {
-        headline: "Background Information for The Bards of Thurán – Elven Way, Swamp Magic, World Struggle",
-        subheader: "2004-20052",
-        paragraphs: [
-          "The Bards were the first books I ever finished writing - apart from a few short stories beforehand. I learnt an incredible amount while writing them and, I hope, gradually improved in the process.", 
-          "The story itself is very old: I thought up Anabellánien when I was about three years old. This is documented by my mum in my childhood albums - as I told her not to disturb me now, I was playing Anna Land. A few years later, I had a pen pal with whom I continued the story: she wrote to me about her adventures in our distant land, which was still called Fantasia at the time (honestly, I didn't know The Neverending Story at the time), and I wrote to her about mine. The sisters, Acanà, Jann, Derjam, Keito and Rawenzan, as well as Aruna and Caro, who were originally written by my friend, and which I later adapted and changed, date from that time.", 
-          "This all happened before I started writing seriously - I couldn't have been ten years old. At twelve, I discovered my love for computers and the written word, for creating stories. However, as I wasn't particularly persistent, I stuck to short stories and my so-called 'practice story', which I will certainly never publish (it's about princes and princesses, there are now over eleven different variations, and yes, what do you expect from a not exactly precocious twelve-year-old...).", 
-          "I always intended to write down Acanà and Jann's story one day. Over the years I made several attempts, played around with different perspectives, but nothing really worked out. And then, one evening in September 2004, I was standing on my balcony and suddenly thought: Now I'm going to do it. Now I'm ready, now I'm going to write them down.",
-          "I went inside, got on my computer and started typing. I already had the first scene, a scene from the middle section and the ending. So what remained was to fill six years of travelling. And that's what I did. For the next three or four months, I did nothing but write (and work full time, because bills have to be paid). I dreamt about Jann and Acanà, I practically lived in Jann's head. I wrote through an entire vacation, and the friend I was on vacation with laughed and said - you'll write a second and third part too.", 
-          "Then I always just sighed and said - let me finish this one first. I've never finished anything this big before.", 
-          "Shortly before Christmas 2004, I was finished and extremely proud. I had three copies printed and bound in the copy shop (and they just fitted into the spiral binding, super-awkward things). I gave them to friends and family to read. I contacted publishers. And when the New Year came (and I had already received two rejections), I wanted to finish another story, my eternal, never-ending practice story.", 
-          "But I couldn't. I just couldn't - Jann and Acanà wouldn't let me go. The story wasn't over yet. I still had so many ideas!",
-          "And so I did what my friend had predicted: I wrote a second and third part. That took another four months each, so that in September 2005 I proudly wrote my last sentence and thought - that was my fantasy story. Now it's finished and I'm concentrating fully on historical novels. I will never write another Thurán, and Jann and Acanà deserve their peace.", 
-          "That hasn't quite materialised - I haven't created a second Thurán, but I have discovered Urban Fantasy for myself. And I'm not sure if I'm quite finished with Mia yet either.", 
-          "What I do know is that this was my first baby. There are still a lot of first-time mistakes in it, I'm aware of that. I tried to eradicate what I could, but it's a first work and some things, such as the changing perspectives, I only realised late on.", 
-          "But without my bards, without this personal success of having actually completed such a long story, I would probably never have written my historical novels, never have dared to write anything at all that anyone but me would be able to read one day.",
-          "And just as the bards encouraged my desire to write, they also triggered the idea of publishing. I had only received rejections on my initial applications and decided back then - in 2005 - that I simply didn't want to put myself through the stress, and besides, the bards were mine and I was still re-writing anyway.", 
-          "Ten years later, there were e-books, and it was suddenly feasible to publish something without a big publisher or a lot of money behind it. Of course, it still took some time - finding covers, carrying out title checks (and saying goodbye to beloved titles because they were already taken), editing and a hundred other little things that the new mini-publishing house initiated. We started a test run with two short stories before finally uploading the three parts in autumn 2017 - without maps, because we just couldn't figure out how to do it and because time was pressing for other reasons.", 
-          "I had no intention of ever looking into the singers again after that - I had let them go and now it should be good. But at some point I did, was horrified by the mistakes I found and decided that it couldn't stay that way.", 
-          "That is why there is now a second edition, and menawhile even a third, due to changing publishers."
-        ],
-      },
-    },
-  },
-  {
-    backgroundId: "children",
-    languages: {
-      de: {
-        headline: "Hintergrundinfo für Die Kinder der Engel",
-        subheader: "2015-2017",
-        paragraphs: [
-          "Zwischen 2008 und 2014 habe ich nicht besonders viel geschrieben. Vielleicht brauchte ich eine Pause. Vielleicht war auch der historische Roman, den ich damals am Wickel hatte, einfach zu kompliziert geworden und langweilte sogar mich. Ich legte ihn beiseite (und da liegt er immer noch).", 
-          "2015 war ich mit einem Freund bei einer Ballett-Aufführung und sah einen blonden, zarten Tänzer, der seinen eigenen Tod tanzte, eine wunderbare, berührende Darstellung. In diesem Moment wurde in meinem Kopf Flo geboren, und der Prolog der Dämonenjäger. Ich war mir zunächst nicht ganz sicher, wohin ich mit dieser Geschichte wollte, und sie zu schreiben war alles andere als leicht. Zum einen war so viel Zeit vergangen seit meinem letzten, fertiggestellten Projekt, und zum anderen fiel es mir schwer, mich auf nur eine, maximal zwei Perspektiven zu beschränken, was ich mir seit der Fertigstellung der Sänger (und dem Einsehen, wie verwirrend und nervig das für einen Leser sonst ist) angewöhnt hatte. Nach vielen Diskussionen mit Freunden und Familie fand ich diesen Weg. Ich mache mir immer noch zu viele Sorgen, dass die Dämonenjäger zu philosophisch geworden sind – aber sie haben etwas geschafft, was ich lange verloren hatte: Ich schrieb wieder, und zwar mehr als nur Kurzgeschichten. Ich brauchte gut zwei Jahre dafür und stellte sie im September 2017 fertig, als Noel bereits durch meinen Kopf kreiste.", 
-          "Ich bin froh, dass ich sie beenden konnte, bevor diese nächste Phase begann." 
-        ],
-      },
-      en: {
-        headline: "Background Information for The Children of Angels",
-        subheader: "2015-2017",
-        paragraphs: [
-          "I didn't write very much between 2008 and 2014. Maybe I needed a break. Maybe the historical novel I had on my plate at the time had simply become too complicated and bored even me. I put it aside (and it's still there).", 
-        "In 2015, I was at a ballet performance with a friend and saw a blonde, delicate dancer dancing his own death, a wonderful, touching performance. At that moment, Flo was born in my head, and the prologue of Demon Hunters. I wasn't quite sure where I wanted to go with this story at first, and writing it was anything but easy. For one thing, so much time had passed since my last completed project, and for another, I found it difficult to limit myself to just one, or at most two, perspectives, something I'd become accustomed to since finishing The Singers (and realising how confusing and annoying it is for a reader otherwise). After much discussion with friends and family, I found this way. I still worry too much that Demon Hunters has become too philosophical - but it did accomplish something I'd long lost: I was writing again, and more than just short stories. It took me a good two years and I finished them in September 2017, when Noel was already running through my head.", 
-        "I'm glad I was able to finish it before this next phase began."],
-      },
-    },
-  },
-  {
-    backgroundId: "elves",
-    languages: {
-      de: {
-        headline: "Hintergrundinfo für Von Elven und Wölfen",
-        subheader: "2017-2018",
-        paragraphs: [
-          "Die Bücher der Reihe 'Von Elfen und Wölfe' enthalten die Geschichte, die ich zu schreiben begann, als mir klar wurde, dass meine Mutter bald sterben würde, und die ich in dem Jahr nach ihrem Tod fertigstellte. Gerade deshalb sind sie nicht düster. Ich habe es schon früher in meinen Nachworten gesagt - ich brauchte das. Ich brauchte die Offenheit von Lucie, die Unbeschwertheit von Bina und die Nachdenklichkeit von Lena in einer ansonsten furchtbar bitteren Zeit. Viel mehr kann ich nicht sagen, außer dass ich einige Bonuskapitel habe, die es nicht in das endgültige Buch geschafft haben. Ich teile sie hier - mit einer Warnung: Sie sind natürlich voller Spoiler für diejenigen, die noch nichts gelesen haben."
-        ],
-      },
-      en: {
-        headline: "Background Information for Of Elves and Wolves",
-        subheader: "2017-2018",
-        paragraphs: [
-          "The books that are part of the 'Of Elves and Wolves' series contain the story I started writing when I realised that my mother would soon die, and which I completed in the year after her death. That is precisely why they are not gloomy. I've said it before in my epilogues - I needed this. I needed Lucie's candour, Bina's light-heartedness and Lena's thoughtfulness in an otherwise terribly bitter time. There's not much more I can say, except that I have some bonus chapters that didn't make it into the final book. I'm sharing them here - with a warning: they are, of course, full of spoilers for those who haven't read anything yet."
-      ],
-      },
-    },
-  },
-  {
-    backgroundId: "odyssee",
-    languages: {
-      de: {
-        headline: "Hintergrundinfo für Irrfahrt ins Gelobte Land",
-        subheader: "2006-2007",
-        paragraphs: [
-          "Wie so viele Geschichten begann die Irrfahrt mit einer einzelnen Szene in meinem Kopf: Die Flucht der Kinder nach Laodikea. Ich wusste, ich wollte einen historischen Roman schreiben, etwas über die Zeit der Kreuzfahrer, und über das Überleben in einem vollkommen fremden Land. Mehr wusste ich nicht.", 
-          "2006 war das bis dahin anstrengendste Jahr meines Lebens. Ich arbeitete mich ins Burnout, hielt die Hand meiner Großmutter, als sie starb, kündigte meinen Job, zog um, machte mehrere Prüfungen, wurde zur Tante, begann ein Aufbaustudium und absolvierte zwei Praktika. Ich sagte mir die ganze Zeit, jetzt habe ich keine Zeit zu schreiben, jetzt ist es ungünstig.", 
-          "Max und Katja waren nicht meiner Meinung. Sie wollten nicht warten.", 
-          "Da dies mein erster historischer Roman war, musste ich recherchieren. Ein wenig hatte ich das ja schon für die Sänger getan, aber dies war natürlich etwas ganz anderes. Dem Internet, dem Gutenberg-Projekt und vielen Autoren der Sekundärliteratur verdanke ich ein hoffentlich einigermaßen realistisches Bild der damaligen Zeit. Aber wie ich im Nachwort geschrieben habe, habe ich durchaus auch konträre Ansichten gefunden, vor allem bei einem solchen Thema, das auch heute wieder politisch brisant ist: dem Konflikt zwischen Ost und West.",
-          "Ich hoffe, niemandem allzu sehr auf die Füße getreten zu haben.",
-          "Am Ende ging es mir jedoch vor allem um meine Geschichte, die Geschichte von Max und Katja. Es ist wieder eine Geschichte über das Erwachsenwerden unter widrigen Umständen, um das Finden eines sicheren Hafens. Sie zu verfassen unterschied sich sehr von Fantasy – ich hatte einen Rahmen. Nachdem ich einmal den Zweiten Kreuzzug als den meinen identifiziert hatte, machte ich mir eine Zeitleiste der Ereignisse und webte meinen Plot herum. Es war demzufolge ein anderes Schreiben als zuvor. Ich hatte weitaus weniger Freiheiten, aber ich hatte auch sehr viel mehr Hilfen. Ich musste mir keine ganze Welt ausdenken, und viele Ereignisse waren einfach gesetzt. Am Anfang war es ungewohnt, machte aber letztendlich unheimlich viel Spaß. Und als ich damit fertig war, hatte ich schon die Idee für die Masken…"],
-      },
-      en: {
-        headline: "Background Information for Odyssee to the Promised Land",
-        subheader: "2022",
-        paragraphs: [
-          "Like so many stories, the odyssey began with a single scene in my head: the children's escape to Laodicea. I knew I wanted to write a historical novel, something about the time of the Crusaders, and about survival in a completely foreign country. That was all I knew.", 
-          "2006 was the most stressful year of my life so far. I worked myself into burnout, held my grandmother's hand when she died, quit my job, moved house, took several exams, became an aunt, started a postgraduate degree and completed two internships. I told myself all the time, now I don't have time to write, now is not a good time.", 
-          "Max and Katja didn't agree with me. They didn't want to wait.", 
-          "As this was my first historical novel, I had to do some research. I had already done a bit of that for the singers, but this was of course something completely different. Thanks to the Internet, the Gutenberg project and many authors of secondary literature, I hope I have a reasonably realistic picture of the period. But as I wrote in the epilogue, I have also found contrary views, especially on a subject that is politically explosive again today: the conflict between East and West.",
-          "I hope I haven't stepped on anyone's toes too much.",
-          "In the end, however, I was mainly interested in my story, the story of Max and Katja. It's another story about growing up under adverse circumstances, about finding a safe harbour. Writing it was very different from writing fantasy - I had a framework. Once I'd identified the Second Crusade as mine, I made a timeline of events and wove my plot around it. As a result, it was different writing than before. I had far less freedom, but I also had a lot more help. I didn't have to think up a whole world, and many events were simply set. It was unusual at first, but in the end it was a lot of fun. And when I'd finished, I already had the idea for the masks..."],
-      },
-    },
-  },
-  {
-    backgroundId: "masks",
-    languages: {
-      de: {
-        headline: "Hintergrundinfo für Die Masken von Florenz",
-        subheader: "2007-2008",
-        paragraphs: [
-          "Auch mein Renaissanceroman begann in meinem Kopf mit einer Szene: Der Moment, in dem Susanna ihre Maske ablegt und Luca in die Schatten folgt. Ich wusste – Karneval in Italien, ich wusste Renaissance. Die Entscheidung für Florenz fiel rasch, weil ich mich schon seit längerem für die Medici und die Kunst ihrer Zeit interessierte. Und dann kam auch noch Leonardo hinzu, und Botticelli, und ganz schnell stand der Zeitrahmen.", 
-          "Da diese Zeit weitaus besser dokumentiert ist als das zwölfte Jahrhundert, hatte ich weitaus engere Vorgaben. Es erleichterte allerdings auch vieles, weil ich manche Dinge einfach nur aus Giannis Perspektive nacherzählen musste. Letztendlich wurde aber gerade dieses Buch am Ende schwer für mich – es zu Ende zu bringen hat mich eine Menge an Disziplin gekostet; vielleicht, weil ich nicht so frei war, wie ich es gerne gewesen wäre, oder vielleicht, weil es mein fünftes Buch innerhalb von weniger als vier Jahren war. Zwischendurch zog ich erneut um, begann einen neuen Job, machte meine Abschlussprüfung vom Aufbaustudium und war irgendwann einfach müde – schreibmüde. 2008 war ich mit den Masken fertig, und danach gab es eine lange, lange Pause.", 
-          "Wie bei der Irrfahrt startete ich damals mit meinen Masken keinen Versuch, einen Verlag für mich zu gewinnen – man hatte meine Sänger abgelehnt, und ich war zufrieden, einfach nur für mich zu schreiben. Aber nachdem wir die Sänger bei Amazon hochgeladen hatten und alles ausprobiert war, alles erkundet, war dies der nächste logische Schritt. Die Masken folgten. Sie sind das letzte Buch, das meine Mutter Korrektur las.", 
-          ],
-      },
-      en: {
-        headline: "Background Information for The Masks of Florence",
-        subheader: "2007-2008",
-        paragraphs: [
-          "My Renaissance novel also began with a scene in my head: the moment when Susanna takes off her mask and follows Luca into the shadows. I knew - Carnival in Italy, I knew Renaissance. I quickly decided in favour of Florence because I had long been interested in the Medici and the art of their time. And then Leonardo and Botticelli were added to the mix, and the time frame was quickly finalised.", 
-          "As this period is much better documented than the twelfth century, I had much tighter guidelines. However, it also made a lot of things easier because I simply had to retell some things from Gianni's perspective. Ultimately, though, this book in particular ended up being difficult for me - finishing it took a lot of discipline; perhaps because I wasn't as free as I would have liked to be, or perhaps because it was my fifth book in less than four years. In between, I moved again, started a new job, took my final exams for my postgraduate degree and at some point I was simply tired - tired of writing. I finished Masks in 2008 and then took a long, long break.", 
-          "As with the odyssey, I made no attempt to get a publisher for my masks at the time - they had rejected my bards and I was content to just write for myself. But once we had uploaded the singers to Amazon and tried everything out, explored everything, this was the next logical step. The masks followed. They are the last book my mum proofread.", 
-          ],
-      },
-    },
-  },  {
-    backgroundId: "alster",
-    languages: {
-      de: {
-        headline: "Hintergrundinfo für Alsterdiamanten",
-        subheader: "2022",
-        paragraphs: [
-          "Diese Geschichte kursierte schon länger in meinem Kopf, aber bevor ich sie schreiben konnte, hatte ich mir geschworen, den Rokoko-Roman von Niklas zu beenden – und das dauerte, mit all den Verzögerungen, bis zum Ende 2021. Dann gab es noch ein paar andere Projekte, die dazwischenfunkten.", 
-        "Doch danach war es endlich an der Zeit für diese Zwei.", 
-        "Die Geschichte von Leander und der Familie Achtmann war da bereits vier Jahre in meinem Kopf, und auch auf Hamburg als Ort hatte ich mich irgendwann festgelegt – was jedoch fehlte, war die genaue Zeit. Ich wollte nicht in die Zeit der Hanse – zu lange her – aber auch nicht in die Gründerzeit, denn dazu gibt es schon so viel. Bei meinen Recherchen stolperte ich schließlich über den großen Hamburger Brand von 1842, und damit war die Peroode klar. Und dann fand ich auch noch ein wunderbares Buch, das sehr detailliert und quellenbezogen die Geschichte der Familie Godeffroy darstellt, und schon war der Grundstein für die Rahmenhandlung gelegt.", 
-        "Dieses Buch zu schreiben ging tatsächlich erstaunlich schnell, vor allem, wenn man in Betracht zieht, dass der historische Roman davor mit diversen Unterbrechungen zwölf Jahre gebraucht hat. Nach wenigen Wochen hatte ich das zu Papier gebracht, was seit Jahren in meinem Kopf kreiste. Meine Erstleser waren flott, mein Korrektorat ebenfalls. Und deshalb kommen die Alsterdiamanten vor dem Rokoko-Roman heraus – der jedoch, so hoffe ich, nicht mehr allzu lange auf sich warten lassen wird."],
-      },
-      en: {
-        headline: "Background Information for Alster Diamonds",
-        subheader: "2022",
-        paragraphs: [
-          "This story had been circulating in my head for a while, but before I could write it, I had vowed to finish Niklas' rococo novel - and that took until the end of 2021, with all the delays. Then there were a few other projects that interfered.", 
-          "But then it was finally time for these two.", 
-          "The story of Leander and the Achtmann family had already been in my head for four years, and I had also decided on Hamburg as the location at some point - but what was missing was the exact time. I didn't want to go back to the time of the Hanseatic League - too long ago - but I didn't want to go back to the Gründerzeit either, because there's already so much about it. During my research, I finally stumbled across the great Hamburg fire of 1842, and so the peroode was clear. And then I also found a marvellous book that describes the history of the Godeffroy family in great detail and with reference to the sources, and the foundation stone for the framework story was laid.", 
-          "Writing this book actually went surprisingly quickly, especially when you consider that the historical novel that preceded it took twelve years with various interruptions. After just a few weeks, I had put on paper what had been circling in my head for years. My first readers were quick, as was my proofreader. And that's why the Alsterdiamanten will be published before the Rococo novel - which, I hope, won't be too long in coming."],
-      },
-    },
-  },
-  {
-    backgroundId: "mind",
-    languages: {
-      de: {
-        headline: "Hintergrundinfo für Der Geist in Brand",
-        subheader: "2010 - 2022",
-        paragraphs: [
-          "Mitte 2010 zog ich jobbedingt in eine neue Stadt und schaffte es gerade noch vorher, die Masken zu beenden. Ich hatte schon die Idee für eine neue Geschichte. Das Rokoko und die Zeit vor und um Napoleon interessierte mich seit langem. Ich wollte diese Zeit aus der Sicht eines Sonnenkindes schreiben, eines Unkomplizierten - einer, der laut den Worten seines Mentors auszog, die Welt mit Charme zu erobern, so wie es Napoleon später mit Gewalt tun würde. Niklas und sein Ziehvater, der Baron, waren recht schnell geboren, auch Greta und die Hintergrundgeschichte des Barons. Aber der Umzug, die neue Stadt, neue Leute, all das warf mein Leben mehr durcheinander, als dies bei meinen vorherigen Umzügen und Jobwechseln der Fall gewesen war. Bis London schaffte ich die Geschichte noch, dann brach ich ab.", 
-          "Über die folgenden zwölf Jahre nahm ich sie mir immer mal wieder vor, schrieb immer mal wieder ein Kapitel – Beau Brummell brachte neuen Schwung hinein, Colette, dann war meine Reisegesellschaft in Russland und ich steckte fest. Statt diese Geschichte weiterzuschreiben – die ich inzwischen nicht einmal mehr lesen mochte, so oft hatte ich sie angefasst – konzentrierte ich mich auf neue Projekte: Die Kinder der Engel entstanden, dann in sehr schneller Folge die drei Bände zu Von Elfen und Wölfen. Und dann widmete ich mich ganz anderen Projekten, bevor mich eine Erkrankung Mitte 2021 aus der Bahn warf.", 
-          "Halb sitzend, halb liegend kann man ganz hervorragend Bücher schreiben, insbesondere, wenn Fernsehen langweilt. Ich brachte meine anderen Projekte zu Ende und schwor mir, bevor ich etwas Neues anfange (und die Alsterdiamanten waren schon in meinem Kopf), beende ich diese Geschichte. Sie war vollständig geplottet und musste „nur“ noch aufgeschrieben werden, und das würde ich ja wohl schaffen.", 
-          "Tat ich auch, mit purer Willenskraft. Silvester 2021 schrieb ich die letzten Sätze, und obwohl ich dieses Ende im Sommer noch einmal kräftig redigieren musste und komplette Teile vom Anfang strich, war Niklas im Herbst 2022 endlich am Ziel. Ich war sehr unsicher, ob ich das Mammutprojekt veröffentlichen sollte, hatte überhaupt kein Gefühl mehr für die Qualität. Aber meine Erstleser bekräftigten mich, meine Lektorin ebenfalls – und so ist er jetzt flügge, der Geist in Brand, mein Krautjunker Niklas und seine Rokokowelt."],
-      },
-      en: {
-        headline: "Background Information for The Mind on Fire ",
-        subheader: "2022",
-        paragraphs: [
-          "In mid-2010, I moved to a new city for work and just managed to finish the masks before then. I already had an idea for a new story. I had been interested in the Rococo period and the time before and around Napoleon for a long time. I wanted to write this period from the point of view of a child of the sun, an uncomplicated person - one who, according to his mentor, set out to conquer the world with charm, just as Napoleon would later do with force. Niklas and his foster father, the Baron, were born quite quickly, as was Greta and the Baron's backstory. But the move, the new city, new people, all this threw my life more into disarray than my previous moves and job changes had done. I made it as far as London, then I dropped out.", 
-          "Over the next twelve years, I revisited it from time to time, wrote a chapter every now and then - Beau Brummell gave it new impetus, Colette, then my travelling party was in Russia and I was stuck. Instead of continuing to write this story - which I didn't even want to read anymore, I had touched it so often - I concentrated on new projects: The Children of Angels was written, then the three volumes of Of Elves and Wolves in very quick succession. And then I devoted myself entirely to other projects before an illness threw me off track in mid-2021.", 
-          "Half sitting, half lying down is a great way to write books, especially when TV is boring. I finished my other projects and swore to myself that before I started something new (and the Alster diamonds were already in my head), I would finish this story. It was fully plotted and 'just' needed to be written down, and I could probably manage that.", 
-          "I did, with sheer willpower. I wrote the last sentences on New Year's Eve 2021, and although I had to edit the end again in the summer and cut entire sections from the beginning, Niklas finally reached his goal in autumn 2022. I was very unsure whether I should publish the mammoth project and had no feeling for the quality at all. But my first readers reassured me, as did my editor - and so he is now fledged, The Mind on Fire, my Krautjunker Niklas and his rococo world."],
-      },
-    },
-  },
-  {
-    backgroundId: "",
-    languages: {
-      de: {
-        headline: "Hintergrundinfo für ",
-        subheader: "2022",
-        paragraphs: ["", "", "", ""],
-      },
-      en: {
-        headline: "Backgroundinformation for ",
-        subheader: "2022",
-        paragraphs: ["", "", "", ""],
-      },
-    },
-  },
-];

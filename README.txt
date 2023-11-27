@@ -1,10 +1,17 @@
 All books with details for booksites are in the JSON allBooks in the books.js
+    Also in that file are: for booksites top part: let topSites
+
 All other JSONs for the sites on first level are in the template.js
     for header: let menuTitles
     for booksites top part: let topSites
     for all sites bottom nav: let navSites
     for pages on first level content: let mainSites
     for the homepage navigation content: let overview
+    for the background pages: let backgroundInfo
+    for familyTreeTopSites: let familyTree
+    for glossaries: let glossaryMasks und let glossaryOdyssee
+    for sources: individual for sites with sources
+    for timelines: let timelineHeaders plus individual timeline JSOns
 
 All main sites will be started with onload=init()
 

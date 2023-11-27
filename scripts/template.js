@@ -7,385 +7,6 @@ let menuTitles = [
   { de: "Über mich", en: "About Me", link: "/about-me.html" },
 ];
 
-//for booksites
-let topSites = [
-  {
-    siteId: "bards",
-    translationExists: "planned",
-    languages: {
-      de: {
-        title: "Die Sänger von Thurán - eine klassische Fantasytrilogie",
-        paragraphs: [
-          "Dies ist mein Erstlingswerk, der Grund, weshalb ich mich überhaupt jemals dazu durchringen konnte, eine meiner Geschichten loszulassen. Es hat sicher eine Menge Erstlingsfehler - aber willkommen in der Welt von Thurán!",
-          "Und weil ich so lange daran geschrieben habe, so viel damit zu tun hatte, gibt es hier ein paar kleine Extras und ein bisschen was zum Nachschlagen. Darunter ist die Geschichte, wie es überhaupt dazu kam, sowie auch vier Kapitel, von denen es eines nie in die Bücher schaffte und drei, die den Kürzungen von Elfenweg und Weltenringen am Ende zum Opfer fielen.",
-          "Hinweis: Die Unterseiten sind derzeit nur auf deutsch verfügbar.",
-        ],
-        links: [
-          {
-            text: "HintergrundInfo",
-            url: "/subsitesBards/bards-background.html",
-          },
-          {
-            text: "Bonuskapitel Elfenweg",
-            url: "/subsitesThuran/bonus-elven-way.html",
-          },
-          {
-            text: "Bonuskapitel Elfenweg - Sumpfzauber",
-            url: "/subsitesThuran/bonus-elven-swamp.html",
-          },
-          {
-            text: "Bonuskapitel Weltenringen: Irionne und Niturio",
-            url: "/subsitesThuran/bonus-world-irionne.html",
-          },
-          {
-            text: "Bonuskapitel Bonuskapitel Weltenringen: Syl und Nycas",
-            url: "/subsitesThuran/bonus-world-syl.html",
-          },
-          { text: "Karten", url: "/subsitesThuran/thuran-maps.html" },
-          {
-            text: "Personenverzeichnis",
-            url: "/subsitesThuran/thuran-persons.html",
-          },
-          {
-            text: "Begriffsverzeichnis",
-            url: "/subsitesThuran/thuran-glossary.html",
-          },
-        ],
-      },
-      en: {
-        title: "The Bards of Thurán - a Classic Fantasy Trilogy",
-        paragraphs: [
-          "This is my debut work, the reason I could ever bring myself to release one of my stories in the first place. It certainly has a lot of first-time mistakes - but welcome to the world of Thurán!",
-          "And because I spent so long writing it and had so much to do with it, here are a few little extras and a few things to look up. These include the story of how it came about in the first place, as well as four chapters, one of which never made it into the books and three that fell victim to the shortening of Elfenweg and Weltenringen at the end.",
-          "Note: The subpages are currently only available in German.",
-        ],
-        links: [
-          {
-            text: "Background info",
-            url: "/subsitesBards/bards-background.html",
-          },
-          {
-            text: "Bonus chapter Elven Way",
-            url: "/subsitesThuran/bonus-elven-way.html",
-          },
-          {
-            text: "Bonus chapter Eleven Way - Swamp Magic",
-            url: "/subsitesThuran/bonus-elven-swamp.html",
-          },
-          {
-            text: "Bonus chapter World Struggle - Irionne and Niturio",
-            url: "/subsitesThuran/bonus-world-irionne.html",
-          },
-          {
-            text: "Bonus chapter World Struggle - Syl and Nycas",
-            url: "/subsitesThuran/bonus-world-syl.html",
-          },
-          { text: "Maps", url: "/subsitesThuran/thuran-maps.html" },
-          { text: "Personage", url: "/subsitesThuran/thuran-persons.html" },
-          { text: "Glossary", url: "/subsitesThuran/thuran-glossary.html" },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "children",
-    translationExists: "progress",
-    languages: {
-      de: {
-        title: "Die Kinder der Engel - eine Urban Fantasy Trilogie",
-        paragraphs: [
-          "Eigentlich wollte ich nach den Sängern nie wieder Fantasy schreiben. Ich wollte nie wieder eine Welt erfinden, sondern mich lieber auf historische Werke stürzen. Aber dann begegnete mir Flo - und tja, was soll ich sagen ... Hier sind sie: meine Dämonenjäger!",
-        ],
-        links: [
-          {
-            text: "HintergrundInfo",
-            url: "/subsitesChildren/children-background.html",
-          },
-          {
-            text: "Bonuskapitel",
-            url: "/subsitesChildren/children-bonus.html",
-          },
-          {
-            text: "Personenverzeichnis",
-            url: "/subsitesChildren/children-persons.html",
-          },
-          { text: "Quellen", url: "/subsitesChildren/children-sources.html" },
-        ],
-      },
-      en: {
-        title: "The Children of Angels - an Urban Fantasy Trilogy",
-        paragraphs: [
-          "Actually, I never wanted to write fantasy again after The Bards. I never wanted to invent a world again, but would rather focus on historical works. But then I met Flo - and well, what can I say ... Here they are: my demon hunters!",
-        ],
-        links: [
-          {
-            text: "Background info",
-            url: "/subsitesChildren/children-background.html",
-          },
-          {
-            text: "Bonus chapter",
-            url: "/subsitesChildren/children-bonus.html",
-          },
-          { text: "Personage", url: "/subsitesChildren/children-persons.html" },
-          { text: "Sources", url: "/subsitesChildren/children-sources.html" },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "elves",
-    translationExists: "true",
-    languages: {
-      de: {
-        title: "Von Elfen und Wölfen - eine Urban Fantasy Trilogie",
-        paragraphs: [""],
-        links: [
-          {
-            text: "HintergrundInfo",
-            url: "/subsitesElves/elves-background.html",
-          },
-          {
-            text: "Bonuskapitel Von Elfen und Wölfen: Noel",
-            url: "/subsitesElves/elves-bonus-Noel.html",
-          },
-          {
-            text: "Bonuskapitel Im Namen der Menschen: Diana",
-            url: "/subsitesElves/elves-bonus-diana.html",
-          },
-          {
-            text: "Personenverzeichnis",
-            url: "/subsitesElves/elves-persons.html",
-          },
-          { text: "Stammbäume", url: "/subsitesElves/elves-familytrees.html" },
-        ],
-      },
-      en: {
-        title:
-          "Of Elves and Wolves - an Urban Fantasy Story in three arcs and nine books",
-        paragraphs: [""],
-        links: [
-          {
-            text: "Background info",
-            url: "/subsitesElves/elves-background.html",
-          },
-          {
-            text: "Bonus chapter - Lucie arc: Noel",
-            url: "/subsitesElves/elves-bonus-Noel.html",
-          },
-          {
-            text: "Bonus chapter - Lena arc: Diana",
-            url: "/subsitesElves/elves-bonus-diana.html",
-          },
-          { text: "Personage", url: "/subsitesElves/elves-persons.html" },
-          {
-            text: "Family Trees",
-            url: "/subsitesElves/elves-familytrees.html",
-          },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "odyssee",
-    translationExists: "planned",
-    languages: {
-      de: {
-        title:
-          "Irrfahrt ins Gelobte Land - Historischer Roman aus der Zeit des Kreuzzüge",
-        paragraphs: ["Mein erster historischer Roman."],
-        links: [
-          {
-            text: "HintergrundInfo",
-            url: "/subsitesOdyssee/odyssee-background.html",
-          },
-          { text: "Bonuskapitel", url: "/subsitesOdyssee/odyssee-bonus.html" },
-          {
-            text: "Personenverzeichnis",
-            url: "/subsitesOdyssee/odyssee-persons.html",
-          },
-          { text: "Zeittafel", url: "/subsitesOdyssee/odyssee-timeline.html" },
-          {
-            text: "Konflikt zwischen Staufer und Welfen",
-            url: "/subsitesOdyssee/odyssee.conflict.html",
-          },
-          {
-            text: "Stammbäume der Staufer und Welfen",
-            url: "/subsitesOdyssee/odyssee-familytrees.html",
-          },
-          {
-            text: "Begriffe und Quellen",
-            url: "/subsitesOdyssee/odyssee.glossary.html",
-          },
-        ],
-      },
-      en: {
-        title:
-          "Odyssee to the Promised Land - Historical novel at the time of the Crusades",
-        paragraphs: ["My second historical novel."],
-        links: [
-          {
-            text: "Background info",
-            url: "/subsitesOdyssee/odyssee-background.html",
-          },
-          { text: "Bonus chapter", url: "/subsitesOdyssee/odyssee-bonus.html" },
-          { text: "Personage", url: "/subsitesOdyssee/odyssee-persons.html" },
-          { text: "Timeline", url: "/subsitesOdyssee/odyssee-timeline.html" },
-          {
-            text: "Conflict between Staufer and Welfen",
-            url: "/subsitesOdyssee/odyssee.conflict.html",
-          },
-          {
-            text: "Family trees of Staufer and Welfen",
-            url: "/subsitesOdyssee/odyssee-familytrees.html",
-          },
-          {
-            text: "Glossary and Sources",
-            url: "/subsitesOdyssee/odyssee.glossary.html",
-          },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "masks",
-    translationExists: "true",
-    languages: {
-      de: {
-        title:
-          "Die Masken von Florenz - Historischer Roman zur Zeit der Renaissance",
-        paragraphs: ["Mein zweiter historischer Roman."],
-        links: [
-          {
-            text: "HintergrundInfo",
-            url: "/subsitesMasks/masks-background.html",
-          },
-          { text: "Bonuskapitel", url: "/subsitesMasks/masks-bonus.html" },
-          {
-            text: "Personenverzeichnis",
-            url: "/subsitesMasks/masks-persons.html",
-          },
-          { text: "Zeittafel", url: "/subsitesMasks/masks-timeline.html" },
-          {
-            text: "Stammbaum der Medici",
-            url: "/subsitesMasks/masks-familytrees.html",
-          },
-          {
-            text: "Begriffe und Quellen",
-            url: "/subsitesMasks/masks-glossary.html",
-          },
-        ],
-      },
-      en: {
-        title:
-          "The Masks of Florence - Historical novel set during the Renaissance",
-        paragraphs: ["My second historical novel."],
-        links: [
-          {
-            text: "Background info",
-            url: "/subsitesMasks/masks-background.html",
-          },
-          { text: "Bonus chapter", url: "/subsitesMasks/masks-bonus.html" },
-          { text: "Personage", url: "/subsitesMasks/masks-persons.html" },
-          { text: "Timeline", url: "/subsitesMasks/masks-timeline.html" },
-          {
-            text: "Family trees of the Medici",
-            url: "/subsitesMasks/masks-familytrees.html",
-          },
-          {
-            text: "Glossary and Sources",
-            url: "/subsitesMasks/masks-glossary.html",
-          },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "alster",
-    translationExists: "true",
-    languages: {
-      de: {
-        title:
-          "Alsterdiamanten - Historischer Roman im Hamburg des Biedermeiers",
-        paragraphs: ["Mein zweiter historischer Roman."],
-        links: [
-          {
-            text: "HintergrundInfo",
-            url: "/subsitesAlster/alster-background.html",
-          },
-          {
-            text: "Personenverzeichnis",
-            url: "/subsitesAlster/alster-persons.html",
-          },
-          { text: "Stammbaum", url: "/subsitesAlster/alster-familytrees.html" },
-          {
-            text: "Quellen und Links zu den Karten",
-            url: "/subsitesAlster/alster-sources.html",
-          },
-        ],
-      },
-      en: {
-        title: "Alster Diamonds - Historical novel set during the Renaissance",
-        paragraphs: ["My second historical novel."],
-        links: [
-          {
-            text: "Background info",
-            url: "/subsitesAlster/alster-background.html",
-          },
-          { text: "Personage", url: "/subsitesAlster/alster-persons.html" },
-          {
-            text: "Family Tree",
-            url: "/subsitesAlster/alster-familytrees.html",
-          },
-          {
-            text: "Quellen und Links zu den Karten",
-            url: "/subsitesAlster/alster-sources.html",
-          },
-        ],
-      },
-    },
-  },
-  {
-    siteId: "mind",
-    translationExists: "false",
-    languages: {
-      de: {
-        title:
-          "Der Geist in Brand - Ein Krautjunker zwischen Rokoko und Revolution",
-        paragraphs: [
-          "Zwölf Jahre Schreibzeit und fast zwei Dekaden umspannend.",
-        ],
-        links: [
-          {
-            text: "HintergrundInfo",
-            url: "/subsitesMind/mind-background.html",
-          },
-          { text: "Bonuskapitel", url: "/subsitesMind/mind-bonus.html" },
-          {
-            text: "Personenverzeichnis",
-            url: "/subsitesMind/mind-persons.html",
-          },
-          { text: "Quellen", url: "/subsitesMind/mind-sources.html" },
-        ],
-      },
-      en: {
-        title: "The Mind on Fire - A Krautjunker between Rococo and Revolution",
-        paragraphs: [
-          "Twelve years of writing and spanning almost two decades.",
-        ],
-        links: [
-          {
-            text: "Background info",
-            url: "/subsitesMind/mind-background.html",
-          },
-          { text: "Bonus chapter", url: "/subsitesMind/mind-bonus.html" },
-          { text: "Personage", url: "/subsitesMind/mind-persons.html" },
-          { text: "Sources", url: "/subsitesMind/mind-sources.html" },
-        ],
-      },
-    },
-  },
-];
-
 //for bottom nav
 let navSites = [
   {
@@ -965,6 +586,195 @@ let overview = [
   },
 ];
 
+//for BackgroundInfo
+let backgroundInfo = [
+  {
+    backgroundId: "bards",
+    languages: {
+      de: {
+        headline: "Hintergrundinfo für Die Sänger von Thurán – Elfenweg, Sumpfzauber, Weltenringen",
+        subheader: "2004-2005",
+        paragraphs: [
+          "Die Sänger waren die ersten Bücher, die ich jemals fertigschrieb – abgesehen von einigen wenigen Kurzgeschichten vorab. Ich habe unglaublich viel während des Schreibens gelernt, und, so hoffe ich, mich nach und nach auch dabei verbessert.", 
+          "Die Geschichte selbst ist sehr alt: Mit circa drei Jahren dachte ich mir Anabellánien aus. Das ist von meiner Mutter so in meinen Kinderalben dokumentiert – wie ich ihr sagte, sie dürfe mich jetzt nicht stören, ich spiele Anna-Land. Einige Jahre später hatte ich eine Brieffreundin, mit der zusammen ich die Geschichte weiterspann: Sie schrieb mir ihre Abenteuer in unserem fernen Land, das damals noch Fantasien hieß (ehrlich, ich kannte die Unendliche Geschichte zu dem Zeitpunkt nicht), und ich schrieb ihr die meinen. Aus dieser Zeit stammen die Schwestern, Acanà, Jann, Derjam, Keito und Rawenzan, sowie Aruna und Caro, die ursprünglich auf das Konto meiner Freundin gingen, und die ich später adaptiert und verändert habe.", 
+          "Das alles geschah, bevor ich ernsthaft zu schreiben begann – ich kann noch keine zehn Jahre alt gewesen sein. Mit zwölf entdeckte ich meine Liebe zu Computern und dem geschriebenen Wort, zu dem Erschaffen von Geschichten. Da ich aber nicht besonders ausdauernd war, blieb es bei Kurzgeschichten und meiner sogenannten „Übungsgeschichte“, die ich sicher niemals veröffentlichen werden (sie handelt von Prinzen und Prinzessinnen, es existieren mittlerweile über elf verschiedene Variationen, und ja, was will man von einer nicht gerade frühreifen Zwölfjährigen denn erwarten…).", 
+          "Ich hatte immer vor, Acanàs und Janns Geschichte eines Tages aufzuschreiben. Über die Jahre startete ich mehrere Versuchen, spielte mit verschiedenen Perspektiven herum, aber nichts klappte so richtig. Und dann, eines Abends im September 2004, stand ich auf meinem Balkon und dachte plötzlich: Jetzt tue ich es. Jetzt bin ich soweit, jetzt schreibe ich sie auf.",
+          "Ich ging hinein, an meinen Computer, fing an zu tippen. Ich hatte da bereits die erste Szene, eine Szene aus dem Mittelteil und das Ende. Was also blieb, war, sechs Jahre Reise zu füllen. Und das tat ich. Die nächsten drei, vier Monate machte ich nichts anderes als zu schreiben (und Vollzeit zu arbeiten, denn Rechnungen müssen schließlich bezahlt werden). Ich träumte von Jann und Acanà, ich lebte praktisch in Janns Kopf. Ich schrieb einen ganzen Urlaub durch, und die Freundin, mit der ich im Urlaub war, lachte und sagte – du schreibst auch noch einen zweiten und dritten Teil.", 
+          "Dann seufzte ich immer nur und sagte – lass mich erst mal diesen fertigstellen. Ich habe noch nie etwas so Großes fertiggestellt.", 
+          "Kurz vor Weihnachten 2004 war ich fertig und über alle Maßen stolz. Ich ließ drei Exemplare im Copyshop ausdrucken und binden (und sie passten gerade so in die Spiralbindung, super-unhandliche Dinger). Ich gab sie Freunden und Familie zum Lesen. Ich kontaktierte Verlage. Und als das Neue Jahr kam (und ich schon zwei Absagen kassiert hatte), wollte ich eine andere Geschichte zu Ende schreiben, meine ewige, nicht-enden-wollende Übungsgeschichte.", 
+          "Aber ich konnte nicht. Ich konnte einfach nicht – Jann und Acanà ließen mich nicht los. Die Geschichte war noch nicht zu Ende. Ich hatte noch so viele Ideen!",
+          "Und so tat ich das, was meine Freundin mir prophezeit hatte: Ich schrieb einen zweiten und dritten Teil. Das dauerte noch einmal jeweils vier Monate, so dass ich im September 2005 voller Stolz meinen letzten Satz schrieb und dachte – das war meine Fantasy-Geschichte. Jetzt ist sie auserzählt, und jetzt konzentriere ich mich voll und ganz auf historische Romane. Nie wieder werde ich ein zweites Thurán schaffen, und Jann und Acanà haben ihren Frieden verdient.", 
+          "So ganz hat sich das nicht bewahrheitet – ich habe zwar kein zweites Thurán geschaffen, aber Urban Fantasy für mich entdeckt. Und ob ich mit Mia schon so fertig bin, weiß ich ebenfalls noch nicht.", 
+          "Was ich weiß: Dies war mein erstes Baby. Es sind immer noch eine Menge Erstlingsfehler drin, dessen bin ich mir bewusst. Ich habe versucht, auszumerzen, was ging, aber es ist eben ein Erstlingswerk und manches, wie zum Beispiel die wechselnden Perspektiven, habe ich erst spät eingesehen.", 
+          "Doch ohne die Sänger, ohne diesen persönlichen Erfolg, eine derart lange Geschichte tatsächlich fertiggestellt zu haben, hätte ich vermutlich niemals meine historischen Romane geschrieben, mir niemals zugetraut, überhaupt etwas zu schreiben, was eines Tages außer mir noch jemand lesen kann.",
+          "Und so, wie die Sänger meine Schreiblust bestärkten, triggerten sie auch die Idee, etwa zu veröffentlichen. Auf meine initialen Bewerbungen hatte ich nur Ablehnungen bekommen und beschloss damals – 2005 – dass ich mir den Stress einfach nicht antun wollte, und außerdem, die Sänger waren mein und ich schrieb sowieso immer noch daran rum.", 
+          "Zehn Jahre später gab es E-Books, und es war plötzlich machbar, etwas ohne einen großen Verlag oder sehr viel Geld im Rücken zu veröffentlichen. Es dauerte natürlich noch etwas – Cover finden, Titelchecks durchführen (und sich von liebgewordenen Titeln verabschieden, weil schon vergeben), lektorieren und hundert andere Kleinigkeiten, die der neue Mini-Verlag initiierte. Wir starteten mit zwei Kurzgeschichten einen Testlauf, bevor wir endlich, im Herbst 2017, die drei Teile hochluden – ohne Karten, weil wir einfach nicht rausfinden konnten, wie das ging, und weil die Zeit inzwischen aus anderen Gründen drängte.", 
+          "Ich hatte nicht vor, danach jemals wieder in die Sänger reinzusehen – ich hatte sie losgelassen, und nun sollte es gut sein. Aber irgendwann tat ich es doch, war entsetzt von den Fehlern, die ich fand, und beschloss, dass dies nicht so bleiben konnte.", 
+          "Deshalb gibt es jetzt eine zweite Auflage, und inzwischen sogar eine dritte, weil der Verlag gewechselt hat."],
+      },
+      en: {
+        headline: "Background Information for The Bards of Thurán – Elven Way, Swamp Magic, World Struggle",
+        subheader: "2004-20052",
+        paragraphs: [
+          "The Bards were the first books I ever finished writing - apart from a few short stories beforehand. I learnt an incredible amount while writing them and, I hope, gradually improved in the process.", 
+          "The story itself is very old: I thought up Anabellánien when I was about three years old. This is documented by my mum in my childhood albums - as I told her not to disturb me now, I was playing Anna Land. A few years later, I had a pen pal with whom I continued the story: she wrote to me about her adventures in our distant land, which was still called Fantasia at the time (honestly, I didn't know The Neverending Story at the time), and I wrote to her about mine. The sisters, Acanà, Jann, Derjam, Keito and Rawenzan, as well as Aruna and Caro, who were originally written by my friend, and which I later adapted and changed, date from that time.", 
+          "This all happened before I started writing seriously - I couldn't have been ten years old. At twelve, I discovered my love for computers and the written word, for creating stories. However, as I wasn't particularly persistent, I stuck to short stories and my so-called 'practice story', which I will certainly never publish (it's about princes and princesses, there are now over eleven different variations, and yes, what do you expect from a not exactly precocious twelve-year-old...).", 
+          "I always intended to write down Acanà and Jann's story one day. Over the years I made several attempts, played around with different perspectives, but nothing really worked out. And then, one evening in September 2004, I was standing on my balcony and suddenly thought: Now I'm going to do it. Now I'm ready, now I'm going to write them down.",
+          "I went inside, got on my computer and started typing. I already had the first scene, a scene from the middle section and the ending. So what remained was to fill six years of travelling. And that's what I did. For the next three or four months, I did nothing but write (and work full time, because bills have to be paid). I dreamt about Jann and Acanà, I practically lived in Jann's head. I wrote through an entire vacation, and the friend I was on vacation with laughed and said - you'll write a second and third part too.", 
+          "Then I always just sighed and said - let me finish this one first. I've never finished anything this big before.", 
+          "Shortly before Christmas 2004, I was finished and extremely proud. I had three copies printed and bound in the copy shop (and they just fitted into the spiral binding, super-awkward things). I gave them to friends and family to read. I contacted publishers. And when the New Year came (and I had already received two rejections), I wanted to finish another story, my eternal, never-ending practice story.", 
+          "But I couldn't. I just couldn't - Jann and Acanà wouldn't let me go. The story wasn't over yet. I still had so many ideas!",
+          "And so I did what my friend had predicted: I wrote a second and third part. That took another four months each, so that in September 2005 I proudly wrote my last sentence and thought - that was my fantasy story. Now it's finished and I'm concentrating fully on historical novels. I will never write another Thurán, and Jann and Acanà deserve their peace.", 
+          "That hasn't quite materialised - I haven't created a second Thurán, but I have discovered Urban Fantasy for myself. And I'm not sure if I'm quite finished with Mia yet either.", 
+          "What I do know is that this was my first baby. There are still a lot of first-time mistakes in it, I'm aware of that. I tried to eradicate what I could, but it's a first work and some things, such as the changing perspectives, I only realised late on.", 
+          "But without my bards, without this personal success of having actually completed such a long story, I would probably never have written my historical novels, never have dared to write anything at all that anyone but me would be able to read one day.",
+          "And just as the bards encouraged my desire to write, they also triggered the idea of publishing. I had only received rejections on my initial applications and decided back then - in 2005 - that I simply didn't want to put myself through the stress, and besides, the bards were mine and I was still re-writing anyway.", 
+          "Ten years later, there were e-books, and it was suddenly feasible to publish something without a big publisher or a lot of money behind it. Of course, it still took some time - finding covers, carrying out title checks (and saying goodbye to beloved titles because they were already taken), editing and a hundred other little things that the new mini-publishing house initiated. We started a test run with two short stories before finally uploading the three parts in autumn 2017 - without maps, because we just couldn't figure out how to do it and because time was pressing for other reasons.", 
+          "I had no intention of ever looking into the singers again after that - I had let them go and now it should be good. But at some point I did, was horrified by the mistakes I found and decided that it couldn't stay that way.", 
+          "That is why there is now a second edition, and menawhile even a third, due to changing publishers."
+        ],
+      },
+    },
+  },
+  {
+    backgroundId: "children",
+    languages: {
+      de: {
+        headline: "Hintergrundinfo für Die Kinder der Engel",
+        subheader: "2015-2017",
+        paragraphs: [
+          "Zwischen 2008 und 2014 habe ich nicht besonders viel geschrieben. Vielleicht brauchte ich eine Pause. Vielleicht war auch der historische Roman, den ich damals am Wickel hatte, einfach zu kompliziert geworden und langweilte sogar mich. Ich legte ihn beiseite (und da liegt er immer noch).", 
+          "2015 war ich mit einem Freund bei einer Ballett-Aufführung und sah einen blonden, zarten Tänzer, der seinen eigenen Tod tanzte, eine wunderbare, berührende Darstellung. In diesem Moment wurde in meinem Kopf Flo geboren, und der Prolog der Dämonenjäger. Ich war mir zunächst nicht ganz sicher, wohin ich mit dieser Geschichte wollte, und sie zu schreiben war alles andere als leicht. Zum einen war so viel Zeit vergangen seit meinem letzten, fertiggestellten Projekt, und zum anderen fiel es mir schwer, mich auf nur eine, maximal zwei Perspektiven zu beschränken, was ich mir seit der Fertigstellung der Sänger (und dem Einsehen, wie verwirrend und nervig das für einen Leser sonst ist) angewöhnt hatte. Nach vielen Diskussionen mit Freunden und Familie fand ich diesen Weg. Ich mache mir immer noch zu viele Sorgen, dass die Dämonenjäger zu philosophisch geworden sind – aber sie haben etwas geschafft, was ich lange verloren hatte: Ich schrieb wieder, und zwar mehr als nur Kurzgeschichten. Ich brauchte gut zwei Jahre dafür und stellte sie im September 2017 fertig, als Noel bereits durch meinen Kopf kreiste.", 
+          "Ich bin froh, dass ich sie beenden konnte, bevor diese nächste Phase begann." 
+        ],
+      },
+      en: {
+        headline: "Background Information for The Children of Angels",
+        subheader: "2015-2017",
+        paragraphs: [
+          "I didn't write very much between 2008 and 2014. Maybe I needed a break. Maybe the historical novel I had on my plate at the time had simply become too complicated and bored even me. I put it aside (and it's still there).", 
+        "In 2015, I was at a ballet performance with a friend and saw a blonde, delicate dancer dancing his own death, a wonderful, touching performance. At that moment, Flo was born in my head, and the prologue of Demon Hunters. I wasn't quite sure where I wanted to go with this story at first, and writing it was anything but easy. For one thing, so much time had passed since my last completed project, and for another, I found it difficult to limit myself to just one, or at most two, perspectives, something I'd become accustomed to since finishing The Singers (and realising how confusing and annoying it is for a reader otherwise). After much discussion with friends and family, I found this way. I still worry too much that Demon Hunters has become too philosophical - but it did accomplish something I'd long lost: I was writing again, and more than just short stories. It took me a good two years and I finished them in September 2017, when Noel was already running through my head.", 
+        "I'm glad I was able to finish it before this next phase began."],
+      },
+    },
+  },
+  {
+    backgroundId: "elves",
+    languages: {
+      de: {
+        headline: "Hintergrundinfo für Von Elven und Wölfen",
+        subheader: "2017-2018",
+        paragraphs: [
+          "Die Bücher der Reihe 'Von Elfen und Wölfe' enthalten die Geschichte, die ich zu schreiben begann, als mir klar wurde, dass meine Mutter bald sterben würde, und die ich in dem Jahr nach ihrem Tod fertigstellte. Gerade deshalb sind sie nicht düster. Ich habe es schon früher in meinen Nachworten gesagt - ich brauchte das. Ich brauchte die Offenheit von Lucie, die Unbeschwertheit von Bina und die Nachdenklichkeit von Lena in einer ansonsten furchtbar bitteren Zeit. Viel mehr kann ich nicht sagen, außer dass ich einige Bonuskapitel habe, die es nicht in das endgültige Buch geschafft haben. Ich teile sie hier - mit einer Warnung: Sie sind natürlich voller Spoiler für diejenigen, die noch nichts gelesen haben."
+        ],
+      },
+      en: {
+        headline: "Background Information for Of Elves and Wolves",
+        subheader: "2017-2018",
+        paragraphs: [
+          "The books that are part of the 'Of Elves and Wolves' series contain the story I started writing when I realised that my mother would soon die, and which I completed in the year after her death. That is precisely why they are not gloomy. I've said it before in my epilogues - I needed this. I needed Lucie's candour, Bina's light-heartedness and Lena's thoughtfulness in an otherwise terribly bitter time. There's not much more I can say, except that I have some bonus chapters that didn't make it into the final book. I'm sharing them here - with a warning: they are, of course, full of spoilers for those who haven't read anything yet."
+      ],
+      },
+    },
+  },
+  {
+    backgroundId: "odyssee",
+    languages: {
+      de: {
+        headline: "Hintergrundinfo für Irrfahrt ins Gelobte Land",
+        subheader: "2006-2007",
+        paragraphs: [
+          "Wie so viele Geschichten begann die Irrfahrt mit einer einzelnen Szene in meinem Kopf: Die Flucht der Kinder nach Laodikea. Ich wusste, ich wollte einen historischen Roman schreiben, etwas über die Zeit der Kreuzfahrer, und über das Überleben in einem vollkommen fremden Land. Mehr wusste ich nicht.", 
+          "2006 war das bis dahin anstrengendste Jahr meines Lebens. Ich arbeitete mich ins Burnout, hielt die Hand meiner Großmutter, als sie starb, kündigte meinen Job, zog um, machte mehrere Prüfungen, wurde zur Tante, begann ein Aufbaustudium und absolvierte zwei Praktika. Ich sagte mir die ganze Zeit, jetzt habe ich keine Zeit zu schreiben, jetzt ist es ungünstig.", 
+          "Max und Katja waren nicht meiner Meinung. Sie wollten nicht warten.", 
+          "Da dies mein erster historischer Roman war, musste ich recherchieren. Ein wenig hatte ich das ja schon für die Sänger getan, aber dies war natürlich etwas ganz anderes. Dem Internet, dem Gutenberg-Projekt und vielen Autoren der Sekundärliteratur verdanke ich ein hoffentlich einigermaßen realistisches Bild der damaligen Zeit. Aber wie ich im Nachwort geschrieben habe, habe ich durchaus auch konträre Ansichten gefunden, vor allem bei einem solchen Thema, das auch heute wieder politisch brisant ist: dem Konflikt zwischen Ost und West.",
+          "Ich hoffe, niemandem allzu sehr auf die Füße getreten zu haben.",
+          "Am Ende ging es mir jedoch vor allem um meine Geschichte, die Geschichte von Max und Katja. Es ist wieder eine Geschichte über das Erwachsenwerden unter widrigen Umständen, um das Finden eines sicheren Hafens. Sie zu verfassen unterschied sich sehr von Fantasy – ich hatte einen Rahmen. Nachdem ich einmal den Zweiten Kreuzzug als den meinen identifiziert hatte, machte ich mir eine Zeitleiste der Ereignisse und webte meinen Plot herum. Es war demzufolge ein anderes Schreiben als zuvor. Ich hatte weitaus weniger Freiheiten, aber ich hatte auch sehr viel mehr Hilfen. Ich musste mir keine ganze Welt ausdenken, und viele Ereignisse waren einfach gesetzt. Am Anfang war es ungewohnt, machte aber letztendlich unheimlich viel Spaß. Und als ich damit fertig war, hatte ich schon die Idee für die Masken…"],
+      },
+      en: {
+        headline: "Background Information for Odyssee to the Promised Land",
+        subheader: "2022",
+        paragraphs: [
+          "Like so many stories, the odyssey began with a single scene in my head: the children's escape to Laodicea. I knew I wanted to write a historical novel, something about the time of the Crusaders, and about survival in a completely foreign country. That was all I knew.", 
+          "2006 was the most stressful year of my life so far. I worked myself into burnout, held my grandmother's hand when she died, quit my job, moved house, took several exams, became an aunt, started a postgraduate degree and completed two internships. I told myself all the time, now I don't have time to write, now is not a good time.", 
+          "Max and Katja didn't agree with me. They didn't want to wait.", 
+          "As this was my first historical novel, I had to do some research. I had already done a bit of that for the singers, but this was of course something completely different. Thanks to the Internet, the Gutenberg project and many authors of secondary literature, I hope I have a reasonably realistic picture of the period. But as I wrote in the epilogue, I have also found contrary views, especially on a subject that is politically explosive again today: the conflict between East and West.",
+          "I hope I haven't stepped on anyone's toes too much.",
+          "In the end, however, I was mainly interested in my story, the story of Max and Katja. It's another story about growing up under adverse circumstances, about finding a safe harbour. Writing it was very different from writing fantasy - I had a framework. Once I'd identified the Second Crusade as mine, I made a timeline of events and wove my plot around it. As a result, it was different writing than before. I had far less freedom, but I also had a lot more help. I didn't have to think up a whole world, and many events were simply set. It was unusual at first, but in the end it was a lot of fun. And when I'd finished, I already had the idea for the masks..."],
+      },
+    },
+  },
+  {
+    backgroundId: "masks",
+    languages: {
+      de: {
+        headline: "Hintergrundinfo für Die Masken von Florenz",
+        subheader: "2007-2008",
+        paragraphs: [
+          "Auch mein Renaissanceroman begann in meinem Kopf mit einer Szene: Der Moment, in dem Susanna ihre Maske ablegt und Luca in die Schatten folgt. Ich wusste – Karneval in Italien, ich wusste Renaissance. Die Entscheidung für Florenz fiel rasch, weil ich mich schon seit längerem für die Medici und die Kunst ihrer Zeit interessierte. Und dann kam auch noch Leonardo hinzu, und Botticelli, und ganz schnell stand der Zeitrahmen.", 
+          "Da diese Zeit weitaus besser dokumentiert ist als das zwölfte Jahrhundert, hatte ich weitaus engere Vorgaben. Es erleichterte allerdings auch vieles, weil ich manche Dinge einfach nur aus Giannis Perspektive nacherzählen musste. Letztendlich wurde aber gerade dieses Buch am Ende schwer für mich – es zu Ende zu bringen hat mich eine Menge an Disziplin gekostet; vielleicht, weil ich nicht so frei war, wie ich es gerne gewesen wäre, oder vielleicht, weil es mein fünftes Buch innerhalb von weniger als vier Jahren war. Zwischendurch zog ich erneut um, begann einen neuen Job, machte meine Abschlussprüfung vom Aufbaustudium und war irgendwann einfach müde – schreibmüde. 2008 war ich mit den Masken fertig, und danach gab es eine lange, lange Pause.", 
+          "Wie bei der Irrfahrt startete ich damals mit meinen Masken keinen Versuch, einen Verlag für mich zu gewinnen – man hatte meine Sänger abgelehnt, und ich war zufrieden, einfach nur für mich zu schreiben. Aber nachdem wir die Sänger bei Amazon hochgeladen hatten und alles ausprobiert war, alles erkundet, war dies der nächste logische Schritt. Die Masken folgten. Sie sind das letzte Buch, das meine Mutter Korrektur las.", 
+          ],
+      },
+      en: {
+        headline: "Background Information for The Masks of Florence",
+        subheader: "2007-2008",
+        paragraphs: [
+          "My Renaissance novel also began with a scene in my head: the moment when Susanna takes off her mask and follows Luca into the shadows. I knew - Carnival in Italy, I knew Renaissance. I quickly decided in favour of Florence because I had long been interested in the Medici and the art of their time. And then Leonardo and Botticelli were added to the mix, and the time frame was quickly finalised.", 
+          "As this period is much better documented than the twelfth century, I had much tighter guidelines. However, it also made a lot of things easier because I simply had to retell some things from Gianni's perspective. Ultimately, though, this book in particular ended up being difficult for me - finishing it took a lot of discipline; perhaps because I wasn't as free as I would have liked to be, or perhaps because it was my fifth book in less than four years. In between, I moved again, started a new job, took my final exams for my postgraduate degree and at some point I was simply tired - tired of writing. I finished Masks in 2008 and then took a long, long break.", 
+          "As with the odyssey, I made no attempt to get a publisher for my masks at the time - they had rejected my bards and I was content to just write for myself. But once we had uploaded the singers to Amazon and tried everything out, explored everything, this was the next logical step. The masks followed. They are the last book my mum proofread.", 
+          ],
+      },
+    },
+  },  
+  {
+    backgroundId: "alster",
+    languages: {
+      de: {
+        headline: "Hintergrundinfo für Alsterdiamanten",
+        subheader: "2022",
+        paragraphs: [
+          "Diese Geschichte kursierte schon länger in meinem Kopf, aber bevor ich sie schreiben konnte, hatte ich mir geschworen, den Rokoko-Roman von Niklas zu beenden – und das dauerte, mit all den Verzögerungen, bis zum Ende 2021. Dann gab es noch ein paar andere Projekte, die dazwischenfunkten.", 
+        "Doch danach war es endlich an der Zeit für diese Zwei.", 
+        "Die Geschichte von Leander und der Familie Achtmann war da bereits vier Jahre in meinem Kopf, und auch auf Hamburg als Ort hatte ich mich irgendwann festgelegt – was jedoch fehlte, war die genaue Zeit. Ich wollte nicht in die Zeit der Hanse – zu lange her – aber auch nicht in die Gründerzeit, denn dazu gibt es schon so viel. Bei meinen Recherchen stolperte ich schließlich über den großen Hamburger Brand von 1842, und damit war die Peroode klar. Und dann fand ich auch noch ein wunderbares Buch, das sehr detailliert und quellenbezogen die Geschichte der Familie Godeffroy darstellt, und schon war der Grundstein für die Rahmenhandlung gelegt.", 
+        "Dieses Buch zu schreiben ging tatsächlich erstaunlich schnell, vor allem, wenn man in Betracht zieht, dass der historische Roman davor mit diversen Unterbrechungen zwölf Jahre gebraucht hat. Nach wenigen Wochen hatte ich das zu Papier gebracht, was seit Jahren in meinem Kopf kreiste. Meine Erstleser waren flott, mein Korrektorat ebenfalls. Und deshalb kommen die Alsterdiamanten vor dem Rokoko-Roman heraus – der jedoch, so hoffe ich, nicht mehr allzu lange auf sich warten lassen wird."],
+      },
+      en: {
+        headline: "Background Information for Alster Diamonds",
+        subheader: "2022",
+        paragraphs: [
+          "This story had been circulating in my head for a while, but before I could write it, I had vowed to finish Niklas' rococo novel - and that took until the end of 2021, with all the delays. Then there were a few other projects that interfered.", 
+          "But then it was finally time for these two.", 
+          "The story of Leander and the Achtmann family had already been in my head for four years, and I had also decided on Hamburg as the location at some point - but what was missing was the exact time. I didn't want to go back to the time of the Hanseatic League - too long ago - but I didn't want to go back to the Gründerzeit either, because there's already so much about it. During my research, I finally stumbled across the great Hamburg fire of 1842, and so the peroode was clear. And then I also found a marvellous book that describes the history of the Godeffroy family in great detail and with reference to the sources, and the foundation stone for the framework story was laid.", 
+          "Writing this book actually went surprisingly quickly, especially when you consider that the historical novel that preceded it took twelve years with various interruptions. After just a few weeks, I had put on paper what had been circling in my head for years. My first readers were quick, as was my proofreader. And that's why the Alsterdiamanten will be published before the Rococo novel - which, I hope, won't be too long in coming."],
+      },
+    },
+  },
+  {
+    backgroundId: "mind",
+    languages: {
+      de: {
+        headline: "Hintergrundinfo für Der Geist in Brand",
+        subheader: "2010 - 2022",
+        paragraphs: [
+          "Mitte 2010 zog ich jobbedingt in eine neue Stadt und schaffte es gerade noch vorher, die Masken zu beenden. Ich hatte schon die Idee für eine neue Geschichte. Das Rokoko und die Zeit vor und um Napoleon interessierte mich seit langem. Ich wollte diese Zeit aus der Sicht eines Sonnenkindes schreiben, eines Unkomplizierten - einer, der laut den Worten seines Mentors auszog, die Welt mit Charme zu erobern, so wie es Napoleon später mit Gewalt tun würde. Niklas und sein Ziehvater, der Baron, waren recht schnell geboren, auch Greta und die Hintergrundgeschichte des Barons. Aber der Umzug, die neue Stadt, neue Leute, all das warf mein Leben mehr durcheinander, als dies bei meinen vorherigen Umzügen und Jobwechseln der Fall gewesen war. Bis London schaffte ich die Geschichte noch, dann brach ich ab.", 
+          "Über die folgenden zwölf Jahre nahm ich sie mir immer mal wieder vor, schrieb immer mal wieder ein Kapitel – Beau Brummell brachte neuen Schwung hinein, Colette, dann war meine Reisegesellschaft in Russland und ich steckte fest. Statt diese Geschichte weiterzuschreiben – die ich inzwischen nicht einmal mehr lesen mochte, so oft hatte ich sie angefasst – konzentrierte ich mich auf neue Projekte: Die Kinder der Engel entstanden, dann in sehr schneller Folge die drei Bände zu Von Elfen und Wölfen. Und dann widmete ich mich ganz anderen Projekten, bevor mich eine Erkrankung Mitte 2021 aus der Bahn warf.", 
+          "Halb sitzend, halb liegend kann man ganz hervorragend Bücher schreiben, insbesondere, wenn Fernsehen langweilt. Ich brachte meine anderen Projekte zu Ende und schwor mir, bevor ich etwas Neues anfange (und die Alsterdiamanten waren schon in meinem Kopf), beende ich diese Geschichte. Sie war vollständig geplottet und musste „nur“ noch aufgeschrieben werden, und das würde ich ja wohl schaffen.", 
+          "Tat ich auch, mit purer Willenskraft. Silvester 2021 schrieb ich die letzten Sätze, und obwohl ich dieses Ende im Sommer noch einmal kräftig redigieren musste und komplette Teile vom Anfang strich, war Niklas im Herbst 2022 endlich am Ziel. Ich war sehr unsicher, ob ich das Mammutprojekt veröffentlichen sollte, hatte überhaupt kein Gefühl mehr für die Qualität. Aber meine Erstleser bekräftigten mich, meine Lektorin ebenfalls – und so ist er jetzt flügge, der Geist in Brand, mein Krautjunker Niklas und seine Rokokowelt."],
+      },
+      en: {
+        headline: "Background Information for The Mind on Fire ",
+        subheader: "2022",
+        paragraphs: [
+          "In mid-2010, I moved to a new city for work and just managed to finish the masks before then. I already had an idea for a new story. I had been interested in the Rococo period and the time before and around Napoleon for a long time. I wanted to write this period from the point of view of a child of the sun, an uncomplicated person - one who, according to his mentor, set out to conquer the world with charm, just as Napoleon would later do with force. Niklas and his foster father, the Baron, were born quite quickly, as was Greta and the Baron's backstory. But the move, the new city, new people, all this threw my life more into disarray than my previous moves and job changes had done. I made it as far as London, then I dropped out.", 
+          "Over the next twelve years, I revisited it from time to time, wrote a chapter every now and then - Beau Brummell gave it new impetus, Colette, then my travelling party was in Russia and I was stuck. Instead of continuing to write this story - which I didn't even want to read anymore, I had touched it so often - I concentrated on new projects: The Children of Angels was written, then the three volumes of Of Elves and Wolves in very quick succession. And then I devoted myself entirely to other projects before an illness threw me off track in mid-2021.", 
+          "Half sitting, half lying down is a great way to write books, especially when TV is boring. I finished my other projects and swore to myself that before I started something new (and the Alster diamonds were already in my head), I would finish this story. It was fully plotted and 'just' needed to be written down, and I could probably manage that.", 
+          "I did, with sheer willpower. I wrote the last sentences on New Year's Eve 2021, and although I had to edit the end again in the summer and cut entire sections from the beginning, Niklas finally reached his goal in autumn 2022. I was very unsure whether I should publish the mammoth project and had no feeling for the quality at all. But my first readers reassured me, as did my editor - and so he is now fledged, The Mind on Fire, my Krautjunker Niklas and his rococo world."],
+      },
+    },
+  }
+];
+
 //for familyTreeTopSites
 let familyTree = [
   {
@@ -1358,12 +1168,578 @@ let timelineMasks = [
         en: "Leonardo da Vinci comes to Andrea del Verrocchio at the age of 17",
       },
       {
+        date: "7.2.",
+        de: "Turnier für Lorenzo unter dem Namen der Lucrezia Donati (verheiratet mit Niccoló Ardinghelli), auf der Piazza San Croce, offiziell für die Verlobung mit Clarice Orsini",
+        en: "Tournament for Lorenzo under the name of Lucrezia Donati (married to Niccoló Ardinghelli), in Piazza San Croce, officially for the engagement to Clarice Orsini",
+      },
+      {
+        date: "3.5.",
+        de: "Geburt Niccolò Machiavelli",
+        en: "Birth of Niccolò Machiavelli",
+      },
+      {
+        date: "27.5.",
+        de: "Giuliano geht nach Rom, um Clarice zu holen (zusammen mit Gentile Becchi, Pierfrancesco de’ Medici, Guglielmo Pazzi, Bernardo Rucellai",
+        en: "Giuliano goes to Rome to fetch Clarice (together with Gentile Becchi, Pierfrancesco de' Medici, Guglielmo Pazzi, Bernardo Rucellai",
+      },
+      {
+        date: "4.6.",
+        de: "Hochzeit Lorenzo mit Clarice, drei Tage lang Feier (1. Tag Sonntag, Braut auf dem Rücken eines Schlachtrosses (Geschenk König von Neapel) aus Palazzo Alessandri zu Palazzo Medici. Dienstagmorgen noch Messe)",
+        en: "Marriage of Lorenzo to Clarice, three days of celebration (1st day Sunday, bride on the back of a warhorse (gift from the King of Naples) from Palazzo Alessandri to Palazzo Medici. Tuesday morning still mass)",
+      },
+      {
+        date: "8.10.",
+        de: "Tod Filippo Lippis",
+        en: "Death of Filippo Lippi",
+      },
+      {
+        date: "2.12.",
+        de: "Piero il Gottoso de' Medici stirbt (53j); prachtvolles Begräbnis, Andrea del Verocchio, der gerade den bronzenen David für den Bargello vollendet hat, macht die Grabmalgestaltung.",
+        en: "Piero il Gottoso de' Medici dies (53); magnificent funeral, Andrea del Verocchio, who has just completed the bronze David for the Bargello, designs the tomb.",
+      },
+      {
+        date: "4.12.",
+        de: "Lorenzo übernimmt die Macht, mit Tommaso Soderini zur Seite",
+        en: "Lorenzo takes over, with Tommaso Soderini at his side",
+      },
+      ],
+  },
+  {
+    year: "1470",
+    event: [
+      {
         date: "",
-        de: "",
-        en: "",
+        de: "Johann von Speyer stirbt während des Druckes von Augustinus' De Civitate Dei",
+        en: "John of Speyer dies during the printing of Augustine's De Civitate Dei",
+      },  {
+        date: "",
+        de: "Bernardo Narci bemächtigt sich Pratos; plant mit Dietisalvi Neroni  gegen Florenz vorzugehen. Die Signoria von Florenz sendet Truppen aus, aber noch vor ihrem Eintreffen ist der podesta von Prato (Cesare Petrucci) wieder Herr Herr der Lage",
+        en: "Bernardo Narci seizes Prato; plans to take action against Florence with Dietisalvi Neroni. The Signoria of Florence sends troops, but before they arrive, the podesta of Prato (Cesare Petrucci) is back in control of the situation",
+      },  {
+        date: "",
+        de: "Dreibundtreffen in Florenz",
+        en: "Triple Alliance meeting in Florence",
+      },  {
+        date: "22.12.",
+        de: "allgemeine Liga unter den italienischen Mächten",
+        en: "general league among the Italian powers",
       },
     ],
   },
+  {
+    year: "1471",
+    event: [
+      {
+        date: "",
+        de: "Galeazzo Maria Sforza und Bona von Savoyen im Frühling in Florenz, zu Gast in der Via Larga",
+        en: "Galeazzo Maria Sforza and Bona of Savoy in spring in Florence, guests in the Via Larga",
+      },{
+        date: "",
+        de: "Bruch der Fastenzeit, Brand in Santo Spirito, Kirche brennt bis auf die Grundmauern nieder",
+        en: "Breaking of Lent, fire in Santo Spirito, church burns to the ground",
+      },{
+        date: "23.4.",
+        de: "Giuliano in Mailand",
+        en: "Giuliano in Mailand",
+      },{
+        date: "26.5.",
+        de: "Luca Landucci kauft vom ersten Zucker, den Florenz aus Madeira bekommt",
+        en: "Luca Landucci buys the first sugar Florence gets from Madeira",
+      },{
+        date: "27.5.",
+        de: "Die Goldene Kuppel wird auf Santa Maria del Fiore gesetzt",
+        en: "The golden dome is placed on Santa Maria del Fiore",
+      },{
+        date: "30.5.",
+        de: "Tedeum in Santa Maria del Fiore",
+        en: "Tedeum in Santa Maria del Fiore",
+      },{
+        date: "",
+        de: "Im Sommer: Innenpolitische Reformen: Rat der Einhundert, Großer Rat, otto di guardia",
+        en: "In summer: domestic reforms: Council of One Hundred, Grand Council, otto di guardia",
+      },{
+        date: "26.7.",
+        de: "Tod Papst Paul II",
+        en: "Death of Pope Paul II",
+      },{
+        date: "9.8.",
+        de: "Francesco della Rovere zu Papst Sixtus IV. gewählt, bis Weihnachten zwei Neffen zu Kardinälen ernannt",
+        en: "Francesco della Rovere elected Pope Sixtus IV, two nephews appointed cardinals by Christmas",
+      },{
+        date: "",
+        de: "Buchdruck beginnt in Florenz",
+        en: "Letterpress printing begins in Florence",
+      },{
+        date: "",
+        de: "Taddeo Manfredi verkauft Imola an Mailand, Florenz protestiert.",
+        en: "Taddeo Manfredi sells Imola to Milan, Florence protests.",
+      },
+    ],
+  },
+  {
+    year: "1472",
+    event: [
+      {
+        date: "15.2.",
+        de: "Geburt Piero des Unglücklichen, Sohn von Lorenzo",
+        en: "Birth of Piero the Unfortunate, son of Lorenzo",
+      }, {
+        date: "",
+        de: "Johann von Köln arbeitet mit Wendelin von Speyer in Venedig",
+        en: "Johann of Cologne works with Wendelin of Speyer in Venice",
+      }, {
+        date: "",
+        de: "Lorenzo schafft Amt des Volkshauptmannes ab",
+        en: "Lorenzo abolishes the office of governor",
+      }, {
+        date: "",
+        de: "Signoria von Volterra prüft Vertrag bzgl. Konzession einer Handelsgesellschaft aus Siena bzgl. Alaun in Volterra und befindet ihn für ungesetzlich. Die Florentiner Gesellschaft wird ausgewiesen, legt in Florenz Widerspruch ein und bekommt Recht. Daraufhin kommt es zu einem Aufstand Volterra. Die dortige Signoria gewinnt Macht zurück, aber Lorenzo besteht gegen den Rat von Tommaso auf eine Unterwerfung durch die Florentnier Truppe unter Montefeltro. Es kommt zu Belagerung, die am 18.6. endet und entsetzliches Rauben und Morden nach sich zieht. Lorenzo reist daraufhin nach Volterra, um persönlich zu entschädigen",
+        en: "Signoria of Volterra examines the contract regarding the concession of a trading company from Siena for alum in Volterra and finds it illegal. The Florentine company is expelled, lodges an objection in Florence and is vindicated. This leads to an uprising in Volterra. The Signoria there regains power, but Lorenzo insists on submission by the Florentine troops under Montefeltro, against Tommaso's advice. The siege ends on June 18 and is followed by horrific robberies and murders. Lorenzo then travels to Volterra to make amends in person",
+      }, {
+        date: "",
+        de: "Giuliano will im März nach Venedig zu gehen, aber Volterra kommt dazwischen (Lorenzo verbietet es ihm, Giuliano reitet nach Cafaggiolo, Gentile Becchi muss vermitteln)",
+        en: "Giuliano wants to go to Venice in March, but Volterra intervenes (Lorenzo forbids him, Giuliano rides to Cafaggiolo, Gentile Becchi has to mediate)",
+      }, {
+        date: "",
+        de: "Universität von Pisa wird wieder aufgebaut",
+        en: "The University of Pisa is being rebuilt",
+      }, {
+        date: "6",
+        de: "Giuliano geht nach Padua, Vicenza und Verona, Mantua",
+        en: "Giuliano goes to Padua, Vicenza and Verona, Mantua",
+      }, {
+        date: "15.11.",
+        de: "Erste Schritte für einen Kardinalshut für Giuliano",
+        en: "First steps towards a cardinal hat for Giuliano",
+      }, {
+        date: "",
+        de: "Lorenzo ist in Rom. Er erhält die Verwaltung der päpstlichen Konten, die Konzession des Alaunabbaus von Viterbo, und Marmorbüsten von Kaiser Augustus und Agrippa. Galeazzo Maria Sforza ist auf das offensichtlich gute Einvernehmen zwischen Lorenzo und dem Papst eifersüchtig",
+        en: "Lorenzo is in Rome. He receives the administration of the papal accounts, the concession to mine alum from Viterbo, and marble busts of Emperor Augustus and Agrippa. Galeazzo Maria Sforza is jealous of the apparently good understanding between Lorenzo and the Pope",
+      },
+    ],
+  },
+  {
+    year: "1473",
+    event: [
+      {
+        date: "7.5.",
+        de: "Giuliano gehört nicht zu den neu ernannten Kardinälen und weigert sich, das Chorhemd anzuziehen. Stimmen mehren sich, die ihn für ungeeignet halten.",
+        en: "Giuliano is not one of the newly appointed cardinals and refuses to put on the surplice. A growing number of voices consider him unsuitable.",
+      }, {
+        date: "",
+        de: "Florentiner Schutzbündnis für Imola erlischt. Sixtus will unter dem Vorwand, dass Manfredi kein Zins gezahlt hat, Imola zurück an Kirche bringen. Er schlägt vor, die Stadt als Mitgift für Caterina Sforza zu verwenden. Nach Ablauf des Schutzbündnisses ist der Herzog von Mailand jedoch bereit, an Florenz zu verkaufen. Daraufhin kommt schärfster Protest aus Rom und ein Angebot über 40.000 Dukaten. Die Pazzi strecken dem Papst das Geld vor, die Medici weigern sich.",
+        en: "Florentine protective alliance for Imola expires. Sixtus wants to return Imola to the Church on the pretext that Manfredi has not paid interest. He proposes using the city as a dowry for Caterina Sforza. However, after the protective alliance expires, the Duke of Milan is prepared to sell to Florence. This is followed by a fierce protest from Rome and an offer of 40,000 ducats. The Pazzi advance the money to the Pope, but the Medici refuse.",
+      }, {
+        date: "10",
+        de: "Gentile Becchi erhält das Bistum Arezzo",
+        en: "Gentile Becchi receives the bishopric of Arezzo",
+      }, {
+        date: "",
+        de: "Lorenzo gibt Kardinalshut für Giuliano im Herbst auf",
+        en: "Lorenzo gives up cardinal hat for Giuliano in the fall",
+      }, {
+        date: "",
+        de: "Tod der Albiera degli Albizzi, Braut von Sigismondo della Stufa, kurz nach der Hochzeit",
+        en: "Death of Albiera degli Albizzi, bride of Sigismondo della Stufa, shortly after the wedding",
+      }, {
+        date: "",
+        de: "Agnolo Ambrogini (Poliziano) kommt mit 19 Jahren zu Lorenzo",
+        en: "Agnolo Ambrogini (Poliziano) joins Lorenzo at the age of 19",
+      }, {
+        date: "",
+        de: "Großer Streit Luigi Pulci mit Marsilio Ficino; beide verlieren die Gunst der Medici",
+        en: "Major dispute between Luigi Pulci and Marsilio Ficino; both lose the Medici's favor",
+      },
+    ],
+  },
+  {
+    year: "1474",
+    event: [
+      {
+        date: "3.1.",
+        de: "Pietro Riario stirbt. Kandidaten für die Nachfolge u.a. Gentile Becchi (Lorenzos Erzieher) und Francesco Salviati (hochan­gesehen, aber verschuldet, mit den Pazzi verwandt, eng mit den Riario verbunden)",
+        en: "Pietro Riario dies. Candidates for the succession include Gentile Becchi (Lorenzo's tutor) and Francesco Salviati (highly respected but indebted, related to the Pazzi, closely linked to the Riario)",
+      },      {
+        date: "28.1.",
+        de: "Rinaldo Orsini wird auf Lorenzos Betreiben Erzbischof von Florenz (er kam nie nach Florenz)",
+        en: "Rinaldo Orsini becomes Archbishop of Florence at Lorenzo's instigation (he never came to Florence)",
+      },      {
+        date: "",
+        de: "Giuliano della Rovere (päpstl. Neffe im Kardinalsrang) schlägt eine Heirat zwischen Giovanni della Rovere (gen. Zanetto) mit Lorenzos Tochter Lucrezia (noch keine 4 Jahre alt) vor. Es gibt Streit wegen Citta di Castello.",
+        en: "Giuliano della Rovere (papal nephew with the rank of cardinal) proposes a marriage between Giovanni della Rovere (gen. Zanetto) and Lorenzo's daughter Lucrezia (not yet 4 years old). There is a dispute over Citta di Castello.",
+      },      {
+        date: "",
+        de: "Giuliano della Rovere geht in Umbrien gegen einen Aufstand in Todi und Spoleto vor, der blutig niedergelegt wird. Danach begibt er sich in Richtung Città di Castello. Florenz steht jedoch zu dessen Regenten Niccoló Vitelli und schickt Truppen bei Santepolcro. Sixtus ist daraufhin zornig und entzieht Lorenzo und Giuliano das Amt des Depositars, was einen beträchtlichen ökonomischen Schaden darstellt",
+        en: "Giuliano della Rovere takes action in Umbria against an uprising in Todi and Spoleto, which is bloodily put down. He then heads for Città di Castello. However, Florence stands by its regent Niccoló Vitelli and sends troops to Santepolcro. Sixtus is furious and deprives Lorenzo and Giuliano of the office of depositary, which causes considerable economic damage",
+      },      {
+        date: "16.7.",
+        de: "Sixtus IV entlässt die Medici als Hausbankiers",
+        en: "Sixtus IV dismisses the Medici as house bankers",
+      },      {
+        date: "21.8.",
+        de: "Federico da Montefeltro wird vom Papst zum Herzog ernannt, sowie zum Generalkapitän der Kirche. Vitelli kapitulatiert.",
+        en: "Federico da Montefeltro is appointed Duke and Captain General of the Church by the Pope. Vitelli capitulates.",
+      },      {
+        date: "25.9.",
+        de: "Brief von Matteo Palmieri an Luca Landucci: in Volterra wurde ein Kind mit einem Stierkopf geboren",
+        en: "Letter from Matteo Palmieri to Luca Landucci: a child with a bull's head was born in Volterra",
+      },      {
+        date: "10.10.",
+        de: "Papst gibt die Verlobung von Giovanna da Montefeltro mit Giovanni della Rovere bekannt",
+        en: "Pope announces the engagement of Giovanna da Montefeltro to Giovanni della Rovere",
+      },      {
+        date: "14.10.",
+        de: "Tod Filippo de’ Medici, des Erzbischofs von Pisa. Salviati wird vom Papst zu seinem Nachfolger ernannt, was bewusst gegen Florentiner Recht verstößt. Salviati wird daraufhin der Zugang zum Bistum verwehrt.",
+        en: "Death of Filippo de' Medici, Archbishop of Pisa. Salviati is appointed his successor by the Pope, which is deliberately contrary to Florentine law. Salviati is subsequently denied access to the bishopric.",
+      },      {
+        date: "",
+        de: "Andrea del Verocchio und Leonardo malen die Taufe Christis - Andrea schwört laut Vasari, nie wieder zu malen",
+        en: "Andrea del Verocchio and Leonardo paint the Baptism of Christ - according to Vasari, Andrea swears never to paint again",
+      },      {
+        date: "2.11.",
+        de: "Neuer Dreibund: Florenz, Mailand, Venedig (anstelle Neapel)",
+        en: "New Triple Alliance: Florence, Milan, Venice (instead of Naples)",
+      },
+    ],
+  },
+  {
+    year: "1475",
+    event: [
+      {
+        date: "29.1.",
+        de: "Giulianos Turnier: 22 Turnierkämpfer, darunter Soderini, Della Stufa, Guicciardini, Merli, Sohn des Markgrafen von Mantua: Rodolfo Gonzaga; zwei Söhne von Roberto Sanseverino. Schönheitskönigin ist Simonetta Vespucci, Turnier­königin Lucrezia Donati",
+        en: "Giuliano's tournament: 22 tournament fighters, including Soderini, Della Stufa, Guicciardini, Merli, son of the Marquis of Mantua: Rodolfo Gonzaga; two sons of Roberto Sanseverino. Beauty queen is Simonetta Vespucci, tournament queen Lucrezia Donati",
+      }, {
+        date: "",
+        de: "Salviati wird Erzbischof von Pisa",
+        en: "Salviati becomes Archbishop of Pisa",
+      }, {
+        date: "",
+        de: "Agnolo Ambrogini wird der Erzieher für Piero de’ Medici (der Unglückliche)",
+        en: "Agnolo Ambrogini becomes the tutor for Piero de' Medici (the unfortunate)",
+      }, {
+        date: "",
+        de: "Antonio Pazzi bekommt im August das Bistum Sarno, die Pazzi machen öffentlich Front gegen Lorenzo",
+        en: "Antonio Pazzi receives the bishopric of Sarno in August, the Pazzi publicly front against Lorenzo",
+      }, {
+        date: "",
+        de: "Giuliano soll Tochter des reichen Mailänder Kaufmanns Giovanni Borromei heiraten, aber weigert sich",
+        en: "Giuliano is supposed to marry the daughter of the rich Milanese merchant Giovanni Borromei, but refuses",
+      },
+    ],
+  },
+  {
+    year: "1476",
+    event: [
+      {
+        date: "26.4.",
+        de: "Simonetta Vespucci stirbt an der Schwindsucht",
+        en: "Simonetta Vespucci dies of consumption",
+      },   {
+        date: "",
+        de: "Leonardo wird angeklagt, mit einem Malerburschen (Jacopo Saltarelli, 17 Jahre) Sex gehabt zu haben - entgeht nur knapp einer Verurteilung wegen Sodomie",
+        en: "Leonardo is accused of having sex with a painter boy (Jacopo Saltarelli, 17 years old) - narrowly escapes a conviction for sodomy",
+      },   {
+        date: "",
+        de: "Giuliano soll eine Schwester der Riarios heiraten",
+        en: "Giuliano is to marry a sister of the Riarios",
+      },   {
+        date: "26.12.",
+        de: "	Galeazzo Maria Sforza wird in Mailand von Carlo Visconti, Girolamo Olgiati und Gianandrea Lampgnani  erstochen; alle drei werden hingerichtet. Professor  Cola Montano hält Vorlesungen, in denen er den Tyrannenmord als heilig darstellt. In der Folfe kommt es zu diversen Mordanschlägen auf z.B. Ercole I von Ferrara",
+        en: "Galeazzo Maria Sforza is stabbed to death in Milan by Carlo Visconti, Girolamo Olgiati and Gianandrea Lampgnani; all three are executed. Professor Cola Montano gives lectures in which he presents the murder of tyrants as sacred. This is followed by various assassination attempts on Ercole I of Ferrara, for example",
+      },
+    ],
+  },
+  {
+    year: "1477",
+    event: [
+      {
+        date: "",
+        de: "Papstneffe Girolamo Riario heiratet die uneheliche Catarina Sforza und übernimmt Forli",
+        en: "",
+      }, {
+        date: "",
+        de: "Papstneffe Girolamo Riario heiratet die uneheliche Catarina Sforza und übernimmt Forli",
+        en: "Pope's nephew Girolamo Riario marries the illegitimate Catarina Sforza and takes over Forli",
+      }, {
+        date: "",
+        de: "Giuliano soll Semiramide heiraten, die Schwester von Jacopo d’Appiano, des neuen Herrn von Piombino, auch dies scheitert",
+        en: "Giuliano is supposed to marry Semiramide, the sister of Jacopo d'Appiano, the new lord of Piombino, but this also fails",
+      }, {
+        date: "",
+        de: "Erbschaftsgesetz: Bei fehlendem Sohn geht Erbe an Neffen, nicht an Töchter Anlass: Giovanni Pazzi ist mit der einzigen Tochter des reichen Giovanni Borromei verheiratet. Ihr Erbe geht daraufhin an ihren Vetter.",
+        en: "Inheritance law: In the absence of a son, inheritance goes to nephews, not daughters Reason: Giovanni Pazzi is married to the only daughter of the wealthy Giovanni Borromei. Her inheritance then goes to her cousin.",
+      }, {
+        date: "",
+        de: "Carlo Fortebraaci will nach 30 Jahren in venezianischem. Dienst nach Montone zurück. Perugia erhofft sich Unter­stützung von ihm gegen die Baglioni. Fortebracci will einen Soldvertrag mit Florenz, aber Venedig legt sein Veto ein. Daraufhin gibt es Ärger in Siena.",
+        en: "Carlo Fortebraaci wants to return to Montone after 30 years in Venetian. service to Montone. Perugia is hoping for his support against the Baglioni. Fortebracci wants a pay treaty with Florence, but Venice vetoes this. This causes trouble in Siena.",
+      }, {
+        date: "",
+        de: "Giovan Battista da Montesecco kommt als Abgesandter Girolamo Riarios nach Florenz, um Jacopo Pazzi für die Verschwörung zu gewinnen; Giovanni Tornabuoni, der vage Infos erhalten hat, warnt seinen Neffen",
+        en: "Giovan Battista da Montesecco arrives in Florence as Girolamo Riario's emissary to win Jacopo Pazzi over to the conspiracy; Giovanni Tornabuoni, who has received vague information, warns his nephew",
+      }
+    ],
+  },
+  {
+    year: "1478",
+    event: [
+      {
+        date: "",
+        de: "Raffaele Riario kommt zusammen mit Salviati in die Villa Jacopo Pazzis; Aufforderung an Lorenzo und Giuliano, den Kardinal in ihrer Villa nahe Fiesole zu bewirten. Lorenzo geht auch mit Poliziano und Piero nach Fiesole, aber Giuliano fühlt sich unwohl.",
+        en: "Raffaele Riario arrives at Jacopo Pazzi's villa with Salviati; Lorenzo and Giuliano are asked to entertain the cardinal at their villa near Fiesole. Lorenzo also goes to Fiesole with Poliziano and Piero, but Giuliano feels uncomfortable.",
+      },  {
+        date: "26.4.",
+        de: "Giuliano gegen 15 Uhr im Dom ermordet",
+        en: "Giuliano murdered in the cathedral around 3 p.m.",
+      },  {
+        date: "",
+        de: "Lorenzo flieht mit Poliziano und anderen in die Sakristei. Antonio Ridolfisaugt Lorenzos Wunde aus; Lorenzo fragt nur nach Giuliano; Sigismondo della Stufa klettert auf einer Leiter zum Guckloch bei den Orgeln, erkennt die Lage, Tür wird geöffnet, Lorenzo fortgebracht, ohne Giuliano zu sehen.",
+        en: "Lorenzo flees with Poliziano and others into the sacristy. Antonio Ridolfi sucks out Lorenzo's wound; Lorenzo only asks for Giuliano; Sigismondo della Stufa climbs a ladder to the peephole by the organs, recognizes the situation, the door is opened, Lorenzo is taken away without seeing Giuliano.",
+      },  {
+        date: "",
+        de: "Francesco Salviati, der Erzbischof von Pisa, versucht, die Macht im Palazzo della Signoria zu übernehmen und scheitert an der Geistesgegenwart des amtierenden Gonfaloniere",
+        en: "Francesco Salviati, the Archbishop of Pisa, attempts to take power in the Palazzo della Signoria and fails due to the presence of mind of the incumbent Gonfaloniere",
+      },  {
+        date: "",
+        de: "Messer Jacopo reitet durch Florenz mit dem Ruf: Volk und Freiheit!",
+        en: "Messer Jacopo rides through Florence with the cry: People and freedom!",
+      },  {
+        date: "",
+        de: "Auf der Piazza della Signoria findet blutiges Morden statt (Verschwörer werden aus den Fenstern geworfen, Vierteilung eines Geistlichen)",
+        en: "Bloody murders take place in the Piazza della Signoria (conspirators are thrown out of the windows, a clergyman is quartered)",
+      },  {
+        date: "",
+        de: "Der Kardinal Riario wird in den Palast della Signori gebracht und kann dabei nur mit Mühe sein Leben retten",
+        en: "Cardinal Riario is taken to the Palazzo della Signori and barely manages to save his life",
+      },  {
+        date: "",
+        de: "Abends: Jacopo di Messer Poggio Bracciolini, Francesco Salviati Franceschino de’ Pazzi werden an den Fenstern aufgehängt, und ca. zwanzig weitere Männern an den Fensters des Palazzo della Signoria, des Podesta, des Capitano.",
+        en: "In the evening: Jacopo di Messer Poggio Bracciolini, Francesco Salviati Franceschino de' Pazzi are hanged from the windows, and about twenty other men from the windows of the Palazzo della Signoria, the Podesta, the Capitano.",
+      },  {
+        date: "27.4.",
+        de: "Jacopo Salviati (Schwiegersohns Filippo Tornabouni) und ein weiterer Jacaopo Salviati werden an den Fenstern aufgehängt, so wie andere",
+        en: "Jacopo Salviati (Filippo Tornabouni's son-in-law) and another Jacaopo Salviati are hung from the windows, as are others",
+      },  {
+        date: "28.4.",
+        de: "Messer Jacopo wird in Falterona gefasst, in Belforte wird Renato de’ Pazzi gefasst",
+        en: "Messer Jacopo is captured in Falterona, Renato de' Pazzi is captured in Belforte",
+      },  {
+        date: "",
+        de: "Um 23 Uhr am Palazzo della Signoria aufgehängt: Jacopo de’ Pazzi, Renato de’ Pazzi – laut Landucci macht dies in drei Tagen mehr als 70 Männer",
+        en: "Hanged at Palazzo della Signoria at 11 pm: Jacopo de' Pazzi, Renato de' Pazzi - according to Landucci, this makes more than 70 men in three days",
+      },  {
+        date: "",
+        de: "Der Kardinal befindet sich im Palast und muss von eigener Hand dem Papst von den Ereignissen berichten",
+        en: "The Cardinal is in the palace and has to report the events to the Pope by his own hand",
+      },  {
+        date: "",
+        de: "Ausbruch von Gefangenen aus der Stinche, bis auf einen, der gefasst und gehängt wird",
+        en: "Prisoners break out of the Stinche, except for one, who is caught and hanged",
+      },  {
+        date: "30.4.",
+        de: "	Himmelfahrt, Beerdigung Giuliano",
+        en: "Assumption, funeral of Giuliano",
+      },  {
+        date: "1.5.",
+        de: "Einzug der neuen Signoria",
+        en: "Entry of the new Signoria",
+      },  {
+        date: "",
+        de: "Andrea de’ Pazzi und der Brigliaino werden gefangen",
+        en: "Andrea de' Pazzi and the Brigliaino are captured",
+      },  {
+        date: "",
+        de: "Messer Piero Vespucci wird auf dem Rückweg von Pisa gefangen (Simonettas Schwiegervater, hat Napoleone Francheso zur Flucht verholfen)",
+        en: "Messer Piero Vespucci is captured on the way back from Pisa (Simonetta's father-in-law, helped Napoleone Francheso to escape)",
+      },  {
+        date: "3.5.",
+        de: "Die beiden Priester Bagone und Maffei gefangen",
+        en: "The two priests Bagone and Maffei captured",
+      },  {
+        date: "",
+        de: "Hängen des Brigliaino und eines anderes, abgeschnitten, Streit der Knechte um Wämser und Strümpfe",
+        en: "Hanging of the brigliaino and another, cut off, dispute of the servants over vests and stockings",
+      },  {
+        date: "4.5.",
+        de: "Die beiden Priester aufgehängt, Montesecco geköpft",
+        en: "The two priests hanged, Montesecco beheaded",
+      },  {
+        date: "5.5.",
+        de: "	Lorenzo bekommt eine Leibwache, nachdem er zehn Tage das Haus überhaupt nicht verlassen hat (eigentlich ist   Waffentragen seit dem Ciompi-Aufstand verboten)",
+        en: "Lorenzo is given a bodyguard after not leaving the house at all for ten days (carrying weapons has actually been forbidden since the Ciompi uprising)",
+      },  {
+        date: "9.5.",
+        de: "Gesandtschaft des Papstes in Florenz; Kardinal wird aber nicht freigegeben",
+        en: "Pope's legation in Florence; Cardinal is not released, however",
+      },  {
+        date: "",
+        de: "In diesen Tagen werden viele Leute auf der Piazza angeworben, ein Bargello (Polizeikommandant) wird ernannt, Streifen werden durchgeführt, ab ein Uhr gilt Ausgangssperre, Waffenverbot",
+        en: "During these days, many people are recruited in the piazza, a bargello (police commander) is appointed, patrols are carried out, curfew is enforced from one o'clock, weapons are banned",
+      },{
+        date: "15.5.",
+        de: "Messer Jacopo ausgegraben und vor den Mauern der Stadt (zwischen Porta della Croce und Porta della Giustizia) wieder eingegraben",
+        en: "Messer Jacopo dug up and reburied in front of the city walls (between Porta della Croce and Porta della Giustizia)",
+      },  {
+        date: "17.5.",
+        de: "Messer Jacopo erneut ausgegraben (gegen 20 Uhr, von Kindern), um die Stadt geschleift, in den Arno geworfen",
+        en: "Messer Jacopo dug up again (around 8 p.m., by children), dragged around the city, thrown into the Arno",
+      },  {
+        date: "18.5.",
+        de: "Lorenzo, der ab dem 1.Mai einer der otto di guardia é balia war, legt sein Amt nieder (wohl um Rachevorwürfen vorzubeugen)",
+        en: "Lorenzo, who was one of the otto di guardia é balia from May 1, resigns from office (probably to avoid accusations of revenge)",
+      },  {
+        date: "19.5.",
+        de: "Andrea de’ Pazzi und zwei Brüder in den Turm in Volterra",
+        en: "Andrea de' Pazzi and two brothers in the tower in Volterra",
+      },  {
+        date: "20.5",
+        de: "Guglielmo verspricht, sich innerhalb der Banngrenzen zu halten (das entspricht seiner eigenen Villa)",
+        en: "Guglielmo promises to stay within the boundaries of the ban (which corresponds to his own villa)",
+      },  {
+        date: "",
+        de: "Piero Vespucci wird in die Stinche gebracht",
+        en: "Piero Vespucci is taken to the Stinche",
+      },  {
+        date: "23.5.",
+        de: "Gesetz gegen die Pazzi",
+        en: "Law against the Pazzi",
+      },  {
+        date: "1.6.",
+        de: "Hab und Gut der Pazzi wird verkauft",
+        en: "The Pazzi's belongings are sold",
+      }, {
+        date: "5.6.",
+        de: "Der Kardinal wird freigelassen",
+        en: "The cardinal is released",
+      },  {
+        date: "7.6.",
+        de: "Der Kardinal wird aus dem Palast hinausbegleitet, hat Angst vor der Menge",
+        en: "The cardinal is escorted out of the palace, afraid of the crowd",
+      },  {
+        date: "12.6.",
+        de: "Der Kardinal verlässt Florenz",
+        en: "The Cardinal leaves Florence",
+      },  {
+        date: "20.6.",
+        de: "Das Interdikt wird verkündet",
+        en: "The interdict is proclaimed",
+      },  {
+        date: "3.7.",
+        de: "nachträgliche Feier des Festes des San Giovanni (24.6.), mit Schaugerüsten, Prozessionen, Pferderennen für den Palio (Preis, Gewebe), Girandola (eine Art Feuerwerk)",
+        en: "Subsequent celebration of the feast of San Giovanni (24.6.), with showpieces, processions, horse races for the Palio (prize, fabric), Girandola (a kind of firework display)",
+      }, {
+        date: "",
+        de: "Leonardo notiert, er habe zwei Madonnen begonnen - beide sind heute verschollen",
+        en: "Leonardo notes that he began two Madonnas - both are now lost",
+      },  {
+        date: "7",
+        de: "Sixtus versucht Keil zwischen Florenz und Lorenzo (Dietisalvi Neroni), wird zurückgewiesen",
+        en: "Sixtus tries to drive a wedge between Florence and Lorenzo (Dietisalvi Neroni), but is rejected",
+      },  {
+        date: "10.7.",
+        de: "Philipp de Commines, Herrn von Argenton, kommt von Louis XI",
+        en: "Philipp de Commines, Lord of Argenton, comes from Louis XI",
+      },  {
+        date: "13.7.",
+        de: "Neapel erklärt Florenz den Krieg",
+        en: "Naples declares war on Florence",
+      },  {
+        date: "19.7.",
+        de: "Angriff Sienas, Kriegsbeginn",
+        en: "Attack on Siena, start of the war",
+      }, {
+        date: "9",
+        de: "Pestausbruch in Florenz, der Winter wird hart",
+        en: "Plague outbreak in Florence, the winter gets tough",
+      },  
+    ],
+  },
+  {
+    year: "1479",
+    event: [
+      {
+        date: "",
+        de: "Die Pest ist so schlimm, dass Landucci im April auf’s Land flieht",
+        en: "The plague is so bad that Landucci flees to the countryside in April",
+      },{
+        date: "6.12.",
+        de: "Lorenzo geht nach Neapel",
+        en: "Lorenzo goes to Naples",
+      },  {
+        date: "23.12.",
+        de: "Bernardo Bandini aus Konstantinopel zurückgebracht",
+        en: "Bernardo Bandini brought back from Constantinople",
+      },  {
+        date: "28.12.",
+        de: "Bernardo Bandini wird gehängt",
+        en: "Bernardo Bandini is hanged",
+      }
+    ],
+  },
+  {
+    year: "1480",
+    event: [
+      {
+        date: "15.3.",
+        de: "Lorenzo kommt zurück aus Neapel",
+        en: "Lorenzo returns from Naples",
+      },{
+        date: "16.3.",
+        de: "Frieden wird verkündet",
+        en: "Peace is proclaimed",
+      },{
+        date: "27.5.",
+        de: "Beatrice de Borromei und andere werden nach einem gescheiterten Befreiungsversuch in Volterra gefangen genommen",
+        en: "Beatrice de Borromei and others are captured after a failed rescue attempt in Volterra",
+      },{
+        date: "6.8.",
+        de: "Türken belagern Otranto",
+        en: "Turks lay siege to Otranto",
+      },{
+        date: "4.11.",
+        de: "Eine Gesandtschaft für den Papst wird ernannt und bricht am Folgetag auf",
+        en: "An envoy for the Pope is appointed and departs the following day",
+      },{
+        date: "5.12.",
+        de: "Florenz erfährt, dass der Papst es wieder gesegnet hat",
+        en: "Florence learns that the Pope has blessed it again",
+      },
+    ],
+  },
+  {
+    year: "1482",
+    event: [
+      {
+        date: "25.3.",
+        de: "Lucrezia Tournabouni stirbt",
+        en: "Lucrezia Tournabouni dies",
+      },
+      {
+        date: "",
+        de: "Botticelli malt la Primavera",
+        en: "Botticelli paints la Primavera",
+      },{
+        date: "",
+        de: "Leonardo geht zu Ludovico Sforza nach Mailand (il moro)",
+        en: "Leonardo goes to Ludovico Sforza in Milan (il moro)",
+      }
+    ],
+  },
+  {
+    year: "1484",
+    event: [
+      {
+        date: "",
+        de: "Tod Papst Sixtus IV, Innozenz VIII wird Papst",
+        en: "Death of Pope Sixtus IV, Innocent VIII becomes Pope",
+      },
+     {
+        date: "",
+        de: "Botticelli vollendet Geburt des Venus",
+        en: "Botticelli completes Birth of Venus",
+      }
+    ],
+  }
 ];
 
 let timelineOdyssee = [
@@ -1374,7 +1750,7 @@ let timelineOdyssee = [
         date: "12",
         de: "Atabeg Zengi von Mosul erobert die Grafschaft Edessa",
         en: "Atabeg Zengi of Mosul conquers the county of Edessa",
-      },
+      }
     ],
   },
   {
@@ -1389,7 +1765,94 @@ let timelineOdyssee = [
         date: "12",
         de: "Ludwig IX. von Frankreich äußert gegenüber seinem Hof den „Herzenswunsch“, Edessa zu befreien. Es erfolgt heftiger Gegenwind von den französischen Adligen, allen voran Abt Suger of St. Denis. Man entschei­det, die Frage an Bernhard von Clairvaux zu richten, welcher sie an den Papst weiterleitet.",
         en: "Louis IX of France expresses his 'heartfelt wish' to his court to liberate Edessa. There is fierce opposition from the French nobles, above all Abbot Suger of St. Denis. It was decided to address the question to Bernard of Clairvaux, who passed it on to the Pope.",
+      }
+    ],
+  },  
+  {
+    year: "1146",
+    event: [
+      {
+        date: "01.03.",
+        de: "Neuauflage der päpstlichen Bulle",
+        en: "New edition of the papal bull",
       },
+      {
+        date: "31.03.",
+        de: "Vézelay: an Ludwigs Hof hält Bernhard eine so flammende Rede, dass sich fast alle für den Kreuzzug anmelden – inklusive Eleonore von Aquitanien, Ludwigs Ehefrau.",
+        en: "Vézelay: at Louis' court, Bernhard gives such a passionate speech that almost everyone signs up for the crusade - including Eleanor of Aquitaine, Louis' wife.",
+      },  {
+        date: "",
+        de: "Ludwig schreibt an Roger von Sizilien, Manuel von Byzanz, Konrad III., Géza von Ungarn, um für freie Passage zu bitten.",
+        en: "Louis writes to Roger of Sicily, Manuel of Byzantium, Conrad III and Géza of Hungary to ask for free passage.",
+      },
+      {
+        date: "",
+        de: "Papst Eugen schreibt an Manuel.",
+        en: "Pope Eugene writes to Manuel.",
+      },  {
+        date: "",
+        de: "Roger von Sizilien bietet Mitzug an, was jedoch aufgrund des Kon­fliktes mit Byzanz und dem Römischen Reich ein Problem ist.",
+        en: "Roger of Sicily offers to join the procession, but this is a problem due to the conflict with Byzantium and the Roman Empire.",
+      },
+      {
+        date: "",
+        de: "Géza und Konrad stellen die Passage frei.",
+        en: "Géza and Konrad allow the passage.",
+      },
+      {
+        date: "",
+        de: "Manuels Antwort ist eher verhalten.",
+        en: "Manuel's response is rather restrained.",
+      }, 
+      {
+        date: "",
+        de: "Bernhard von Clairvaux geht auf Fahrt durch ganz Frankreich, schickt Briefe nach England, Flandern, an Manfred von Brescia, um für den Kreuzzug zu werben.",
+        en: "Bernard of Clairvaux travels throughout France, sending letters to England, Flanders and Manfred of Brescia to promote the crusade.",
+      }, 
+      {
+        date: "",
+        de: "In Nordfrankreich flammt, getragen durch den Zisterziensermönch Radulf, Antisemitismus auf.",
+        en: "Anti-Semitism flares up in northern France, fueled by the Cistercian monk Radulf.",
+      }
+    ],
+  } ,
+  {
+    year: "1147",
+    event: [
+      {
+        date: "",
+        de: "",
+        en: "",
+      },,  {
+        date: "",
+        de: "",
+        en: "",
+      }, {
+        date: "19.5.",
+        de: "",
+        en: "",
+      },  {
+        date: "",
+        de: "",
+        en: "",
+      },  {
+        date: "",
+        de: "",
+        en: "",
+      },  {
+        date: "",
+        de: "",
+        en: "",
+      },  {
+        date: "",
+        de: "",
+        en: "",
+      },
+    ],
+  },
+  {
+    year: "1148",
+    event: [
       {
         date: "",
         de: "",
@@ -1397,4 +1860,64 @@ let timelineOdyssee = [
       },
     ],
   },
+  {
+    year: "1149",
+    event: [
+      {
+        date: "",
+        de: "",
+        en: "",
+      },
+    ],
+  },
+  {
+    year: "1150",
+    event: [
+      {
+        date: "",
+        de: "",
+        en: "",
+      },
+    ],
+  },
+  {
+    year: "1151",
+    event: [
+      {
+        date: "",
+        de: "",
+        en: "",
+      },
+    ],
+  },
+  {
+    year: "1152",
+    event: [
+      {
+        date: "",
+        de: "",
+        en: "",
+      },
+    ],
+  },
+  {
+    year: "1153",
+    event: [
+      {
+        date: "",
+        de: "",
+        en: "",
+      },
+    ],
+  },
+  {
+    year: "1154",
+    event: [
+      {
+        date: "",
+        de: "",
+        en: "",
+      },
+    ],
+  }
 ];
