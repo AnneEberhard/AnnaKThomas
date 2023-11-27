@@ -130,28 +130,28 @@ let personSitesHeader = [
         subHeaders: [
           {
             subHeaderText: "Erfundene Personen",
-            subHeaderLink: "",
+            subHeaderLink: "odysseePersonsfictional",
           },
           {
             subHeaderText: "Historische Personen",
-            subHeaderLink: "",
+            subHeaderLink: "odysseePersonshistorical",
           },
         ],
-        paragraphs: ["Vorsicht! Enthält SPOILER!"],
+        paragraphs: ["* historisch belegt", "Vorsicht! Enthält SPOILER!"],
       },
       en: {
         header: "Personage",
         subHeaders: [
           {
             subHeaderText: "Fictional Characters",
-            subHeaderLink: "",
+            subHeaderLink: "odysseePersonsfictional",
           },
           {
             subHeaderText: "Historical Characters",
-            subHeaderLink: "",
+            subHeaderLink: "odysseePersonshistorical",
           },
         ],
-        paragraphs: ["Caution! Includes Spoilers!"],
+        paragraphs: ["* historically documented", "Caution! Includes Spoilers!"],
       },
     },
   },
@@ -163,11 +163,11 @@ let personSitesHeader = [
         subHeaders: [
           {
             subHeaderText: "Erfundene Personen",
-            subHeaderLink: "",
+            subHeaderLink: "masksPersonsfictional",
           },
           {
             subHeaderText: "Historische Personen",
-            subHeaderLink: "",
+            subHeaderLink: "masksPersonshistorical",
           },
         ],
         paragraphs: ["Vorsicht! Enthält SPOILER!"],
@@ -177,11 +177,11 @@ let personSitesHeader = [
         subHeaders: [
           {
             subHeaderText: "Fictional Characters",
-            subHeaderLink: "",
+            subHeaderLink: "masksPersonsfictional",
           },
           {
             subHeaderText: "Historical Characters",
-            subHeaderLink: "",
+            subHeaderLink: "masksPersonshistorical",
           },
         ],
         paragraphs: ["Caution! Includes Spoilers!"],
@@ -229,28 +229,29 @@ let personSitesHeader = [
         subHeaders: [
           {
             subHeaderText: "Erfundene Personen",
-            subHeaderLink: "",
+            subHeaderLink: "mindPersonsfictional",
           },
           {
             subHeaderText: "Historische Personen",
-            subHeaderLink: "",
+            subHeaderLink: "mindPersonshistorical",
           },
         ],
-        paragraphs: ["Vorsicht! Enthält SPOILER!"],
+        paragraphs: ["In der Reihenfolge des Erscheinens",
+        "Vorsicht! Enthält SPOILER!"],
       },
       en: {
         header: "Personage",
         subHeaders: [
           {
             subHeaderText: "Fictional Characters",
-            subHeaderLink: "",
+            subHeaderLink: "mindPersonsfictional",
           },
           {
             subHeaderText: "Historical Characters",
-            subHeaderLink: "",
+            subHeaderLink: "mindPersonshistorical",
           },
         ],
-        paragraphs: ["Caution! Includes Spoilers!"],
+        paragraphs: ["In order of appearance", "Caution! Includes Spoilers!"],
       },
     },
   },
@@ -2415,7 +2416,7 @@ let personsMind = [
         de: "irischer Lehrer von Niklas",
         en: "Irish teacher of Niklas",
       },
-          {
+      {
         name: "Nicolette Dubâton",
         de: "uneheliche Tochter des Barons",
         en: "illegitimate daughter of the baron",
@@ -2450,7 +2451,6 @@ let personsMind = [
         de: "Russe, Reisegenosse",
         en: "Russian, travel companion",
       },
-      ,
       {
         name: "Nuremkows",
         de: "Personal in Sankt Petersburg",
@@ -2466,7 +2466,6 @@ let personsMind = [
         de: "Niklas' Freund",
         en: "Niklas' friend",
       },
-      ,
       {
         name: "Pawel (Paschka) Stepanowitsch Golitzyn",
         de: "Mitjas älterer Bruder",
@@ -2482,7 +2481,6 @@ let personsMind = [
         de: "Mitjas und Pawels entfernter jüngerer Cousin",
         en: "Mitja and Pavel's distant younger cousin",
       },
-      ,
       {
         name: "Guiseppe Constantino, Conte di Visi",
         de: "Bekannter des Barons, Gastgeber bei Rom",
@@ -2498,7 +2496,6 @@ let personsMind = [
         de: "Niklas' Geliebte in Rom",
         en: "Niklas' lover in Rome",
       },
-      ,
       {
         name: "Amalia von Altenmark",
         de: "geb. Lichterberg, Andreas' Ehefrau",
