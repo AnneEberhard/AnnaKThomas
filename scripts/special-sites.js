@@ -462,22 +462,6 @@ function generateTimelineHeader(bookId) {
   return templateHTML;
 }
 
-
-
-function generateTimelineHeader2(bookId) {
-  let templateHTML = '';
-  let headline;
-  if (defaultLanguage == 'de') {
-    headline = 'Zeittafel';
-  } else {
-    headline = 'Timeline';
-  }
-  templateHTML = /*html*/`
-  <h2>${headline}</h2>`;
-  return templateHTML;
-}
-
-
 function renderTimelineBottom(bookId) {
   let timelineId = findTimelinebyId(bookId);
   let divId = bookId + 'TimelineBottom';
