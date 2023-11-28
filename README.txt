@@ -13,6 +13,8 @@ All other JSONs for the sites on first level are in the template.js
     for sources: individual for sites with sources
     for timelines: let timelineHeaders plus individual timeline JSOns
 
+ALL JSONs for bonus chapters as well as sources children are in the JSONs folder
+
 All main sites will be started with onload=init()
 
 Init (init.js) includes footer, header, background and mobile templates, then checks for browser language

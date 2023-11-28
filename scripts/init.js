@@ -1,7 +1,7 @@
 // for path navigation
 
 let browserLanguage = navigator.language || navigator.userLanguage;
-let defaultLanguage = browserLanguage;
+let defaultLanguage = 'de';
 let currentSiteId;
 let currentGenre;
 
@@ -12,22 +12,22 @@ async function init() {
 
 function checkBrowserLanguage() {
   if (browserLanguage.startsWith("de")) {
-    console.log(browserLanguage);
     german();
   } else {
-    console.log(browserLanguage);
     english();
   }
 }
 
 function german() {
     defaultLanguage = "de";
+    console.log(defaultLanguage);
     renderContentBasedOnPage(); //CAVE First because of genre/site identification
     renderSharedContent();  
   }
   
   function english() {
     defaultLanguage = "en";
+    console.log(defaultLanguage);
     renderContentBasedOnPage(); //CAVE First because of genre/site identification
     renderSharedContent();
   }
@@ -41,34 +41,56 @@ function german() {
   function renderMenu() {
     const navElement = document.getElementById("desktopNav");
     navElement.innerHTML = "";
+  
+    // Burger-Menu (Hamburger-Menü) hinzufügen
+    const burgerMenu = document.createElement("div");
+    burgerMenu.id = "burgerMenu";
+    burgerMenu.onclick = showMobileMenu;
+    burgerMenu.innerHTML = `<img class="burgerMenuImage" src="/assets/img/icons/burger-menu.png">`;
+    navElement.appendChild(burgerMenu);
+  
+    // Menüpunkte hinzufügen
     menuTitles.forEach((menuItem) => {
       const title = menuItem[defaultLanguage];
       const link = document.createElement("a");
       link.classList.add("navLink");
       link.href = menuItem.link;
       link.innerHTML = title;
-
+  
       if (menuItem.id === currentGenre) {
         link.classList.add("highlighted");
       }
       navElement.appendChild(link);
     });
+
+  }
+  
+  function renderBurgerMenu() {
+    const burgerMenu = document.createElement("div");
+    burgerMenu.id = "burgerMenu";
+    burgerMenu.onclick = showMobileMenu;
+    burgerMenu.innerHTML = `<img class="burgerMenuImage" src="/assets/img/icons/burger-menu.png">`;
+    navElement.appendChild(burgerMenu);
   }
   
 
 
-function renderMobileMenu() {
+  function renderMobileMenu() {
     const mobileNavElement = document.getElementById("mobileNav");
     mobileNavElement.innerHTML = "";
-    const logoLink = document.createElement("a");
-    logoLink.href = `/${menuTitles[0].link}`;
-    logoLink.innerHTML = `<img class="mobileLogo" src="/assets/img/logo/Anna-reverse-transparent.png"/>`;
-    mobileNavElement.appendChild(logoLink);
+  
+    // Close-Button hinzufügen
+    const closeButton = document.createElement("span");
+    closeButton.id = "closeButton";
+    closeButton.innerHTML = `<img src="/assets/img/icons/close.png" onclick="closeMobileMenu()">`;
+    mobileNavElement.appendChild(closeButton);
+  
+    // Menüpunkte hinzufügen
     menuTitles.forEach((menuItem) => {
       const title = menuItem[defaultLanguage];
       const link = document.createElement("a");
       link.classList.add("mobileNavLink");
-      link.href = `/${menuItem.link}`;
+      link.href = `${menuItem.link}`;
       link.innerHTML = title;
       if (menuItem.id === currentGenre) {
         link.classList.add("highlighted");
@@ -76,6 +98,7 @@ function renderMobileMenu() {
       mobileNavElement.appendChild(link);
     });
   }
+  
   
 function renderSubHeaderBottom () {
     let subHeaderBottom = document.getElementById('subHeaderBottom');
