@@ -120,6 +120,13 @@ function renderContentBasedOnPage() {
         { path: "/subsitesMasks/masks-timeline.html", function: renderTimeline, params: ['historical','masks'] },
         { path: "/subsitesOdyssee/odyssee-timeline.html", function: renderTimeline, params: ['historical','odyssee'] },
         { path: "/subsitesChildren/children-bonus.html", function: renderBonusChapter, params: ['fantasy','children', 'zach'] },
+        { path: "/subsitesElves/elves-bonus-diana.html", function: renderBonusChapter, params: ['fantasy','elves', 'diana'] },
+        { path: "/subsitesElves/elves-bonus-noel.html", function: renderBonusChapter, params: ['fantasy','elves', 'noel'] },
+        { path: "/subsitesMind/mind-bonus-curtius.html", function: renderBonusChapter, params: ['historical','mind', 'curtius'] },
+        { path: "/subsitesMind/mind-bonus-danton.html", function: renderBonusChapter, params: ['historical','mind', 'danton'] },
+        { path: "/subsitesMind/mind-bonus-henri.html", function: renderBonusChapter, params: ['historical','mind', 'henri'] },
+        { path: "/subsitesOdyssee/odyssee-bonus.html", function: renderBonusChapter, params: ['historical','odyssee', 'radegunde'] },
+        { path: "/subsitesMasks/masks-bonus.html", function: renderBonusChapter, params: ['historical','masks', 'susanna'] },
 
       ];
     const path = window.location.pathname;

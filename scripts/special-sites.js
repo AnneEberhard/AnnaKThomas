@@ -526,12 +526,11 @@ function generateTableRowSingle(previousYear,timeline,event ) {
 async function renderBonusChapter(genre, bookId, bonusId) {
   currentSiteId = bonusId;
   currentGenre = genre;
-  url = '/JSONs/bonus-zach.json';
-  targetDiv = bonusId+'Top';
+  url = fetchUrl(bonusId);
   await loadAndRenderContent(targetDiv, url);
   renderNav(navSites, bookId, `${bonusId}Nav`);
-
 }
+
 async function loadAndRenderContent(targetDiv, url) {
   try {
     const response = await fetch(url);
@@ -545,6 +544,32 @@ async function loadAndRenderContent(targetDiv, url) {
     });
   } catch (error) {
     console.error('Fehler beim Laden und Rendern der JSON-Datei:', error);
+  }
+}
+
+function fetchUrl(bonusId) {
+  if(bonusId =='zach') {
+    return '/JSONs/bonus-zach.json'
+  } else if(bonusId =='noel') {
+return '/JSONs/bonus-noel.json'
+  }else if(bonusId =='diana') {
+    return '/JSONs/bonus-diana.json'
+  }else if(bonusId =='bina') {
+    return '/JSONs/bonus-bina.json'
+  }else if(bonusId =='henri') {
+    return '/JSONs/bonus-henri-and-ella.json'
+  }else if(bonusId =='curtius') {
+    return '/JSONs/bonus-curtius.json'
+  }else if(bonusId =='danton') {
+    return '/JSONs/bonus-danton.json'
+  }else if(bonusId =='radegunde') {
+    return '/JSONs/bonus-radegunde.json'
+  }else if(bonusId =='susanna') {
+    return '/JSONs/bonus-susanna.json'
+  }else if(bonusId =='') {
+    return '/'
+  } else {
+    return null
   }
 }
 

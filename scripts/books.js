@@ -137,7 +137,7 @@ let topSites = [
           },
           {
             text: "Bonuskapitel Von Elfen und Wölfen: Noel",
-            url: "/subsitesElves/elves-bonus-Noel.html",
+            url: "/subsitesElves/elves-bonus-noel.html",
           },
           {
             text: "Bonuskapitel Im Namen der Menschen: Diana",
