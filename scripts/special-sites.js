@@ -539,6 +539,7 @@ async function loadAndRenderContent(targetDiv, url) {
     const languageData = data[defaultLanguage];
     const targetElement = document.getElementById(targetDiv);
     targetElement.innerHTML = `<h2>${languageData.header}</h2>`;
+    targetElement.innerHTML += `<h3>${languageData.subheader}</h3>`;
     languageData.text.forEach(paragraph => {
       targetElement.innerHTML += `<p>${paragraph}</p>`;
     });

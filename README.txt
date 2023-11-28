@@ -40,4 +40,11 @@ special-sites.js contains the logic for
     the special logic for background info (using the JSON backgroundInfo in the books.js)
     the source sites containing glossaries, sources and extras (using individual JSONs/Arrays in template.JS)
     the timeline sites (using timelineHeaders JSON and individual JSON in template.js)
+
+For Bonus Chapter text:
+    convert in word all " into '
+    convert in Word all ^p into ","
+    convert in editor all formatted " into clean "
+    check for  „, and convert into  ",
+    Add some line breaks in editor as it is easier as in VS Code and too long lines lead to errors
  
