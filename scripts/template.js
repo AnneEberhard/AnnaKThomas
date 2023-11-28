@@ -1,10 +1,10 @@
 //for header
 let menuTitles = [
-  { de: "Home", en: "Home", link: "/index.html" },
-  { de: "Fantasy", en: "Fantasy", link: "/fantasy.html" },
-  { de: "Historisch", en: "Historical", link: "/historical.html" },
-  { de: "Novellen", en: "Novellas", link: "/novellas.html" },
-  { de: "Über mich", en: "About Me", link: "/about-me.html" },
+  { id:"home", de: "Home", en: "Home", link: "/index.html" },
+  { id:"fantasy", de: "Fantasy", en: "Fantasy", link: "/fantasy.html" },
+  { id:"historical", de: "Historisch", en: "Historical", link: "/historical.html" },
+  { id:"novellas", de: "Novellen", en: "Novellas", link: "/novellas.html" },
+  { id:"aboutMe", de: "Über mich", en: "About Me", link: "/about-me.html" },
 ];
 
 //for bottom nav

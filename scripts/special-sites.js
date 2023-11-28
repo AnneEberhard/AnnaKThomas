@@ -522,11 +522,11 @@ function generateTableRowSingle(previousYear,timeline,event ) {
 }
 
 // für BonusChapters
-
 async function renderBonusChapter(genre, bookId, bonusId) {
   currentSiteId = bonusId;
   currentGenre = genre;
   url = fetchUrl(bonusId);
+  targetDiv = bonusId+'Top';
   await loadAndRenderContent(targetDiv, url);
   renderNav(navSites, bookId, `${bonusId}Nav`);
 }
@@ -573,5 +573,39 @@ return '/JSONs/bonus-noel.json'
   }
 }
 
+//For sources Children
+async function renderSourcesSiteChildren (genre, bookId, siteId) {
+  currentSiteId = siteId;
+  currentGenre = genre;
+ const sourceData = await loadData('/JSONs/sources.children.json');
+ const languageSourceData = sourceData[defaultLanguage];
+ const targetElement = document.getElementById("childrenSources");
+ targetElement.innerHTML = generateTemplateChildrenSources(languageSourceData);
+ renderNav(navSites, bookId, `${siteId}Nav`);
+}
 
+ async function loadData(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Fehler beim Laden und Rendern der JSON-Datei:', error);
+  }
+ }
+
+ function generateTemplateChildrenSources(languageSourceData) {
+  let templateHTML = `<h2>${languageSourceData.header}</h2>`;
+  languageSourceData.paragraphs.forEach(paragraph => {
+    templateHTML += `<p>${paragraph}</p>`;
+  });
+  languageSourceData.subsections.forEach(subsection => {
+    templateHTML += `<h3>${subsection.subheader}</h3>`;
+    subsection.text.forEach(text => {
+      templateHTML += `<p>${text}</p>`;
+    });
+    templateHTML += `<a href="${subsection.link}">${subsection.linktext}</a>`;
+  });
+  return templateHTML;
+}
 

@@ -81,6 +81,11 @@ table {
   font-size: 22px;
 }
 
+
+.highlighted {
+font-weight: 700;
+}
+
 .toTheBooksSites {
   display: flex;
   flex-direction: column;

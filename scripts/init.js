@@ -1,8 +1,7 @@
 // for path navigation
 
-
 let browserLanguage = navigator.language || navigator.userLanguage;
-let defaultLanguage = "en";
+let defaultLanguage = browserLanguage;
 let currentSiteId;
 let currentGenre;
 
@@ -23,14 +22,14 @@ function checkBrowserLanguage() {
 
 function german() {
     defaultLanguage = "de";
+    renderContentBasedOnPage(); //CAVE First because of genre/site identification
     renderSharedContent();  
-    renderContentBasedOnPage();
   }
   
   function english() {
     defaultLanguage = "en";
+    renderContentBasedOnPage(); //CAVE First because of genre/site identification
     renderSharedContent();
-    renderContentBasedOnPage();
   }
   
   function renderSharedContent() {
@@ -39,20 +38,24 @@ function german() {
     renderSubHeaderBottom();
   }
 
-function renderMenu() {
-  const navElement = document.getElementById("desktopNav");
-  navElement.innerHTML = "";
+  function renderMenu() {
+    const navElement = document.getElementById("desktopNav");
+    navElement.innerHTML = "";
+    menuTitles.forEach((menuItem) => {
+      const title = menuItem[defaultLanguage];
+      const link = document.createElement("a");
+      link.classList.add("navLink");
+      link.href = menuItem.link;
+      link.innerHTML = title;
 
-  menuTitles.forEach((menuItem) => {
-    const title = menuItem[defaultLanguage];
-    const link = document.createElement("a");
-    link.classList.add("navLink");
-    link.href = menuItem.link;
-    link.innerHTML = title;
+      if (menuItem.id === currentGenre) {
+        link.classList.add("highlighted");
+      }
+      navElement.appendChild(link);
+    });
+  }
+  
 
-    navElement.appendChild(link);
-  });
-}
 
 function renderMobileMenu() {
     const mobileNavElement = document.getElementById("mobileNav");
@@ -67,6 +70,9 @@ function renderMobileMenu() {
       link.classList.add("mobileNavLink");
       link.href = `/${menuItem.link}`;
       link.innerHTML = title;
+      if (menuItem.id === currentGenre) {
+        link.classList.add("highlighted");
+      }
       mobileNavElement.appendChild(link);
     });
   }
@@ -83,7 +89,7 @@ function renderSubHeaderBottom () {
 
 function renderContentBasedOnPage() {
     let pageFunctions = [
-        { path: "/index.html", function: renderHomePage, params: [] },
+        { path: "/index.html", function: renderHomePage, params: ['home'] },
         { path: "/fantasy.html", function: renderMainSite, params: ['fantasy'] },
         { path: "/historical.html", function: renderMainSite, params: ['historical'] },
         { path: "/novellas.html", function: renderNovellas, params: ['novellas'] },
@@ -117,6 +123,7 @@ function renderContentBasedOnPage() {
         { path: "/subsitesOdyssee/odyssee.glossary.html", function: renderSourcesSite, params: ['historical','odyssee'] },
         { path: "/subsitesAlster/alster-sources.html", function: renderSourcesSite, params: ['historical','alster'] },
         { path: "/subsitesMind/mind-sources.html", function: renderSourcesSite, params: ['historical','mind'] },
+        { path: "/subsitesChildren/children-sources.html", function: renderSourcesSiteChildren, params: ['fantasy','children','childrenSources'] },
         { path: "/subsitesMasks/masks-timeline.html", function: renderTimeline, params: ['historical','masks'] },
         { path: "/subsitesOdyssee/odyssee-timeline.html", function: renderTimeline, params: ['historical','odyssee'] },
         { path: "/subsitesChildren/children-bonus.html", function: renderBonusChapter, params: ['fantasy','children', 'zach'] },
