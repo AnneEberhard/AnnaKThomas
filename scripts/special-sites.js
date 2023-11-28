@@ -609,3 +609,28 @@ async function renderSourcesSiteChildren (genre, bookId, siteId) {
   return templateHTML;
 }
 
+//for imprint
+
+function renderImprint() {
+  currentSiteId = 'imprint';
+  currentGenre = 'support';
+  const targetElement = document.getElementById("imprint");
+  if (defaultLanguage== 'de') {
+    targetElement.innerHTML = generateImprintGerman();
+  } else {
+    targetElement.innerHTML = generateImprintEnglish();
+  }
+}
+
+//For privacyPolicy
+function renderprivacyPolicy() {
+  currentSiteId = 'privacyPolice';
+  currentGenre = 'support';
+  const targetElement = document.getElementById("privacyPolicy");
+  if (defaultLanguage== 'de') {
+    targetElement.innerHTML = generatePrivacyPolicyGerman();
+  } else {
+    targetElement.innerHTML = generatePrivacyPolicyEnglish();
+  }
+}
+

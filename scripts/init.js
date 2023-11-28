@@ -134,6 +134,8 @@ function renderContentBasedOnPage() {
         { path: "/subsitesMind/mind-bonus-henri.html", function: renderBonusChapter, params: ['historical','mind', 'henri'] },
         { path: "/subsitesOdyssee/odyssee-bonus.html", function: renderBonusChapter, params: ['historical','odyssee', 'radegunde'] },
         { path: "/subsitesMasks/masks-bonus.html", function: renderBonusChapter, params: ['historical','masks', 'susanna'] },
+        { path: "/imprint.html", function: renderImprint, params: [] },
+        { path: "/privacy-policy.html", function: renderprivacyPolicy, params: [] },
 
       ];
     const path = window.location.pathname;
