@@ -122,6 +122,7 @@ function generateImprintGerman() {
     law provisions.
   </p>
   <h3 >Bilder und Icons</h3>
+  <p>Alle Bilder und Texte, soweit nicht anders angegeben, sind Eigentum von Anne Eberhard</p>
   <a target="_blank" href="https://icons8.com/icon/31761/amazon">Amazon</a> Icon von <a target="_blank" href="https://icons8.com">Icons8</a>
     `;
 }
@@ -250,6 +251,8 @@ function generateImprintEnglish() {
   law provisions.
 </p>
 <h3 >Pictures and Icons</h3>
+<p>All images and texts, unless otherwise stated, are the property of Anne Eberhard</p>
+
     <a target="_blank" href="https://icons8.com/icon/31761/amazon">Amazon</a> Icon von <a target="_blank" href="https://icons8.com">Icons8</a>
     `;
 }
