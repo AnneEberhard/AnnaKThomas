@@ -1,5 +1,6 @@
 // function for special sites about me
 function renderAboutMe(id) {
+  debugger;
   currentSiteId = id;
   currentGenre = id;
   let headline = document.getElementById("aboutMeHeadline");

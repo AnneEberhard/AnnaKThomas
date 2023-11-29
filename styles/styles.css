@@ -250,10 +250,17 @@ rect {
   .bookContainer {
     flex-direction: column;
   }
+  #homeBottom {
+    flex-direction: column;
+    gap: 16px;
+  }
 
+  .columnContent {
+    text-align: center;
+  }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   h1 {
     font-size: 24px;
   }
@@ -288,4 +295,6 @@ rect {
     bottom: 10px;
     right: 10px;
   }
+
+ 
 }
