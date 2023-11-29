@@ -566,7 +566,7 @@ let overview = [
     books: [
       {
         bookId: "life",
-        internalLink: "/booksites/masks-of-florence.html",
+        internalLink: "/novellas.html",
         translationExists: "true",
         languages: {
           de: "LebensAbschnitt",
