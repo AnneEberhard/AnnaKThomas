@@ -173,7 +173,7 @@ function generateBookHTML(book, link) {
 // for personages sites
 function renderPersonage(genre, navId, siteId, personageObject) {
   renderPersonageTop(genre, siteId);
-  renderPersonageBottom(siteId , personageObject);
+  renderPersonageBottom(siteId, personageObject);
   renderNav(navSites, navId, `${siteId}Nav`);
 }
 

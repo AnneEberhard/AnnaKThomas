@@ -63,7 +63,7 @@ nav {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 200px;
+  right:0;
   background-color: #0097b2;
   box-sizing: border-box;
   padding: 32px 16px 16px 16px;
@@ -73,6 +73,7 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   z-index: 9;
+  opacity: 0.9;
 }
 
 .mobileLogo {
