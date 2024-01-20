@@ -57,27 +57,21 @@ function templateAboutMeTextGerman() {
 function templateAboutMeTextEnglish() {
   let template = `
     <p>
-    There was never a time in my life when I didn't make up stories.
-    made up stories. I really started writing when I was twelve, when the first computer
-    when the first computer arrived in our family and my fingers could
-    could follow my thoughts for the first time. I wrote my first
-    I wrote my first story for a reason that I'm sure is familiar to many readers
-    readers - anger about a book I had just read and the good advice
+    There was never a time in my life when I didn't make up stories. I really started writing when I was twelve, when the first computer arrived in our family and my fingers could
+    could follow my thoughts for the first time. 
+    I wrote my first story for a reason that I'm sure is familiar to many readers - anger about a book I had just read and the good advice
     to do it better after all.  </p>
     <p>
     In my case - twelve years - I was just annoyed by the fact that
-    that so many obstacles were always put in the way of the heroes of a story.
-    were always put in the way. I wanted to write the opposite: a book in which everything went
-    went smoothly and only good things happened. However, I then realised
-    quickly realised how incredibly boring such a story is.
-    story is. I also realised that if I could put obstacles in my hero's
-    obstacles in my hero's path, as an author I also had the power to
-    to clear them away again. And with this realisation, I began
-    writing - and simply never stopped.
+    so many obstacles were put in the way of the heroes of a story.
+    I wanted to write the opposite: a book in which everything went
+    smoothly and only good things happened. However, I quickly realised how incredibly boring such a story is.
+    I also realised that if I could put obstacles in my hero's path, as an author I also had the power to
+    to remove them. And with this realisation, I began writing - and simply never stopped.
   </p>
   <p>For many years I only wrote for myself, wrote like other people read, wrote and gave my stories an independent existence. I was stingy with it, hardly ever giving anything away, and it was only the singers who changed my attitude: For the first time, I had a story I wanted to share.</p>
   <p>In my "other" life, I have made a career in science, need analytics and logic and can only give a small place to fantasy. In my "other" life, very few people would understand what my stories mean to me.</p>
-  <p>And so, dear reader, forgive me if there is little information about "the" Anna K. Thomas. Just believe me when I say that I am analytical and emotional, logical and empathetic, completely crazy and completely normal, love to write for a living, and read, read, read...</p>
+  <p>And so, dear reader, forgive me if there is little information about "the" Anna K. Thomas. Just believe me when I say that I am analytical and emotional, logical and empathetic, completely crazy and completely normal, love to write, and to read, read, read...</p>
   `;
   return template;
 }
