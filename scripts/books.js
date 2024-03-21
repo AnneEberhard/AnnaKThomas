@@ -596,7 +596,7 @@ let allBooks = [
         bookId: "demonRide",
         internalLink: "/booksites/children-of-angels.html",
         seriesId: "children",
-        translationExists: "progress",
+        translationExists: "true",
         languages: {
           de: {
             title: "Dämonenjagd",
@@ -616,11 +616,10 @@ let allBooks = [
             imageURL: "/assets/img/covers/demon-ride.jpg",
             externalLink: "https://mybook.to/DemonRide",
             paragraphs: [
-              "Books are currently in translation",
               "Who would have thought that demons really exist? And not just them - demon hunters too?",
-              "Daniel encounters three of them when he gets involved with a demon while searching for his brother. With the hunters, he hopes he has a better chance of tracking down Zach.",
-              "But this decision draws him deeper and deeper into an old conflict between the opposing species. What happened to make the demons abandon their millennia-old cover in the first place? What role did the hunter Miriam play, who is treated with extreme contempt by her fellow hunters - and what role did her former partner Flo play?",
-              "The search for Zach leads Daniel and the hunters not only into the past, but across two continents - and ends with something completely different from what they all expected ...",
+              "Daniel encounters three of them at once when he gets involved with a demon while searching for his brother. With the hunters, he hopes, he has a better chance of tracking Zach down.",
+              "But this decision draws him deeper and deeper into an ancient conflict between the hostile species. What happened to make the demons abandon their millennia-old cover in the first place? What role did the huntress Miriam play, who is treated with extreme contempt by her fellow hunters - and what role her former partner Flo play?",
+              "The search for Zach leads Daniel and the hunters not only into the past, but across two continents - and at its end is something quite different than what they all expected ...",
             ],
           },
         },
@@ -629,7 +628,7 @@ let allBooks = [
         bookId: "demonLeap",
         internalLink: "/booksites/children-of-angels.html",
         seriesId: "children",
-        translationExists: "progress",
+        translationExists: "true",
         languages: {
           de: {
             title: "Dämonensprung",
@@ -647,11 +646,10 @@ let allBooks = [
             title: "Demon Leap",
             seriesTitle: "Children of Angels",
             imageURL: "/assets/img/covers/demon-leap.jpg",
-            externalLink: "https://mybook.to/Demonleap",
+            externalLink: "https://mybook.to/DemonLeap",
             paragraphs: [
-              "Books are currently in translation",
               "The journey of the children of angels continues...",
-              "Flo, Miriam and Daniel did it - they inserted one of the lost shards into the Heart of the Angels, as the prophecies said they would. But this has unforeseen consequences, especially for Daniel, who is the first human to be exposed to the unrestrained power of the channelers.",
+              "Flo, Miriam, and Daniel did it - they inserted one of the lost shards into the Heart of the Angels, as the prophecies said they would. But this has unforeseen consequences, especially for Daniel, the first human to be exposed to the unrestrained power of the channelers.",
               "What becomes of a human who can suddenly manipulate energy? How does the Council of Hunters react to the rebellion of their promised ones? And what do the demons want? Or should they better be called shadow channelers?",
               "Flo, Miriam, and Daniel increasingly start to challenge old legends...",
             ],
@@ -662,7 +660,7 @@ let allBooks = [
         bookId: "demonDream",
         internalLink: "/booksites/children-of-angels.html",
         seriesId: "children",
-        translationExists: "progress",
+        translationExists: "true",
         languages: {
           de: {
             title: "Dämonentraum",
@@ -679,10 +677,9 @@ let allBooks = [
           en: {
             title: "Demon Dream",
             seriesTitle: "Children of Angels",
-            imageURL: "/assets/img/covers/demon dream.jpg",
-            externalLink: "https://mybook.to/Demondream",
+            imageURL: "/assets/img/covers/demon-dream.jpg",
+            externalLink: "https://mybook.to/DemonDream",
             paragraphs: [
-              "Books are currently in translation",
               "The journey of the children of angels reaches its climax...",
               "Flo, Miriam, and Daniel try their best to save the world from a war of channelers, which it would probably not survive. But suddenly a new player appears and demands their support.",
               "Who is this Bell, and why has she come? Is it even possible to stop the war? And if not - is it possible to at least protect the human world from annihilation?",
