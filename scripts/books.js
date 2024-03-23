@@ -80,7 +80,7 @@ let topSites = [
   },
   {
     siteId: "children",
-    translationExists: "progress",
+    translationExists: "true",
     languages: {
       de: {
         title: "Die Kinder der Engel - eine Urban Fantasy Trilogie",
