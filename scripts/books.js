@@ -614,9 +614,9 @@ let allBooks = [
             title: "Demon Ride",
             seriesTitle: "Children of Angels",
             imageURL: "/assets/img/covers/demon-ride.jpg",
-            externalLink: "https://mybook.to/DemonRide",
+            externalLink: "https://mybook.to/Demon-Ride",
             paragraphs: [
-              "Who would have thought that demons really exist? And not just them - demon hunters too?",
+              "Who would have thought that demons exist? And not just them - demon hunters too?",
               "Daniel encounters three of them at once when he gets involved with a demon while searching for his brother. With the hunters, he hopes, he has a better chance of tracking Zach down.",
               "But this decision draws him deeper and deeper into an ancient conflict between the hostile species. What happened to make the demons abandon their millennia-old cover in the first place? What role did the huntress Miriam play, who is treated with extreme contempt by her fellow hunters - and what role her former partner Flo play?",
               "The search for Zach leads Daniel and the hunters not only into the past, but across two continents - and at its end is something quite different than what they all expected ...",
@@ -646,7 +646,7 @@ let allBooks = [
             title: "Demon Leap",
             seriesTitle: "Children of Angels",
             imageURL: "/assets/img/covers/demon-leap.jpg",
-            externalLink: "https://mybook.to/DemonLeap",
+            externalLink: "https://mybook.to/Demon-Leap",
             paragraphs: [
               "The journey of the children of angels continues...",
               "Flo, Miriam, and Daniel did it - they inserted one of the lost shards into the Heart of the Angels, as the prophecies said they would. But this has unforeseen consequences, especially for Daniel, the first human to be exposed to the unrestrained power of the channelers.",
@@ -678,7 +678,7 @@ let allBooks = [
             title: "Demon Dream",
             seriesTitle: "Children of Angels",
             imageURL: "/assets/img/covers/demon-dream.jpg",
-            externalLink: "https://mybook.to/DemonDream",
+            externalLink: "https://mybook.to/Demon-Dream",
             paragraphs: [
               "The journey of the children of angels reaches its climax...",
               "Flo, Miriam, and Daniel try their best to save the world from a war of channelers, which it would probably not survive. But suddenly a new player appears and demands their support.",
