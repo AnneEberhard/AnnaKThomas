@@ -961,7 +961,7 @@ let personsOdyssee = [
       {
         name: "Katharina (Katja) Vogelmann",
         de: "Goldschmiedegattin aus Mainz",
-        en: "Goldsmith's wife from Mainz",
+        en: "Goldsmith wife from Mainz",
       },
       {
         name: "Ewald Vogelmann",
@@ -991,7 +991,7 @@ let personsOdyssee = [
       {
         name: "Gunild",
         de: "Pilgerin",
-        en: "Pilgrim woman",
+        en: "Pilgrim",
       },
       {
         name: "Walter †",
@@ -1006,17 +1006,17 @@ let personsOdyssee = [
       {
         name: "Maximilian (Max)",
         de: "Jüngerer Bruder von Rudolph",
-        en: "Rudolph's younger brother",
+        en: "Younger brother of Rudolph ",
       },
       {
         name: "Magda",
         de: "Pilgerin",
-        en: "Pilgrim woman",
+        en: "Pilgrim",
       },
       {
         name: "Gerd Hänsel",
         de: "	Älterer Händler im Kreuzzug",
-        en: "Elderly trader on the crusade",
+        en: "Elder merchant on the trek",
       },
       {
         name: "Meisterin Hänsel",
@@ -1071,7 +1071,7 @@ let personsOdyssee = [
         en: "Called the Boy, King of France, he was originally destined for a career in the church and was never quite able to break away from it",
       },
       {
-        name: "* Eleonore von Aquitanien",
+        name: "* Eleonore",
         de: "von Aquitanien, Tochter des Herzogs Wilhelm X. von Aquitanien (1099-1137) und der Aenòr de Chateleràud (1105-1130). Ihr Name Alienor (Eleonore) bedeutet vermutlicht „die andere Aenor“, um sie von ihrer Mutter zu unter­scheiden. Sie war die reichste Erbin ihrer Zeit, Königin von Frankreich, ließ sich nach dem Kreuzzug von Ludwig scheiden, heiratete Heinrich Plantagenet und wurde somit Königin von England",
         en: "of Aquitaine, Daughter of Duke William X of Aquitaine (1099-1137) and Aenòr de Chateleràud (1105-1130). Her name Alienor (Eleonore) presumably means 'the other Aenor', to distinguish her from her mother. She was the richest heiress of her time, Queen of France, divorced Louis after the Crusade, married Henry Plantagenet and thus became Queen of England",
       }
@@ -1097,31 +1097,6 @@ let personsOdyssee = [
         de: "Jüngerer Sohn von Zengi, nach dessen Tod Statthalter von Aleppo",
         en: "Younger son of Zengi, governor of Aleppo after his death",
       },
-      {
-        name: "* Unur",
-        de: "Emir von Damaskus",
-        en: "Emir of Damascus",
-      },
-      {
-        name: "* Ma’sud",
-        de: "Sultan der Rum-Seldschuken",
-        en: "Sultan of the Rum Seljuks",
-      },
-      {
-        name: "* Sandschar",
-        de: "Sultan der Groß-Seldschuken, (Reich im Zerfall begriffen)",
-        en: "Sultan of the Great Seljuks, (empire in decay)",
-      },
-      {
-        name: "* Al-Hafiz",
-        de: "Kalif von Kairo (Schiiten)",
-        en: "Caliph of Cairo (Shiites)",
-      },
-      {
-        name: "* Al-Muqtafi",
-        de: "Kalif von Bagdad (Sunniten)",
-        en: "Caliph of Baghdad (Sunni)",
-      },
     ],
   },
   {
@@ -1132,22 +1107,22 @@ let personsOdyssee = [
       {
         name: "* Ayyub",
         de: "Kurde, bis 1146 Statthalter von Baalbek, dann in Damaskus (voller Name Najm ad-Din Ayyub bin Shadhi), Stammvater der Ayyubiden",
-        en: "Kurd, governor of Baalbek until 1146, then in Damascus (full name Najm ad-Din Ayyub bin Shadhi), progenitor of the Ayyubids",
+        en: "Kurd, governor of Baalbek until 1146, then in Damascus (full name al-Malik al-Afdal Najm al-Dīn Ayyūb ibn Shādhi ibn Marwān), progenitor of the Ayyubids",
       },
       {
         name: "* Schirkuh",
         de: "Kurde, General in Nureddins Diensten (voller Name Asad ad-Din Schirkuh bin Shahdi)",
-        en: "Kurd, general in Nureddin's service (full name Asad ad-Din Shirkuh bin Shahdi)",
+        en: "Kurd, general in Nureddin's service (full name Asad ad-Dīn Shīrkūh bin Shādhī)",
       },
       {
         name: "* Turanschah",
         de: "Sohn Ayyubs (voller Name al-Malik al-Mu'azzam Shams ad-Dawla Turanshah bin Ayyub)",
-        en: "Son of Ayyub (full name al-Malik al-Mu'azzam Shams ad-Dawla Turanshah bin Ayyub)",
+        en: "Son of Ayyub (full name Shams ad-Din Turanshah ibn Ayyub al-Malik al-Mu'azzam Shams ad-Dawla Fakhr ad-Din)",
       },
       {
         name: "* Yusuf",
         de: "Sohn Ayyubs, später Saladin (voller Name Salah ad-Din Yusuf bin Ayyub)",
-        en: "Son of Ayyub, later Saladin (full name Salah ad-Din Yusuf bin Ayyub)",
+        en: "Son of Ayyub, later Saladin (full name Salah ad-Din Yusuf bin Ayyub ad-Dawīnī)",
       },
       {
         name: "* Nur ad-Din Shahanshah",
@@ -1163,7 +1138,12 @@ let personsOdyssee = [
         name: "Otto",
         de: "Ein fränkischer Sklave in Ayyubs Haus",
         en: "A Frankish slave in Ayyub's house",
-      }
+      },
+      {
+        name: "* Unur",
+        de: "Emir von Damaskus",
+        en: "Emir of Damascus",
+      },
     ],
   },
   {
@@ -1175,11 +1155,6 @@ let personsOdyssee = [
         name: "* Balduin III.",
         de: "Minderjähriger König von Jerusalem",
         en: "Minor King of Jerusalem",
-      },
-      {
-        name: "* Melisande",
-        de: "Balduins Mutter, Mitregentin",
-        en: "Balduin's mother, co-regent",
       },
       {
         name: "* Raimund ",
@@ -1197,16 +1172,6 @@ let personsOdyssee = [
         en: "Count of Tripoli, Melisande's brother-in-law",
       },
       {
-        name: "* Alfonso Jorda",
-        de: "Aspirant auf den Grafenthron von Tripolis; aus der ehelichen Linie des Raimund von Toulouse, erster Graf von Tripolis",
-        en: "Aspirant to the count's throne of Tripoli; from the matrimonial line of Raimund of Toulouse, first count of Tripoli",
-      },
-      {
-        name: "* Bertram",
-        de: "Sohn von Alfonso Jordan",
-        en: "Son of Alfonso Jordan",
-      },
-      {
         name: "* Bertrand",
         de: "Bastardsohn des Raimund von Toulouse, dem ersten Grafen von Tripolis; Großvater von Raimund II.",
         en: "Bastard son of Raimund of Toulouse, the first Count of Tripoli; grandfather of Raimund II.",
@@ -1222,7 +1187,7 @@ let personsOdyssee = [
         en: "A priest from the Crac des Chevalier, originally from Frankfurt",
       },
       {
-        name: "Meister Georg",
+        name: "Georg",
         de: "Johannes’ Bruder, Kaufmann in Jerusalem",
         en: "Johannes's brother, merchant in Jerusalem",
       },
@@ -1266,7 +1231,7 @@ let personsOdyssee = [
       {
         name: "* Manuel I.",
         de: "Kaiser von Byzanz, aus dem Geschlecht der Komnenen",
-        en: "Emperor of Byzantium, from the family of the Comnenes",
+        en: "Emperor of Byzantium, from the family of the Komnenes",
       },
       {
         name: "* Anna Komnena",
@@ -1321,9 +1286,9 @@ let personsOdyssee = [
         en: "Last German emperor from the Salian dynasty",
       },
       {
-        name: "* Friedrich der Einäugige †",
-        de: "Ältester Sohn Friedrichs von Hohenstaufen und Agnes von Waiblingens, heiratet 1120 Judith, Tochter des Welfen Heinrich der Schwarze; Vater Barbarossas",
-        en: "Eldest son of Frederick of Hohenstaufen and Agnes of Waiblingen, marries Judith, daughter of Henry the Black, Guelph; father of Barbarossa, in 1120",
+        name: "* Friedrich †",
+        de: "der Einäugige. Ältester Sohn Friedrichs von Hohenstaufen und Agnes von Waiblingens, heiratet 1120 Judith, Tochter des Welfen Heinrich der Schwarze; Vater Barbarossas",
+        en: "the One-Eyed. Eldest son of Frederick of Hohenstaufen and Agnes of Waiblingen, marries Judith, daughter of Henry the Black, Guelph; father of Barbarossa, in 1120",
       },
       {
         name: "* Heinrich-Berengar",
@@ -1331,7 +1296,7 @@ let personsOdyssee = [
         en: "Konrad's first-born, crowned king in Aachen in March 1147",
       },
       {
-        name: "* Heinrich der Schwarze",
+        name: "* Heinrich",
         de: "der Schwarze, Herzog von Bayern",
         en: "the Black, Duke of Bavaria",
       },
@@ -1344,11 +1309,6 @@ let personsOdyssee = [
         name: "* Heinrich",
         de: "der Löwe, Sohn Heinrichs des Stolzen",
         en: "the Lion, Son of Henry the Proud",
-      },
-      {
-        name: "* Albrecht ",
-        de: "der Bär, Askanier, Markgraf von Brandenburg (Nordmark)",
-        en: "the Bear, Ascanian, Margrave of Brandenburg (Nordmark)",
       },
       {
         name: "* Lothar III. von Supplinburg †",
@@ -1375,12 +1335,12 @@ let personsOdyssee = [
       {
         name: "Irmina",
         de: "Heilerin der Fahrenden",
-        en: "Healer of the Travellers",
+        en: "Healer of the Travelers",
       },
       {
         name: "Aziza",
         de: "Tochter in der fahrenden Familie",
-        en: "Daughter in the traveling family",
+        en: "Daughter of the Travelers",
       },
       {
         name: "Yul",
@@ -1390,10 +1350,10 @@ let personsOdyssee = [
       {
         name: "Rachild",
         de: "Weissagerin der Fahrenden",
-        en: "Fortune teller of the Travellers",
+        en: "Fortune teller of the Travelers",
       },
       {
-        name: "Vater Bertram",
+        name: "Bertram",
         de: "Deutscher Priester im westlichen Ungarn",
         en: "German priest in western Hungary",
       },
@@ -1416,7 +1376,7 @@ let personsOdyssee = [
         en: "Max's uncle",
       },
       {
-        name: "Trude  Musenbauer",
+        name: "Trude Musenbauer",
         de: "Max’ Tante",
         en: "Max's aunt",
       },
@@ -1448,7 +1408,7 @@ let personsOdyssee = [
         en: "Suitor for Katja's hand",
       },
       {
-        name: "Meister Erwin aus Offenbach",
+        name: "Erwin aus Offenbach",
         de: "Bewerber um Katjas Hand",
         en: "Suitor for Katja's hand",
       },
@@ -1483,7 +1443,7 @@ let personsOdyssee = [
         en: "Richenza's son",
       },
       {
-        name: "Hänschen",
+        name: "Hans/Hänschen",
         de: "Richenzas Sohn",
         en: "Richenza's son",
       },

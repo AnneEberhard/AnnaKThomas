@@ -1047,10 +1047,10 @@ let glossaryOdyssee = [
   {
     name: "Gebende",
     de: "Kopfbedeckung, die um Stirn und Kinn gebunden wird",
-    en: "",
+    en: "Headgear that is tied around the forehead and chin",
   },
   {
-    name: "Kotte ",
+    name: "Kotte",
     de: "Oberkleid, wird über dem Untergewand oder Hemd getragen",
     en: "Outer garment, worn over the undergarment or shirt",
   },
@@ -1062,18 +1062,21 @@ let glossaryOdyssee = [
   {
     name: "Hemus",
     de: "heute: Hoher Balkan",
-    en: "today: Balkan mountain range",
+    en: "today: Balkan Mountains, Stara Planina",
   },
 ];
 
 //for sources
 let sourcesOdyssee = [
-  "A History of the Crusades; Kenneth M. Setton (General Editor), Auszug:",
-  "XV: The Second Crusade, pg. 463-512",
-  "XVI: The Career of Nur-ad-Din pg. 513-527",
-  "Important Dates and Events pg. 622-625",
+  "A History of the Crusades; Kenneth M. Setton (General Editor), Auszug: XV: The Second Crusade, pg. 463-512 / XVI: The Career of Nur-ad-Din pg. 513-527 / Important Dates and Events pg. 622-625",
+  "An Arab-Syrian Gentleman & Warrior in the Period of the Crusades. Memoirs of Usmamah Ibn-Munquid. Translated by Philip K. Hitti, Columbia University Press 2000",
+  "Byzantium – The Surprising Life of a Medieval Empire. Judith Herrin, Penguin Books 2007",
   "Chronik der Deutschen, 3. Auflage 1995, s. 212-213",
   "Die Geschichte der Kreuzzüge; Steven Runciman, dtv, 5. Auflage Juni 2006",
+  "Die Kreuzzüge. Vom Krieg im Morgenland bis zum 13. Jahrhundert (Origi-nal: Historical Atlas of the Crusades). Angus Konstam; tosa 2005",
+  "Kaufleute und Bankiers im Mittelalter. Jacques LeGoff. Wagenbach 2005",
+  "Lebendiges Mittelalter. dtv 3rd Edition 1996",
+  "Saladin – Der Sultan und seine Zeit 1138-1193. Hannes Möhring, C.H. Beck 2005",
 ];
 
 let sourcesMasks = [

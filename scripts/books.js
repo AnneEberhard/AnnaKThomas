@@ -178,7 +178,7 @@ let topSites = [
   },
   {
     siteId: "odyssee",
-    translationExists: "planned",
+    translationExists: "true",
     languages: {
       de: {
         title:
@@ -333,7 +333,7 @@ let topSites = [
   },
   {
     siteId: "mind",
-    translationExists: "false",
+    translationExists: "progress",
     languages: {
       de: {
         title:
@@ -449,7 +449,7 @@ let allBooks = [
         bookId: "odyssee",
         internalLink: "/booksites/odyssee.html",
         seriesId: "",
-        translationExists: "planned",
+        translationExists: "true",
         languages: {
           de: {
             title: "Irrfahrt ins Gelobte Land",
@@ -464,8 +464,8 @@ let allBooks = [
           en: {
             title: "Odyssee to the Promised Land",
             seriesTitle: "",
-            imageURL: "/assets/img/covers/irrfahrt.jpg",
-            externalLink: "https://mybook.to/IrrfahrtInsGelobteLand",
+            imageURL: "/assets/img/covers/Odyssey.jpg",
+            externalLink: "https://mybook.to/ToThePromisedLand",
             paragraphs: [
               "The year is 1147 and the Saracens have just conquered the Christian city of Edessa in the Orient. In response, the second crusade from the West sets off eastwards to drive back the enemy. Fifteen-year-old Catherine, her husband and children as well as the brothers Rudolph and Maximilian are part of this crusade.",
               "Inspired by the success of the first crusade, they set off, filled with noble goals, greed for profit and a belief in their own invincibility. But reality strikes. Suddenly, all of a sudden, Max and Katja find themselves alone and have to find their own way through a hostile country ...",
@@ -477,7 +477,7 @@ let allBooks = [
         bookId: "mind",
         internalLink: "/booksites/mind-on-fire.html",
         seriesId: "",
-        translationExists: "false",
+        translationExists: "progress",
         languages: {
           de: {
             title: "Der Geist in Brand",
