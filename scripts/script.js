@@ -16,18 +16,17 @@ function findSiteIndexById(siteArray, siteId) {
 function getTranslationStatusText(translationExists, defaultLanguage) {
   if (translationExists === "true") {
     return defaultLanguage === "de"
-     ? '<p>Eine Übersetzung ins Englische ist vorhanden.</p>'
-    :  '<p>An English translation is available.</p>'
-     } else if (translationExists === "progress") {
-      return defaultLanguage === "de"
-      ? '<p>Eine Übersetzung ins Englische ist in Arbeit.</p>'
-      :  '<p>A translation into English is in progress.</p>'
-     }  else if (translationExists === "planned") {
-      return defaultLanguage === "de"
-      ? '<p>Eine Übersetzung ins Englische ist geplant.</p>'
-      :  '<p>A translation into English is planned.</p>'
-     }
-     else {
+      ? "<p>Eine Übersetzung ins Englische ist vorhanden.</p>"
+      : "<p>An English translation is available.</p>";
+  } else if (translationExists === "progress") {
+    return defaultLanguage === "de"
+      ? "<p>Eine Übersetzung ins Englische ist in Arbeit.</p>"
+      : "<p>A translation into English is in progress.</p>";
+  } else if (translationExists === "planned") {
+    return defaultLanguage === "de"
+      ? "<p>Eine Übersetzung ins Englische ist geplant.</p>"
+      : "<p>A translation into English is planned.</p>";
+  } else {
     return defaultLanguage === "de"
       ? "<p>Bis jetzt ist keine Übersetzung ins Englische verfügbar.</p>"
       : "<p>There is no English translation available yet.</p>";
@@ -55,7 +54,7 @@ function renderNav(navData, siteId, divId) {
 
 function showMobileMenu() {
   const mobileNav = document.getElementById("mobileNav");
-  mobileNav.classList.remove("dNone"); 
+  mobileNav.classList.remove("dNone");
 }
 
 function closeMobileMenu() {
@@ -63,18 +62,18 @@ function closeMobileMenu() {
   mobileNav.classList.add("dNone");
 }
 
-
 //functions for main sites
 
 function renderMainSite(siteId) {
   currentSiteId = siteId;
   currentGenre = siteId;
-  let divId = siteId + 'Top';
+  let divId = siteId + "Top";
   let topDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(mainSites, siteId);
   if (siteIndex !== -1) {
     let site = mainSites[siteIndex].languages[defaultLanguage];
-    let templateHTML = generateSiteTitle(site.title) + generateSiteParagraphs(site.paragraphs);
+    let templateHTML =
+      generateSiteTitle(site.title) + generateSiteParagraphs(site.paragraphs);
     for (let section of site.sections) {
       templateHTML += generateSection(section);
     }
@@ -82,7 +81,7 @@ function renderMainSite(siteId) {
   } else {
     console.log(`SiteId '${siteId}' not found`);
   }
-  renderNav(navSites, 'general', `${siteId}Nav`);
+  renderNav(navSites, "general", `${siteId}Nav`);
 }
 
 function generateSiteTitle(title) {
@@ -90,7 +89,9 @@ function generateSiteTitle(title) {
 }
 
 function generateSiteParagraphs(paragraphs) {
-  return `<div class="siteParagraphs">${paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}</div>`;
+  return `<div class="siteParagraphs">${paragraphs
+    .map((paragraph) => `<p>${paragraph}</p>`)
+    .join("")}</div>`;
 }
 
 function generateSection(section) {
@@ -100,10 +101,14 @@ function generateSection(section) {
       ${section.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
     </div>
     <div class="siteNavTop">
-      ${section.links.map((link) => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`).join("")}
+      ${section.links
+        .map(
+          (link) =>
+            `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`
+        )
+        .join("")}
     </div>`;
 }
-
 
 //Functions for books sites
 function renderBookSite(genre, id, seriesExists) {
@@ -116,15 +121,14 @@ function renderBookSite(genre, id, seriesExists) {
     data = findBookById(genre, id);
     bookId = id;
   }
-  console.log('data found:', data);
   if (!data) {
     console.log(`Unknown book: ${id}`);
     return;
   }
-  if(defaultLanguage == 'en' && id =='elves') {
+  if (defaultLanguage == "en" && id == "elves") {
     renderSeriesEnglish(data, `${id}Bottom`);
   } else {
-    renderBookDetails(data,`${id}Bottom`);
+    renderBookDetails(data, `${id}Bottom`);
   }
   renderBookSiteTop(topSites, id, `${id}Top`);
   renderNav(navSites, id, `${id}Nav`);
@@ -158,9 +162,9 @@ function findBookById(targetGenre, targetBook) {
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].genre === targetGenre) {
       for (let j = 0; j < allBooks[i].books.length; j++)
-      if (allBooks[i].books[j].bookId === targetBook) {
-      return allBooks[i].books[j];
-      }
+        if (allBooks[i].books[j].bookId === targetBook) {
+          return allBooks[i].books[j];
+        }
     }
   }
   return null;
@@ -172,11 +176,11 @@ function renderBookSiteTop(siteData, siteId, divId) {
 
   if (siteIndex !== -1) {
     let site = siteData[siteIndex].languages[defaultLanguage];
-    let translationExists = siteData[siteIndex].translationExists
-    topDiv.innerHTML  =
+    let translationExists = siteData[siteIndex].translationExists;
+    topDiv.innerHTML =
       generateBookSiteTitle(site.title) +
       generateBookSiteParagraphs(site.paragraphs) +
-      getTranslationStatusText(translationExists,defaultLanguage) +
+      getTranslationStatusText(translationExists, defaultLanguage) +
       generateBookSiteNavTop(site.links);
   } else {
     console.log(`SiteId '${siteId}' not found`);
@@ -188,44 +192,54 @@ function generateBookSiteTitle(title) {
 }
 
 function generateBookSiteParagraphs(paragraphs) {
-  return `<div class="siteParagraphs">${paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}</div>`;
+  return `<div class="siteParagraphs">${paragraphs
+    .map((paragraph) => `<p>${paragraph}</p>`)
+    .join("")}</div>`;
 }
 
 function generateBookSiteNavTop(links) {
-  return `<div class="siteNavTop">${links.map((link) => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`).join("")}</div>`;
+  return `<div class="siteNavTop">${links
+    .map(
+      (link) => `<a class="siteNavTopLink" href="${link.url}">${link.text}</a>`
+    )
+    .join("")}</div>`;
 }
 
 function renderSeriesEnglish(seriesData, divId) {
   let bottomDiv = document.getElementById(divId);
-  let templateHTML ='';
+  let templateHTML = "";
   for (let i = 0; i < seriesData.length; i++) {
     let bookEnglishArray = seriesData[i].languages[defaultLanguage];
-        for (let seriesEnglishBook of bookEnglishArray) {
-          templateHTML += generateBookDetailsTemplate(seriesEnglishBook);
-        }
+    for (let seriesEnglishBook of bookEnglishArray) {
+      templateHTML += generateBookDetailsTemplate(seriesEnglishBook);
+    }
     bottomDiv.innerHTML = templateHTML;
   }
 }
 
-
 function renderBookDetails(bookData, divId) {
   let bottomDiv = document.getElementById(divId);
-  let templateHTML ='';
+  let templateHTML = "";
   if (bookData.length > 0 && bookData[0].seriesId) {
     let seriesBooks = bookData.filter(
-      (b) => b.seriesId === bookData[0].seriesId);
+      (b) => b.seriesId === bookData[0].seriesId
+    );
     for (let seriesBook of seriesBooks) {
-      templateHTML += generateBookDetailsTemplate(seriesBook.languages[defaultLanguage]);
+      templateHTML += generateBookDetailsTemplate(
+        seriesBook.languages[defaultLanguage]
+      );
     }
   } else {
     let book = bookData.languages[defaultLanguage];
     templateHTML = generateBookDetailsTemplate(book);
-    }
-    bottomDiv.innerHTML = templateHTML;
+  }
+  bottomDiv.innerHTML = templateHTML;
 }
 
 function generateBookDetailsTemplate(book) {
-  let paragraphsHTML = book.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('');
+  let paragraphsHTML = book.paragraphs
+    .map((paragraph) => `<p>${paragraph}</p>`)
+    .join("");
 
   return `
     <div class="bookContainer">
@@ -246,6 +260,3 @@ function findBookIndexById(bookArray, bookId) {
   }
   return -1;
 }
-
-
-
