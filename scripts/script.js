@@ -107,7 +107,6 @@ function generateSection(section) {
 
 //Functions for books sites
 function renderBookSite(genre, id, seriesExists) {
-  console.log(genre, id, seriesExists)
   currentSiteId = id;
   currentGenre = genre;
   if (seriesExists == true) {
@@ -197,13 +196,11 @@ function generateBookSiteNavTop(links) {
 }
 
 function renderSeriesEnglish(seriesData, divId) {
-  console.log('data for english series:', seriesData)
   let bottomDiv = document.getElementById(divId);
   let templateHTML ='';
   for (let i = 0; i < seriesData.length; i++) {
     let bookEnglishArray = seriesData[i].languages[defaultLanguage];
         for (let seriesEnglishBook of bookEnglishArray) {
-          console.log('english book:', seriesEnglishBook);
           templateHTML += generateBookDetailsTemplate(seriesEnglishBook);
         }
     bottomDiv.innerHTML = templateHTML;
@@ -212,7 +209,6 @@ function renderSeriesEnglish(seriesData, divId) {
 
 
 function renderBookDetails(bookData, divId) {
-  console.log('exists', bookData);
   let bottomDiv = document.getElementById(divId);
   let templateHTML ='';
   if (bookData.length > 0 && bookData[0].seriesId) {
@@ -229,8 +225,6 @@ function renderBookDetails(bookData, divId) {
 }
 
 function generateBookDetailsTemplate(book) {
-  console.log('generating data:',book);
-  console.log(book.title);
   let paragraphsHTML = book.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('');
 
   return `
