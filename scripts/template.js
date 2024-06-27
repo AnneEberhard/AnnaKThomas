@@ -1,5 +1,12 @@
+
+function jsonify() {
+  const jsonString = JSON.stringify(timelineOdyssee, null, 2);
+console.log(jsonString);
+}
+
+
 //for header
-let menuTitles = [
+let menuTitles2 = [
   { id:"home", de: "Home", en: "Home", link: "/index.html" },
   { id:"fantasy", de: "Fantasy", en: "Fantasy", link: "/fantasy.html" },
   { id:"historical", de: "Historisch", en: "Historical", link: "/historical.html" },
@@ -8,7 +15,7 @@ let menuTitles = [
 ];
 
 //for bottom nav
-let navSites = [
+let navSites2 = [
   {
     siteId: "general",
     languages: {
@@ -239,7 +246,7 @@ let navSites = [
 ];
 
 // for main pages
-let mainSites = [
+let mainSites2 = [
   {
     siteId: "home",
     translationExists: "true",

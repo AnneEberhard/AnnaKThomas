@@ -902,4 +902,3 @@ let allBooks = [
   },
   // Weitere Genres können hier hinzugefügt werden
 ];
-
