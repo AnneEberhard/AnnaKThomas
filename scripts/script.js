@@ -1,5 +1,8 @@
 //functions used by several sections
 
+/**
+* scrolls to top of the page
+*/
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -19,6 +22,12 @@ function findSiteIndexById(siteArray, siteId) {
   return -1;
 }
 
+/**
+* checks if a translation is true, progress or planned and genereates respective div with text
+* @param {string} translationExists - information for the respective book out of topSites json
+* @param {string} defaultLanguage - global variable that is checked depending on browser and user input
+* @returns {HTMLElement} respective HTML 
+*/
 function getTranslationStatusText(translationExists, defaultLanguage) {
   if (translationExists === "true") {
     return defaultLanguage === "de"
@@ -172,7 +181,7 @@ function renderBookSite(genre, id, seriesExists) {
   } else {
     renderBookDetails(data, `${id}Bottom`);
   }
-  renderBookSiteTop(topSites, id, `${id}Top`);
+  renderBookSiteTop(id, `${id}Top`);
   renderNav(navSites, id, `${id}Nav`);
 }
 
@@ -212,13 +221,13 @@ function findBookById(targetGenre, targetBook) {
   return null;
 }
 
-function renderBookSiteTop(siteData, siteId, divId) {
+function renderBookSiteTop(siteId, divId) {
   let topDiv = document.getElementById(divId);
-  let siteIndex = findSiteIndexById(siteData, siteId);
+  let siteIndex = findSiteIndexById(topSites, siteId);
 
   if (siteIndex !== -1) {
-    let site = siteData[siteIndex].languages[defaultLanguage];
-    let translationExists = siteData[siteIndex].translationExists;
+    let site = topSites[siteIndex].languages[defaultLanguage];
+    let translationExists = topSites[siteIndex].translationExists;
     topDiv.innerHTML =
       generateBookSiteTitle(site.title) +
       generateBookSiteParagraphs(site.paragraphs) +
