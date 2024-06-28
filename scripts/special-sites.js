@@ -549,6 +549,16 @@ function generateTableRowSingle(previousYear,timeline,event ) {
 }
 
 // für BonusChapters
+
+/**
+* initializes rendering of bonus chapter sites
+* initializes getting url based on bonusId
+* initializes loading and rendering of content based on bonusId
+* initializes rendering the bottom navigation based site parameters
+* @param {string} genre - genre such as historical
+* @param {string} bookId - id for respective book
+* @param {string} bonusId - id for respective bonus content
+*/
 async function renderBonusChapter(genre, bookId, bonusId) {
   currentSiteId = bonusId;
   currentGenre = genre;
@@ -558,6 +568,12 @@ async function renderBonusChapter(genre, bookId, bonusId) {
   renderNav(navSites, bookId, `${bonusId}Nav`);
 }
 
+/**
+* loads and renders of content based on bonusId
+* initializes rendering the bottom navigation based site parameters
+* @param {string} targetDiv - bonusId+'Top'
+* @param {string} url - path to respective json
+*/
 async function loadAndRenderContent(targetDiv, url) {
   try {
     const response = await fetch(url);
@@ -574,25 +590,30 @@ async function loadAndRenderContent(targetDiv, url) {
   }
 }
 
+/**
+* fetches url based on bonusId
+* @param {string} bonusId - id for respective bonus content
+* @returns url as string
+*/
 function fetchUrl(bonusId) {
   if(bonusId =='zach') {
-    return '/JSONs/bonus-zach.json'
+    return '/JSONs/bonus/bonus-zach.json'
   } else if(bonusId =='noel') {
 return '/JSONs/bonus-noel.json'
   }else if(bonusId =='diana') {
-    return '/JSONs/bonus-diana.json'
+    return '/JSONs/bonus/bonus-diana.json'
   }else if(bonusId =='bina') {
-    return '/JSONs/bonus-bina.json'
+    return '/JSONs/bonus/bonus-bina.json'
   }else if(bonusId =='henri') {
-    return '/JSONs/bonus-henri-and-ella.json'
+    return '/JSONs/bonus/bonus-henri-and-ella.json'
   }else if(bonusId =='curtius') {
-    return '/JSONs/bonus-curtius.json'
+    return '/JSONs/bonus/bonus-curtius.json'
   }else if(bonusId =='danton') {
-    return '/JSONs/bonus-danton.json'
+    return '/JSONs/bonus/bonus-danton.json'
   }else if(bonusId =='radegunde') {
-    return '/JSONs/bonus-radegunde.json'
+    return '/JSONs/bonus/bonus-radegunde.json'
   }else if(bonusId =='susanna') {
-    return '/JSONs/bonus-susanna.json'
+    return '/JSONs/bonus/bonus-susanna.json'
   }else if(bonusId =='') {
     return '/'
   } else {

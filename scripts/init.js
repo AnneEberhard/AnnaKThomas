@@ -1,5 +1,4 @@
-// for path navigation
-
+// global variables
 let browserLanguage = navigator.language || navigator.userLanguage;
 let defaultLanguage = "de";
 let currentSiteId;
@@ -9,47 +8,92 @@ let navSites;
 let mainSites;
 let overview;
 let personSitesHeader;
+let pageData;
+const functionMap = {
+  "/fantasy.html": renderMainSite,
+  "/historical.html": renderMainSite,
+  "/novellas.html": renderNovellas,
+  "/about-me.html": renderAboutMe,
+  "/booksites": renderBookSite,
+  "persons": renderPersonage,
+  "background": renderBackground,
+  "familytrees": renderFamilyTrees,
+  "sources": renderSourcesSite,
+  "timeline": renderTimeline,
+  "bonus": renderBonusChapter
+};
 
+/**
+ * initializes all sites
+ * initializes loading HTML templates
+ * initializes loading general data needed for most sites
+ * initializes browser language check
+ * initializes rendering content based on the respective page
+ * initializes rendering shared content for all pages
+ */
 async function init() {
   await includeHTML();
   await loadGeneralData();
-  checkBrowserLanguage();
+  await checkBrowserLanguage();
+  renderContentBasedOnPage(); //CAVE First because of genre/site identification
+  renderSharedContent();
   //jsonify();
 }
 
+/**
+ * loads data for the global variables
+ * menuTitles, navSites, mainSites, overview, pageFunctions
+ */
 async function loadGeneralData() {
   menuTitles = await fetchJSON("/JSONs/general/menuTitles.json");
   navSites = await fetchJSON("/JSONs/general/navSites.json");
   mainSites = await fetchJSON("/JSONs/general/mainSites.json");
   overview = await fetchJSON("/JSONs/general/overview.json");
+  pageData = await fetchJSON("/JSONs/general/pageFunctions.json");
 }
 
-function checkBrowserLanguage() {
+/**
+ * checks the browser language and sets default language accordingly
+ */
+async function checkBrowserLanguage() {
   if (browserLanguage.startsWith("de")) {
-    german();
+    defaultLanguage = "de";
   } else {
-    english();
+    defaultLanguage = "en";
   }
 }
 
+/**
+ * sets default language to german as chosen by user via button
+ */
 function german() {
   defaultLanguage = "de";
   renderContentBasedOnPage(); //CAVE First because of genre/site identification
   renderSharedContent();
 }
 
+/**
+ * sets default language to english as chosen by user via button
+ */
 function english() {
   defaultLanguage = "en";
   renderContentBasedOnPage(); //CAVE First because of genre/site identification
   renderSharedContent();
 }
 
+/**
+ * starts the rendering of content equal for all pages - e.g. header
+ */
 function renderSharedContent() {
   renderMenu();
   renderMobileMenu();
   renderSubHeaderBottom();
 }
 
+/**
+ * loads json data from the folder jsons
+ * @param {string} path - path to respective json
+ */
 async function fetchJSON(path) {
   try {
     const response = await fetch(path);
@@ -59,33 +103,14 @@ async function fetchJSON(path) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Fehler beim Laden der Menü-Titel:", error);
+    console.error("Fehler beim Laden der JSON Datei:", error);
   }
 }
 
-//async function loadData(url) {
-//  try {
-//    const response = await fetch(url);
-//    const data = await response.json();
-//    return data;
-//  } catch (error) {
-//    console.error('Fehler beim Laden und Rendern der JSON-Datei:', error);
-//  }
-// }
-//
-//async function fetchData(path) {
-//  try {
-//    const response = await fetch(`/JSONs/${path}.json`);
-//    if (!response.ok) {
-//      throw new Error(`HTTP error! status: ${response.status}`);
-//    }
-//    const data = await response.json();
-//    return data;
-//  } catch (error) {
-//    console.error("Fehler beim Laden der Menü-Titel:", error);
-//  }
-//}
 
+/**
+ * renders the menu bar using the global variable menuTitles based on default language
+ */
 async function renderMenu() {
   const navElement = document.getElementById("desktopNav");
   navElement.innerHTML = "";
@@ -112,6 +137,9 @@ async function renderMenu() {
   });
 }
 
+/**
+ * adds the burger menu symbol to the header
+ */
 function renderBurgerMenu() {
   const burgerMenu = document.createElement("div");
   burgerMenu.id = "burgerMenu";
@@ -120,6 +148,9 @@ function renderBurgerMenu() {
   navElement.appendChild(burgerMenu);
 }
 
+/**
+ * renders the mobile menu using the global variable menuTitles based on default language
+ */
 function renderMobileMenu() {
   const mobileNavElement = document.getElementById("mobileNav");
   mobileNavElement.innerHTML = "";
@@ -144,6 +175,9 @@ function renderMobileMenu() {
   });
 }
 
+/**
+ * renders the bottom part of the menu based on default language
+ */
 function renderSubHeaderBottom() {
   let subHeaderBottom = document.getElementById("subHeaderBottom");
   subHeaderBottom.innerHTML = "";
@@ -154,235 +188,53 @@ function renderSubHeaderBottom() {
   }
 }
 
-function renderContentBasedOnPage() {
+/**
+ * initializes rendering the the content of a respective page based on url and default language
+ * uses global variable pageData (loaded at init)
+ * uses global variable functionMap
+ */
+async function renderContentBasedOnPage() {
   let path = window.location.pathname;
   if (path === "/" || path === "/index.html") {
     renderHomePage("home");
     return;
   }
-  let pageFunctions = [
-    { path: "/fantasy.html", function: renderMainSite, params: ["fantasy"] },
-    {
-      path: "/historical.html",
-      function: renderMainSite,
-      params: ["historical"],
-    },
-    { path: "/novellas.html", function: renderNovellas, params: ["novellas"] },
-    { path: "/about-me.html", function: renderAboutMe, params: ["aboutMe"] },
-    {
-      path: "/booksites/odyssee.html",
-      function: renderBookSite,
-      params: ["historical", "odyssee", false],
-    },
-    {
-      path: "/booksites/mind-on-fire.html",
-      function: renderBookSite,
-      params: ["historical", "mind", false],
-    },
-    {
-      path: "/booksites/alster-diamonds.html",
-      function: renderBookSite,
-      params: ["historical", "alster", false],
-    },
-    {
-      path: "/booksites/masks-of-florence.html",
-      function: renderBookSite,
-      params: ["historical", "masks", false],
-    },
-    {
-      path: "/booksites/children-of-angels.html",
-      function: renderBookSite,
-      params: ["fantasy", "children", true],
-    },
-    {
-      path: "/booksites/of-elves-and-wolves.html",
-      function: renderBookSite,
-      params: ["fantasy", "elves", true],
-    },
-    {
-      path: "/booksites/bards-of-thuran.html",
-      function: renderBookSite,
-      params: ["fantasy", "bards", true],
-    },
-    {
-      path: "/subsitesElves/elves-persons.html",
-      function: renderPersonage,
-      params: ["fantasy", "elves", "elvesPersons", "personsElves"],
-    },
-    {
-      path: "/subsitesAlster/alster-persons.html",
-      function: renderPersonage,
-      params: ["historical", "alster", "alsterPersons", "personsAlster"],
-    },
-    {
-      path: "/subsitesMind/mind-persons.html",
-      function: renderPersonage,
-      params: ["historical", "mind", "mindPersons", "personsMind"],
-    },
-    {
-      path: "/subsitesOdyssee/odyssee-persons.html",
-      function: renderPersonage,
-      params: ["historical", "odyssee", "odysseePersons", "personsOdyssey"],
-    },
-    {
-      path: "/subsitesMasks/masks-persons.html",
-      function: renderPersonage,
-      params: ["historical", "masks", "masksPersons", "personsMasks"],
-    },
-    {
-      path: "/subsitesBards/bards-persons.html",
-      function: renderPersonage,
-      params: ["fantasy", "bards", "bardsPersons", "personsBards"],
-    },
-    {
-      path: "/subsitesChildren/children-persons.html",
-      function: renderPersonage,
-      params: ["fantasy", "children", "childrenPersons", "personsChildren"],
-    },
-    {
-      path: "/subsitesAlster/alster-background.html",
-      function: renderBackground,
-      params: ["historical", "alster", "alsterBackground"],
-    },
-    {
-      path: "/subsitesBards/bards-background.html",
-      function: renderBackground,
-      params: ["fantasy", "bards", "bardsBackground"],
-    },
-    {
-      path: "/subsitesChildren/children-background.html",
-      function: renderBackground,
-      params: ["fantasy", "children", "childrenBackground"],
-    },
-    {
-      path: "/subsitesElves/elves-background.html",
-      function: renderBackground,
-      params: ["fantasy", "elves", "elvesBackground"],
-    },
-    {
-      path: "/subsitesMasks/masks-background.html",
-      function: renderBackground,
-      params: ["historical", "masks", "masksBackground"],
-    },
-    {
-      path: "/subsitesMind/mind-background.html",
-      function: renderBackground,
-      params: ["historical", "mind", "mindBackground"],
-    },
-    {
-      path: "/subsitesOdyssee/odyssee-background.html",
-      function: renderBackground,
-      params: ["historical", "odyssee", "odysseeBackground"],
-    },
-    {
-      path: "/subsitesOdyssee/odyssee-familytrees.html",
-      function: renderFamilyTrees,
-      params: ["historical", "odyssee", "odysseeFamilyTree"],
-    },
-    {
-      path: "/subsitesMasks/masks-familytrees.html",
-      function: renderFamilyTrees,
-      params: ["historical", "masks", "masksFamilyTree"],
-    },
-    {
-      path: "/subsitesAlster/alster-familytrees.html",
-      function: renderFamilyTrees,
-      params: ["historical", "alster", "alsterFamilyTree"],
-    },
-    {
-      path: "/subsitesElves/elves-familytrees.html",
-      function: renderFamilyTrees,
-      params: ["fantasy", "elves", "elvesFamilyTree"],
-    },
-    {
-      path: "/subsitesMasks/masks-glossary.html",
-      function: renderSourcesSite,
-      params: ["historical", "masks"],
-    },
-    {
-      path: "/subsitesOdyssee/odyssee.glossary.html",
-      function: renderSourcesSite,
-      params: ["historical", "odyssee"],
-    },
-    {
-      path: "/subsitesAlster/alster-sources.html",
-      function: renderSourcesSite,
-      params: ["historical", "alster"],
-    },
-    {
-      path: "/subsitesMind/mind-sources.html",
-      function: renderSourcesSite,
-      params: ["historical", "mind"],
-    },
-    {
-      path: "/subsitesChildren/children-sources.html",
-      function: renderSourcesSiteChildren,
-      params: ["fantasy", "children", "childrenSources"],
-    },
-    {
-      path: "/subsitesMasks/masks-timeline.html",
-      function: renderTimeline,
-      params: ["historical", "masks"],
-    },
-    {
-      path: "/subsitesOdyssee/odyssee-timeline.html",
-      function: renderTimeline,
-      params: ["historical", "odyssee"],
-    },
-    {
-      path: "/subsitesChildren/children-bonus.html",
-      function: renderBonusChapter,
-      params: ["fantasy", "children", "zach"],
-    },
-    {
-      path: "/subsitesElves/elves-bonus-diana.html",
-      function: renderBonusChapter,
-      params: ["fantasy", "elves", "diana"],
-    },
-    {
-      path: "/subsitesElves/elves-bonus-noel.html",
-      function: renderBonusChapter,
-      params: ["fantasy", "elves", "noel"],
-    },
-    {
-      path: "/subsitesMind/mind-bonus-curtius.html",
-      function: renderBonusChapter,
-      params: ["historical", "mind", "curtius"],
-    },
-    {
-      path: "/subsitesMind/mind-bonus-danton.html",
-      function: renderBonusChapter,
-      params: ["historical", "mind", "danton"],
-    },
-    {
-      path: "/subsitesMind/mind-bonus-henri.html",
-      function: renderBonusChapter,
-      params: ["historical", "mind", "henri"],
-    },
-    {
-      path: "/subsitesOdyssee/odyssee-bonus.html",
-      function: renderBonusChapter,
-      params: ["historical", "odyssee", "radegunde"],
-    },
-    {
-      path: "/subsitesMasks/masks-bonus.html",
-      function: renderBonusChapter,
-      params: ["historical", "masks", "susanna"],
-    },
-    { path: "/imprint.html", function: renderImprint, params: [] },
-    { path: "/privacy-policy.html", function: renderprivacyPolicy, params: [] },
-  ];
+  let matchingEntry = pageData.mainSites.find(entry => path.includes(entry.path)) ||
+                      pageData.bookSites.find(entry => path.includes(entry.path)) ||
+                      pageData.personSites.find(entry => path.includes(entry.path)) ||
+                      pageData.backgroundSites.find(entry => path.includes(entry.path)) ||
+                      pageData.familyTreeSites.find(entry => path.includes(entry.path)) ||
+                      pageData.sourcesSites.find(entry => path.includes(entry.path)) ||
+                      pageData.timelineSites.find(entry => path.includes(entry.path)) ||
+                      pageData.bonusChapterSites.find(entry => path.includes(entry.path));
 
-  const matchingFunction = pageFunctions.find((entry) =>
-    path.includes(entry.path)
-  );
-
-  if (matchingFunction) {
-    const { function: renderFunction, params } = matchingFunction;
-    renderFunction(...params);
+  if (matchingEntry) {
+    let renderFunction;
+    if (matchingEntry.path.includes("person")) {
+      renderFunction = functionMap["persons"];
+    } else if (matchingEntry.path.includes("background")) {
+      renderFunction = functionMap["background"];
+    } else if (matchingEntry.path.includes("familytrees")) {
+      renderFunction = functionMap["familytrees"];
+    }else if (matchingEntry.path.includes("sources")) {
+      renderFunction = functionMap["sources"];
+    }else if (matchingEntry.path.includes("timeline")) {
+      renderFunction = functionMap["timeline"];
+    }else if (matchingEntry.path.includes("bonus")) {
+      renderFunction = functionMap["bonus"];
+    }else {
+      renderFunction = functionMap[matchingEntry.path] || functionMap["/booksites"];
+    }
+    
+    if (renderFunction) {
+      renderFunction(...matchingEntry.params);
+    }
   }
 }
 
+/**
+ * includes the HTML templates
+ */
 async function includeHTML() {
   var z, i, elmnt, file, xhttp;
   z = document.getElementsByTagName("*");

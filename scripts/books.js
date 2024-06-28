@@ -201,7 +201,7 @@ let topSites = [
           },
           {
             text: "Begriffe und Quellen",
-            url: "/subsitesOdyssee/odyssee.glossary.html",
+            url: "/subsitesOdyssee/odyssey-sources.html",
           },
         ],
       },
@@ -227,7 +227,7 @@ let topSites = [
           },
           {
             text: "Glossary and Sources",
-            url: "/subsitesOdyssee/odyssee.glossary.html",
+            url: "/subsitesOdyssee/odyssey-sources.html",
           },
         ],
       },
@@ -258,7 +258,7 @@ let topSites = [
           },
           {
             text: "Begriffe und Quellen",
-            url: "/subsitesMasks/masks-glossary.html",
+            url: "/subsitesMasks/masks-sources.html",
           },
         ],
       },
@@ -280,7 +280,7 @@ let topSites = [
           },
           {
             text: "Glossary and Sources",
-            url: "/subsitesMasks/masks-glossary.html",
+            url: "/subsitesMasks/masks-sources.html",
           },
         ],
       },

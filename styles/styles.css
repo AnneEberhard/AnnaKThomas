@@ -251,6 +251,16 @@ rect {
   display: none;
 }
 
+@media (max-width: 1200px) {
+.maps {
+  flex-direction: column;
+  width: 80vw;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+}
+
 @media (max-width: 800px) {
   .bookContainer {
     flex-direction: column;

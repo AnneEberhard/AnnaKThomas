@@ -1,6 +1,6 @@
 /**
 * 
-* @param {} form - entered data
+* @param {string} form - entered data
 * @returns boolean
 */
 
