@@ -6,6 +6,8 @@ let currentGenre;
 let menuTitles;
 let navSites;
 let mainSites;
+let topSites;
+let allBooks;
 let overview;
 let personSitesHeader;
 let pageData;
@@ -45,11 +47,13 @@ async function init() {
  * menuTitles, navSites, mainSites, overview, pageFunctions
  */
 async function loadGeneralData() {
+  allBooks = await fetchJSON('/JSONs/general/allBooks.json');
+  mainSites = await fetchJSON("/JSONs/general/mainSites.json");
   menuTitles = await fetchJSON("/JSONs/general/menuTitles.json");
   navSites = await fetchJSON("/JSONs/general/navSites.json");
-  mainSites = await fetchJSON("/JSONs/general/mainSites.json");
   overview = await fetchJSON("/JSONs/general/overview.json");
   pageData = await fetchJSON("/JSONs/general/pageFunctions.json");
+  topSites = await fetchJSON('/JSONs/general/topSites.json');
 }
 
 /**

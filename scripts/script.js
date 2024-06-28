@@ -4,6 +4,12 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+/**
+* renders the navigation part at the bottom of each page
+* @param {Object[]} siteArray - loaded jsonArray such as navSites, mainSites
+* @param {string} siteId - id for site
+* @returns {number} index of the site in the respective array or, if not found, -1
+*/
 function findSiteIndexById(siteArray, siteId) {
   for (let i = 0; i < siteArray.length; i++) {
     if (siteArray[i].siteId === siteId) {
@@ -33,12 +39,19 @@ function getTranslationStatusText(translationExists, defaultLanguage) {
   }
 }
 
-function renderNav(navData, siteId, divId) {
+
+/**
+* renders the navigation part at the bottom of each page
+* @param {Object[]} navSites - loaded jsonArray of navSites
+* @param {string} siteId - id for site
+* @param {string} divId - id for div in which to render
+*/
+function renderNav(navSites, siteId, divId) {
   let navDiv = document.getElementById(divId);
-  let siteIndex = findSiteIndexById(navData, siteId);
+  let siteIndex = findSiteIndexById(navSites, siteId);
 
   if (siteIndex !== -1) {
-    let site = navData[siteIndex].languages[defaultLanguage];
+    let site = navSites[siteIndex].languages[defaultLanguage];
     let templateHTML = `
       <div class="siteNav">
         <h3>Navigation</h3>
@@ -55,19 +68,30 @@ function renderNav(navData, siteId, divId) {
 
 /**
 * determines names of json based on bookId
-* @param {string} dataId - id for respective data such as sources
-* @param {string} bookId - id for respective books such as masks
+* @param {string} reference - id for respective references such as sources
+* @param {string} id - id for respective books such as masks or for special cases such as info
 * @returns {object} respective data
 */
-async function findDataById(dataId, bookId) {
-  try {
-    data = await fetchJSON(`/JSONs/${dataId}/${dataId}-${bookId}.json`);
+async function findDataById(reference, id) {
+    data = await fetchJSON(`/JSONs/${reference}/${reference}-${id}.json`);
+    console.log(data);
     return data;
-  } catch (error) {
-    console.error('Fehler beim Laden und Rendern der JSON-Datei:', error);
-    return null;
-  }
+}
 
+/**
+* gets a subgroup out of a JsonArray based on id
+* id is compared to backgroundId of the JsonArray
+* @param {string} id - id for respective book such as mind
+* @param {Object[]} array - respective JsonArray such as Familytrees
+* @returns {Object[]} respective subgroup of the overarching JsonArray
+*/
+function findDataInArray(id, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].backgroundId === id) {
+      return array[i].languages[defaultLanguage];
+      }
+    }
+  return null;
 }
 
 function showMobileMenu() {

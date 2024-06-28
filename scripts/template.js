@@ -594,7 +594,7 @@ let overview2 = [
 ];
 
 //for BackgroundInfo
-let backgroundInfo = [
+let backgroundInfo2 = [
   {
     backgroundId: "bards",
     languages: {
@@ -783,7 +783,7 @@ let backgroundInfo = [
 ];
 
 //for familyTreeTopSites
-let familyTree = [
+let familyTree2 = [
   {
     backgroundId: "elves",
     languages: {

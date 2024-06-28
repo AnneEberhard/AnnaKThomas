@@ -161,56 +161,49 @@
             "path": "/subsitesAlster/alster-background.html",
             "params": [
               "historical",
-              "alster",
-              "alsterBackground"
+              "alster"
             ]
           },
           {
             "path": "/subsitesBards/bards-background.html",
             "params": [
               "fantasy",
-              "bards",
-              "bardsBackground"
+              "bards"
             ]
           },
           {
             "path": "/subsitesChildren/children-background.html",
             "params": [
               "fantasy",
-              "children",
-              "childrenBackground"
+              "children"
             ]
           },
           {
             "path": "/subsitesElves/elves-background.html",
             "params": [
               "fantasy",
-              "elves",
-              "elvesBackground"
+              "elves"
             ]
           },
           {
             "path": "/subsitesMasks/masks-background.html",
             "params": [
               "historical",
-              "masks",
-              "masksBackground"
+              "masks"
             ]
           },
           {
             "path": "/subsitesMind/mind-background.html",
             "params": [
               "historical",
-              "mind",
-              "mindBackground"
+              "mind"
             ]
           },
           {
             "path": "/subsitesOdyssee/odyssee-background.html",
             "params": [
               "historical",
-              "odyssee",
-              "odysseeBackground"
+              "odyssee"
             ]
           }
     ],
@@ -219,32 +212,28 @@
             "path": "/subsitesOdyssee/odyssee-familytrees.html",
             "params": [
               "historical",
-              "odyssee",
-              "odysseeFamilyTree"
+              "odyssee"
             ]
           },
           {
             "path": "/subsitesMasks/masks-familytrees.html",
             "params": [
               "historical",
-              "masks",
-              "masksFamilyTree"
+              "masks"
             ]
           },
           {
             "path": "/subsitesAlster/alster-familytrees.html",
             "params": [
               "historical",
-              "alster",
-              "alsterFamilyTree"
+              "alster"
             ]
           },
           {
             "path": "/subsitesElves/elves-familytrees.html",
             "params": [
               "fantasy",
-              "elves",
-              "elvesFamilyTree"
+              "elves"
             ]
           }
     ],
@@ -281,20 +270,21 @@
         "path": "/subsitesChildren/children-sources.html",
         "params": [
           "fantasy",
-          "children",
-          "childrenSources"
+          "children"
         ]
       }],
     "timelineSites": [
         {
             "path": "/subsitesMasks/masks-timeline.html",
             "params": [
+              "historical",
               "masks"
             ]
           },
           {
             "path": "/subsitesOdyssee/odyssee-timeline.html",
             "params": [
+              "historical",
               "odyssee"
             ]
           }

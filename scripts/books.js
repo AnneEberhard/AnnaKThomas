@@ -1,5 +1,5 @@
 //for booksites
-let topSites = [
+let topSites2 = [
   {
     siteId: "bards",
     translationExists: "planned",
@@ -383,7 +383,7 @@ let topSites = [
 ];
 
 // for books
-let allBooks = [
+let allBooks2 = [
   {
     genre: "historical",
     books: [
