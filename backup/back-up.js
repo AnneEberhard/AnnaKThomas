@@ -1,4 +1,22 @@
+/**
+* determines names of json based on bookId
+* @param {string} bookId - id for respective books such as masks
+* @returns {object} respective glossary
+*/
+async function findGlossarybyId(bookId) {
+  glossary = await fetchJSON(`/JSONs/glossary/glossary-${bookId}.json`)
+  return glossary;
+}
 
+/**
+* determines names of json based on bookId
+* @param {string} bookId - id for respective books such as masks
+* @returns {object} respective sources
+*/
+async function findSourcesbyId(bookId) {
+  sources = await fetchJSON(`/JSONs/sources/sources-${bookId}.json`)
+  return sources;
+}
 
 //async function loadData(url) {
 //  try {

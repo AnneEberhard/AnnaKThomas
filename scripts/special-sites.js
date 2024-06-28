@@ -330,46 +330,61 @@ function findDataById(id, array) {
 
 //Function for sites with glossaries and/or sources 
 
+/**
+* initializes rendering of the source and glossary site
+* determines the following functions based on bookId
+* initializes rendering the bottom nav based on global variable navSites and bookId
+* @param {string} genre - genre such as historical
+* @param {string} bookId - id for respective books such as masks
+*/
 function renderSourcesSite(genre, bookId) {
   currentSiteId = bookId + 'Sources';
   currentGenre = genre;
   const booksWithGlossaries = ['odyssee', 'masks'];
   const booksWithSources = ['odyssee', 'masks', 'alster', 'mind'];
+  const booksWithSpecialSource = ['children'];
 if (booksWithGlossaries.includes(bookId)) {
   renderGlossary(bookId);
 }
 if (booksWithSources.includes(bookId)) {
   renderSources(bookId);
 }
+if (booksWithSpecialSource.includes(bookId)) {
+  renderSpecialSources(bookId);
+}
   renderNav(navSites, bookId, `${bookId}SourcesNav`);
 }
 
 
 //Function for glossary tables
-function renderGlossary(bookId){
-  let glossaryId = findGlossarybyId(bookId);
+
+/**
+* initializes rendering of the glossary
+* @param {string} bookId - id for respective books such as masks
+*/
+async function renderGlossary(bookId){
+  let glossary = await findDatabyId('glossary', bookId);
   let divId = bookId + 'Glossary';
   let targetDiv = document.getElementById(divId);
   targetDiv.innerHTML = '';
-  targetDiv.innerHTML = generateGlossaryTemplate (glossaryId);
+  targetDiv.innerHTML = generateGlossaryTemplate(glossary);
 }
 
-function findGlossarybyId(bookId) {
-  if (bookId == 'masks') {
-    return glossaryMasks;
-  } else if (bookId == 'odyssee') {
-    return glossaryOdyssee;
-  } else {
-    return null;
-  }
-}
-
-function generateGlossaryTemplate(glossaryId) {
+/**
+* renders overall template for glossary
+* @param {object} glossary - respective glossary
+* @returns {html} html template
+*/
+function generateGlossaryTemplate(glossary) {
   let templateHTML = generateGlossaryHeader();
-  templateHTML += generateGlossaryTable(glossaryId);
+  templateHTML += generateGlossaryTable(glossary);
   return templateHTML;
 }
 
+/**
+* renders header for glossary based on set language
+* @returns {html} html template
+*/
 function generateGlossaryHeader() {
   let templateHTML = '';
   let headline;
@@ -383,14 +398,19 @@ function generateGlossaryHeader() {
   return templateHTML;
 }
 
-function generateGlossaryTable(glossaryId) {
+/**
+* renders table glossary based on set language
+* @param {object} glossary - respective glossary
+* @returns {html} html template
+*/
+function generateGlossaryTable(glossary) {
   let templateHTML = `
     <table class="contentTable">
       <tr>
         <th class="personageName">Name</th>
         <th>${defaultLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
       </tr>`;
-  for (let term of glossaryId) {
+  for (let term of glossary) {
     templateHTML += `
       <tr>
         <td class="personageName">${term.name}</td> 
@@ -402,35 +422,34 @@ function generateGlossaryTable(glossaryId) {
 }
 
 //Function for Sources paragraphs
-function renderSources(bookId){
-  let sourceId = findSourcesbyId(bookId);
+
+/**
+* initializes rendering of the sources
+* @param {string} bookId - id for respective books such as masks
+*/
+async function renderSources(bookId){
+  let sourceData = await findDatabyId('sources', bookId);
   let divId = bookId + 'Sources';
   let targetDiv = document.getElementById(divId);
   targetDiv.innerHTML = '';
-  targetDiv.innerHTML = generateSourcesTemplate (sourceId);
+  targetDiv.innerHTML = generateSourcesTemplate (sourceData);
 }
 
-function findSourcesbyId(bookId) {
-  if (bookId == 'odyssee') {
-    return sourcesOdyssee;
-  } else if (bookId == 'masks') {
-    return sourcesMasks;
-  } else {if (bookId == 'alster') {
-    return sourcesAlster;
-  } if (bookId == 'mind') {
-    return sourcesMind;
-  } 
-    return null;
-  }
-}
-
-function generateSourcesTemplate (sourceId) {
+/**
+* renders overall template for source
+* @param {object} sourceData - respective source
+* @returns {html} html template
+*/
+function generateSourcesTemplate (sourceData) {
   let templateHTML = generateSourcesHeader();
-  templateHTML += generateSourcesText(sourceId);
+  templateHTML += generateSourcesText(sourceData);
   return templateHTML;
 }
 
-
+/**
+* renders header for source based on set language
+* @returns {html} html template
+*/
 function generateSourcesHeader() {
   let templateHTML = '';
   let headline;
@@ -444,14 +463,51 @@ function generateSourcesHeader() {
   return templateHTML;
 }
 
-function generateSourcesText(sourceId) {
+/**
+* renders source text irrespective of set language
+* @param {object} sourceData - respective source data
+* @returns {html} html template
+*/
+function generateSourcesText(sourceData) {
   let templateHTML = '';
-   for (let source of sourceId) {
+   for (let paragraph of sourceData) {
     templateHTML += `
-      <p>${source}</p>`;
+      <p>${paragraph}</p>`;
   }
   return templateHTML;
 }
+
+/**
+* renders the sources for special sites (in this case Children of Angels)
+* @param {string} bookId - id for respective books such as children
+*/
+async function renderSpecialSources(bookId) {
+ const sourceData = await findDatabyId('sources', bookId);
+ const languageSourceData = sourceData[defaultLanguage];
+ const targetElement = document.getElementById(`${bookId}Sources`);
+ targetElement.innerHTML = generateTemplateSpecialSources(languageSourceData);
+}
+
+/**
+* renders special source text based on set language
+* @param {object} languageSourceData - respective source data
+* @returns {html} html template
+*/
+function generateTemplateSpecialSources(languageSourceData) {
+  let templateHTML = `<h2>${languageSourceData.header}</h2>`;
+  languageSourceData.paragraphs.forEach(paragraph => {
+    templateHTML += `<p>${paragraph}</p>`;
+  });
+  languageSourceData.subsections.forEach(subsection => {
+    templateHTML += `<h3>${subsection.subheader}</h3>`;
+    subsection.text.forEach(text => {
+      templateHTML += `<p>${text}</p>`;
+    });
+    templateHTML += `<a href="${subsection.link}">${subsection.linktext}</a>`;
+  });
+  return templateHTML;
+}
+
 
 //function for timeline Sites
 function renderTimeline(genre, bookId) {
@@ -621,33 +677,7 @@ return '/JSONs/bonus-noel.json'
   }
 }
 
-//For sources Children
-async function renderSourcesSiteChildren (genre, bookId, siteId) {
-  currentSiteId = siteId;
-  currentGenre = genre;
- const sourceData = await fetchJSON('/JSONs/sources/sourcesChildren.json');
- const languageSourceData = sourceData[defaultLanguage];
- const targetElement = document.getElementById("childrenSources");
- targetElement.innerHTML = generateTemplateChildrenSources(languageSourceData);
- renderNav(navSites, bookId, `${siteId}Nav`);
-}
 
-
-
- function generateTemplateChildrenSources(languageSourceData) {
-  let templateHTML = `<h2>${languageSourceData.header}</h2>`;
-  languageSourceData.paragraphs.forEach(paragraph => {
-    templateHTML += `<p>${paragraph}</p>`;
-  });
-  languageSourceData.subsections.forEach(subsection => {
-    templateHTML += `<h3>${subsection.subheader}</h3>`;
-    subsection.text.forEach(text => {
-      templateHTML += `<p>${text}</p>`;
-    });
-    templateHTML += `<a href="${subsection.link}">${subsection.linktext}</a>`;
-  });
-  return templateHTML;
-}
 
 //for imprint
 

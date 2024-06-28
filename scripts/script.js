@@ -52,6 +52,18 @@ function renderNav(navData, siteId, divId) {
   }
 }
 
+
+/**
+* determines names of json based on bookId
+* @param {string} dataId - id for respective data such as sources
+* @param {string} bookId - id for respective books such as masks
+* @returns {object} respective data
+*/
+async function findDatabyId(dataId, bookId) {
+  data = await fetchJSON(`/JSONs/${dataId}/${dataId}-${bookId}.json`)
+  return data;
+}
+
 function showMobileMenu() {
   const mobileNav = document.getElementById("mobileNav");
   mobileNav.classList.remove("dNone");

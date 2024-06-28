@@ -907,7 +907,7 @@ let familyTree = [
 ];
 
 //for glossaries
-let glossaryMasks = [
+let glossaryMasks2 = [
   {
     name: "Auripigment",
     de: "Gelbe Farbe zum Malen",
@@ -1030,7 +1030,7 @@ let glossaryMasks = [
   },
 ];
 
-let glossaryOdyssee = [
+let glossaryOdyssee2 = [
   {
     name: "Al-Quds",
     de: "arabischer Name für Jerusalem",
@@ -1074,7 +1074,7 @@ let glossaryOdyssee = [
 ];
 
 //for sources
-let sourcesOdyssee = [
+let sourcesOdyssee2 = [
   "A History of the Crusades; Kenneth M. Setton (General Editor), Auszug: XV: The Second Crusade, pg. 463-512 / XVI: The Career of Nur-ad-Din pg. 513-527 / Important Dates and Events pg. 622-625",
   "An Arab-Syrian Gentleman & Warrior in the Period of the Crusades. Memoirs of Usmamah Ibn-Munquid. Translated by Philip K. Hitti, Columbia University Press 2000",
   "Byzantium – The Surprising Life of a Medieval Empire. Judith Herrin, Penguin Books 2007",
@@ -1086,7 +1086,7 @@ let sourcesOdyssee = [
   "Saladin – Der Sultan und seine Zeit 1138-1193. Hannes Möhring, C.H. Beck 2005",
 ];
 
-let sourcesMasks = [
+let sourcesMasks2 = [
   "Luca Landucci: Ein Florentinisches Tagebuch 1450-1516. Eugen Diederichs Verlag 1978",
   "E.L. Steely: Stories of the Italien Artists by Vasari. Chatto, Windus & Duffield 1908",
   "Niccolo Machiavelli: History of Florence and of the affairs of Italy from the earliest times to the death of Lorenzo the Magnificent. Universal Classics Library 1901",
@@ -1102,7 +1102,7 @@ let sourcesMasks = [
   "Brian Richardson: Printing, Writers and Reader in Renaissance Italy. Cambridge University Press 1999",
 ];
 
-let sourcesAlster = [
+let sourcesAlster2 = [
   "Arne Cornelius Wasmuth: Hanseatische Dynastien – Alte Hamburger Familien öffnen ihre Alben. Verlag Die Hanse, 2001",
   "Eckart Klessmann: Geschichte der Stadt Hamburg. Hoffmann und Campe, 1988",
   "Gabriele Hofmann: Das Haus an der Elbchaussee – Die Geschichte einer Reederfamilie. Piper ebooks, 2018",
@@ -1121,7 +1121,7 @@ let sourcesAlster = [
   "Karten: https://www.christian-terstegge.de/hamburg/karten_ereignisse/index.html [August 2022]",
 ];
 
-let sourcesMind = [
+let sourcesMind2 = [
   "Werner Schneiders: Das Zeitalter der Aufklärung. C.H. Beck Wissen, 4. Auflage 2008",
   "Ronald G. Asch: Europäischer Adel in der Frühen Neuzeit. Böhlau Verlag, 2008",
   "Stefan Zweig: Marie Antoinette – Bildnis eines mittleren Charakters. Fischer Taschenbuch Verlag, 27. Auflage 2007",
