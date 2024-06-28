@@ -59,9 +59,15 @@ function renderNav(navData, siteId, divId) {
 * @param {string} bookId - id for respective books such as masks
 * @returns {object} respective data
 */
-async function findDatabyId(dataId, bookId) {
-  data = await fetchJSON(`/JSONs/${dataId}/${dataId}-${bookId}.json`)
-  return data;
+async function findDataById(dataId, bookId) {
+  try {
+    data = await fetchJSON(`/JSONs/${dataId}/${dataId}-${bookId}.json`);
+    return data;
+  } catch (error) {
+    console.error('Fehler beim Laden und Rendern der JSON-Datei:', error);
+    return null;
+  }
+
 }
 
 function showMobileMenu() {

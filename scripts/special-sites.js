@@ -319,7 +319,7 @@ function generateFamilyTreeTop(backgroundId) {
  return templateHTML;
 }
 
-function findDataById(id, array) {
+function findDataById2(id, array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i].backgroundId === id) {
       return array[i].languages[defaultLanguage];
@@ -362,7 +362,7 @@ if (booksWithSpecialSource.includes(bookId)) {
 * @param {string} bookId - id for respective books such as masks
 */
 async function renderGlossary(bookId){
-  let glossary = await findDatabyId('glossary', bookId);
+  let glossary = await findDataById('glossary', bookId);
   let divId = bookId + 'Glossary';
   let targetDiv = document.getElementById(divId);
   targetDiv.innerHTML = '';
@@ -427,7 +427,7 @@ function generateGlossaryTable(glossary) {
 * @param {string} bookId - id for respective books such as masks
 */
 async function renderSources(bookId){
-  let sourceData = await findDatabyId('sources', bookId);
+  let sourceData = await findDataById('sources', bookId);
   let divId = bookId + 'Sources';
   let targetDiv = document.getElementById(divId);
   targetDiv.innerHTML = '';
@@ -481,7 +481,7 @@ function generateSourcesText(sourceData) {
 * @param {string} bookId - id for respective books such as children
 */
 async function renderSpecialSources(bookId) {
- const sourceData = await findDatabyId('sources', bookId);
+ const sourceData = await findDataById('sources', bookId);
  const languageSourceData = sourceData[defaultLanguage];
  const targetElement = document.getElementById(`${bookId}Sources`);
  targetElement.innerHTML = generateTemplateSpecialSources(languageSourceData);
@@ -514,12 +514,13 @@ function generateTemplateSpecialSources(languageSourceData) {
 * initializes rendering of the timeline site
 * determines the following functions based on bookId
 * initializes rendering the bottom nav based on global variable navSites and bookId
+* async because findDataById() is called twice in short succession
 * @param {string} genre - genre such as historical
 * @param {string} bookId - id for respective books such as masks
 */
-function renderTimeline(bookId) {
+async function renderTimeline(bookId) {
   currentSiteId = bookId + 'Timeline';
-  renderTimelineTop(bookId);
+  await renderTimelineTop(bookId);
   renderTimelineBottom(bookId);
   renderNav(navSites, bookId, `${bookId}TimelineNav`);
 }
@@ -528,11 +529,12 @@ function renderTimeline(bookId) {
 * initializes rendering of the timeline top part
 * @param {string} bookId - id for respective books such as masks
 */
-function renderTimelineTop(bookId) {
+async function renderTimelineTop(bookId) {
+  
   let divId = bookId + 'TimelineTop';
   let targetDiv = document.getElementById(divId);
   targetDiv.innerHTML = '';
-  targetDiv.innerHTML = generateTimelineHeader(bookId);
+  targetDiv.innerHTML = await generateTimelineHeader(bookId);
 }
 
 /**
@@ -560,7 +562,7 @@ async function generateTimelineHeader(bookId) {
 * @param {string} bookId - id for respective books such as masks
 */
 async function renderTimelineBottom(bookId) {
-  let timelineData = await findDatabyId('timeline', bookId);
+  let timelineData = await findDataById('timeline', bookId);
   let divId = bookId + 'TimelineBottom';
   let targetDiv = document.getElementById(divId);
   targetDiv.innerHTML = '';
@@ -644,92 +646,28 @@ function generateTableRowSingle(previousYear, timelineData, event) {
 * @param {string} bookId - id for respective book
 * @param {string} bonusId - id for respective bonus content
 */
-async function renderBonusChapter(genre, bookId, bonusId) {
+async function renderBonus(genre, bookId, bonusId) {
   currentSiteId = bonusId;
   currentGenre = genre;
-  url = fetchUrl(bonusId);
   targetDiv = bonusId+'Top';
-  await loadAndRenderContent(targetDiv, url);
+  bonusData = await findDataById('bonus', bonusId);
+  renderBonusContent(targetDiv, bonusData);
   renderNav(navSites, bookId, `${bonusId}Nav`);
 }
 
 /**
-* loads and renders of content based on bonusId
+* renders of content based on bonusId
 * initializes rendering the bottom navigation based site parameters
 * @param {string} targetDiv - bonusId+'Top'
-* @param {string} url - path to respective json
+* @param {json} bonusData - respective json
 */
-async function loadAndRenderContent(targetDiv, url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    const languageData = data[defaultLanguage];
+function renderBonusContent(targetDiv, bonusData) {
+    const languageData = bonusData[defaultLanguage];
     const targetElement = document.getElementById(targetDiv);
     targetElement.innerHTML = `<h2>${languageData.header}</h2>`;
     targetElement.innerHTML += `<h3>${languageData.subheader}</h3>`;
+    targetElement.innerHTML += `<a href="${languageData.link}">${languageData.linkText}</a>`;
     languageData.text.forEach(paragraph => {
       targetElement.innerHTML += `<p>${paragraph}</p>`;
     });
-  } catch (error) {
-    console.error('Fehler beim Laden und Rendern der JSON-Datei:', error);
-  }
 }
-
-/**
-* fetches url based on bonusId
-* @param {string} bonusId - id for respective bonus content
-* @returns url as string
-*/
-function fetchUrl(bonusId) {
-  if(bonusId =='zach') {
-    return '/JSONs/bonus/bonus-zach.json'
-  } else if(bonusId =='noel') {
-return '/JSONs/bonus-noel.json'
-  }else if(bonusId =='diana') {
-    return '/JSONs/bonus/bonus-diana.json'
-  }else if(bonusId =='bina') {
-    return '/JSONs/bonus/bonus-bina.json'
-  }else if(bonusId =='henri') {
-    return '/JSONs/bonus/bonus-henri-and-ella.json'
-  }else if(bonusId =='curtius') {
-    return '/JSONs/bonus/bonus-curtius.json'
-  }else if(bonusId =='danton') {
-    return '/JSONs/bonus/bonus-danton.json'
-  }else if(bonusId =='radegunde') {
-    return '/JSONs/bonus/bonus-radegunde.json'
-  }else if(bonusId =='susanna') {
-    return '/JSONs/bonus/bonus-susanna.json'
-  }else if(bonusId =='') {
-    return '/'
-  } else {
-    return null
-  }
-}
-
-
-
-//for imprint
-
-function renderImprint() {
-  currentSiteId = 'imprint';
-  currentGenre = 'support';
-  const targetElement = document.getElementById("imprint");
-  if (defaultLanguage== 'de') {
-    targetElement.innerHTML = generateImprintGerman();
-  } else {
-    targetElement.innerHTML = generateImprintEnglish();
-  }
-}
-
-//For privacyPolicy
-function renderprivacyPolicy() {
-  currentSiteId = 'privacyPolice';
-  currentGenre = 'support';
-  const targetElement = document.getElementById("privacyPolicy");
-  if (defaultLanguage== 'de') {
-    targetElement.innerHTML = generatePrivacyPolicyGerman();
-  } else {
-    targetElement.innerHTML = generatePrivacyPolicyEnglish();
-  }
-}
-

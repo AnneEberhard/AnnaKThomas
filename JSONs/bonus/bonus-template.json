@@ -2,6 +2,8 @@
     "de": {
         "header":"",
         "subheader": "",
+        "link": "",
+        "linkText": "",
         "text":  [
             "",
             ""
@@ -10,6 +12,8 @@
     "en":{
         "header":"",
         "subheader": "",
+        "link": "",
+        "linkText": "",
         "text":  [
             "",
             ""

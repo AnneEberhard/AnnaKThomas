@@ -20,7 +20,7 @@ const functionMap = {
   "familytrees": renderFamilyTrees,
   "sources": renderSourcesSite,
   "timeline": renderTimeline,
-  "bonus": renderBonusChapter
+  "bonus": renderBonus
 };
 
 /**

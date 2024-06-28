@@ -1,3 +1,37 @@
+//for imprint and privacy policy
+
+/**
+* initializes rendering the bottom navigation based site parameters
+*/
+function renderImprint() {
+  currentSiteId = 'imprint';
+  currentGenre = 'support';
+  const targetElement = document.getElementById("imprint");
+  if (defaultLanguage== 'de') {
+    targetElement.innerHTML = generateImprintGerman();
+  } else {
+    targetElement.innerHTML = generateImprintEnglish();
+  }
+}
+
+/**
+* initializes rendering the bottom navigation based site parameters
+*/
+function renderprivacyPolicy() {
+  currentSiteId = 'privacyPolice';
+  currentGenre = 'support';
+  const targetElement = document.getElementById("privacyPolicy");
+  if (defaultLanguage== 'de') {
+    targetElement.innerHTML = generatePrivacyPolicyGerman();
+  } else {
+    targetElement.innerHTML = generatePrivacyPolicyEnglish();
+  }
+}
+
+/**
+* generates content of imprint in German
+* @returns {html} html code
+*/
 function generateImprintGerman() {
   return /*html*/`
   <h1 >Impressum</h1>
@@ -127,6 +161,10 @@ function generateImprintGerman() {
     `;
 }
 
+/**
+* generates content of imprint in English
+* @returns {html} html code
+*/
 function generateImprintEnglish() {
   return /*html*/`
   <h1 >Imprint</h1>
@@ -257,7 +295,10 @@ function generateImprintEnglish() {
     `;
 }
 
-
+/**
+* generates content of privacy policy in German
+* @returns {html} html code
+*/
 function generatePrivacyPolicyGerman() {
     return /*html*/ `
       <h2 ></h2>
@@ -452,6 +493,10 @@ function generatePrivacyPolicyGerman() {
 `;
 }
 
+/**
+* generates content of privacy policy in English
+* @returns {html} html code
+*/
 function generatePrivacyPolicyEnglish() {
     return /*html*/ `
       <h2 ></h2>
