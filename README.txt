@@ -1,3 +1,9 @@
+/**
+* 
+* @param {} form - entered data
+* @returns boolean
+*/
+
 All books with details for booksites are in the JSON allBooks in the books.js
     Also in that file are: for booksites top part: let topSites
 

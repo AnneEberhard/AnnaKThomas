@@ -1,6 +1,5 @@
 // function for special sites about me
 function renderAboutMe(id) {
-  debugger;
   currentSiteId = id;
   currentGenre = id;
   let headline = document.getElementById("aboutMeHeadline");
@@ -83,13 +82,11 @@ function renderNovellas(genre) {
   let topDivId = genre + "Top";
   let bottomDivID = genre + "Bottom";
   let genreData = findBooksByGenre(genre);
-  let bookId = genreData[0].bookId;
   renderMainSite(genre, topDivId);
   renderBookDetails(genreData, bottomDivID);
 }
 
 //function for navMenu on home Page
-
 function renderHomePage() {
   renderMainSite("home");
   renderHomeOverview();
@@ -165,12 +162,30 @@ function generateBookHTML(book, link) {
 }
 
 // for personages sites
-function renderPersonage(genre, navId, siteId, personageObject) {
+
+/**
+* initializes rendering of personage sites
+* loads data for personSitesHeader (global variable)
+* loads data for personage 
+* @param {string} genre - genre such as historical
+* @param {string} navId - id for rendering nav such as masks
+* @param {string} siteId - id for subsite such as masksPersons
+* @param {string} JsonId - id for JSON such as personsMasks
+*/
+async function renderPersonage(genre, navId, siteId, JsonId) {
+  personSitesHeader = await fetchJSON('/JSONS/persons/personSitesHeader.json');
+  let personsUrl = `/JSONS/persons/${JsonId}.json`;
+  let personageObject = await fetchJSON(personsUrl);
   renderPersonageTop(genre, siteId);
   renderPersonageBottom(siteId, personageObject);
   renderNav(navSites, navId, `${siteId}Nav`);
 }
 
+/**
+* renders top part of personage sites
+* @param {string} genre - genre such as historical
+* @param {string} siteId - id for subsite such as masksPersons
+*/
 function renderPersonageTop(genre, siteId) {
   currentSiteId = siteId;
   currentGenre = genre;
@@ -192,6 +207,11 @@ function renderPersonageTop(genre, siteId) {
   }
 }
 
+/**
+* renders bottom part of personage sites
+* @param {string} siteId - id for subsite such as masksPersons
+* @param {object} personageObject - loaded JSON 
+*/
 function renderPersonageBottom(siteId, personageObject){
   let divId = siteId + 'Bottom';
   let bottomDiv = document.getElementById(divId);
@@ -199,14 +219,26 @@ function renderPersonageBottom(siteId, personageObject){
   bottomDiv.innerHTML = generatePersonAllTemplate (siteId, personageObject);
 }
 
-function generatePersonAllTemplate (siteId, personageId) {
+/**
+* renders the overall template bottom part of personage sites
+* @param {string} siteId - id for subsite such as masksPersons
+* @param {object} personageObject - loaded JSON 
+* @returns html template
+*/
+function generatePersonAllTemplate (siteId, personageObject) {
   let templateHTML = '';
-for (let i = 0; i < personageId.length; i++) {
-  templateHTML += generatePersonTableTemplate(siteId, personageId[i])
+for (let i = 0; i < personageObject.length; i++) {
+  templateHTML += generatePersonTableTemplate(siteId, personageObject[i])
 }
 return templateHTML;
 }
 
+/**
+* renders the table in of bottom part of personage sites
+* @param {string} siteId - id for subsite such as masksPersons
+* @param {object} personGroup - subgroup of loaded JSON 
+* @returns html template
+*/
 function generatePersonTableTemplate(siteId, personGroup) {
   let subHeaderId = siteId + personGroup.groupId; // unique ID for each header even if naming in JSON is similar
   let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;

@@ -488,7 +488,7 @@ let mainSites2 = [
 ];
 
 // for home page
-let overview = [
+let overview2 = [
   {
     de: "Fantasy",
     en: "Fantasy",

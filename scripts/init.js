@@ -7,6 +7,8 @@ let currentGenre;
 let menuTitles;
 let navSites;
 let mainSites;
+let overview;
+let personSitesHeader;
 
 async function init() {
   await includeHTML();
@@ -19,6 +21,7 @@ async function loadGeneralData() {
   menuTitles = await fetchJSON("/JSONs/general/menuTitles.json");
   navSites = await fetchJSON("/JSONs/general/navSites.json");
   mainSites = await fetchJSON("/JSONs/general/mainSites.json");
+  overview = await fetchJSON("/JSONs/general/overview.json");
 }
 
 function checkBrowserLanguage() {
@@ -204,37 +207,37 @@ function renderContentBasedOnPage() {
     {
       path: "/subsitesElves/elves-persons.html",
       function: renderPersonage,
-      params: ["fantasy", "elves", "elvesPersons", personsElves],
+      params: ["fantasy", "elves", "elvesPersons", "personsElves"],
     },
     {
       path: "/subsitesAlster/alster-persons.html",
       function: renderPersonage,
-      params: ["historical", "alster", "alsterPersons", personsAlster],
+      params: ["historical", "alster", "alsterPersons", "personsAlster"],
     },
     {
       path: "/subsitesMind/mind-persons.html",
       function: renderPersonage,
-      params: ["historical", "mind", "mindPersons", personsMind],
+      params: ["historical", "mind", "mindPersons", "personsMind"],
     },
     {
       path: "/subsitesOdyssee/odyssee-persons.html",
       function: renderPersonage,
-      params: ["historical", "odyssee", "odysseePersons", personsOdyssee],
+      params: ["historical", "odyssee", "odysseePersons", "personsOdyssey"],
     },
     {
       path: "/subsitesMasks/masks-persons.html",
       function: renderPersonage,
-      params: ["historical", "masks", "masksPersons", personsMasks],
+      params: ["historical", "masks", "masksPersons", "personsMasks"],
     },
     {
       path: "/subsitesBards/bards-persons.html",
       function: renderPersonage,
-      params: ["fantasy", "bards", "bardsPersons", personsBards],
+      params: ["fantasy", "bards", "bardsPersons", "personsBards"],
     },
     {
       path: "/subsitesChildren/children-persons.html",
       function: renderPersonage,
-      params: ["fantasy", "children", "childrenPersons", personsChildren],
+      params: ["fantasy", "children", "childrenPersons", "personsChildren"],
     },
     {
       path: "/subsitesAlster/alster-background.html",
