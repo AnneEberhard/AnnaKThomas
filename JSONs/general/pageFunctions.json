@@ -289,14 +289,12 @@
         {
             "path": "/subsitesMasks/masks-timeline.html",
             "params": [
-              "historical",
               "masks"
             ]
           },
           {
             "path": "/subsitesOdyssee/odyssee-timeline.html",
             "params": [
-              "historical",
               "odyssee"
             ]
           }

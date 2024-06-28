@@ -355,7 +355,6 @@ if (booksWithSpecialSource.includes(bookId)) {
   renderNav(navSites, bookId, `${bookId}SourcesNav`);
 }
 
-
 //Function for glossary tables
 
 /**
@@ -490,7 +489,7 @@ async function renderSpecialSources(bookId) {
 
 /**
 * renders special source text based on set language
-* @param {object} languageSourceData - respective source data
+* @param {json} languageSourceData - respective source data
 * @returns {html} html template
 */
 function generateTemplateSpecialSources(languageSourceData) {
@@ -509,15 +508,26 @@ function generateTemplateSpecialSources(languageSourceData) {
 }
 
 
-//function for timeline Sites
-function renderTimeline(genre, bookId) {
+//functions for timeline Sites
+
+/**
+* initializes rendering of the timeline site
+* determines the following functions based on bookId
+* initializes rendering the bottom nav based on global variable navSites and bookId
+* @param {string} genre - genre such as historical
+* @param {string} bookId - id for respective books such as masks
+*/
+function renderTimeline(bookId) {
   currentSiteId = bookId + 'Timeline';
-  currentGenre = genre;
   renderTimelineTop(bookId);
   renderTimelineBottom(bookId);
   renderNav(navSites, bookId, `${bookId}TimelineNav`);
 }
 
+/**
+* initializes rendering of the timeline top part
+* @param {string} bookId - id for respective books such as masks
+*/
 function renderTimelineTop(bookId) {
   let divId = bookId + 'TimelineTop';
   let targetDiv = document.getElementById(divId);
@@ -525,15 +535,15 @@ function renderTimelineTop(bookId) {
   targetDiv.innerHTML = generateTimelineHeader(bookId);
 }
 
-function generateTimelineTemplate(bookId, timelineId) {
-  let templateHTML = generateTimelineHeader(bookId);
-  templateHTML += generateTimelineTable(timelineId);
-  return templateHTML;
-}
-
-function generateTimelineHeader(bookId) {
+/**
+* generate header for timeline based on set language
+* @param {string} bookId - id for respective books such as masks
+* @returns {html} html template
+*/
+async function generateTimelineHeader(bookId) {
   let templateHTML = '';
   let headline;
+  let timelineHeaders = await findDataById('timeline', 'headers');
   let matchingHeader = timelineHeaders.find(header => header.bookId === bookId);
   if (matchingHeader) {
     headline = matchingHeader[defaultLanguage] || ''; 
@@ -545,22 +555,24 @@ function generateTimelineHeader(bookId) {
   return templateHTML;
 }
 
-function renderTimelineBottom(bookId) {
-  let timelineId = findTimelinebyId(bookId);
+/**
+* initializes rendering of the timeline bottom part
+* @param {string} bookId - id for respective books such as masks
+*/
+async function renderTimelineBottom(bookId) {
+  let timelineData = await findDatabyId('timeline', bookId);
   let divId = bookId + 'TimelineBottom';
   let targetDiv = document.getElementById(divId);
   targetDiv.innerHTML = '';
-  targetDiv.innerHTML = generateTimelineTable(timelineId);
+  targetDiv.innerHTML = generateTimelineTable(timelineData);
 }
 
-function findTimelinebyId(bookId) {
-  if (bookId == 'odyssee') {
-    return timelineOdyssee;
-  } else if (bookId == 'masks') {
-    return timelineMasks;
-  } else { return null;}
-}
 
+/**
+* generates overall table template for timeline bottom
+* @param {json} timelineData - respective timeline json
+* @returns {html} html template
+*/
 function generateTimelineTable(timelineData) {
   let templateHTML = `
     <table class="contentTable">
@@ -570,6 +582,10 @@ function generateTimelineTable(timelineData) {
   return templateHTML;
 }
 
+/**
+* generates table header based on set language
+* @returns {html} html template
+*/
 function generateTableHeader() {
   return `
     <tr>
@@ -579,13 +595,18 @@ function generateTableHeader() {
     </tr>`;
 }
 
+/**
+* generates overall table rows for timeline bottom
+* @param {json} timelineData - respective timeline json
+* @returns {html} html template
+*/
 function generateTableRows(timelineData) {
   let templateHTML = '';
   let previousYear = null;
 
   for (let timeline of timelineData) {
     for (let event of timeline.event) {
-      templateHTML +=  generateTableRowSingle(previousYear,timeline,event );
+      templateHTML +=  generateTableRowSingle(previousYear, timeline, event);
       if (previousYear !== timeline.year) {
         previousYear = timeline.year;
       }
@@ -594,10 +615,18 @@ function generateTableRows(timelineData) {
   return templateHTML;
 }
 
-function generateTableRowSingle(previousYear,timeline,event ) {
+/**
+* generates a table row for timeline bottom
+* year is only shown if it was not shown before (previous year)
+* @param {string} previousYear - the year that was shown in the previous iteration
+* @param {string} timelineData - respective timeline json
+* @param {string} event - respective event
+* @returns {html} html template
+*/
+function generateTableRowSingle(previousYear, timelineData, event) {
   let templateHTML = `
   <tr>
-    <td class="timelineYear">${previousYear === timeline.year ? '' : timeline.year}</td>
+    <td class="timelineYear">${previousYear === timelineData.year ? '' : timelineData.year}</td>
     <td class="timelineDate">${event.date}</td>
     <td class="timelineEvent">${event[defaultLanguage]}</td>
   </tr>`;

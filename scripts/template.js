@@ -1151,7 +1151,7 @@ let sourcesMind2 = [
 ];
 
 //for timelines
-let timelineHeaders = [{
+let timelineHeaders2 = [{
   bookId: 'odyssee',
   de: 'Zeittafel des Zweiten Kreuzzuges (Auszug)',
   en: 'Timeline of the Second Crusade (excerpt)'
@@ -1163,7 +1163,7 @@ let timelineHeaders = [{
 },
 ]
 
-let timelineMasks = [
+let timelineMasks2 = [
   {
     year: "1469",
     event: [
@@ -1752,7 +1752,7 @@ let timelineMasks = [
   }
 ];
 
-let timelineOdyssee = [
+let timelineOdyssee2 = [
   {
     year: "1144",
     event: [
