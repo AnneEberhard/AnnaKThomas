@@ -79,7 +79,7 @@ function renderAboutMe(id) {
     headline.innerHTML = templateAboutMeHeadEnglish();
     aboutMeText.innerHTML = templateAboutMeTextEnglish();
   }
-  renderNav(navSites, "general", `aboutMeNav`);
+  renderNav("general", `aboutMeNav`);
 }
 
 /**
@@ -164,7 +164,7 @@ function renderNovellas(genre) {
   currentGenre = genre;
   let topDivId = genre + "Top";
   let bottomDivID = genre + "Bottom";
-  let genreData = findBooksByGenre(genre);
+  let genreData = collectBooksOfSeries(genre, genre);
   renderMainSite(genre, topDivId);
   renderBookDetails(genreData, bottomDivID);
 }
@@ -189,7 +189,7 @@ async function renderPersonage(genre, navId, siteId, JsonId) {
   let personageObject = await fetchJSON(personsUrl);
   renderPersonageTop(siteId);
   renderPersonageBottom(siteId, personageObject);
-  renderNav(navSites, navId, `${siteId}Nav`);
+  renderNav(navId, `${siteId}Nav`);
 }
 
 /**
@@ -281,7 +281,7 @@ function generatePersonTableTemplate(siteId, personGroup) {
 function renderBackground(genre, bookId) {
   currentGenre = genre;
   renderBackgroundContent(bookId);
-  renderNav(navSites, bookId, `${bookId}BackgroundNav`);
+  renderNav(bookId, `${bookId}BackgroundNav`);
 }
 
 /**
@@ -324,7 +324,7 @@ async function generateBackgroundContent(bookId) {
 function renderFamilyTrees(genre, bookId) {
   currentGenre = genre;
   renderFamilyTreeContent(bookId);
-  renderNav(navSites, bookId, `${bookId}FamilyTreeNav`);
+  renderNav(bookId, `${bookId}FamilyTreeNav`);
 }
 
 /**
@@ -335,7 +335,7 @@ async function renderFamilyTreeContent(bookId) {
   let divId = bookId + 'FamilyTreeTop';
   let topDiv = document.getElementById(divId);
   topDiv.innerHTML = '';
-  topDiv.innerHTML = await generateFamilyTreeTop(bookId)
+  topDiv.innerHTML = await generateFamilyTreeContent(bookId)
 }
 
 /**
@@ -380,7 +380,7 @@ if (booksWithSources.includes(bookId)) {
 if (booksWithSpecialSource.includes(bookId)) {
   renderSpecialSources(bookId);
 }
-  renderNav(navSites, bookId, `${bookId}SourcesNav`);
+  renderNav(bookId, `${bookId}SourcesNav`);
 }
 
 // functions for glossary tables
@@ -448,7 +448,7 @@ function generateGlossaryTable(glossary) {
   return templateHTML;
 }
 
-// functions for Sources paragraphs
+// functions for sources paragraphs
 
 /**
 * initializes rendering of the sources
@@ -551,7 +551,7 @@ async function renderTimeline(genre, bookId) {
   currentGenre = genre;
   await renderTimelineTop(bookId);
   renderTimelineBottom(bookId);
-  renderNav(navSites, bookId, `${bookId}TimelineNav`);
+  renderNav(bookId, `${bookId}TimelineNav`);
 }
 
 /**
@@ -664,7 +664,7 @@ function generateTableRowSingle(previousYear, timelineData, event) {
 }
 
 
-// functions for BonusChapters
+// functions for bonus chapters
 
 /**
 * initializes rendering of bonus chapter sites
@@ -681,7 +681,7 @@ async function renderBonus(genre, bookId, bonusId) {
   targetDiv = bonusId+'Top';
   bonusData = await findDataById('bonus', bonusId);
   renderBonusContent(targetDiv, bonusData);
-  renderNav(navSites, bookId, `${bonusId}Nav`);
+  renderNav(bookId, `${bonusId}Nav`);
 }
 
 /**

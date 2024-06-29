@@ -1,14 +1,19 @@
-//functions used by several sections
+// functions used by several sections
 
 /**
-* scrolls to top of the page
+* determines names of json based on bookId
+* @param {string} reference - id for respective references such as sources
+* @param {string} id - id for respective books such as masks or for special cases such as info
+* @returns {object} respective data
 */
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+async function findDataById(reference, id) {
+  data = await fetchJSON(`/JSONs/${reference}/${reference}-${id}.json`);
+  console.log(data);
+  return data;
 }
 
 /**
-* renders the navigation part at the bottom of each page
+* finds the index of each site in the respective JsonArrays
 * @param {Object[]} siteArray - loaded jsonArray such as navSites, mainSites
 * @param {string} siteId - id for site
 * @returns {number} index of the site in the respective array or, if not found, -1
@@ -20,6 +25,22 @@ function findSiteIndexById(siteArray, siteId) {
     }
   }
   return -1;
+}
+
+/**
+* gets a subgroup out of a JsonArray based on id
+* id is compared to backgroundId of the JsonArray
+* @param {string} id - id for respective book such as mind
+* @param {Object[]} array - respective JsonArray such as Familytrees
+* @returns {Object[]} respective subgroup of the overarching JsonArray
+*/
+function findDataInArray(id, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].backgroundId === id) {
+      return array[i].languages[defaultLanguage];
+      }
+    }
+  return null;
 }
 
 /**
@@ -48,14 +69,39 @@ function getTranslationStatusText(translationExists, defaultLanguage) {
   }
 }
 
+/**
+* checks if a translation is true, progress or planned and genereates respective div with text
+* @param {string} translationExists - information for the respective book out of topSites json
+* @param {string} defaultLanguage - global variable that is checked depending on browser and user input
+* @returns {HTMLElement} respective HTML 
+*/
+function getTranslationStatusText(translationExists, defaultLanguage) {
+  if (translationExists === "true") {
+    return defaultLanguage === "de"
+      ? "<p>Eine Übersetzung ins Englische ist vorhanden.</p>"
+      : "<p>An English translation is available.</p>";
+  } else if (translationExists === "progress") {
+    return defaultLanguage === "de"
+      ? "<p>Eine Übersetzung ins Englische ist in Arbeit.</p>"
+      : "<p>A translation into English is in progress.</p>";
+  } else if (translationExists === "planned") {
+    return defaultLanguage === "de"
+      ? "<p>Eine Übersetzung ins Englische ist geplant.</p>"
+      : "<p>A translation into English is planned.</p>";
+  } else {
+    return defaultLanguage === "de"
+      ? "<p>Bis jetzt ist keine Übersetzung ins Englische verfügbar.</p>"
+      : "<p>There is no English translation available yet.</p>";
+  }
+}
 
 /**
 * renders the navigation part at the bottom of each page
-* @param {Object[]} navSites - loaded jsonArray of navSites
+* using the global variable navSites that is loaded on init
 * @param {string} siteId - id for site
 * @param {string} divId - id for div in which to render
 */
-function renderNav(navSites, siteId, divId) {
+function renderNav(siteId, divId) {
   let navDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(navSites, siteId);
 
@@ -74,49 +120,40 @@ function renderNav(navSites, siteId, divId) {
   }
 }
 
-
 /**
-* determines names of json based on bookId
-* @param {string} reference - id for respective references such as sources
-* @param {string} id - id for respective books such as masks or for special cases such as info
-* @returns {object} respective data
+* scrolls to top of the page
 */
-async function findDataById(reference, id) {
-    data = await fetchJSON(`/JSONs/${reference}/${reference}-${id}.json`);
-    console.log(data);
-    return data;
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 /**
-* gets a subgroup out of a JsonArray based on id
-* id is compared to backgroundId of the JsonArray
-* @param {string} id - id for respective book such as mind
-* @param {Object[]} array - respective JsonArray such as Familytrees
-* @returns {Object[]} respective subgroup of the overarching JsonArray
+* opens the mobile menu
 */
-function findDataInArray(id, array) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].backgroundId === id) {
-      return array[i].languages[defaultLanguage];
-      }
-    }
-  return null;
-}
-
 function showMobileMenu() {
   const mobileNav = document.getElementById("mobileNav");
   mobileNav.classList.remove("dNone");
 }
 
+/**
+* closes the mobile menu
+*/
 function closeMobileMenu() {
   const mobileNav = document.getElementById("mobileNav");
   mobileNav.classList.add("dNone");
 }
 
-//functions for main sites
 
+// functions for main sites on the root level
+
+/**
+ * initializes the rendering of all pages on the root level except for about me
+ * is called from global variable functionMap
+ * using the global variable mainSites that is loaded on init
+ * initializes rendering the nav on root level
+ * @param {string} siteId - id for site
+*/
 function renderMainSite(siteId) {
-  currentSiteId = siteId;
   currentGenre = siteId;
   let divId = siteId + "Top";
   let topDiv = document.getElementById(divId);
@@ -132,19 +169,31 @@ function renderMainSite(siteId) {
   } else {
     console.log(`SiteId '${siteId}' not found`);
   }
-  renderNav(navSites, "general", `${siteId}Nav`);
+  renderNav("general", `${siteId}Nav`);
 }
 
+/**
+* generates the site title based on set language
+* @param {string} title - respective title for site
+*/
 function generateSiteTitle(title) {
   return `<h2>${title}</h2>`;
 }
 
+/**
+* generates the site paragraphs based on set language
+* @param {Array} paragraphs - array filled with strings
+*/
 function generateSiteParagraphs(paragraphs) {
   return `<div class="siteParagraphs">${paragraphs
     .map((paragraph) => `<p>${paragraph}</p>`)
     .join("")}</div>`;
 }
 
+/**
+ * generates the lower section on a main site based on set language
+* @param {Object[]} sections - JSONArray filled with info such as books and links
+*/
 function generateSection(section) {
   return `
     <h3>${section.subtitle}</h3>
@@ -161,40 +210,45 @@ function generateSection(section) {
     </div>`;
 }
 
-//Functions for books sites
+
+// functions for book sites
+
+/**
+ * initializes the rendering of a book/series overview site
+ * is called from global variable functionMap
+ * params stem from pageData
+ * initializes rendering the nav on booksite level
+ * @param {string} genre - important for menu highlight
+ * @param {string} id - id of book or series - do not confuse with single bookId
+ * @param {boolean} seriesExists - depending on whether it is more than one book 
+*/
 function renderBookSite(genre, id, seriesExists) {
-  currentSiteId = id;
   currentGenre = genre;
   if (seriesExists == true) {
-    data = findBooksBySeries(genre, id);
+    data = collectBooksOfSeries(genre, id);
     bookId = data[0].bookId;
   } else {
     data = findBookById(genre, id);
     bookId = id;
   }
+  console.log(data);
   if (!data) {
     console.log(`Unknown book: ${id}`);
     return;
   }
-  if (defaultLanguage == "en" && id == "elves") {
-    renderSeriesEnglish(data, `${id}Bottom`);
-  } else {
-    renderBookDetails(data, `${id}Bottom`);
-  }
+  renderBookDetails(data, `${id}Bottom`);
   renderBookSiteTop(id, `${id}Top`);
-  renderNav(navSites, id, `${id}Nav`);
+  renderNav(id, `${id}Nav`);
 }
 
-function findBooksByGenre(targetGenre) {
-  for (let i = 0; i < allBooks.length; i++) {
-    if (allBooks[i].genre === targetGenre) {
-      return allBooks[i].books;
-    }
-  }
-  return null;
-}
-
-function findBooksBySeries(targetGenre, targetSeries) {
+/**
+ * collects all books of a series in a new JSONArray
+ * uses global variable allBooks that is loaded on init
+ * @param {string} targetGenre - respective genre
+ * @param {string} targetSeries - id of series such as children
+ * @returns {Object[]} seriesArray is returned if the length is > 0 
+*/
+function collectBooksOfSeries(targetGenre, targetSeries) {
   let seriesArray = [];
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].genre === targetGenre) {
@@ -209,6 +263,13 @@ function findBooksBySeries(targetGenre, targetSeries) {
   return seriesArray.length > 0 ? seriesArray : null;
 }
 
+/**
+ * finds the book based on its bookId (for books that are not part of a series)
+ * uses global variable allBooks that is loaded on init
+ * @param {string} targetGenre - respective genre
+ * @param {string} targetBook - id of book such as mind
+ * @returns {Object[]} JSONArray with respective book info 
+*/
 function findBookById(targetGenre, targetBook) {
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].genre === targetGenre) {
@@ -221,6 +282,12 @@ function findBookById(targetGenre, targetBook) {
   return null;
 }
 
+/**
+ * renders the top site of the book site
+ * uses global variable topSites that is loaded on init
+ * @param {string} siteId - id of book / series and thus the site
+ * @param {string} divId - id of the div into which is rendered
+*/
 function renderBookSiteTop(siteId, divId) {
   let topDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(topSites, siteId);
@@ -238,16 +305,31 @@ function renderBookSiteTop(siteId, divId) {
   }
 }
 
+/**
+ * generates the site title/header
+ * @param {string} title - id of book / series and thus the site
+ * @returns {HTMLElement} header for the booksite
+*/
 function generateBookSiteTitle(title) {
   return `<h2>${title}</h2>`;
 }
 
+/**
+ * generates the upper paragraphs of the site
+ * @param {Array} paragraphs - respective array filled with strings
+ * @returns {HTMLElement} header for the booksite
+*/
 function generateBookSiteParagraphs(paragraphs) {
   return `<div class="siteParagraphs">${paragraphs
     .map((paragraph) => `<p>${paragraph}</p>`)
     .join("")}</div>`;
 }
 
+/**
+ * generates the upper navigation of the site, leading to subsites
+ * @param {Object[]} links - JSONArray with links and linktext
+ * @returns {HTMLElement} upper navigation
+*/
 function generateBookSiteNavTop(links) {
   return `<div class="siteNavTop">${links
     .map(
@@ -256,22 +338,16 @@ function generateBookSiteNavTop(links) {
     .join("")}</div>`;
 }
 
-function renderSeriesEnglish(seriesData, divId) {
-  let bottomDiv = document.getElementById(divId);
-  let templateHTML = "";
-  for (let i = 0; i < seriesData.length; i++) {
-    let bookEnglishArray = seriesData[i].languages[defaultLanguage];
-    for (let seriesEnglishBook of bookEnglishArray) {
-      templateHTML += generateBookDetailsTemplate(seriesEnglishBook);
-    }
-    bottomDiv.innerHTML = templateHTML;
-  }
-}
-
+/**
+ * renders the content for each book with image, text and links
+ * depending on whether the book is a series or a standalone
+ * @param {Object[]} bookData - JSONArray of either one book (Json) or one series (array of jsons)
+ * @param {string} divId - id of the div into which is rendered
+*/
 function renderBookDetails(bookData, divId) {
   let bottomDiv = document.getElementById(divId);
   let templateHTML = "";
-  if (bookData.length > 0 && bookData[0].seriesId) {
+  if (bookData.length > 0) {
     let seriesBooks = bookData.filter(
       (b) => b.seriesId === bookData[0].seriesId
     );
@@ -287,11 +363,15 @@ function renderBookDetails(bookData, divId) {
   bottomDiv.innerHTML = templateHTML;
 }
 
+/**
+ * generates the content for each book with image, text and links
+ * @param {Object[]} book - JSONArray of the respective book in the correct language (ultimately from allBooks)
+ * @returns {HTMLElement} book content
+*/
 function generateBookDetailsTemplate(book) {
   let paragraphsHTML = book.paragraphs
     .map((paragraph) => `<p>${paragraph}</p>`)
     .join("");
-
   return `
     <div class="bookContainer">
       <img class="cover" src="${book.imageURL}" alt="">
@@ -303,11 +383,21 @@ function generateBookDetailsTemplate(book) {
     </div>`;
 }
 
-function findBookIndexById(bookArray, bookId) {
-  for (let i = 0; i < bookArray.length; i++) {
-    if (bookArray[i].bookId === bookId) {
-      return i;
+
+// functions currently not in use
+
+/**
+ * collects all books of a genre in a new JSONArray
+ * uses global variable allBooks that is loaded on init
+ * currently not in use
+ * @param {string} targetGenre - respective genre
+ * @returns {Object[]} allBooks[i].books with the target genre
+*/
+function collectBooksOfGenre(targetGenre) {
+  for (let i = 0; i < allBooks.length; i++) {
+    if (allBooks[i].genre === targetGenre) {
+      return allBooks[i].books;
     }
   }
-  return -1;
+  return null;
 }

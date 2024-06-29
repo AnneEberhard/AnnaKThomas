@@ -52,7 +52,7 @@ async function loadGeneralData() {
   menuTitles = await fetchJSON("/JSONs/general/menuTitles.json");
   navSites = await fetchJSON("/JSONs/general/navSites.json");
   overview = await fetchJSON("/JSONs/general/overview.json");
-  pageData = await fetchJSON("/JSONs/general/pageFunctions.json");
+  pageData = await fetchJSON("/JSONs/general/pageData.json");
   topSites = await fetchJSON('/JSONs/general/topSites.json');
 }
 

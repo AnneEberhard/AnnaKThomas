@@ -259,6 +259,10 @@ rect {
   justify-content: center;
   align-items: center;
 }
+
+#aboutMeContainer {
+  flex-direction: column !important;
+}
 }
 
 @media (max-width: 800px) {
