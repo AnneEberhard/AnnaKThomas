@@ -1,4 +1,65 @@
-// function for special site about me
+// functions for home Page
+
+/**
+* initializes rendering of home page
+* upper part is rendered via renderMainSite
+*/
+function renderHomePage() {
+  renderMainSite("home");
+  renderHomeOverview();
+}
+
+/**
+* initializes rendering of home page overview part (bottom)
+*/
+function renderHomeOverview() {
+  let homeBottom = document.getElementById("homeBottom");
+  homeBottom.innerHTML = templateOverview();
+  fillOverviewColumns();
+}
+
+/**
+* generates template for homepage overview based on default language
+* fills column headers (such as "Fantasy")
+* uses global variable overview that is loaded on init
+*/
+function templateOverview() {
+  let columns = "";
+  for (let i = 0; i < overview.length; i++) {
+    if (defaultLanguage == "de") {
+      columnHeader = overview[i].de;
+    } else {
+      columnHeader = overview[i].en;
+    }
+    let genreLink = overview[i].genreLink;
+    columns += `<div class="column" id="homeBottomColumn${i}">
+      <a class="columnHeader" href="${genreLink}" >${columnHeader}</a> </div>`;
+  }
+  return columns;
+}
+
+/**
+* fills overview template columns with the respective books 
+* based on default language and global variable overview
+*/
+function fillOverviewColumns() {
+  for (let i = 0; i < overview.length; i++) {
+    targetdiv = document.getElementById(`homeBottomColumn${i}`);
+    booksArray = overview[i].books;
+    for (let j = 0; j < booksArray.length; j++) {
+      if (defaultLanguage == "de") {
+        bookName = booksArray[j].languages.de;
+      } else {
+        bookName = booksArray[j].languages.en;
+      }
+      bookLink = booksArray[j].internalLink;
+      targetdiv.innerHTML += /*html*/ `<a class="columnContent" href="${bookLink}" >${bookName}</a>`;
+    }
+  }
+}
+
+
+// functions for special site about me
 
 /**
 * initializes rendering of about me page
@@ -92,7 +153,8 @@ function templateAboutMeTextEnglish() {
   return template;
 }
 
-// function for special site novellas
+
+// functions for special site novellas
 
 /**
 * initializes rendering the novella page
@@ -107,80 +169,6 @@ function renderNovellas(genre) {
   renderBookDetails(genreData, bottomDivID);
 }
 
-// function for navMenu on home Page
-function renderHomePage() {
-  renderMainSite("home");
-  renderHomeOverview();
-}
-
-function renderHomeOverview() {
-  let homeBottom = document.getElementById("homeBottom");
-  homeBottom.innerHTML = templateOverview();
-  fillOverviewColumns();
-}
-
-function templateOverview() {
-  let columns = "";
-  for (let i = 0; i < overview.length; i++) {
-    if (defaultLanguage == "de") {
-      columnHeader = overview[i].de;
-    } else {
-      columnHeader = overview[i].en;
-    }
-    let genreLink = overview[i].genreLink;
-    columns += `<div class="column" id="homeBottomColumn${i}">
-      <a class="columnHeader" href="${genreLink}" >${columnHeader}</a> </div>`;
-  }
-  return columns;
-}
-
-function fillOverviewColumns() {
-  for (let i = 0; i < overview.length; i++) {
-    targetdiv = document.getElementById(`homeBottomColumn${i}`);
-    booksArray = overview[i].books;
-    for (let j = 0; j < booksArray.length; j++) {
-      if (defaultLanguage == "de") {
-        bookName = booksArray[j].languages.de;
-      } else {
-        bookName = booksArray[j].languages.en;
-      }
-      bookLink = booksArray[j].internalLink;
-      targetdiv.innerHTML += /*html*/ `<a class="columnContent" href="${bookLink}" >${bookName}</a>`;
-    }
-  }
-}
-
-function generateOverviewColumns(overviewData) {
-  let columnsHTML = "";
-  overviewData.forEach((genre) => {
-    const genreHTML = generateGenreHTML(genre.genre);
-    const booksHTML = generateBooksHTML(genre.genre.books);
-    columnsHTML += `<div class="genre-column">${genreHTML}${booksHTML}</div>`;
-  });
-  return columnsHTML;
-}
-
-function generateGenreHTML(genre) {
-  return `<h2 class="center"><a href="${genre.genreLink}">${genre[defaultLanguage]}</a></h2>`;
-}
-
-function generateBooksHTML(books) {
-  let booksHTML = "<ul>";
-  books.forEach((book) => {
-    const bookHTML = generateBookHTML(
-      book.languages[defaultLanguage],
-      book.internalLink
-    );
-    booksHTML += `<li>${bookHTML}</li>`;
-  });
-
-  booksHTML += "</ul>";
-  return booksHTML;
-}
-
-function generateBookHTML(book, link) {
-  return `<a href="${link}">${book}</a>`;
-}
 
 // functions for personages sites
 
@@ -280,7 +268,8 @@ function generatePersonTableTemplate(siteId, personGroup) {
   return templateHTML;
 }
 
-//Function for background pages
+
+// functions for for background pages
 
 /**
 * initializes rendering of the background site
@@ -323,7 +312,7 @@ async function generateBackgroundContent(bookId) {
 }
 
 
-// function for picture sites such as family trees
+// functions for picture sites such as family trees
 
 /**
 * initializes rendering of the family trees site
@@ -609,7 +598,6 @@ async function renderTimelineBottom(bookId) {
   targetDiv.innerHTML = generateTimelineTable(timelineData);
 }
 
-
 /**
 * generates overall table template for timeline bottom
 * @param {json} timelineData - respective timeline json
@@ -674,6 +662,7 @@ function generateTableRowSingle(previousYear, timelineData, event) {
   </tr>`;
   return templateHTML
 }
+
 
 // functions for BonusChapters
 
