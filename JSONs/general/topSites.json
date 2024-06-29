@@ -13,35 +13,35 @@
         "links": [
           {
             "text": "HintergrundInfo",
-            "url": "/subsitesBards/bards-background.html"
+            "url": "/sites-html/subsitesBards/bards-background.html"
           },
           {
             "text": "Bonuskapitel Elfenweg",
-            "url": "/subsitesThuran/bonus-elven-way.html"
+            "url": "/sites-html/subsitesThuran/bonus-elven-way.html"
           },
           {
             "text": "Bonuskapitel Elfenweg - Sumpfzauber",
-            "url": "/subsitesThuran/bonus-elven-swamp.html"
+            "url": "/sites-html/subsitesThuran/bonus-elven-swamp.html"
           },
           {
             "text": "Bonuskapitel Weltenringen: Irionne und Niturio",
-            "url": "/subsitesThuran/bonus-world-irionne.html"
+            "url": "/sites-html/subsitesThuran/bonus-world-irionne.html"
           },
           {
             "text": "Bonuskapitel Bonuskapitel Weltenringen: Syl und Nycas",
-            "url": "/subsitesThuran/bonus-world-syl.html"
+            "url": "/sites-html/subsitesThuran/bonus-world-syl.html"
           },
           {
             "text": "Karten",
-            "url": "/subsitesThuran/thuran-maps.html"
+            "url": "/sites-html/subsitesThuran/thuran-maps.html"
           },
           {
             "text": "Personenverzeichnis",
-            "url": "/subsitesThuran/thuran-persons.html"
+            "url": "/sites-html/subsitesThuran/thuran-persons.html"
           },
           {
             "text": "Begriffsverzeichnis",
-            "url": "/subsitesThuran/thuran-glossary.html"
+            "url": "/sites-html/subsitesThuran/thuran-glossary.html"
           }
         ]
       },
@@ -55,35 +55,35 @@
         "links": [
           {
             "text": "Background info",
-            "url": "/subsitesBards/bards-background.html"
+            "url": "/sites-html/subsitesBards/bards-background.html"
           },
           {
             "text": "Bonus chapter Elven Way",
-            "url": "/subsitesThuran/bonus-elven-way.html"
+            "url": "/sites-html/subsitesThuran/bonus-elven-way.html"
           },
           {
             "text": "Bonus chapter Eleven Way - Swamp Magic",
-            "url": "/subsitesThuran/bonus-elven-swamp.html"
+            "url": "/sites-html/subsitesThuran/bonus-elven-swamp.html"
           },
           {
             "text": "Bonus chapter World Struggle - Irionne and Niturio",
-            "url": "/subsitesThuran/bonus-world-irionne.html"
+            "url": "/sites-html/subsitesThuran/bonus-world-irionne.html"
           },
           {
             "text": "Bonus chapter World Struggle - Syl and Nycas",
-            "url": "/subsitesThuran/bonus-world-syl.html"
+            "url": "/sites-html/subsitesThuran/bonus-world-syl.html"
           },
           {
             "text": "Maps",
-            "url": "/subsitesThuran/thuran-maps.html"
+            "url": "/sites-html/subsitesThuran/thuran-maps.html"
           },
           {
             "text": "Personage",
-            "url": "/subsitesThuran/thuran-persons.html"
+            "url": "/sites-html/subsitesThuran/thuran-persons.html"
           },
           {
             "text": "Glossary",
-            "url": "/subsitesThuran/thuran-glossary.html"
+            "url": "/sites-html/subsitesThuran/thuran-glossary.html"
           }
         ]
       }
@@ -101,19 +101,19 @@
         "links": [
           {
             "text": "HintergrundInfo",
-            "url": "/subsitesChildren/children-background.html"
+            "url": "/sites-html/subsitesChildren/children-background.html"
           },
           {
             "text": "Bonuskapitel",
-            "url": "/subsitesChildren/children-bonus.html"
+            "url": "/sites-html/subsitesChildren/children-bonus.html"
           },
           {
             "text": "Personenverzeichnis",
-            "url": "/subsitesChildren/children-persons.html"
+            "url": "/sites-html/subsitesChildren/children-persons.html"
           },
           {
             "text": "Quellen",
-            "url": "/subsitesChildren/children-sources.html"
+            "url": "/sites-html/subsitesChildren/children-sources.html"
           }
         ]
       },
@@ -125,19 +125,19 @@
         "links": [
           {
             "text": "Background info",
-            "url": "/subsitesChildren/children-background.html"
+            "url": "/sites-html/subsitesChildren/children-background.html"
           },
           {
             "text": "Bonus chapter",
-            "url": "/subsitesChildren/children-bonus.html"
+            "url": "/sites-html/subsitesChildren/children-bonus.html"
           },
           {
             "text": "Personage",
-            "url": "/subsitesChildren/children-persons.html"
+            "url": "/sites-html/subsitesChildren/children-persons.html"
           },
           {
             "text": "Sources",
-            "url": "/subsitesChildren/children-sources.html"
+            "url": "/sites-html/subsitesChildren/children-sources.html"
           }
         ]
       }
@@ -155,23 +155,23 @@
         "links": [
           {
             "text": "HintergrundInfo",
-            "url": "/subsitesElves/elves-background.html"
+            "url": "/sites-html/subsitesElves/elves-background.html"
           },
           {
             "text": "Bonuskapitel Von Elfen und Wölfen: Noel",
-            "url": "/subsitesElves/elves-bonus-noel.html"
+            "url": "/sites-html/subsitesElves/elves-bonus-noel.html"
           },
           {
             "text": "Bonuskapitel Im Namen der Menschen: Diana",
-            "url": "/subsitesElves/elves-bonus-diana.html"
+            "url": "/sites-html/subsitesElves/elves-bonus-diana.html"
           },
           {
             "text": "Personenverzeichnis",
-            "url": "/subsitesElves/elves-persons.html"
+            "url": "/sites-html/subsitesElves/elves-persons.html"
           },
           {
             "text": "Stammbäume",
-            "url": "/subsitesElves/elves-familytrees.html"
+            "url": "/sites-html/subsitesElves/elves-familytrees.html"
           }
         ]
       },
@@ -183,23 +183,23 @@
         "links": [
           {
             "text": "Background info",
-            "url": "/subsitesElves/elves-background.html"
+            "url": "/sites-html/subsitesElves/elves-background.html"
           },
           {
             "text": "Bonus chapter - Lucie arc: Noel",
-            "url": "/subsitesElves/elves-bonus-Noel.html"
+            "url": "/sites-html/subsitesElves/elves-bonus-Noel.html"
           },
           {
             "text": "Bonus chapter - Lena arc: Diana",
-            "url": "/subsitesElves/elves-bonus-diana.html"
+            "url": "/sites-html/subsitesElves/elves-bonus-diana.html"
           },
           {
             "text": "Personage",
-            "url": "/subsitesElves/elves-persons.html"
+            "url": "/sites-html/subsitesElves/elves-persons.html"
           },
           {
             "text": "Family Trees",
-            "url": "/subsitesElves/elves-familytrees.html"
+            "url": "/sites-html/subsitesElves/elves-familytrees.html"
           }
         ]
       }
@@ -217,27 +217,27 @@
         "links": [
           {
             "text": "HintergrundInfo",
-            "url": "/subsitesOdyssee/odyssee-background.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-background.html"
           },
           {
             "text": "Bonuskapitel",
-            "url": "/subsitesOdyssee/odyssee-bonus.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-bonus.html"
           },
           {
             "text": "Personenverzeichnis",
-            "url": "/subsitesOdyssee/odyssee-persons.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-persons.html"
           },
           {
             "text": "Zeittafel",
-            "url": "/subsitesOdyssee/odyssee-timeline.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-timeline.html"
           },
           {
             "text": "Stammbäume der Staufer und Welfen",
-            "url": "/subsitesOdyssee/odyssee-familytrees.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-familytrees.html"
           },
           {
             "text": "Begriffe und Quellen",
-            "url": "/subsitesOdyssee/odyssey-sources.html"
+            "url": "/sites-html/subsitesOdyssee/odyssey-sources.html"
           }
         ]
       },
@@ -249,31 +249,31 @@
         "links": [
           {
             "text": "Background info",
-            "url": "/subsitesOdyssee/odyssee-background.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-background.html"
           },
           {
             "text": "Bonus chapter",
-            "url": "/subsitesOdyssee/odyssee-bonus.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-bonus.html"
           },
           {
             "text": "Personage",
-            "url": "/subsitesOdyssee/odyssee-persons.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-persons.html"
           },
           {
             "text": "Timeline",
-            "url": "/subsitesOdyssee/odyssee-timeline.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-timeline.html"
           },
           {
             "text": "Conflict between Staufer and Welfen",
-            "url": "/subsitesOdyssee/odyssee.conflict.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee.conflict.html"
           },
           {
             "text": "Family trees of Staufer and Welfen",
-            "url": "/subsitesOdyssee/odyssee-familytrees.html"
+            "url": "/sites-html/subsitesOdyssee/odyssee-familytrees.html"
           },
           {
             "text": "Glossary and Sources",
-            "url": "/subsitesOdyssee/odyssey-sources.html"
+            "url": "/sites-html/subsitesOdyssee/odyssey-sources.html"
           }
         ]
       }
@@ -291,27 +291,27 @@
         "links": [
           {
             "text": "HintergrundInfo",
-            "url": "/subsitesMasks/masks-background.html"
+            "url": "/sites-html/subsitesMasks/masks-background.html"
           },
           {
             "text": "Bonuskapitel",
-            "url": "/subsitesMasks/masks-bonus.html"
+            "url": "/sites-html/subsitesMasks/masks-bonus.html"
           },
           {
             "text": "Personenverzeichnis",
-            "url": "/subsitesMasks/masks-persons.html"
+            "url": "/sites-html/subsitesMasks/masks-persons.html"
           },
           {
             "text": "Zeittafel",
-            "url": "/subsitesMasks/masks-timeline.html"
+            "url": "/sites-html/subsitesMasks/masks-timeline.html"
           },
           {
             "text": "Stammbaum der Medici",
-            "url": "/subsitesMasks/masks-familytrees.html"
+            "url": "/sites-html/subsitesMasks/masks-familytrees.html"
           },
           {
             "text": "Begriffe und Quellen",
-            "url": "/subsitesMasks/masks-sources.html"
+            "url": "/sites-html/subsitesMasks/masks-sources.html"
           }
         ]
       },
@@ -323,27 +323,27 @@
         "links": [
           {
             "text": "Background info",
-            "url": "/subsitesMasks/masks-background.html"
+            "url": "/sites-html/subsitesMasks/masks-background.html"
           },
           {
             "text": "Bonus chapter",
-            "url": "/subsitesMasks/masks-bonus.html"
+            "url": "/sites-html/subsitesMasks/masks-bonus.html"
           },
           {
             "text": "Personage",
-            "url": "/subsitesMasks/masks-persons.html"
+            "url": "/sites-html/subsitesMasks/masks-persons.html"
           },
           {
             "text": "Timeline",
-            "url": "/subsitesMasks/masks-timeline.html"
+            "url": "/sites-html/subsitesMasks/masks-timeline.html"
           },
           {
             "text": "Family trees of the Medici",
-            "url": "/subsitesMasks/masks-familytrees.html"
+            "url": "/sites-html/subsitesMasks/masks-familytrees.html"
           },
           {
             "text": "Glossary and Sources",
-            "url": "/subsitesMasks/masks-sources.html"
+            "url": "/sites-html/subsitesMasks/masks-sources.html"
           }
         ]
       }
@@ -361,19 +361,19 @@
         "links": [
           {
             "text": "HintergrundInfo",
-            "url": "/subsitesAlster/alster-background.html"
+            "url": "/sites-html/subsitesAlster/alster-background.html"
           },
           {
             "text": "Personenverzeichnis",
-            "url": "/subsitesAlster/alster-persons.html"
+            "url": "/sites-html/subsitesAlster/alster-persons.html"
           },
           {
             "text": "Stammbaum",
-            "url": "/subsitesAlster/alster-familytrees.html"
+            "url": "/sites-html/subsitesAlster/alster-familytrees.html"
           },
           {
             "text": "Quellen und Links zu den Karten",
-            "url": "/subsitesAlster/alster-sources.html"
+            "url": "/sites-html/subsitesAlster/alster-sources.html"
           }
         ]
       },
@@ -385,19 +385,19 @@
         "links": [
           {
             "text": "Background info",
-            "url": "/subsitesAlster/alster-background.html"
+            "url": "/sites-html/subsitesAlster/alster-background.html"
           },
           {
             "text": "Personage",
-            "url": "/subsitesAlster/alster-persons.html"
+            "url": "/sites-html/subsitesAlster/alster-persons.html"
           },
           {
             "text": "Family Tree",
-            "url": "/subsitesAlster/alster-familytrees.html"
+            "url": "/sites-html/subsitesAlster/alster-familytrees.html"
           },
           {
             "text": "Quellen und Links zu den Karten",
-            "url": "/subsitesAlster/alster-sources.html"
+            "url": "/sites-html/subsitesAlster/alster-sources.html"
           }
         ]
       }
@@ -415,27 +415,27 @@
         "links": [
           {
             "text": "HintergrundInfo",
-            "url": "/subsitesMind/mind-background.html"
+            "url": "/sites-html/subsitesMind/mind-background.html"
           },
           {
             "text": "Bonuskapitel I: Prolog der geplatzten Flucht von Henri und Ella",
-            "url": "/subsitesMind/mind-bonus-henri.html"
+            "url": "/sites-html/subsitesMind/mind-bonus-henri.html"
           },
           {
             "text": "Bonuskapitel II: Der Salon des Dr. Curtius (Madame Tussaud)",
-            "url": "/subsitesMind/mind-bonus-curtius.html"
+            "url": "/sites-html/subsitesMind/mind-bonus-curtius.html"
           },
           {
             "text": "Bonuskapitel III: Danton erklärt Niklas die Generalstände",
-            "url": "/subsitesMind/mind-bonus-danton.html"
+            "url": "/sites-html/subsitesMind/mind-bonus-danton.html"
           },
           {
             "text": "Personenverzeichnis",
-            "url": "/subsitesMind/mind-persons.html"
+            "url": "/sites-html/subsitesMind/mind-persons.html"
           },
           {
             "text": "Quellen",
-            "url": "/subsitesMind/mind-sources.html"
+            "url": "/sites-html/subsitesMind/mind-sources.html"
           }
         ]
       },
@@ -447,29 +447,29 @@
         "links": [
           {
             "text": "Background info",
-            "url": "/subsitesMind/mind-background.html"
+            "url": "/sites-html/subsitesMind/mind-background.html"
           },
           {
             "text": "Bonus Chapter I: Prologue to Henri and Ella's failed escape",
-            "url": "/subsitesMind/mind-bonus-henri.html"
+            "url": "/sites-html/subsitesMind/mind-bonus-henri.html"
           },
           null,
           {
             "text": "Bonus chapter II: Time for learning - the salon of Dr. Curtius",
-            "url": "/subsitesMind/mind-bonus-curtius.html"
+            "url": "/sites-html/subsitesMind/mind-bonus-curtius.html"
           },
           null,
           {
             "text": "Bonus Chapter III: Danton explains the Estates General to Niklas ",
-            "url": "/subsitesMind/mind-bonus-danton.html"
+            "url": "/sites-html/subsitesMind/mind-bonus-danton.html"
           },
           {
             "text": "Personage",
-            "url": "/subsitesMind/mind-persons.html"
+            "url": "/sites-html/subsitesMind/mind-persons.html"
           },
           {
             "text": "Sources",
-            "url": "/subsitesMind/mind-sources.html"
+            "url": "/sites-html/subsitesMind/mind-sources.html"
           }
         ]
       }

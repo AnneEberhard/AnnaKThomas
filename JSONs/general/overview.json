@@ -6,7 +6,7 @@
     "books": [
       {
         "bookId": "bards",
-        "internalLink": "/booksites/bards-of-thuran.html",
+        "internalLink": "/sites-html/booksites/bards-of-thuran.html",
         "translationExists": "false",
         "languages": {
           "de": "Die Sänger von Thurán Trilogie",
@@ -15,7 +15,7 @@
       },
       {
         "bookId": "children",
-        "internalLink": "/booksites/children-of-angels.html",
+        "internalLink": "/sites-html/booksites/children-of-angels.html",
         "translationExists": "false",
         "languages": {
           "de": "Die Kinder der Engel Trilogie",
@@ -24,7 +24,7 @@
       },
       {
         "bookId": "elves",
-        "internalLink": "/booksites/of-elves-and-wolves.html",
+        "internalLink": "/sites-html/booksites/of-elves-and-wolves.html",
         "translationExists": "false",
         "languages": {
           "de": "Von Elfen und Wölfen Trilogie",
@@ -40,7 +40,7 @@
     "books": [
       {
         "bookId": "odyssee",
-        "internalLink": "/booksites/odyssee.html",
+        "internalLink": "/sites-html/booksites/odyssee.html",
         "translationExists": "false",
         "languages": {
           "de": "Irrfahrt ins Gelobte Land",
@@ -49,7 +49,7 @@
       },
       {
         "bookId": "masks",
-        "internalLink": "/booksites/masks-of-florence.html",
+        "internalLink": "/sites-html/booksites/masks-of-florence.html",
         "translationExists": "true",
         "languages": {
           "de": "Die Masken von Florenz",
@@ -58,7 +58,7 @@
       },
       {
         "bookId": "alster",
-        "internalLink": "/booksites/alster-diamonds.html",
+        "internalLink": "/sites-html/booksites/alster-diamonds.html",
         "translationExists": "true",
         "languages": {
           "de": "Alsterdiamanten",
@@ -67,7 +67,7 @@
       },
       {
         "bookId": "mind",
-        "internalLink": "/booksites/mind-on-fire.html",
+        "internalLink": "/sites-html/booksites/mind-on-fire.html",
         "translationExists": "true",
         "languages": {
           "de": "Der Geist in Brand",

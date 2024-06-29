@@ -35,7 +35,7 @@
     ],
     "bookSites": [
         {
-            "path": "/booksites/odyssee.html",
+            "path": "/sites-html/booksites/odyssee.html",
             "params": [
               "historical",
               "odyssee",
@@ -43,7 +43,7 @@
             ]
           },
           {
-            "path": "/booksites/mind-on-fire.html",
+            "path": "/sites-html/booksites/mind-on-fire.html",
             "params": [
               "historical",
               "mind",
@@ -51,7 +51,7 @@
             ]
           },
           {
-            "path": "/booksites/alster-diamonds.html",
+            "path": "/sites-html/booksites/alster-diamonds.html",
             "params": [
               "historical",
               "alster",
@@ -59,7 +59,7 @@
             ]
           },
           {
-            "path": "/booksites/masks-of-florence.html",
+            "path": "/sites-html/booksites/masks-of-florence.html",
             "params": [
               "historical",
               "masks",
@@ -67,7 +67,7 @@
             ]
           },
           {
-            "path": "/booksites/children-of-angels.html",
+            "path": "/sites-html/booksites/children-of-angels.html",
             "params": [
               "fantasy",
               "children",
@@ -75,7 +75,7 @@
             ]
           },
           {
-            "path": "/booksites/of-elves-and-wolves.html",
+            "path": "/sites-html/booksites/of-elves-and-wolves.html",
             "params": [
               "fantasy",
               "elves",
@@ -83,7 +83,7 @@
             ]
           },
           {
-            "path": "/booksites/bards-of-thuran.html",
+            "path": "/sites-html/booksites/bards-of-thuran.html",
             "params": [
               "fantasy",
               "bards",
@@ -93,7 +93,7 @@
     ],
     "personSites": [
         {
-            "path": "/subsitesElves/elves-persons.html",
+            "path": "/sites-html/subsitesElves/elves-persons.html",
             "params": [
               "fantasy",
               "elves",
@@ -102,7 +102,7 @@
             ]
           },
           {
-            "path": "/subsitesAlster/alster-persons.html",
+            "path": "/sites-html/subsitesAlster/alster-persons.html",
             "params": [
               "historical",
               "alster",
@@ -111,7 +111,7 @@
             ]
           },
           {
-            "path": "/subsitesMind/mind-persons.html",
+            "path": "/sites-html/subsitesMind/mind-persons.html",
             "params": [
               "historical",
               "mind",
@@ -120,7 +120,7 @@
             ]
           },
           {
-            "path": "/subsitesOdyssee/odyssee-persons.html",
+            "path": "/sites-html/subsitesOdyssee/odyssee-persons.html",
             "params": [
               "historical",
               "odyssee",
@@ -129,7 +129,7 @@
             ]
           },
           {
-            "path": "/subsitesMasks/masks-persons.html",
+            "path": "/sites-html/subsitesMasks/masks-persons.html",
             "params": [
               "historical",
               "masks",
@@ -138,7 +138,7 @@
             ]
           },
           {
-            "path": "/subsitesBards/bards-persons.html",
+            "path": "/sites-html/subsitesBards/bards-persons.html",
             "params": [
               "fantasy",
               "bards",
@@ -147,7 +147,7 @@
             ]
           },
           {
-            "path": "/subsitesChildren/children-persons.html",
+            "path": "/sites-html/subsitesChildren/children-persons.html",
             "params": [
               "fantasy",
               "children",
@@ -158,49 +158,49 @@
     ],
     "backgroundSites": [
         {
-            "path": "/subsitesAlster/alster-background.html",
+            "path": "/sites-html/subsitesAlster/alster-background.html",
             "params": [
               "historical",
               "alster"
             ]
           },
           {
-            "path": "/subsitesBards/bards-background.html",
+            "path": "/sites-html/subsitesBards/bards-background.html",
             "params": [
               "fantasy",
               "bards"
             ]
           },
           {
-            "path": "/subsitesChildren/children-background.html",
+            "path": "/sites-html/subsitesChildren/children-background.html",
             "params": [
               "fantasy",
               "children"
             ]
           },
           {
-            "path": "/subsitesElves/elves-background.html",
+            "path": "/sites-html/subsitesElves/elves-background.html",
             "params": [
               "fantasy",
               "elves"
             ]
           },
           {
-            "path": "/subsitesMasks/masks-background.html",
+            "path": "/sites-html/subsitesMasks/masks-background.html",
             "params": [
               "historical",
               "masks"
             ]
           },
           {
-            "path": "/subsitesMind/mind-background.html",
+            "path": "/sites-html/subsitesMind/mind-background.html",
             "params": [
               "historical",
               "mind"
             ]
           },
           {
-            "path": "/subsitesOdyssee/odyssee-background.html",
+            "path": "/sites-html/subsitesOdyssee/odyssee-background.html",
             "params": [
               "historical",
               "odyssee"
@@ -209,28 +209,28 @@
     ],
     "familyTreeSites": [
         {
-            "path": "/subsitesOdyssee/odyssee-familytrees.html",
+            "path": "/sites-html/subsitesOdyssee/odyssee-familytrees.html",
             "params": [
               "historical",
               "odyssee"
             ]
           },
           {
-            "path": "/subsitesMasks/masks-familytrees.html",
+            "path": "/sites-html/subsitesMasks/masks-familytrees.html",
             "params": [
               "historical",
               "masks"
             ]
           },
           {
-            "path": "/subsitesAlster/alster-familytrees.html",
+            "path": "/sites-html/subsitesAlster/alster-familytrees.html",
             "params": [
               "historical",
               "alster"
             ]
           },
           {
-            "path": "/subsitesElves/elves-familytrees.html",
+            "path": "/sites-html/subsitesElves/elves-familytrees.html",
             "params": [
               "fantasy",
               "elves"
@@ -239,35 +239,35 @@
     ],
     "sourcesSites":[
         {
-            "path": "/subsitesMasks/masks-sources.html",
+            "path": "/sites-html/subsitesMasks/masks-sources.html",
             "params": [
               "historical",
               "masks"
             ]
           },
           {
-            "path": "/subsitesOdyssee/odyssey-sources.html",
+            "path": "/sites-html/subsitesOdyssee/odyssey-sources.html",
             "params": [
               "historical",
               "odyssee"
             ]
           },
         {
-        "path": "/subsitesAlster/alster-sources.html",
+        "path": "/sites-html/subsitesAlster/alster-sources.html",
         "params": [
           "historical",
           "alster"
         ]
       },
       {
-        "path": "/subsitesMind/mind-sources.html",
+        "path": "/sites-html/subsitesMind/mind-sources.html",
         "params": [
           "historical",
           "mind"
         ]
       },
       {
-        "path": "/subsitesChildren/children-sources.html",
+        "path": "/sites-html/subsitesChildren/children-sources.html",
         "params": [
           "fantasy",
           "children"
@@ -275,14 +275,14 @@
       }],
     "timelineSites": [
         {
-            "path": "/subsitesMasks/masks-timeline.html",
+            "path": "/sites-html/subsitesMasks/masks-timeline.html",
             "params": [
               "historical",
               "masks"
             ]
           },
           {
-            "path": "/subsitesOdyssee/odyssee-timeline.html",
+            "path": "/sites-html/subsitesOdyssee/odyssee-timeline.html",
             "params": [
               "historical",
               "odyssee"
@@ -291,7 +291,7 @@
     ],
     "bonusChapterSites": [
         {
-        "path": "/subsitesChildren/children-bonus.html",
+        "path": "/sites-html/subsitesChildren/children-bonus.html",
         "params": [
           "fantasy",
           "children",
@@ -299,7 +299,7 @@
         ]
       },
       {
-        "path": "/subsitesElves/elves-bonus-diana.html",
+        "path": "/sites-html/subsitesElves/elves-bonus-diana.html",
         "params": [
           "fantasy",
           "elves",
@@ -307,7 +307,7 @@
         ]
       },
       {
-        "path": "/subsitesElves/elves-bonus-noel.html",
+        "path": "/sites-html/subsitesElves/elves-bonus-noel.html",
         "params": [
           "fantasy",
           "elves",
@@ -315,7 +315,7 @@
         ]
       },
       {
-        "path": "/subsitesMind/mind-bonus-curtius.html",
+        "path": "/sites-html/subsitesMind/mind-bonus-curtius.html",
         "params": [
           "historical",
           "mind",
@@ -323,7 +323,7 @@
         ]
       },
       {
-        "path": "/subsitesMind/mind-bonus-danton.html",
+        "path": "/sites-html/subsitesMind/mind-bonus-danton.html",
         "params": [
           "historical",
           "mind",
@@ -331,7 +331,7 @@
         ]
       },
       {
-        "path": "/subsitesMind/mind-bonus-henri.html",
+        "path": "/sites-html/subsitesMind/mind-bonus-henri.html",
         "params": [
           "historical",
           "mind",
@@ -339,7 +339,7 @@
         ]
       },
       {
-        "path": "/subsitesOdyssee/odyssee-bonus.html",
+        "path": "/sites-html/subsitesOdyssee/odyssee-bonus.html",
         "params": [
           "historical",
           "odyssee",
@@ -347,7 +347,7 @@
         ]
       },
       {
-        "path": "/subsitesMasks/masks-bonus.html",
+        "path": "/sites-html/subsitesMasks/masks-bonus.html",
         "params": [
           "historical",
           "masks",

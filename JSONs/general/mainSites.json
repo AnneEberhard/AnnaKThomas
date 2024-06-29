@@ -45,7 +45,7 @@
             "links": [
               {
                 "text": "",
-                "url": "/booksites/"
+                "url": "/sites-html/booksites/"
               }
             ]
           }
@@ -74,7 +74,7 @@
             "links": [
               {
                 "text": "Die Sänger von Thurán",
-                "url": "/booksites/bards-of-thuran.html"
+                "url": "/sites-html/booksites/bards-of-thuran.html"
               }
             ]
           },
@@ -87,11 +87,11 @@
             "links": [
               {
                 "text": "Die Kinder der Engel",
-                "url": "/booksites/children-of-angels.html"
+                "url": "/sites-html/booksites/children-of-angels.html"
               },
               {
                 "text": "Von Elfen und Wölfen",
-                "url": "/booksites/of-elves-and-wolves.html"
+                "url": "/sites-html/booksites/of-elves-and-wolves.html"
               }
             ]
           }
@@ -114,7 +114,7 @@
             "links": [
               {
                 "text": "The Bards of Thurán",
-                "url": "/booksites/bards-of-thuran.html"
+                "url": "/sites-html/booksites/bards-of-thuran.html"
               }
             ]
           },
@@ -127,11 +127,11 @@
             "links": [
               {
                 "text": "Children Of Angels",
-                "url": "/booksites/children-of-angels.html"
+                "url": "/sites-html/booksites/children-of-angels.html"
               },
               {
                 "text": "Of Elves and Wolves",
-                "url": "/booksites/of-elves-and-wolves.html"
+                "url": "/sites-html/booksites/of-elves-and-wolves.html"
               }
             ]
           }
@@ -160,19 +160,19 @@
             "links": [
               {
                 "text": "Irrfahrt ins Gelobte Land",
-                "url": "/booksites/odyssee.html"
+                "url": "/sites-html/booksites/odyssee.html"
               },
               {
                 "text": "Die Masken von Florenz",
-                "url": "/booksites/masks-of-florence.html"
+                "url": "/sites-html/booksites/masks-of-florence.html"
               },
               {
                 "text": "Alsterdiamanten",
-                "url": "/booksites/alster-diamonds.html"
+                "url": "/sites-html/booksites/alster-diamonds.html"
               },
               {
                 "text": "Der Geist in Brand",
-                "url": "/booksites/mind-on-fire.html"
+                "url": "/sites-html/booksites/mind-on-fire.html"
               }
             ]
           }
@@ -195,19 +195,19 @@
             "links": [
               {
                 "text": "Irrfahrt ins Gelobte Land",
-                "url": "/booksites/odyssee.html"
+                "url": "/sites-html/booksites/odyssee.html"
               },
               {
                 "text": "The Masks of Florence",
-                "url": "/booksites/masks-of-florence.html"
+                "url": "/sites-html/booksites/masks-of-florence.html"
               },
               {
                 "text": "Alster Diamonds",
-                "url": "/booksites/alster-diamonds.html"
+                "url": "/sites-html/booksites/alster-diamonds.html"
               },
               {
                 "text": "Der Geist in Brand",
-                "url": "/booksites/mind-on-fire.html"
+                "url": "/sites-html/booksites/mind-on-fire.html"
               }
             ]
           }

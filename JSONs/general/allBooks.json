@@ -4,7 +4,7 @@
     "books": [
       {
         "bookId": "masks",
-        "internalLink": "/booksites/masks-of-florence.html",
+        "internalLink": "/sites-html/booksites/masks-of-florence.html",
         "seriesId": "",
         "translationExists": "true",
         "languages": {
@@ -33,7 +33,7 @@
       },
       {
         "bookId": "alster",
-        "internalLink": "/booksites/alster-diamonds.html",
+        "internalLink": "/sites-html/booksites/alster-diamonds.html",
         "seriesId": "",
         "translationExists": "true",
         "languages": {
@@ -62,7 +62,7 @@
       },
       {
         "bookId": "odyssee",
-        "internalLink": "/booksites/odyssee.html",
+        "internalLink": "/sites-html/booksites/odyssee.html",
         "seriesId": "",
         "translationExists": "true",
         "languages": {
@@ -90,7 +90,7 @@
       },
       {
         "bookId": "mind",
-        "internalLink": "/booksites/mind-on-fire.html",
+        "internalLink": "/sites-html/booksites/mind-on-fire.html",
         "seriesId": "",
         "translationExists": "progress",
         "languages": {
@@ -125,7 +125,7 @@
     "books": [
       {
         "bookId": "elvenWay",
-        "internalLink": "/booksites/bards-of-thuran.html",
+        "internalLink": "/sites-html/booksites/bards-of-thuran.html",
         "seriesId": "bards",
         "translationExists": "planned",
         "languages": {
@@ -153,7 +153,7 @@
       },
       {
         "bookId": "swampMagic",
-        "internalLink": "/booksites/bards-of-thuran.html",
+        "internalLink": "/sites-html/booksites/bards-of-thuran.html",
         "seriesId": "bards",
         "translationExists": "planned",
         "languages": {
@@ -181,7 +181,7 @@
       },
       {
         "bookId": "worldStruggle",
-        "internalLink": "/booksites/bards-of-thuran.html",
+        "internalLink": "/sites-html/booksites/bards-of-thuran.html",
         "seriesId": "bards",
         "translationExists": "planned",
         "languages": {
@@ -209,7 +209,7 @@
       },
       {
         "bookId": "demonRide",
-        "internalLink": "/booksites/children-of-angels.html",
+        "internalLink": "/sites-html/booksites/children-of-angels.html",
         "seriesId": "children",
         "translationExists": "true",
         "languages": {
@@ -241,7 +241,7 @@
       },
       {
         "bookId": "demonLeap",
-        "internalLink": "/booksites/children-of-angels.html",
+        "internalLink": "/sites-html/booksites/children-of-angels.html",
         "seriesId": "children",
         "translationExists": "true",
         "languages": {
@@ -273,7 +273,7 @@
       },
       {
         "bookId": "demonDream",
-        "internalLink": "/booksites/children-of-angels.html",
+        "internalLink": "/sites-html/booksites/children-of-angels.html",
         "seriesId": "children",
         "translationExists": "true",
         "languages": {
@@ -306,7 +306,7 @@
       {
         "bookId": "Lucie",
         "seriesId": "elves",
-        "internalLink": "/booksites/of-elves-and-wolves.html",
+        "internalLink": "/sites-html/booksites/of-elves-and-wolves.html",
         "translationExists": "true",
         "languages": {
           "de": {
@@ -370,7 +370,7 @@
       },
       {
         "bookId": "Bina",
-        "internalLink": "/booksites/of-elves-and-wolves.html",
+        "internalLink": "/sites-html/booksites/of-elves-and-wolves.html",
         "seriesId": "elves",
         "translationExists": "true",
         "languages": {
@@ -423,7 +423,7 @@
       },
       {
         "bookId": "Lena",
-        "internalLink": "/booksites/of-elves-and-wolves.html",
+        "internalLink": "/sites-html/booksites/of-elves-and-wolves.html",
         "seriesId": "elves",
         "translationExists": "true",
         "languages": {

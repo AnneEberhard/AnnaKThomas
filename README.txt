@@ -36,7 +36,8 @@ For Bonus Chapter text:
     check for  „, and convert into  ",
     Add some line breaks in editor as it is easier as in VS Code and lines too long  lead to errors
  
- 
+ A template of a new site is in folder templates
+
  JSDOC notation
  /**
  * 

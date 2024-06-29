@@ -8,7 +8,6 @@
 */
 async function findDataById(reference, id) {
   data = await fetchJSON(`/JSONs/${reference}/${reference}-${id}.json`);
-  console.log(data);
   return data;
 }
 
