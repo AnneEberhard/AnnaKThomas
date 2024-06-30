@@ -1,9 +1,8 @@
 header {
   background-color: rgba(0,151,178, 0.1);
-  height: 300px;
   width: 100vw;
   box-sizing: border-box;
-  padding: 16px 16px 16px 16px;
+  padding: 60px 16px 32px 16px;
   display: flex;
   color: rgba(0,151,178, 1);
   align-items: center;
@@ -46,6 +45,7 @@ nav {
   color: lightcyan;
   text-shadow: 2px 2px 4px rgba(0,151,178, 0.8);
 }
+
 
 #languageSelection {
   display: flex;
@@ -141,13 +141,16 @@ footer {
 #burgerMenu {
   display: flex !important;
   justify-content: center;
-  cursor: pointer;
   margin-top: 20px;
 }
 
-.burgerMenuImage:hover {
-  box-shadow: 0px 0px 36px rgba(255, 255, 255, 1);
+
+#burgerMenuSVG:hover {
+  cursor: pointer;
+  background-color: rgba(0,151,178, 0.3);
+  box-shadow: 0px 0px 36px rgba(0,151,178, 0.8);
 }
+ 
 }
 
 @media (max-width:600px) {
@@ -162,7 +165,6 @@ footer {
 
 @media (max-width: 350px) {
   header {
-    height: 280px;
     padding: 60px 16px 16px 16px;
   }
 }

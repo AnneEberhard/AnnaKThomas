@@ -235,11 +235,11 @@ tr:last-child {
 }
 
 .arrowUp:hover path {
-  fill: rgb(19, 79, 92);
+  fill: #0097b2;
 }
 
 .arrowUp:hover rect {
-  stroke: rgb(19, 79, 92);
+  stroke: #0097b2;
 }
 
 path,
