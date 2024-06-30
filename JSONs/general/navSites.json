@@ -101,7 +101,7 @@
               },
               {
                 "text": "Zurück zu Alsterdiamanten",
-                "url": "/booksites/alster-diamonds.html"
+                "url": "/sites-html/booksites/alster-diamonds.html"
               }
             ]
           },
@@ -124,7 +124,7 @@
         }
       },
       {
-        "siteId": "odyssee",
+        "siteId": "odyssey",
         "languages": {
           "de": {
             "links": [
@@ -138,7 +138,7 @@
               },
               {
                 "text": "Zurück zu Irrfahrt ins Gelobte Land",
-                "url": "/booksites/odyssee.html"
+                "url": "/sites-html/booksites/odyssey.html"
               }
             ]
           },
@@ -153,8 +153,8 @@
                 "url": "/historical.html"
               },
               {
-                "text": "Back to Odyssee to the Promised Land",
-                "url": "/sites-html/booksites/odyssee.html"
+                "text": "Back to Odyssey to the Promised Land",
+                "url": "/sites-html/booksites/odyssey.html"
               }
             ]
           }

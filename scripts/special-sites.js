@@ -19,14 +19,14 @@ function renderHomeOverview() {
 }
 
 /**
-* generates template for homepage overview based on default language
+* generates template for homepage overview based on set language
 * fills column headers (such as "Fantasy")
 * uses global variable overview that is loaded on init
 */
 function templateOverview() {
   let columns = "";
   for (let i = 0; i < overview.length; i++) {
-    if (defaultLanguage == "de") {
+    if (setLanguage == "de") {
       columnHeader = overview[i].de;
     } else {
       columnHeader = overview[i].en;
@@ -40,14 +40,14 @@ function templateOverview() {
 
 /**
 * fills overview template columns with the respective books 
-* based on default language and global variable overview
+* based on set language and global variable overview
 */
 function fillOverviewColumns() {
   for (let i = 0; i < overview.length; i++) {
     targetdiv = document.getElementById(`homeBottomColumn${i}`);
     booksArray = overview[i].books;
     for (let j = 0; j < booksArray.length; j++) {
-      if (defaultLanguage == "de") {
+      if (setLanguage == "de") {
         bookName = booksArray[j].languages.de;
       } else {
         bookName = booksArray[j].languages.en;
@@ -72,7 +72,7 @@ function renderAboutMe(id) {
   let aboutMeText = document.getElementById("aboutMeText");
   headline.innerHTML = "";
   aboutMeText.innerHTML = "";
-  if (defaultLanguage == "de") {
+  if (setLanguage == "de") {
     headline.innerHTML = templateAboutMeHeadGerman();
     aboutMeText.innerHTML = templateAboutMeTextGerman();
   } else {
@@ -203,7 +203,7 @@ function renderPersonageTop(siteId) {
   topDiv.innerHTML = '';
   let siteIndex = personSitesHeader.findIndex(site => site.siteId === siteId);
   if (siteIndex !== -1) {
-    let site = personSitesHeader[siteIndex].languages[defaultLanguage];
+    let site = personSitesHeader[siteIndex].languages[setLanguage];
     topDiv.innerHTML += `<h2>${site.header}</h2>`;
     for (let subHeader of site.subHeaders) {
       topDiv.innerHTML += `<h3><a href="#${subHeader.subHeaderLink}">${subHeader.subHeaderText}</a></h3>`;
@@ -250,18 +250,18 @@ return templateHTML;
 */
 function generatePersonTableTemplate(siteId, personGroup) {
   let subHeaderId = siteId + personGroup.groupId; // unique ID for each header even if naming in JSON is similar
-  let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[defaultLanguage]}</h3>`;
+  let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[setLanguage]}</h3>`;
   templateHTML += `
     <table class="contentTable">
       <tr>
         <th class="personageName">Name</th>
-        <th>${defaultLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
+        <th>${setLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
       </tr>`;
   for (let member of personGroup.members) {
     templateHTML += `
       <tr>
         <td class="personageName">${member.name}</td>
-        <td>${member[defaultLanguage]}</td>
+        <td>${member[setLanguage]}</td>
       </tr>`;
   }
   templateHTML += `</table>`;
@@ -368,8 +368,8 @@ async function generateFamilyTreeContent(bookId) {
 function renderSourcesSite(genre, bookId) {
   currentSiteId = bookId + 'Sources';
   currentGenre = genre;
-  const booksWithGlossaries = ['odyssee', 'masks'];
-  const booksWithSources = ['odyssee', 'masks', 'alster', 'mind'];
+  const booksWithGlossaries = ['odyssey', 'masks'];
+  const booksWithSources = ['odyssey', 'masks', 'alster', 'mind'];
   const booksWithSpecialSource = ['children'];
 if (booksWithGlossaries.includes(bookId)) {
   renderGlossary(bookId);
@@ -415,7 +415,7 @@ function generateGlossaryTemplate(glossary) {
 function generateGlossaryHeader() {
   let templateHTML = '';
   let headline;
-  if (defaultLanguage == 'de') {
+  if (setLanguage == 'de') {
     headline = 'Begriffsverzeichnis';
   } else {
     headline = 'Glossary';
@@ -435,13 +435,13 @@ function generateGlossaryTable(glossary) {
     <table class="contentTable">
       <tr>
         <th class="personageName">Name</th>
-        <th>${defaultLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
+        <th>${setLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
       </tr>`;
   for (let term of glossary) {
     templateHTML += `
       <tr>
         <td class="personageName">${term.name}</td> 
-        <td>${term[defaultLanguage]}</td>
+        <td>${term[setLanguage]}</td>
       </tr>`;
   }
   templateHTML += `</table>`;
@@ -480,7 +480,7 @@ function generateSourcesTemplate (sourceData) {
 function generateSourcesHeader() {
   let templateHTML = '';
   let headline;
-  if (defaultLanguage == 'de') {
+  if (setLanguage == 'de') {
     headline = 'Quellen';
   } else {
     headline = 'Sources';
@@ -510,7 +510,7 @@ function generateSourcesText(sourceData) {
 */
 async function renderSpecialSources(bookId) {
  const sourceData = await findDataById('sources', bookId);
- const languageSourceData = sourceData[defaultLanguage];
+ const languageSourceData = sourceData[setLanguage];
  const targetElement = document.getElementById(`${bookId}Sources`);
  targetElement.innerHTML = generateSpecialSourcesContent(languageSourceData);
 }
@@ -577,9 +577,9 @@ async function generateTimelineHeader(bookId) {
   let timelineHeaders = await findDataById('timeline', 'headers');
   let matchingHeader = timelineHeaders.find(header => header.bookId === bookId);
   if (matchingHeader) {
-    headline = matchingHeader[defaultLanguage] || ''; 
+    headline = matchingHeader[setLanguage] || ''; 
   } else {
-    headline = defaultLanguage === 'de' ? 'Zeittafel' : 'Timeline';
+    headline = setLanguage === 'de' ? 'Zeittafel' : 'Timeline';
   }
   templateHTML = /*html*/`
     <h2>${headline}</h2>`;
@@ -619,9 +619,9 @@ function generateTimelineTable(timelineData) {
 function generateTableHeader() {
   return `
     <tr>
-      <th class="timelineYear">${defaultLanguage === 'de' ? 'Jahr' : 'Year'}</th>
-      <th class="timelineDate">${defaultLanguage === 'de' ? 'Datum' : 'Date'}</th>
-      <th class="timelineEvent">${defaultLanguage === 'de' ? 'Ereignis' : 'Event'}</th>
+      <th class="timelineYear">${setLanguage === 'de' ? 'Jahr' : 'Year'}</th>
+      <th class="timelineDate">${setLanguage === 'de' ? 'Datum' : 'Date'}</th>
+      <th class="timelineEvent">${setLanguage === 'de' ? 'Ereignis' : 'Event'}</th>
     </tr>`;
 }
 
@@ -658,7 +658,7 @@ function generateTableRowSingle(previousYear, timelineData, event) {
   <tr>
     <td class="timelineYear">${previousYear === timelineData.year ? '' : timelineData.year}</td>
     <td class="timelineDate">${event.date}</td>
-    <td class="timelineEvent">${event[defaultLanguage]}</td>
+    <td class="timelineEvent">${event[setLanguage]}</td>
   </tr>`;
   return templateHTML
 }
@@ -691,7 +691,7 @@ async function renderBonus(genre, bookId, bonusId) {
 * @param {json} bonusData - respective json
 */
 function renderBonusContent(targetDiv, bonusData) {
-    const languageData = bonusData[defaultLanguage];
+    const languageData = bonusData[setLanguage];
     const targetElement = document.getElementById(targetDiv);
     targetElement.innerHTML = `<h2>${languageData.header}</h2>`;
     targetElement.innerHTML += `<h3>${languageData.subheader}</h3>`;

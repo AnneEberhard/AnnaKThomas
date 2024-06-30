@@ -7,7 +7,7 @@ function renderImprint() {
   currentSiteId = 'imprint';
   currentGenre = 'support';
   const targetElement = document.getElementById("imprint");
-  if (defaultLanguage== 'de') {
+  if (setLanguage== 'de') {
     targetElement.innerHTML = generateImprintGerman();
   } else {
     targetElement.innerHTML = generateImprintEnglish();
@@ -21,7 +21,7 @@ function renderprivacyPolicy() {
   currentSiteId = 'privacyPolice';
   currentGenre = 'support';
   const targetElement = document.getElementById("privacyPolicy");
-  if (defaultLanguage== 'de') {
+  if (setLanguage== 'de') {
     targetElement.innerHTML = generatePrivacyPolicyGerman();
   } else {
     targetElement.innerHTML = generatePrivacyPolicyEnglish();

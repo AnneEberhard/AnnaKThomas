@@ -206,7 +206,7 @@
     }
   },
   {
-    "siteId": "odyssee",
+    "siteId": "odyssey",
     "translationExists": "true",
     "languages": {
       "de": {
@@ -217,63 +217,59 @@
         "links": [
           {
             "text": "HintergrundInfo",
-            "url": "/sites-html/subsitesOdyssee/odyssee-background.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-background.html"
           },
           {
             "text": "Bonuskapitel",
-            "url": "/sites-html/subsitesOdyssee/odyssee-bonus.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-bonus.html"
           },
           {
             "text": "Personenverzeichnis",
-            "url": "/sites-html/subsitesOdyssee/odyssee-persons.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-persons.html"
           },
           {
             "text": "Zeittafel",
-            "url": "/sites-html/subsitesOdyssee/odyssee-timeline.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-timeline.html"
           },
           {
             "text": "Stammbäume der Staufer und Welfen",
-            "url": "/sites-html/subsitesOdyssee/odyssee-familytrees.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-familytrees.html"
           },
           {
             "text": "Begriffe und Quellen",
-            "url": "/sites-html/subsitesOdyssee/odyssey-sources.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-sources.html"
           }
         ]
       },
       "en": {
-        "title": "Odyssee to the Promised Land - Historical novel at the time of the Crusades",
+        "title": "Odyssey to the Promised Land - Historical novel at the time of the Crusades",
         "paragraphs": [
           "My second historical novel."
         ],
         "links": [
           {
             "text": "Background info",
-            "url": "/sites-html/subsitesOdyssee/odyssee-background.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-background.html"
           },
           {
             "text": "Bonus chapter",
-            "url": "/sites-html/subsitesOdyssee/odyssee-bonus.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-bonus.html"
           },
           {
             "text": "Personage",
-            "url": "/sites-html/subsitesOdyssee/odyssee-persons.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-persons.html"
           },
           {
             "text": "Timeline",
-            "url": "/sites-html/subsitesOdyssee/odyssee-timeline.html"
-          },
-          {
-            "text": "Conflict between Staufer and Welfen",
-            "url": "/sites-html/subsitesOdyssee/odyssee.conflict.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-timeline.html"
           },
           {
             "text": "Family trees of Staufer and Welfen",
-            "url": "/sites-html/subsitesOdyssee/odyssee-familytrees.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-familytrees.html"
           },
           {
             "text": "Glossary and Sources",
-            "url": "/sites-html/subsitesOdyssee/odyssey-sources.html"
+            "url": "/sites-html/subsitesOdyssey/odyssey-sources.html"
           }
         ]
       }

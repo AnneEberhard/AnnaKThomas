@@ -7,22 +7,22 @@
       {
         "name": "Henri Berlingen",
         "de": "Baron von Satten, Niklas Ziehvater, Nicolettes Vater",
-        "en": "Baron von Satten, Niklas' foster father, Nicolette's father"
+        "en": "Baron von Satten, Niklas' foster father, Nicolette's natural father"
       },
       {
         "name": "Graf Freilheim",
         "de": "Reichsunmittelbarer Graf. Freund und Herr des Baron von Sattens",
-        "en": "Count with imperial immediacy. Friend and Lord of the Baron von Sattens"
+        "en": "Imperial immediate count, friend and superior of Baron von Satten"
       },
       {
         "name": "Nikolaus von Altenmark",
         "de": "gen. Niklas, Nicolas, Nico, Nicholas, Nicky, Nikolai, Kolja, Nicola. Junker von Altenmark, adoptierter Baron von Satten",
-        "en": "gen. Niklas, Nicolas, Nico, Nicholas, Nicky, Nikolai, Kolja, Nicola. Junker von Altenmark, adopted Baron von Satten"
+        "en": "called Niklas, Nicolas, Nico, Nicholas, Nicky, Nikolai, Kolja, Nicola. Junker von Altenmark, adopted Baron von Satten"
       },
       {
         "name": "Heinrich von Altenmark",
         "de": "Ritter, Niklas' leiblicher Vater",
-        "en": "Knight, Niklas' biological father"
+        "en": "Knight, Niklas' natural father"
       },
       {
         "name": "Andreas von Altenmark",
@@ -42,17 +42,17 @@
       {
         "name": "Greta-Lina von Suttburg",
         "de": "Niklas' Freundin",
-        "en": "Niklas' girlfriend"
+        "en": "Niklas' childhood friend"
       },
       {
         "name": "Ludorff",
         "de": "Leibdiener des Barons",
-        "en": "Body servant of the baron"
+        "en": "Baron von Satten's body servant"
       },
       {
         "name": "Mamsell Gehrau",
         "de": "Köchin des Barons",
-        "en": "Cook of the Baron"
+        "en": "Baron von Satten's cook"
       },
       {
         "name": "Rieke",
@@ -67,7 +67,7 @@
       {
         "name": "Elise",
         "de": "Dienstmädchen, verschwindet in der Revolution",
-        "en": "Maid, disappears during the revolution"
+        "en": "Maid, disappears in the revolution"
       },
       {
         "name": "Pierre Vagot",
@@ -146,23 +146,23 @@
       },
       {
         "name": "Kyra",
-        "de": "Tochter des Verwalters",
-        "en": "Daughter of the manager"
+        "de": "Tochter des Verwalters in Sankt Petersburg",
+        "en": "Daughter of the manager in Saint Petersburg"
       },
       {
-        "name": "Dimitri (Mitja) Stepanowitsch Golitzyn",
-        "de": "Niklas' Freund",
-        "en": "Niklas' friend"
+        "name": "Dimitri Stepanowitsch Golitzyn",
+        "de": "gen. Mitja, Niklas' Freund",
+        "en": "called Mitya, Niklas' friend"
       },
       {
-        "name": "Pawel (Paschka) Stepanowitsch Golitzyn",
-        "de": "Mitjas älterer Bruder",
-        "en": "Mitja's older brother"
+        "name": "Pawel Stepanowitsch Golitzyn",
+        "de": "gen. Paschka, Mitjas älterer Bruder",
+        "en": "gen. Pashka, Mitja's older brother"
       },
       {
         "name": "Mikhail Petrowitsch Golitzyn",
         "de": "Mitjas und Pawels entfernter älterer Cousin",
-        "en": "Mitja and Pavel's distant older cousin"
+        "en": "Mitya and Pavel's distant older cousin"
       },
       {
         "name": "Andrej Petrowitsch Golitzyn",
@@ -177,7 +177,7 @@
       {
         "name": "Lukasz",
         "de": "Polnischer Reitbursche von Niklas",
-        "en": "Polish groom of Niklas"
+        "en": "Polish riding boy of Niklas"
       },
       {
         "name": "Sophia (Sofie) Dell'Arga",
@@ -204,7 +204,7 @@
       {
         "name": "Jean-Jacques Rousseau †",
         "de": "Genfer Schriftsteller, Philosoph, Pädagoge, Naturforscher und Komponist",
-        "en": "Geneva writer, philosopher, educator, naturalist and composer"
+        "en": "Genevan writer, philosopher, educator, naturalist and composer"
       },
       {
         "name": "Denis Diderot †",
@@ -217,14 +217,14 @@
         "en": "King of Prussia, popularly known as the fat Lüderjahn"
       },
       {
-        "name": "Wilhelmine Enke (auch Encke)",
+        "name": "Wilhelmine Enke (Encke)",
         "de": "Gräfin von Lichtenau, ehemalige Mätresse Friedrich Wilhelms II. von Preußens",
-        "en": "Countess of Lichtenau, former mistress of Frederick William II of Prussia"
+        "en": "Gräfin von Lichtenau, former mistress of Frederick William II of Prussia"
       },
       {
         "name": "Friedrich Wilhelm Moritz Alexander von der Mark ('Anderchen')",
         "de": "illegitimer Sohn König Friedrich Wilhelms II. von Preußen und seiner Geliebten, der Gräfin Wilhelmine von Lichtenau",
-        "en": "illegitimate son of King Frederick William II of Prussia and his mistress, Countess Wilhelmine von Lichtenau"
+        "en": "illegitimate son of King Frederick William II of Prussia and his mistress, Gräfin Wilhelmine von Lichtenau"
       },
       {
         "name": "François Alexandre Frédéric de La Rochefoucauld",
@@ -239,7 +239,7 @@
       {
         "name": "Anne Louise Germaine de Staël-Holstein, Baronesse de Staël",
         "de": "französische Schriftstellerin, Tochter Neckers. Von ihr stammt die Bezeichnung Deutschlands als „Land der Dichter und Denker“.",
-        "en": "French writer, daughter of Necker. She gave Germany the nickname 'land of poets and thinkers'."
+        "en": "French writer, daughter of Necker. She is the origin of Germany's des-ignation as the 'land of poets and thinkers'."
       },
       {
         "name": "Elisabeth Françoise Sophie de Lalive de Bellegarde, Comtesse d'Houdetot",
@@ -248,8 +248,8 @@
       },
       {
         "name": "Jacques Necker",
-        "de": "Schweizer Bankier und Finanzminister unter Ludwig XVI., Vater von Madame de Stael Baronin Anne Louise Germaine de Staël-Holstein",
-        "en": "Swiss banker and finance minister under Louis XVI, father of Madame de Stael Baroness Anne Louise Germaine de Staël-Holstein"
+        "de": "Schweizer Bankier und Finanzminister unter Ludwig XVI., Vater von Baronin Anne Louise Germaine de Staël-Holstein",
+        "en": "Swiss banker and finance minister under Louis XVI, father of Baroness Anne Louise Germaine de Staël-Holstein"
       },
       {
         "name": "Marie-Jeanne (Rose) Bertin",
@@ -264,7 +264,7 @@
       {
         "name": "Marie Louise Élisabeth Vigée-Lebrun",
         "de": "französische Malerin, die zahlreiche Porträts europäischer Adliger anfertigte. Ihre Werke sind dem Klassizismus zuzuordnen.",
-        "en": "French painter who painted numerous portraits of European aristocrats. Her works can be classified as classicist."
+        "en": "French painter who painted numerous portraits of European aristocrats. Her works can be attributed to classicism."
       },
       {
         "name": "Marie Thérèse Louise de Bourbon, Princesse de Savoyen-Carignan (Princesse de Lamballe)",
@@ -379,7 +379,7 @@
       {
         "name": "Hans Axel",
         "de": "Graf von Fersen, schwedischer Staatsmann und ein Favorit der französischen Königin Marie Antoinette. In Schweden wird er als „Axel von Fersen der Jüngere“ bezeichnet, um ihn von seinem gleichnamigen Vater (Axel von Fersen d. Ä.) zu unterscheiden.",
-        "en": "Count of Fersen, Swedish statesman and a favorite of the French queen Marie Antoinette. In Sweden, he is referred to as 'Axel the Younger' to distinguish him from his father of the same name (Axel the Elder)."
+        "en": "Count Fersen, Swedish statesman and a favorite of the French queen Marie Antoinette. In Sweden, he is referred to as 'Axel the Younger' to distinguish him from his father of the same name (Axel the Elder)."
       },
       {
         "name": "Charles X Philippe, Conte d‘Artois",
@@ -390,11 +390,6 @@
         "name": "Olympe de Gouges",
         "de": "eigentlich Marie Gouze, Revolutionärin, Frauenrechtlerin, Schriftstellerin und Autorin von Theaterstücken. Sie ist die Verfasserin der Erklärung der Rechte der Frau und Bürgerin von 1791",
         "en": "actually Marie Gouze, Revolutionary, women's rights activist, writer and author of plays. She is the author of the Declaration of the Rights of Women and Citizens of 1791"
-      },
-      {
-        "name": "Théroigne de Méricourt",
-        "de": "Geburtsname Anne-Josèphe Théroigne, wird auch „Amazone der Französischen Revolution“ genannt, weil sie für die Bewaffnung der Frauen eintrat",
-        "en": "birth name Anne-Josèphe Théroigne, is also known as the 'Amazon of the French Revolution' because she advocated the arming of women"
       },
       {
         "name": "Élisabeth Philippine Marie Hélène de Bourbon",
@@ -418,7 +413,7 @@
       },
       {
         "name": "Napoléon I Bonaparte, geb. Buonaparte",
-        "de": "französischer General, Erster Konsul, später Kaise",
+        "de": "französischer General, Erster Konsul, später Kaiser",
         "en": "French General, First Consul, later Emperor"
       },
       {
@@ -439,7 +434,7 @@
       {
         "name": "George Bryan Brummell",
         "de": "später genannt Beau, tonangebend in der Herrenmode im britischen Regency-Zeitalter und ein Freund des Prinzregenten, des späteren Königs Georg IV",
-        "en": "lster called Beau, a leading figure in men's fashion in the British Regency period and a friend of the Prince Regent, later King George IV"
+        "en": "later called Beau, a leading figure in men's fashion in the British Regency period and a friend of the Prince Regent, later King George IV"
       },
       {
         "name": "William Brummell",
@@ -457,9 +452,9 @@
         "en": "British nobleman and politician. He is considered Queen Victoria's mentor"
       },
       {
-        "name": "George III. Wilhelm Frederick",
-        "de": "von 1760 bis 1801 König von Großbritannien und Irland, danach bis zu seinem Tod König des Vereinigten Königreichs von Großbritannien und Irland",
-        "en": "King of Great Britain and Ireland from 1760 to 1801, then King of the United Kingdom of Great Britain and Ireland until his death"
+        "name": "Frederick North, Earl of Guilford",
+        "de": "ab 1752 bekannt unter dem Höflichkeitstitel Lord North, Premierminister von Großbritannien und einer der Hauptakteure der amerikanischen Unabhängigkeitsbewegung",
+        "en": "From 1752 known by the courtesy title Lord North, Prime Minister of Great Britain and one of the main protagonists of the American independence movement"
       },
       {
         "name": "Charles James Fox",
@@ -472,15 +467,26 @@
         "en": "British politician of the late eighteenth and early nineteenth centuries. He became the youngest Prime Minister in 1783 at the age of 24. He left office in 1801, but was Prime Minister again from 1804 until his death"
       },
       {
+        "name": "Sophie Charlotte, Herzogin zu Mecklenburg, Queen of England",
+        "de": "Deutsche Prinzessin, wurde durch Heirat mit König Georg III. als Königin Charlotte Königin von Großbritannien und Irland (ab 1801 des Vereinigten Königreichs von Großbritannien und Irland) und Kurfürstin von Braunschweig-Lüneburg und später Königin von Hannover.",
+        "en": "German princess, by marriage to King George III as Queen Charlotte became Queen of Great Britain and of Ireland (from 1801 of the United Kingdom of Great Britain and Ireland) and Electress of Brunswick-Lüneburg and later Queen of Hanover"
+      },
+      {
+        "name": "Augusta Sophia",
+        "de": "Britisch-hannoversche Prinzessin, sechstes Kind von König Georg III. und Königin Charlotte.",
+        "en": "British-Hanoverian princess, sixth child of King George III and Queen Charlotte."
+      },
+      {
         "name": "Georg IV. August Friedrich, Prince of Wales",
         "de": "von 1820 bis 1830 König des Vereinigten Königreichs von Großbritannien und Irland und König von Hannover",
         "en": "King of the United Kingdom of Great Britain and Ireland and King of Hanover from 1820 to 1830"
       },
       {
-        "name": "Julia Storer / Johnstone",
-        "de": "Jugendfreundin von Beau Brummell, zunächst mit dem Hof verbunden, wurde aber zur Kurtisane",
-        "en": "Childhood friend of Beau Brummell, initially associated with the court, but became a courtesan"
+        "name": "George III. Wilhelm Frederick",
+        "de": "von 1760 bis 1801 König von Großbritannien und Irland, danach bis zu seinem Tod König des Vereinigten Königreichs von Großbritannien und Irland",
+        "en": "King of Great Britain and Ireland from 1760 to 1801, then King of the United Kingdom of Great Britain and Ireland until his death"
       },
+  
       {
         "name": "Georgiana Dorothy Cavendish, Duchess of Devonshire",
         "de": "britische Adlige, zählte zu den einflussreichsten Frauen ihrer Zeit",
@@ -490,6 +496,11 @@
         "name": "Elizabeth Hervey, Lady Foster",
         "de": "war eine britische Adlige, Freundin der Duchess of Devonshire, langjährige Geliebte und nach deren Tod Ehefrau deren Ehemannes",
         "en": "was a British noblewoman, friend of the Duchess of Devonshire, longtime mistress and after her death wife of her husband"
+      },
+      {
+        "name": "Julia Storer / Johnstone",
+        "de": "Jugendfreundin von Beau Brummell, zunächst mit dem Hof verbunden, wurde aber zur Kurtisane",
+        "en": "Childhood friend of Beau Brummell, initially associated with the court, but became a courtesan"
       },
       {
         "name": "Captain Josiah Cottin",
@@ -510,11 +521,6 @@
         "name": "Mary, Lady Coke",
         "de": "Englische Adlige und eifrige Briefeschreiberin",
         "en": "English noblewoman and avid letter writer"
-      },
-      {
-        "name": "Frederick North, Earl of Guilford",
-        "de": "ab 1752 bekannt unter dem Höflichkeitstitel Lord North, Premierminister von Großbritannien und einer der Hauptakteure der amerikanischen Unabhängigkeitsbewegung",
-        "en": "From 1752 known by the courtesy title Lord North, Prime Minister of Great Britain and one of the main protagonists of the American independence movement"
       },
       {
         "name": "Henry Herbert, Earl of Pembroke, Earl of Montgomery",
@@ -574,10 +580,10 @@
       {
         "name": "Friederike Luise Karoline Sophie Charlotte Alexandrine von Mecklenburg-Strelitz",
         "de": "durch Heirat Prinzessin von Preußen (genannt Prinzessin Louis), dann Prinzessin zu Solms-Braunfels und später Königin von Hannover",
-        "en": "by marriage Princess of Prussia (called Princess Louis, then Princess of Solms-Braunfels and later Queen of Hanover"
+        "en": "by marriage Princess of Prussia (called Princess Louis), then Princess of Solms-Braunfels and later Queen of Hanover"
       },
       {
-        "name": "Sophie Wilhelmine Charlotte Marie, geborene von Pannwitz, Gräfin von Voß",
+        "name": "Sophie Wilhelmine Charlotte Marie von Pannwitz, Gräfin von Voß",
         "de": "lebte neunundsechzig Jahre am preußischen Hof und war über Jahrzehnte Gesprächspartnerin, Beraterin und Hofdame von Königinnen und Königen",
         "en": "lived at the Prussian court for sixty-nine years and was an interlocutor, advisor and lady-in-waiting to kings and queens for decades"
       },
@@ -607,7 +613,7 @@
         "en": "Prussian major general and second husband of Friederike of Mecklenburg-Strelitz"
       },
       {
-        "name": "Louis Ferdinand Friedrich Ludwig Christian von Preußen",
+        "name": "Louis 'Ferdinand' Friedrich Ludwig Christian von Preußen",
         "de": "preußischer Prinz aus dem Hause Hohenzollern, Feldherr, Komponist und Pianist, auch genannt der preußische Apoll",
         "en": "Prussian prince from the House of Hohenzollern, military commander, composer and pianist, also known as the Prussian Apollo"
       },
@@ -619,7 +625,7 @@
       {
         "name": "Rahel Varnhagen von Ense",
         "de": "geb. Levin, angenommener Familienname ab Mitte der 1790er-Jahre Robert bzw. Robert-Tornow, deutsche Schriftstellerin und Salonnière jüdischer Herkunft",
-        "en": "born, Levin, assumed surname from the mid-1790s Robert or Robert-Tornow, German writer and salonnière of Jewish origin"
+        "en": "born Levin, assumed surname from the mid-1790s Robert or Robert-Tornow, German writer and salonnière of Jewish origin"
       },
       {
         "name": "Wilhelm von Humboldt",

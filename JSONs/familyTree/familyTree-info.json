@@ -33,7 +33,7 @@
         }
       },
       {
-        "backgroundId": "odyssee",
+        "backgroundId": "odyssey",
         "languages": {
           "de": {
             "headline": "Staufer/Welfen/Salier/Babenberger",
@@ -41,7 +41,7 @@
             "images": [
               {
                 "subheaderImages": "",
-                "imageUrl": "/assets/img/family-tree-odyssee-de.PNG"
+                "imageUrl": "/assets/img/family-tree-odyssey-de.PNG"
               }
             ]
           },
@@ -51,7 +51,7 @@
             "images": [
               {
                 "subheaderImages": "",
-                "imageUrl": "/assets/img/family-tree-odyssee-en.PNG"
+                "imageUrl": "/assets/img/family-tree-odyssey-en.PNG"
               }
             ]
           }

@@ -61,8 +61,8 @@
         }
       },
       {
-        "bookId": "odyssee",
-        "internalLink": "/sites-html/booksites/odyssee.html",
+        "bookId": "odyssey",
+        "internalLink": "/sites-html/booksites/odyssey.html",
         "seriesId": "",
         "translationExists": "true",
         "languages": {
@@ -77,7 +77,7 @@
             ]
           },
           "en": {
-            "title": "Odyssee to the Promised Land",
+            "title": "Odyssey to the Promised Land",
             "seriesTitle": "",
             "imageURL": "/assets/img/covers/Odyssey.jpg",
             "externalLink": "https://mybook.to/ToThePromisedLand",
@@ -108,12 +108,12 @@
           "en": {
             "title": "The Mind on Fire",
             "seriesTitle": "",
-            "imageURL": "/assets/img/covers/der-geist-in-brand.jpg",
+            "imageURL": "/assets/img/covers/the-mind-on-fire.jpg",
             "externalLink": "https://mybook.to/DerGeistInBrand",
             "paragraphs": [
-              "1787 - Heinrich Berlingen, Baron von Satten, needs an heir to his title and his life's work, but does not want to commit himself. So Niklas von Altenmark, a seven-year-old Prussian squire, joins the restless older gentleman, even though he never wanted to leave home.",
-              "Under the baron's wing, Niklas travels via Berlin to pre-revolutionary Paris, experiences the last flowering of the Rococo period before the outbreak of the French Revolution drives them to London, and from there across half the continent. He gets to know people of his time, from Marie Antoinette to Danton, from Beau Brummell to the Duchess of Devonshire, from the later Tsar Alexander I to Queen Luise, from Josef Haydn to Ludwig van Beethoven. One question hangs over them all the time: What drives the Baron, and what really happened in his youth to make him never settle down?",
-              "Niklas and Colette, the baron's biological daughter, will only find the answer to this at the end of their own journey."
+              "1787 – Heinrich Berlingen, Baron von Satten, needs an heir for his title and his life's work, but does not want to get married. Thus, Junker Niklas von Altenmark, the seven-year-old Prussian son of a knight, comes to live with the restless elderly gentleman, even though he never wanted to leave home.",
+              "Under the baron's wing, Niklas travels via Berlin to pre-revolutionary Paris, experiences the decadence of the Rococo period before the French Revolution drives them to London, and from there across half the conti-nent. He meets people of his time, from Marie Antoinette to Danton, from Beau Brummell to the Duchess of Devonshire, from the later Tsar Alexan-der I to Queen Luise of Prussia, from Josef Haydn to Ludwig van Beetho-ven. All the while, one question hangs over them: What drives the baron, and what really happened in his youth so that he never settled down?",
+              "Niklas and Colette, the baron's natural daughter, will find the answer at the end of their own journey."
             ]
           }
         }

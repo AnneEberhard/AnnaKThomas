@@ -36,7 +36,7 @@ function findSiteIndexById(siteArray, siteId) {
 function findDataInArray(id, array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i].backgroundId === id) {
-      return array[i].languages[defaultLanguage];
+      return array[i].languages[setLanguage];
       }
     }
   return null;
@@ -45,24 +45,24 @@ function findDataInArray(id, array) {
 /**
 * checks if a translation is true, progress or planned and genereates respective div with text
 * @param {string} translationExists - information for the respective book out of topSites json
-* @param {string} defaultLanguage - global variable that is checked depending on browser and user input
+* @param {string} setLanguage - global variable that is checked depending on browser and user input
 * @returns {HTMLElement} respective HTML 
 */
-function getTranslationStatusText(translationExists, defaultLanguage) {
+function getTranslationStatusText(translationExists, setLanguage) {
   if (translationExists === "true") {
-    return defaultLanguage === "de"
+    return setLanguage === "de"
       ? "<p>Eine Übersetzung ins Englische ist vorhanden.</p>"
       : "<p>An English translation is available.</p>";
   } else if (translationExists === "progress") {
-    return defaultLanguage === "de"
+    return setLanguage === "de"
       ? "<p>Eine Übersetzung ins Englische ist in Arbeit.</p>"
       : "<p>A translation into English is in progress.</p>";
   } else if (translationExists === "planned") {
-    return defaultLanguage === "de"
+    return setLanguage === "de"
       ? "<p>Eine Übersetzung ins Englische ist geplant.</p>"
       : "<p>A translation into English is planned.</p>";
   } else {
-    return defaultLanguage === "de"
+    return setLanguage === "de"
       ? "<p>Bis jetzt ist keine Übersetzung ins Englische verfügbar.</p>"
       : "<p>There is no English translation available yet.</p>";
   }
@@ -71,24 +71,24 @@ function getTranslationStatusText(translationExists, defaultLanguage) {
 /**
 * checks if a translation is true, progress or planned and genereates respective div with text
 * @param {string} translationExists - information for the respective book out of topSites json
-* @param {string} defaultLanguage - global variable that is checked depending on browser and user input
+* @param {string} setLanguage - global variable that is checked depending on browser and user input
 * @returns {HTMLElement} respective HTML 
 */
-function getTranslationStatusText(translationExists, defaultLanguage) {
+function getTranslationStatusText(translationExists, setLanguage) {
   if (translationExists === "true") {
-    return defaultLanguage === "de"
+    return setLanguage === "de"
       ? "<p>Eine Übersetzung ins Englische ist vorhanden.</p>"
       : "<p>An English translation is available.</p>";
   } else if (translationExists === "progress") {
-    return defaultLanguage === "de"
+    return setLanguage === "de"
       ? "<p>Eine Übersetzung ins Englische ist in Arbeit.</p>"
       : "<p>A translation into English is in progress.</p>";
   } else if (translationExists === "planned") {
-    return defaultLanguage === "de"
+    return setLanguage === "de"
       ? "<p>Eine Übersetzung ins Englische ist geplant.</p>"
       : "<p>A translation into English is planned.</p>";
   } else {
-    return defaultLanguage === "de"
+    return setLanguage === "de"
       ? "<p>Bis jetzt ist keine Übersetzung ins Englische verfügbar.</p>"
       : "<p>There is no English translation available yet.</p>";
   }
@@ -105,7 +105,7 @@ function renderNav(siteId, divId) {
   let siteIndex = findSiteIndexById(navSites, siteId);
 
   if (siteIndex !== -1) {
-    let site = navSites[siteIndex].languages[defaultLanguage];
+    let site = navSites[siteIndex].languages[setLanguage];
     let templateHTML = `
       <div class="siteNav">
         <h3>Navigation</h3>
@@ -143,7 +143,7 @@ function closeMobileMenu() {
 }
 
 
-// functions for main sites on the root level
+// functions for main sites
 
 /**
  * initializes the rendering of all pages on the root level except for about me
@@ -158,7 +158,7 @@ function renderMainSite(siteId) {
   let topDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(mainSites, siteId);
   if (siteIndex !== -1) {
-    let site = mainSites[siteIndex].languages[defaultLanguage];
+    let site = mainSites[siteIndex].languages[setLanguage];
     let templateHTML =
       generateSiteTitle(site.title) + generateSiteParagraphs(site.paragraphs);
     for (let section of site.sections) {
@@ -235,7 +235,11 @@ function renderBookSite(genre, id, seriesExists) {
     console.log(`Unknown book: ${id}`);
     return;
   }
-  renderBookDetails(data, `${id}Bottom`);
+  if (setLanguage == "en" && id == "elves") {
+    renderSeriesInSeries(data, `${id}Bottom`);
+  } else {
+    renderBookDetails(data, `${id}Bottom`);
+  }
   renderBookSiteTop(id, `${id}Top`);
   renderNav(id, `${id}Nav`);
 }
@@ -292,12 +296,12 @@ function renderBookSiteTop(siteId, divId) {
   let siteIndex = findSiteIndexById(topSites, siteId);
 
   if (siteIndex !== -1) {
-    let site = topSites[siteIndex].languages[defaultLanguage];
+    let site = topSites[siteIndex].languages[setLanguage];
     let translationExists = topSites[siteIndex].translationExists;
     topDiv.innerHTML =
       generateBookSiteTitle(site.title) +
       generateBookSiteParagraphs(site.paragraphs) +
-      getTranslationStatusText(translationExists, defaultLanguage) +
+      getTranslationStatusText(translationExists, setLanguage) +
       generateBookSiteNavTop(site.links);
   } else {
     console.log(`SiteId '${siteId}' not found`);
@@ -338,6 +342,24 @@ function generateBookSiteNavTop(links) {
 }
 
 /**
+ * renders the content for each book of a series whose book count is higher than in the other language
+ * e.g. first book of the "Of Elves and Wolves" series in German equals four books in the translation
+ * @param {Object[]} bookData - JSONArray of the series (array of jsons)
+ * @param {string} divId - id of the div into which is rendered
+*/
+function renderSeriesInSeries(seriesData, divId) {
+  let bottomDiv = document.getElementById(divId);
+  let templateHTML = "";
+  for (let i = 0; i < seriesData.length; i++) {
+    let bookEnglishArray = seriesData[i].languages[setLanguage];
+    for (let seriesEnglishBook of bookEnglishArray) {
+      templateHTML += generateBookDetailsTemplate(seriesEnglishBook);
+    }
+    bottomDiv.innerHTML = templateHTML;
+  }
+}
+
+/**
  * renders the content for each book with image, text and links
  * depending on whether the book is a series or a standalone
  * @param {Object[]} bookData - JSONArray of either one book (Json) or one series (array of jsons)
@@ -352,11 +374,11 @@ function renderBookDetails(bookData, divId) {
     );
     for (let seriesBook of seriesBooks) {
       templateHTML += generateBookDetailsTemplate(
-        seriesBook.languages[defaultLanguage]
+        seriesBook.languages[setLanguage]
       );
     }
   } else {
-    let book = bookData.languages[defaultLanguage];
+    let book = bookData.languages[setLanguage];
     templateHTML = generateBookDetailsTemplate(book);
   }
   bottomDiv.innerHTML = templateHTML;
@@ -399,4 +421,13 @@ function collectBooksOfGenre(targetGenre) {
     }
   }
   return null;
+}
+
+function findBookIndexById(bookArray, bookId) {
+  for (let i = 0; i < bookArray.length; i++) {
+    if (bookArray[i].bookId === bookId) {
+      return i;
+    }
+  }
+  return -1;
 }

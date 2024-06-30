@@ -39,12 +39,12 @@
     "genreLink": "/historical.html",
     "books": [
       {
-        "bookId": "odyssee",
-        "internalLink": "/sites-html/booksites/odyssee.html",
+        "bookId": "odyssey",
+        "internalLink": "/sites-html/booksites/odyssey.html",
         "translationExists": "false",
         "languages": {
           "de": "Irrfahrt ins Gelobte Land",
-          "en": "Odyssee to the Promised Land"
+          "en": "Odyssey to the Promised Land"
         }
       },
       {

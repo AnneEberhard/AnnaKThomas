@@ -1,6 +1,6 @@
 // global variables
 let browserLanguage = navigator.language || navigator.userLanguage;
-let defaultLanguage = "de";
+let setLanguage = "de";
 let currentSiteId;
 let currentGenre;
 let menuTitles;
@@ -57,30 +57,30 @@ async function loadGeneralData() {
 }
 
 /**
- * checks the browser language and sets default language accordingly
+ * checks the browser language and sets language accordingly
  */
 async function checkBrowserLanguage() {
   if (browserLanguage.startsWith("de")) {
-    defaultLanguage = "de";
+    setLanguage = "de";
   } else {
-    defaultLanguage = "en";
+    setLanguage = "en";
   }
 }
 
 /**
- * sets default language to german as chosen by user via button
+ * sets  language to german as chosen by user via button
  */
 function german() {
-  defaultLanguage = "de";
+  setLanguage = "de";
   renderContentBasedOnPage(); //CAVE First because of genre/site identification
   renderSharedContent();
 }
 
 /**
- * sets default language to english as chosen by user via button
+ * sets  language to english as chosen by user via button
  */
 function english() {
-  defaultLanguage = "en";
+  setLanguage = "en";
   renderContentBasedOnPage(); //CAVE First because of genre/site identification
   renderSharedContent();
 }
@@ -113,7 +113,7 @@ async function fetchJSON(path) {
 
 
 /**
- * renders the menu bar using the global variable menuTitles based on default language
+ * renders the menu bar using the global variable menuTitles based on set language
  */
 async function renderMenu() {
   const navElement = document.getElementById("desktopNav");
@@ -128,7 +128,7 @@ async function renderMenu() {
 
   // Menüpunkte hinzufügen
   menuTitles.forEach((menuItem) => {
-    const title = menuItem[defaultLanguage];
+    const title = menuItem[setLanguage];
     const link = document.createElement("a");
     link.classList.add("navLink");
     link.href = menuItem.link;
@@ -153,7 +153,7 @@ function renderBurgerMenu() {
 }
 
 /**
- * renders the mobile menu using the global variable menuTitles based on default language
+ * renders the mobile menu using the global variable menuTitles based on set language
  */
 function renderMobileMenu() {
   const mobileNavElement = document.getElementById("mobileNav");
@@ -167,7 +167,7 @@ function renderMobileMenu() {
 
   // Menüpunkte hinzufügen
   menuTitles.forEach((menuItem) => {
-    const title = menuItem[defaultLanguage];
+    const title = menuItem[setLanguage];
     const link = document.createElement("a");
     link.classList.add("mobileNavLink");
     link.href = `${menuItem.link}`;
@@ -180,12 +180,12 @@ function renderMobileMenu() {
 }
 
 /**
- * renders the bottom part of the menu based on default language
+ * renders the bottom part of the menu based on set language
  */
 function renderSubHeaderBottom() {
   let subHeaderBottom = document.getElementById("subHeaderBottom");
   subHeaderBottom.innerHTML = "";
-  if (defaultLanguage == "de") {
+  if (setLanguage == "de") {
     subHeaderBottom.innerHTML = "Geschichten - Hintergründe - Bonuskapitel";
   } else {
     subHeaderBottom.innerHTML = "Stories - Backgrounds - Bonus chapter";
@@ -193,7 +193,7 @@ function renderSubHeaderBottom() {
 }
 
 /**
- * initializes rendering the the content of a respective page based on url and default language
+ * initializes rendering the the content of a respective page based on url and set language
  * uses global variable pageData (loaded at init)
  * uses global variable functionMap
  */

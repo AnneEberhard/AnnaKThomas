@@ -35,10 +35,10 @@
     ],
     "bookSites": [
         {
-            "path": "/sites-html/booksites/odyssee.html",
+            "path": "/sites-html/booksites/odyssey.html",
             "params": [
               "historical",
-              "odyssee",
+              "odyssey",
               false
             ]
           },
@@ -120,11 +120,11 @@
             ]
           },
           {
-            "path": "/sites-html/subsitesOdyssee/odyssee-persons.html",
+            "path": "/sites-html/subsitesOdyssey/odyssey-persons.html",
             "params": [
               "historical",
-              "odyssee",
-              "odysseePersons",
+              "odyssey",
+              "odysseyPersons",
               "personsOdyssey"
             ]
           },
@@ -200,19 +200,19 @@
             ]
           },
           {
-            "path": "/sites-html/subsitesOdyssee/odyssee-background.html",
+            "path": "/sites-html/subsitesOdyssey/odyssey-background.html",
             "params": [
               "historical",
-              "odyssee"
+              "odyssey"
             ]
           }
     ],
     "familyTreeSites": [
         {
-            "path": "/sites-html/subsitesOdyssee/odyssee-familytrees.html",
+            "path": "/sites-html/subsitesOdyssey/odyssey-familytrees.html",
             "params": [
               "historical",
-              "odyssee"
+              "odyssey"
             ]
           },
           {
@@ -246,10 +246,10 @@
             ]
           },
           {
-            "path": "/sites-html/subsitesOdyssee/odyssey-sources.html",
+            "path": "/sites-html/subsitesOdyssey/odyssey-sources.html",
             "params": [
               "historical",
-              "odyssee"
+              "odyssey"
             ]
           },
         {
@@ -282,10 +282,10 @@
             ]
           },
           {
-            "path": "/sites-html/subsitesOdyssee/odyssee-timeline.html",
+            "path": "/sites-html/subsitesOdyssey/odyssey-timeline.html",
             "params": [
               "historical",
-              "odyssee"
+              "odyssey"
             ]
           }
     ],
@@ -339,10 +339,10 @@
         ]
       },
       {
-        "path": "/sites-html/subsitesOdyssee/odyssee-bonus.html",
+        "path": "/sites-html/subsitesOdyssey/odyssey-bonus.html",
         "params": [
           "historical",
-          "odyssee",
+          "odyssey",
           "radegunde"
         ]
       },
