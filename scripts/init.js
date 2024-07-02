@@ -37,8 +37,6 @@ async function init() {
   await includeHTML();
   await loadGeneralData();
   await checkBrowserLanguage();
-  renderContentBasedOnPage(); //CAVE First because of genre/site identification
-  renderSharedContent();
   //jsonify();
 }
 
@@ -58,20 +56,24 @@ async function loadGeneralData() {
 
 /**
  * checks the browser language and sets language accordingly
+ * initializes rendering in the respective language
  */
 async function checkBrowserLanguage() {
   if (browserLanguage.startsWith("de")) {
-    setLanguage = "de";
+    german();
   } else {
-    setLanguage = "en";
+    english();
   }
 }
 
 /**
  * sets  language to german as chosen by user via button
+ * highlights selected language button
  */
 function german() {
   setLanguage = "de";
+  document.getElementById('de').classList.add('bold');
+  document.getElementById('en').classList.remove('bold');
   renderContentBasedOnPage(); //CAVE First because of genre/site identification
   renderSharedContent();
 }
@@ -81,6 +83,8 @@ function german() {
  */
 function english() {
   setLanguage = "en";
+  document.getElementById('en').classList.add('bold');
+  document.getElementById('de').classList.remove('bold');
   renderContentBasedOnPage(); //CAVE First because of genre/site identification
   renderSharedContent();
 }

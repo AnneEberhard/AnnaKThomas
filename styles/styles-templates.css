@@ -41,6 +41,10 @@ nav {
   color: rgba(0,151,178, 1);
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .navLink:hover {
   color: lightcyan;
   text-shadow: 2px 2px 4px rgba(0,151,178, 0.8);
