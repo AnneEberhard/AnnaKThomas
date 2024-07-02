@@ -305,6 +305,7 @@ rect {
   .cover {
     box-sizing: border-box;
     width: 100vw;
+    object-fit: scale-down;
   }
 
   table {
