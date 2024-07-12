@@ -230,7 +230,6 @@ function renderBookSite(genre, id, seriesExists) {
     data = findBookById(genre, id);
     bookId = id;
   }
-  console.log(data);
   if (!data) {
     console.log(`Unknown book: ${id}`);
     return;
