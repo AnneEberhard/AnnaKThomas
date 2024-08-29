@@ -1,22 +1,22 @@
 // functions used by several sections
 
 /**
-* determines names of json based on bookId
-* @param {string} reference - id for respective references such as sources
-* @param {string} id - id for respective books such as masks or for special cases such as info
-* @returns {object} respective data
-*/
+ * determines names of json based on bookId
+ * @param {string} reference - id for respective references such as sources
+ * @param {string} id - id for respective books such as masks or for special cases such as info
+ * @returns {object} respective data
+ */
 async function findDataById(reference, id) {
   data = await fetchJSON(`/JSONs/${reference}/${reference}-${id}.json`);
   return data;
 }
 
 /**
-* finds the index of each site in the respective JsonArrays
-* @param {Object[]} siteArray - loaded jsonArray such as navSites, mainSites
-* @param {string} siteId - id for site
-* @returns {number} index of the site in the respective array or, if not found, -1
-*/
+ * finds the index of each site in the respective JsonArrays
+ * @param {Object[]} siteArray - loaded jsonArray such as navSites, mainSites
+ * @param {string} siteId - id for site
+ * @returns {number} index of the site in the respective array or, if not found, -1
+ */
 function findSiteIndexById(siteArray, siteId) {
   for (let i = 0; i < siteArray.length; i++) {
     if (siteArray[i].siteId === siteId) {
@@ -27,27 +27,27 @@ function findSiteIndexById(siteArray, siteId) {
 }
 
 /**
-* gets a subgroup out of a JsonArray based on id
-* id is compared to backgroundId of the JsonArray
-* @param {string} id - id for respective book such as mind
-* @param {Object[]} array - respective JsonArray such as Familytrees
-* @returns {Object[]} respective subgroup of the overarching JsonArray
-*/
+ * gets a subgroup out of a JsonArray based on id
+ * id is compared to backgroundId of the JsonArray
+ * @param {string} id - id for respective book such as mind
+ * @param {Object[]} array - respective JsonArray such as Familytrees
+ * @returns {Object[]} respective subgroup of the overarching JsonArray
+ */
 function findDataInArray(id, array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i].backgroundId === id) {
       return array[i].languages[setLanguage];
-      }
     }
+  }
   return null;
 }
 
 /**
-* checks if a translation is true, progress or planned and genereates respective div with text
-* @param {string} translationExists - information for the respective book out of topSites json
-* @param {string} setLanguage - global variable that is checked depending on browser and user input
-* @returns {HTMLElement} respective HTML 
-*/
+ * checks if a translation is true, progress or planned and genereates respective div with text
+ * @param {string} translationExists - information for the respective book out of topSites json
+ * @param {string} setLanguage - global variable that is checked depending on browser and user input
+ * @returns {HTMLElement} respective HTML
+ */
 function getTranslationStatusText(translationExists, setLanguage) {
   if (translationExists === "true") {
     return setLanguage === "de"
@@ -69,11 +69,11 @@ function getTranslationStatusText(translationExists, setLanguage) {
 }
 
 /**
-* checks if a translation is true, progress or planned and genereates respective div with text
-* @param {string} translationExists - information for the respective book out of topSites json
-* @param {string} setLanguage - global variable that is checked depending on browser and user input
-* @returns {HTMLElement} respective HTML 
-*/
+ * checks if a translation is true, progress or planned and genereates respective div with text
+ * @param {string} translationExists - information for the respective book out of topSites json
+ * @param {string} setLanguage - global variable that is checked depending on browser and user input
+ * @returns {HTMLElement} respective HTML
+ */
 function getTranslationStatusText(translationExists, setLanguage) {
   if (translationExists === "true") {
     return setLanguage === "de"
@@ -95,11 +95,11 @@ function getTranslationStatusText(translationExists, setLanguage) {
 }
 
 /**
-* renders the navigation part at the bottom of each page
-* using the global variable navSites that is loaded on init
-* @param {string} siteId - id for site
-* @param {string} divId - id for div in which to render
-*/
+ * renders the navigation part at the bottom of each page
+ * using the global variable navSites that is loaded on init
+ * @param {string} siteId - id for site
+ * @param {string} divId - id for div in which to render
+ */
 function renderNav(siteId, divId) {
   let navDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(navSites, siteId);
@@ -120,28 +120,27 @@ function renderNav(siteId, divId) {
 }
 
 /**
-* scrolls to top of the page
-*/
+ * scrolls to top of the page
+ */
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 /**
-* opens the mobile menu
-*/
+ * opens the mobile menu
+ */
 function showMobileMenu() {
   const mobileNav = document.getElementById("mobileNav");
   mobileNav.classList.remove("dNone");
 }
 
 /**
-* closes the mobile menu
-*/
+ * closes the mobile menu
+ */
 function closeMobileMenu() {
   const mobileNav = document.getElementById("mobileNav");
   mobileNav.classList.add("dNone");
 }
-
 
 // functions for main sites
 
@@ -151,7 +150,7 @@ function closeMobileMenu() {
  * using the global variable mainSites that is loaded on init
  * initializes rendering the nav on root level
  * @param {string} siteId - id for site
-*/
+ */
 function renderMainSite(siteId) {
   currentGenre = siteId;
   let divId = siteId + "Top";
@@ -172,17 +171,17 @@ function renderMainSite(siteId) {
 }
 
 /**
-* generates the site title based on set language
-* @param {string} title - respective title for site
-*/
+ * generates the site title based on set language
+ * @param {string} title - respective title for site
+ */
 function generateSiteTitle(title) {
   return `<h2>${title}</h2>`;
 }
 
 /**
-* generates the site paragraphs based on set language
-* @param {Array} paragraphs - array filled with strings
-*/
+ * generates the site paragraphs based on set language
+ * @param {Array} paragraphs - array filled with strings
+ */
 function generateSiteParagraphs(paragraphs) {
   return `<div class="siteParagraphs">${paragraphs
     .map((paragraph) => `<p>${paragraph}</p>`)
@@ -191,8 +190,8 @@ function generateSiteParagraphs(paragraphs) {
 
 /**
  * generates the lower section on a main site based on set language
-* @param {Object[]} sections - JSONArray filled with info such as books and links
-*/
+ * @param {Object[]} sections - JSONArray filled with info such as books and links
+ */
 function generateSection(section) {
   return `
     <h3>${section.subtitle}</h3>
@@ -209,7 +208,6 @@ function generateSection(section) {
     </div>`;
 }
 
-
 // functions for book sites
 
 /**
@@ -219,8 +217,8 @@ function generateSection(section) {
  * initializes rendering the nav on booksite level
  * @param {string} genre - important for menu highlight
  * @param {string} id - id of book or series - do not confuse with single bookId
- * @param {boolean} seriesExists - depending on whether it is more than one book 
-*/
+ * @param {boolean} seriesExists - depending on whether it is more than one book
+ */
 function renderBookSite(genre, id, seriesExists) {
   currentGenre = genre;
   if (seriesExists == true) {
@@ -248,8 +246,8 @@ function renderBookSite(genre, id, seriesExists) {
  * uses global variable allBooks that is loaded on init
  * @param {string} targetGenre - respective genre
  * @param {string} targetSeries - id of series such as children
- * @returns {Object[]} seriesArray is returned if the length is > 0 
-*/
+ * @returns {Object[]} seriesArray is returned if the length is > 0
+ */
 function collectBooksOfSeries(targetGenre, targetSeries) {
   let seriesArray = [];
   for (let i = 0; i < allBooks.length; i++) {
@@ -270,8 +268,8 @@ function collectBooksOfSeries(targetGenre, targetSeries) {
  * uses global variable allBooks that is loaded on init
  * @param {string} targetGenre - respective genre
  * @param {string} targetBook - id of book such as mind
- * @returns {Object[]} JSONArray with respective book info 
-*/
+ * @returns {Object[]} JSONArray with respective book info
+ */
 function findBookById(targetGenre, targetBook) {
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].genre === targetGenre) {
@@ -289,7 +287,7 @@ function findBookById(targetGenre, targetBook) {
  * uses global variable topSites that is loaded on init
  * @param {string} siteId - id of book / series and thus the site
  * @param {string} divId - id of the div into which is rendered
-*/
+ */
 function renderBookSiteTop(siteId, divId) {
   let topDiv = document.getElementById(divId);
   let siteIndex = findSiteIndexById(topSites, siteId);
@@ -311,7 +309,7 @@ function renderBookSiteTop(siteId, divId) {
  * generates the site title/header
  * @param {string} title - id of book / series and thus the site
  * @returns {HTMLElement} header for the booksite
-*/
+ */
 function generateBookSiteTitle(title) {
   return `<h2>${title}</h2>`;
 }
@@ -320,7 +318,7 @@ function generateBookSiteTitle(title) {
  * generates the upper paragraphs of the site
  * @param {Array} paragraphs - respective array filled with strings
  * @returns {HTMLElement} header for the booksite
-*/
+ */
 function generateBookSiteParagraphs(paragraphs) {
   return `<div class="siteParagraphs">${paragraphs
     .map((paragraph) => `<p>${paragraph}</p>`)
@@ -331,7 +329,7 @@ function generateBookSiteParagraphs(paragraphs) {
  * generates the upper navigation of the site, leading to subsites
  * @param {Object[]} links - JSONArray with links and linktext
  * @returns {HTMLElement} upper navigation
-*/
+ */
 function generateBookSiteNavTop(links) {
   return `<div class="siteNavTop">${links
     .map(
@@ -345,7 +343,7 @@ function generateBookSiteNavTop(links) {
  * e.g. first book of the "Of Elves and Wolves" series in German equals four books in the translation
  * @param {Object[]} bookData - JSONArray of the series (array of jsons)
  * @param {string} divId - id of the div into which is rendered
-*/
+ */
 function renderSeriesInSeries(seriesData, divId) {
   let bottomDiv = document.getElementById(divId);
   let templateHTML = "";
@@ -363,7 +361,7 @@ function renderSeriesInSeries(seriesData, divId) {
  * depending on whether the book is a series or a standalone
  * @param {Object[]} bookData - JSONArray of either one book (Json) or one series (array of jsons)
  * @param {string} divId - id of the div into which is rendered
-*/
+ */
 function renderBookDetails(bookData, divId) {
   let bottomDiv = document.getElementById(divId);
   let templateHTML = "";
@@ -387,22 +385,34 @@ function renderBookDetails(bookData, divId) {
  * generates the content for each book with image, text and links
  * @param {Object[]} book - JSONArray of the respective book in the correct language (ultimately from allBooks)
  * @returns {HTMLElement} book content
-*/
+ */
 function generateBookDetailsTemplate(book) {
   let paragraphsHTML = book.paragraphs
     .map((paragraph) => `<p>${paragraph}</p>`)
     .join("");
-  return `
-    <div class="bookContainer">
+  if (setLanguage === "de") {
+    return `<div class="bookContainer">
+      <img class="cover" src="${book.imageURL}" alt="">
+      <div class="bookContainerText">
+        <h3>${book.title}</h3> 
+        ${paragraphsHTML}
+        <a target="_blank" class="amazonLink" href="${book.externalLink}">Link zu Amazon</a>
+        <a target="_blank" class="amazonLink" href="${book.externalLink2}">Link zu anderen Händlern</a>
+      </div>
+    </div>`;
+  } else {
+    return `<div class="bookContainer">
       <img class="cover" src="${book.imageURL}" alt="">
       <div class="bookContainerText">
         <h3>${book.title}</h3> 
         ${paragraphsHTML}
         <a target="_blank" class="amazonLink" href="${book.externalLink}">Link to Amazon</a>
+        <a target="_blank" class="amazonLink" href="${book.externalLink2}">Link to other shops</a>
       </div>
     </div>`;
+  }
+  return;
 }
-
 
 // functions currently not in use
 
@@ -412,7 +422,7 @@ function generateBookDetailsTemplate(book) {
  * currently not in use
  * @param {string} targetGenre - respective genre
  * @returns {Object[]} allBooks[i].books with the target genre
-*/
+ */
 function collectBooksOfGenre(targetGenre) {
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].genre === targetGenre) {

@@ -401,7 +401,7 @@
   },
   {
     "siteId": "mind",
-    "translationExists": "progress",
+    "translationExists": "true",
     "languages": {
       "de": {
         "title": "Der Geist in Brand - Ein Krautjunker zwischen Rokoko und Revolution",
