@@ -390,6 +390,9 @@ function generateBookDetailsTemplate(book) {
   let paragraphsHTML = book.paragraphs
     .map((paragraph) => `<p>${paragraph}</p>`)
     .join("");
+    const secondLinkHTML = book.externalLink2 
+    ? `<a target="_blank" class="amazonLink" href="${book.externalLink2}">${setLanguage === "de" ? "Link zu anderen Händlern" : "Link to other shops"}</a>` 
+    : "";
   if (setLanguage === "de") {
     return `<div class="bookContainer">
       <img class="cover" src="${book.imageURL}" alt="">
@@ -397,8 +400,8 @@ function generateBookDetailsTemplate(book) {
         <h3>${book.title}</h3> 
         ${paragraphsHTML}
         <a target="_blank" class="amazonLink" href="${book.externalLink}">Link zu Amazon</a>
-        <a target="_blank" class="amazonLink" href="${book.externalLink2}">Link zu anderen Händlern</a>
-      </div>
+         ${secondLinkHTML}
+        </div>
     </div>`;
   } else {
     return `<div class="bookContainer">
@@ -407,7 +410,7 @@ function generateBookDetailsTemplate(book) {
         <h3>${book.title}</h3> 
         ${paragraphsHTML}
         <a target="_blank" class="amazonLink" href="${book.externalLink}">Link to Amazon</a>
-        <a target="_blank" class="amazonLink" href="${book.externalLink2}">Link to other shops</a>
+         ${secondLinkHTML}
       </div>
     </div>`;
   }
