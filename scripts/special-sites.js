@@ -167,6 +167,7 @@ function renderNovellas(genre) {
   let genreData = collectBooksOfSeries(genre, genre);
   renderMainSite(genre, topDivId);
   renderBookDetails(genreData, bottomDivID);
+  renderNav("novellas", `novellasNav`);
 }
 
 

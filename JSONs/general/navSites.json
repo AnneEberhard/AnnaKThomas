@@ -21,6 +21,35 @@
         }
       },
       {
+        "siteId": "novellas",
+        "languages": {
+          "de": {
+            "links": [
+              {
+                "text": "Zurück zur Homepage",
+                "url": "/index.html"
+              },
+              {
+                "text": "Zur Bonusgeschichte",
+                "url": "/sites-html/booksites/girl-with-gentle-eyes.html"
+              }
+            ]
+          },
+          "en": {
+            "links": [
+              {
+                "text": "Back to Homepage",
+                "url": "/index.html"
+              },
+              {
+                "text": "Bonus story",
+                "url": "/sites-html/booksites/girl-with-gentle-eyes.html"
+              }
+            ]
+          }
+        }
+      },
+      {
         "siteId": "historical",
         "languages": {
           "de": {
