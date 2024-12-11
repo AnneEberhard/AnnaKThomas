@@ -161,7 +161,9 @@ function renderBurgerMenu() {
  */
 function renderMobileMenu() {
   const mobileNavElement = document.getElementById("mobileNav");
-  mobileNavElement.innerHTML = "";
+  if (mobileNavElement) {
+    mobileNavElement.innerHTML = "";
+  }
 
   // Close-Button hinzufügen
   const closeButton = document.createElement("span");
