@@ -232,6 +232,10 @@ async function renderContentBasedOnPage() {
       renderFunction = functionMap["timeline"];
     }else if (matchingEntry.path.includes("bonus")) {
       renderFunction = functionMap["bonus"];
+    }else if (matchingEntry.path.includes("imprint")) {
+      renderImprint();
+    }else if (matchingEntry.path.includes("privacy-policy")) {
+      renderprivacyPolicy();
     }else {
       renderFunction = functionMap[matchingEntry.path] || functionMap["/booksites"];
     }
