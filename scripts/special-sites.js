@@ -1,17 +1,17 @@
 // functions for home Page
 
 /**
-* initializes rendering of home page
-* upper part is rendered via renderMainSite
-*/
+ * initializes rendering of home page
+ * upper part is rendered via renderMainSite
+ */
 function renderHomePage() {
   renderMainSite("home");
   renderHomeOverview();
 }
 
 /**
-* initializes rendering of home page overview part (bottom)
-*/
+ * initializes rendering of home page overview part (bottom)
+ */
 function renderHomeOverview() {
   let homeBottom = document.getElementById("homeBottom");
   homeBottom.innerHTML = templateOverview();
@@ -19,10 +19,10 @@ function renderHomeOverview() {
 }
 
 /**
-* generates template for homepage overview based on set language
-* fills column headers (such as "Fantasy")
-* uses global variable overview that is loaded on init
-*/
+ * generates template for homepage overview based on set language
+ * fills column headers (such as "Fantasy")
+ * uses global variable overview that is loaded on init
+ */
 function templateOverview() {
   let columns = "";
   for (let i = 0; i < overview.length; i++) {
@@ -39,9 +39,9 @@ function templateOverview() {
 }
 
 /**
-* fills overview template columns with the respective books 
-* based on set language and global variable overview
-*/
+ * fills overview template columns with the respective books
+ * based on set language and global variable overview
+ */
 function fillOverviewColumns() {
   for (let i = 0; i < overview.length; i++) {
     targetdiv = document.getElementById(`homeBottomColumn${i}`);
@@ -58,14 +58,13 @@ function fillOverviewColumns() {
   }
 }
 
-
 // functions for special site about me
 
 /**
-* initializes rendering of about me page
-* initializes rendering the navigation at the bottom 
-* @param {string} id - needed for nav highlight
-*/
+ * initializes rendering of about me page
+ * initializes rendering the navigation at the bottom
+ * @param {string} id - needed for nav highlight
+ */
 function renderAboutMe(id) {
   currentGenre = id;
   let headline = document.getElementById("aboutMeHeadline");
@@ -83,24 +82,24 @@ function renderAboutMe(id) {
 }
 
 /**
-* generates the header for the about me page in German
-*/
+ * generates the header for the about me page in German
+ */
 function templateAboutMeHeadGerman() {
   let template = `<h2>Was gibt es über mich zu sagen ...</h2>`;
   return template;
 }
 
 /**
-* generates the header for the about me page in English
-*/
+ * generates the header for the about me page in English
+ */
 function templateAboutMeHeadEnglish() {
   let template = `<h2>What is there to say about me ...</h2>`;
   return template;
 }
 
 /**
-* generates the text for the about me page in German
-*/
+ * generates the text for the about me page in German
+ */
 function templateAboutMeTextGerman() {
   let template = /*html*/ `<p>
     Es gab keine Zeit in meinem Leben, in der ich mir nicht Geschichten
@@ -129,10 +128,10 @@ function templateAboutMeTextGerman() {
 }
 
 /**
-* generates the text for the about me page in German
-*/
+ * generates the text for the about me page in German
+ */
 function templateAboutMeTextEnglish() {
-  let template = /*html*/`
+  let template = /*html*/ `
     <p>
     There was never a time in my life when I didn't make up stories. I started writing for real when I was twelve, when the first computer arrived in our family and my fingers could
     could follow my thoughts for the first time. 
@@ -153,13 +152,12 @@ function templateAboutMeTextEnglish() {
   return template;
 }
 
-
 // functions for special site novellas
 
 /**
-* initializes rendering the novella page
-* @param {string} genre - needed for menu highlight
-*/
+ * initializes rendering the novella page
+ * @param {string} genre - needed for menu highlight
+ */
 function renderNovellas(genre) {
   currentGenre = genre;
   let topDivId = genre + "Top";
@@ -170,22 +168,21 @@ function renderNovellas(genre) {
   renderNav("novellas", `novellasNav`);
 }
 
-
 // functions for personages sites
 
 /**
-* initializes rendering of personage sites
-* loads data for personSitesHeader (global variable)
-* loads data for personage 
-* @param {string} genre - needed for nav highlight
-* @param {string} navId - id for rendering nav such as masks
-* @param {string} siteId - id for subsite such as masksPersons
-* @param {string} JsonId - id for JSON such as personsMasks
-*/
+ * initializes rendering of personage sites
+ * loads data for personSitesHeader (global variable)
+ * loads data for personage
+ * @param {string} genre - needed for nav highlight
+ * @param {string} navId - id for rendering nav such as masks
+ * @param {string} siteId - id for subsite such as masksPersons
+ * @param {string} JsonId - id for JSON such as personsMasks
+ */
 async function renderPersonage(genre, navId, siteId, JsonId) {
   currentSiteId = siteId;
   currentGenre = genre;
-  personSitesHeader = await fetchJSON('/JSONS/persons/personSitesHeader.json');
+  personSitesHeader = await fetchJSON("/JSONS/persons/personSitesHeader.json");
   let personsUrl = `/JSONS/persons/${JsonId}.json`;
   let personageObject = await fetchJSON(personsUrl);
   renderPersonageTop(siteId);
@@ -194,15 +191,19 @@ async function renderPersonage(genre, navId, siteId, JsonId) {
 }
 
 /**
-* renders top part of personage sites
-* @param {string} genre - genre such as historical
-* @param {string} siteId - id for subsite such as masksPersons
-*/
+ * renders top part of personage sites
+ * @param {string} genre - genre such as historical
+ * @param {string} siteId - id for subsite such as masksPersons
+ */
 function renderPersonageTop(siteId) {
-  let divId = siteId + 'Top';
+  console.log(siteId);
+  let divId = siteId + "Top";
   let topDiv = document.getElementById(divId);
-  topDiv.innerHTML = '';
-  let siteIndex = personSitesHeader.findIndex(site => site.siteId === siteId);
+  if (topDiv) {
+    topDiv.innerHTML = "";
+  }
+
+  let siteIndex = personSitesHeader.findIndex((site) => site.siteId === siteId);
   if (siteIndex !== -1) {
     let site = personSitesHeader[siteIndex].languages[setLanguage];
     topDiv.innerHTML += `<h2>${site.header}</h2>`;
@@ -218,37 +219,38 @@ function renderPersonageTop(siteId) {
 }
 
 /**
-* renders bottom part of personage sites
-* @param {string} siteId - id for subsite such as masksPersons
-* @param {Object[]} personageObject - loaded JSON 
-*/
-function renderPersonageBottom(siteId, personageObject){
-  let divId = siteId + 'Bottom';
+ * renders bottom part of personage sites
+ * @param {string} siteId - id for subsite such as masksPersons
+ * @param {Object[]} personageObject - loaded JSON
+ */
+function renderPersonageBottom(siteId, personageObject) {
+  console.log(siteId);
+  let divId = siteId + "Bottom";
   let bottomDiv = document.getElementById(divId);
-  bottomDiv.innerHTML = '';
-  bottomDiv.innerHTML = generatePersonAllTemplate (siteId, personageObject);
+  bottomDiv.innerHTML = "";
+  bottomDiv.innerHTML = generatePersonAllTemplate(siteId, personageObject);
 }
 
 /**
-* generates the overall template bottom part of personage sites
-* @param {string} siteId - id for subsite such as masksPersons
-* @param {Object[]} personageObject - loaded JSON 
-* @returns html template
-*/
-function generatePersonAllTemplate (siteId, personageObject) {
-  let templateHTML = '';
-for (let i = 0; i < personageObject.length; i++) {
-  templateHTML += generatePersonTableTemplate(siteId, personageObject[i])
-}
-return templateHTML;
+ * generates the overall template bottom part of personage sites
+ * @param {string} siteId - id for subsite such as masksPersons
+ * @param {Object[]} personageObject - loaded JSON
+ * @returns html template
+ */
+function generatePersonAllTemplate(siteId, personageObject) {
+  let templateHTML = "";
+  for (let i = 0; i < personageObject.length; i++) {
+    templateHTML += generatePersonTableTemplate(siteId, personageObject[i]);
+  }
+  return templateHTML;
 }
 
 /**
-* generates the table in of bottom part of personage sites
-* @param {string} siteId - id for subsite such as masksPersons
-* @param {Object[]} personGroup - subgroup of loaded JSON 
-* @returns html template
-*/
+ * generates the table in of bottom part of personage sites
+ * @param {string} siteId - id for subsite such as masksPersons
+ * @param {Object[]} personGroup - subgroup of loaded JSON
+ * @returns html template
+ */
 function generatePersonTableTemplate(siteId, personGroup) {
   let subHeaderId = siteId + personGroup.groupId; // unique ID for each header even if naming in JSON is similar
   let templateHTML = `<h3 class="personGroup" id="${subHeaderId}" >${personGroup[setLanguage]}</h3>`;
@@ -256,7 +258,7 @@ function generatePersonTableTemplate(siteId, personGroup) {
     <table class="contentTable">
       <tr>
         <th class="personageName">Name</th>
-        <th>${setLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
+        <th>${setLanguage === "de" ? "Beschreibung" : "Description"}</th>
       </tr>`;
   for (let member of personGroup.members) {
     templateHTML += `
@@ -269,16 +271,15 @@ function generatePersonTableTemplate(siteId, personGroup) {
   return templateHTML;
 }
 
-
 // functions for for background pages
 
 /**
-* initializes rendering of the background site
-* determines the following functions based on bookId
-* initializes rendering the bottom nav based on global variable navSites and bookId
-* @param {string} genre - needed for nav highlight
-* @param {string} bookId - id for respective books such as masks
-*/
+ * initializes rendering of the background site
+ * determines the following functions based on bookId
+ * initializes rendering the bottom nav based on global variable navSites and bookId
+ * @param {string} genre - needed for nav highlight
+ * @param {string} bookId - id for respective books such as masks
+ */
 function renderBackground(genre, bookId) {
   currentGenre = genre;
   renderBackgroundContent(bookId);
@@ -286,23 +287,23 @@ function renderBackground(genre, bookId) {
 }
 
 /**
-* renders of the top of background site
-* @param {string} bookId - id for respective books such as masks
-*/
+ * renders of the top of background site
+ * @param {string} bookId - id for respective books such as masks
+ */
 async function renderBackgroundContent(bookId) {
-  let divId = bookId + 'BackgroundTop';
+  let divId = bookId + "BackgroundTop";
   let topDiv = document.getElementById(divId);
-  topDiv.innerHTML = '';
-  topDiv.innerHTML = await generateBackgroundContent(bookId)
+  topDiv.innerHTML = "";
+  topDiv.innerHTML = await generateBackgroundContent(bookId);
 }
 
 /**
-* generate content for top of background page after loading content from json file
-* @param {string} bookId - id for respective books such as masks
-* @returns {HTMLElement} html template
-*/
+ * generate content for top of background page after loading content from json file
+ * @param {string} bookId - id for respective books such as masks
+ * @returns {HTMLElement} html template
+ */
 async function generateBackgroundContent(bookId) {
-  let backgroundInfoArray = await findDataById('background', 'info');
+  let backgroundInfoArray = await findDataById("background", "info");
   let backgroundInfo = await findDataInArray(bookId, backgroundInfoArray);
   let templateHTML = `<h2 class="personGroup">${backgroundInfo.headline}</h2>`;
   templateHTML += `<h3 class="personGroup">${backgroundInfo.subheader}</h3>`;
@@ -312,16 +313,15 @@ async function generateBackgroundContent(bookId) {
   return templateHTML;
 }
 
-
 // functions for picture sites such as family trees
 
 /**
-* initializes rendering of the family trees site
-* determines the following functions based on bookId
-* initializes rendering the bottom nav based on global variable navSites and bookId
-* @param {string} genre - needed for nav highlight
-* @param {string} bookId - id for respective books such as masks
-*/
+ * initializes rendering of the family trees site
+ * determines the following functions based on bookId
+ * initializes rendering the bottom nav based on global variable navSites and bookId
+ * @param {string} genre - needed for nav highlight
+ * @param {string} bookId - id for respective books such as masks
+ */
 function renderFamilyTrees(genre, bookId) {
   currentGenre = genre;
   renderFamilyTreeContent(bookId);
@@ -329,80 +329,79 @@ function renderFamilyTrees(genre, bookId) {
 }
 
 /**
-* renders of the family tree site
-* @param {string} bookId - id for respective books such as masks
-*/
+ * renders of the family tree site
+ * @param {string} bookId - id for respective books such as masks
+ */
 async function renderFamilyTreeContent(bookId) {
-  let divId = bookId + 'FamilyTreeTop';
+  let divId = bookId + "FamilyTreeTop";
   let topDiv = document.getElementById(divId);
-  topDiv.innerHTML = '';
-  topDiv.innerHTML = await generateFamilyTreeContent(bookId)
+  topDiv.innerHTML = "";
+  topDiv.innerHTML = await generateFamilyTreeContent(bookId);
 }
 
 /**
-* generates content for the family tree page after loading content from json file
-* @param {string} bookId - id for respective books such as masks
-* @returns {HTMLElement} html template
-*/
+ * generates content for the family tree page after loading content from json file
+ * @param {string} bookId - id for respective books such as masks
+ * @returns {HTMLElement} html template
+ */
 async function generateFamilyTreeContent(bookId) {
- let familyTree = await findDataById('familyTree', 'info');
- let familyTreeGroup = findDataInArray(bookId, familyTree);
- let templateHTML = `<h2 class="personGroup">${familyTreeGroup.headline}</h2>`;
- templateHTML += `<p>${familyTreeGroup.subheader}</p>`;
- for (let i = 0; i < familyTreeGroup.images.length; i++) {
-   templateHTML += `<div class="pictureContainer"><h3 class="pictureHeader">${familyTreeGroup.images[i].subheaderImages}</h3>
+  let familyTree = await findDataById("familyTree", "info");
+  let familyTreeGroup = findDataInArray(bookId, familyTree);
+  let templateHTML = `<h2 class="personGroup">${familyTreeGroup.headline}</h2>`;
+  templateHTML += `<p>${familyTreeGroup.subheader}</p>`;
+  for (let i = 0; i < familyTreeGroup.images.length; i++) {
+    templateHTML += `<div class="pictureContainer"><h3 class="pictureHeader">${familyTreeGroup.images[i].subheaderImages}</h3>
    <img src="${familyTreeGroup.images[i].imageUrl}"></div>`;
- }
- return templateHTML;
+  }
+  return templateHTML;
 }
 
-
-// functions for sites with glossaries and/or sources 
+// functions for sites with glossaries and/or sources
 
 /**
-* initializes rendering of the source and glossary site
-* determines the following functions based on bookId
-* initializes rendering the bottom nav based on global variable navSites and bookId
-* @param {string} genre - needed for nav highlight
-* @param {string} bookId - id for respective books such as masks
-*/
+ * initializes rendering of the source and glossary site
+ * determines the following functions based on bookId
+ * initializes rendering the bottom nav based on global variable navSites and bookId
+ * @param {string} genre - needed for nav highlight
+ * @param {string} bookId - id for respective books such as masks
+ */
 function renderSourcesSite(genre, bookId) {
-  currentSiteId = bookId + 'Sources';
+  currentSiteId = bookId + "Sources";
   currentGenre = genre;
-  const booksWithGlossaries = ['odyssey', 'masks'];
-  const booksWithSources = ['odyssey', 'masks', 'alster', 'mind'];
-  const booksWithSpecialSource = ['children'];
-if (booksWithGlossaries.includes(bookId)) {
-  renderGlossary(bookId);
-}
-if (booksWithSources.includes(bookId)) {
-  renderSources(bookId);
-}
-if (booksWithSpecialSource.includes(bookId)) {
-  renderSpecialSources(bookId);
-}
+  const booksWithGlossaries = ["odyssey", "masks"];
+  const booksWithSources = ["odyssey", "masks", "alster", "mind"];
+  const booksWithSpecialSource = ["children"];
+  if (booksWithGlossaries.includes(bookId)) {
+    renderGlossary(bookId);
+  }
+  if (booksWithSources.includes(bookId)) {
+    renderSources(bookId);
+  }
+  if (booksWithSpecialSource.includes(bookId)) {
+    renderSpecialSources(bookId);
+  }
   renderNav(bookId, `${bookId}SourcesNav`);
 }
 
 // functions for glossary tables
 
 /**
-* initializes rendering of the glossary
-* @param {string} bookId - id for respective books such as masks
-*/
-async function renderGlossary(bookId){
-  let glossary = await findDataById('glossary', bookId);
-  let divId = bookId + 'Glossary';
+ * initializes rendering of the glossary
+ * @param {string} bookId - id for respective books such as masks
+ */
+async function renderGlossary(bookId) {
+  let glossary = await findDataById("glossary", bookId);
+  let divId = bookId + "Glossary";
   let targetDiv = document.getElementById(divId);
-  targetDiv.innerHTML = '';
+  targetDiv.innerHTML = "";
   targetDiv.innerHTML = generateGlossaryTemplate(glossary);
 }
 
 /**
-* renders overall template for glossary
-* @param {Object[]} glossary - respective glossary
-* @returns {HTMLElement} html template
-*/
+ * renders overall template for glossary
+ * @param {Object[]} glossary - respective glossary
+ * @returns {HTMLElement} html template
+ */
 function generateGlossaryTemplate(glossary) {
   let templateHTML = generateGlossaryHeader();
   templateHTML += generateGlossaryTable(glossary);
@@ -410,33 +409,33 @@ function generateGlossaryTemplate(glossary) {
 }
 
 /**
-* renders header for glossary based on set language
-* @returns {HTMLElement} html template
-*/
+ * renders header for glossary based on set language
+ * @returns {HTMLElement} html template
+ */
 function generateGlossaryHeader() {
-  let templateHTML = '';
+  let templateHTML = "";
   let headline;
-  if (setLanguage == 'de') {
-    headline = 'Begriffsverzeichnis';
+  if (setLanguage == "de") {
+    headline = "Begriffsverzeichnis";
   } else {
-    headline = 'Glossary';
+    headline = "Glossary";
   }
-  templateHTML = /*html*/`
+  templateHTML = /*html*/ `
   <h2>${headline}</h2>`;
   return templateHTML;
 }
 
 /**
-* renders table glossary based on set language
-* @param {Object[]} glossary - respective glossary
-* @returns {HTMLElement} html template
-*/
+ * renders table glossary based on set language
+ * @param {Object[]} glossary - respective glossary
+ * @returns {HTMLElement} html template
+ */
 function generateGlossaryTable(glossary) {
   let templateHTML = `
     <table class="contentTable">
       <tr>
         <th class="personageName">Name</th>
-        <th>${setLanguage === 'de' ? 'Beschreibung' : 'Description'}</th>
+        <th>${setLanguage === "de" ? "Beschreibung" : "Description"}</th>
       </tr>`;
   for (let term of glossary) {
     templateHTML += `
@@ -452,53 +451,53 @@ function generateGlossaryTable(glossary) {
 // functions for sources paragraphs
 
 /**
-* initializes rendering of the sources
-* @param {string} bookId - id for respective books such as masks
-*/
-async function renderSources(bookId){
-  let sourceData = await findDataById('sources', bookId);
-  let divId = bookId + 'Sources';
+ * initializes rendering of the sources
+ * @param {string} bookId - id for respective books such as masks
+ */
+async function renderSources(bookId) {
+  let sourceData = await findDataById("sources", bookId);
+  let divId = bookId + "Sources";
   let targetDiv = document.getElementById(divId);
-  targetDiv.innerHTML = '';
-  targetDiv.innerHTML = generateSourcesTemplate (sourceData);
+  targetDiv.innerHTML = "";
+  targetDiv.innerHTML = generateSourcesTemplate(sourceData);
 }
 
 /**
-* renders overall template for source
-* @param {Object[]} sourceData - respective source
-* @returns {HTMLElement} html template
-*/
-function generateSourcesTemplate (sourceData) {
+ * renders overall template for source
+ * @param {Object[]} sourceData - respective source
+ * @returns {HTMLElement} html template
+ */
+function generateSourcesTemplate(sourceData) {
   let templateHTML = generateSourcesHeader();
   templateHTML += generateSourcesText(sourceData);
   return templateHTML;
 }
 
 /**
-* renders header for source based on set language
-* @returns {HTMLElement} html template
-*/
+ * renders header for source based on set language
+ * @returns {HTMLElement} html template
+ */
 function generateSourcesHeader() {
-  let templateHTML = '';
+  let templateHTML = "";
   let headline;
-  if (setLanguage == 'de') {
-    headline = 'Quellen';
+  if (setLanguage == "de") {
+    headline = "Quellen";
   } else {
-    headline = 'Sources';
+    headline = "Sources";
   }
-  templateHTML = /*html*/`
+  templateHTML = /*html*/ `
   <h2>${headline}</h2>`;
   return templateHTML;
 }
 
 /**
-* renders source text irrespective of set language
-* @param {Object[]} sourceData - respective source data
-* @returns {HTMLElement} html template
-*/
+ * renders source text irrespective of set language
+ * @param {Object[]} sourceData - respective source data
+ * @returns {HTMLElement} html template
+ */
 function generateSourcesText(sourceData) {
-  let templateHTML = '';
-   for (let paragraph of sourceData) {
+  let templateHTML = "";
+  for (let paragraph of sourceData) {
     templateHTML += `
       <p>${paragraph}</p>`;
   }
@@ -506,29 +505,29 @@ function generateSourcesText(sourceData) {
 }
 
 /**
-* renders the sources for special sites (in this case Children of Angels)
-* @param {string} bookId - id for respective books such as children
-*/
+ * renders the sources for special sites (in this case Children of Angels)
+ * @param {string} bookId - id for respective books such as children
+ */
 async function renderSpecialSources(bookId) {
- const sourceData = await findDataById('sources', bookId);
- const languageSourceData = sourceData[setLanguage];
- const targetElement = document.getElementById(`${bookId}Sources`);
- targetElement.innerHTML = generateSpecialSourcesContent(languageSourceData);
+  const sourceData = await findDataById("sources", bookId);
+  const languageSourceData = sourceData[setLanguage];
+  const targetElement = document.getElementById(`${bookId}Sources`);
+  targetElement.innerHTML = generateSpecialSourcesContent(languageSourceData);
 }
 
 /**
-* renders special source text based on set language
-* @param {Object[]} languageSourceData - respective source data
-* @returns {HTMLElement} html template
-*/
+ * renders special source text based on set language
+ * @param {Object[]} languageSourceData - respective source data
+ * @returns {HTMLElement} html template
+ */
 function generateSpecialSourcesContent(languageSourceData) {
   let templateHTML = `<h2>${languageSourceData.header}</h2>`;
-  languageSourceData.paragraphs.forEach(paragraph => {
+  languageSourceData.paragraphs.forEach((paragraph) => {
     templateHTML += `<p>${paragraph}</p>`;
   });
-  languageSourceData.subsections.forEach(subsection => {
+  languageSourceData.subsections.forEach((subsection) => {
     templateHTML += `<h3>${subsection.subheader}</h3>`;
-    subsection.text.forEach(text => {
+    subsection.text.forEach((text) => {
       templateHTML += `<p>${text}</p>`;
     });
     templateHTML += `<a href="${subsection.link}">${subsection.linktext}</a>`;
@@ -536,19 +535,18 @@ function generateSpecialSourcesContent(languageSourceData) {
   return templateHTML;
 }
 
-
 // functions for timeline Sites
 
 /**
-* initializes rendering of the timeline site
-* determines the following functions based on bookId
-* initializes rendering the bottom nav based on global variable navSites and bookId
-* async because findDataById() is called twice in short succession
-* @param {string} genre - genre such as historical
-* @param {string} bookId - id for respective books such as masks
-*/
+ * initializes rendering of the timeline site
+ * determines the following functions based on bookId
+ * initializes rendering the bottom nav based on global variable navSites and bookId
+ * async because findDataById() is called twice in short succession
+ * @param {string} genre - genre such as historical
+ * @param {string} bookId - id for respective books such as masks
+ */
 async function renderTimeline(genre, bookId) {
-  currentSiteId = bookId + 'Timeline';
+  currentSiteId = bookId + "Timeline";
   currentGenre = genre;
   await renderTimelineTop(bookId);
   renderTimelineBottom(bookId);
@@ -556,54 +554,55 @@ async function renderTimeline(genre, bookId) {
 }
 
 /**
-* initializes rendering of the timeline top part
-* @param {string} bookId - id for respective books such as masks
-*/
+ * initializes rendering of the timeline top part
+ * @param {string} bookId - id for respective books such as masks
+ */
 async function renderTimelineTop(bookId) {
-  
-  let divId = bookId + 'TimelineTop';
+  let divId = bookId + "TimelineTop";
   let targetDiv = document.getElementById(divId);
-  targetDiv.innerHTML = '';
+  targetDiv.innerHTML = "";
   targetDiv.innerHTML = await generateTimelineHeader(bookId);
 }
 
 /**
-* generate header for timeline based on set language
-* @param {string} bookId - id for respective books such as masks
-* @returns {HTMLElement} html template
-*/
+ * generate header for timeline based on set language
+ * @param {string} bookId - id for respective books such as masks
+ * @returns {HTMLElement} html template
+ */
 async function generateTimelineHeader(bookId) {
-  let templateHTML = '';
+  let templateHTML = "";
   let headline;
-  let timelineHeaders = await findDataById('timeline', 'headers');
-  let matchingHeader = timelineHeaders.find(header => header.bookId === bookId);
+  let timelineHeaders = await findDataById("timeline", "headers");
+  let matchingHeader = timelineHeaders.find(
+    (header) => header.bookId === bookId
+  );
   if (matchingHeader) {
-    headline = matchingHeader[setLanguage] || ''; 
+    headline = matchingHeader[setLanguage] || "";
   } else {
-    headline = setLanguage === 'de' ? 'Zeittafel' : 'Timeline';
+    headline = setLanguage === "de" ? "Zeittafel" : "Timeline";
   }
-  templateHTML = /*html*/`
+  templateHTML = /*html*/ `
     <h2>${headline}</h2>`;
   return templateHTML;
 }
 
 /**
-* initializes rendering of the timeline bottom part
-* @param {string} bookId - id for respective books such as masks
-*/
+ * initializes rendering of the timeline bottom part
+ * @param {string} bookId - id for respective books such as masks
+ */
 async function renderTimelineBottom(bookId) {
-  let timelineData = await findDataById('timeline', bookId);
-  let divId = bookId + 'TimelineBottom';
+  let timelineData = await findDataById("timeline", bookId);
+  let divId = bookId + "TimelineBottom";
   let targetDiv = document.getElementById(divId);
-  targetDiv.innerHTML = '';
+  targetDiv.innerHTML = "";
   targetDiv.innerHTML = generateTimelineTable(timelineData);
 }
 
 /**
-* generates overall table template for timeline bottom
-* @param {json} timelineData - respective timeline json
-* @returns {HTMLElement} html template
-*/
+ * generates overall table template for timeline bottom
+ * @param {json} timelineData - respective timeline json
+ * @returns {HTMLElement} html template
+ */
 function generateTimelineTable(timelineData) {
   let templateHTML = `
     <table class="contentTable">
@@ -614,30 +613,32 @@ function generateTimelineTable(timelineData) {
 }
 
 /**
-* generates table header based on set language
-* @returns {HTMLElement} html template
-*/
+ * generates table header based on set language
+ * @returns {HTMLElement} html template
+ */
 function generateTableHeader() {
   return `
     <tr>
-      <th class="timelineYear">${setLanguage === 'de' ? 'Jahr' : 'Year'}</th>
-      <th class="timelineDate">${setLanguage === 'de' ? 'Datum' : 'Date'}</th>
-      <th class="timelineEvent">${setLanguage === 'de' ? 'Ereignis' : 'Event'}</th>
+      <th class="timelineYear">${setLanguage === "de" ? "Jahr" : "Year"}</th>
+      <th class="timelineDate">${setLanguage === "de" ? "Datum" : "Date"}</th>
+      <th class="timelineEvent">${
+        setLanguage === "de" ? "Ereignis" : "Event"
+      }</th>
     </tr>`;
 }
 
 /**
-* generates overall table rows for timeline bottom
-* @param {json} timelineData - respective timeline json
-* @returns {HTMLElement} html template
-*/
+ * generates overall table rows for timeline bottom
+ * @param {json} timelineData - respective timeline json
+ * @returns {HTMLElement} html template
+ */
 function generateTableRows(timelineData) {
-  let templateHTML = '';
+  let templateHTML = "";
   let previousYear = null;
 
   for (let timeline of timelineData) {
     for (let event of timeline.event) {
-      templateHTML +=  generateTableRowSingle(previousYear, timeline, event);
+      templateHTML += generateTableRowSingle(previousYear, timeline, event);
       if (previousYear !== timeline.year) {
         previousYear = timeline.year;
       }
@@ -647,57 +648,58 @@ function generateTableRows(timelineData) {
 }
 
 /**
-* generates a table row for timeline bottom
-* year is only shown if it was not shown before (previous year)
-* @param {string} previousYear - the year that was shown in the previous iteration
-* @param {string} timelineData - respective timeline json
-* @param {string} event - respective event
-* @returns {HTMLElement} html template
-*/
+ * generates a table row for timeline bottom
+ * year is only shown if it was not shown before (previous year)
+ * @param {string} previousYear - the year that was shown in the previous iteration
+ * @param {string} timelineData - respective timeline json
+ * @param {string} event - respective event
+ * @returns {HTMLElement} html template
+ */
 function generateTableRowSingle(previousYear, timelineData, event) {
   let templateHTML = `
   <tr>
-    <td class="timelineYear">${previousYear === timelineData.year ? '' : timelineData.year}</td>
+    <td class="timelineYear">${
+      previousYear === timelineData.year ? "" : timelineData.year
+    }</td>
     <td class="timelineDate">${event.date}</td>
     <td class="timelineEvent">${event[setLanguage]}</td>
   </tr>`;
-  return templateHTML
+  return templateHTML;
 }
-
 
 // functions for bonus chapters
 
 /**
-* initializes rendering of bonus chapter sites
-* initializes getting url based on bonusId
-* initializes loading and rendering of content based on bonusId
-* initializes rendering the bottom navigation based site parameters
-* @param {string} genre - genre such as historical
-* @param {string} bookId - id for respective book
-* @param {string} bonusId - id for respective bonus content
-*/
+ * initializes rendering of bonus chapter sites
+ * initializes getting url based on bonusId
+ * initializes loading and rendering of content based on bonusId
+ * initializes rendering the bottom navigation based site parameters
+ * @param {string} genre - genre such as historical
+ * @param {string} bookId - id for respective book
+ * @param {string} bonusId - id for respective bonus content
+ */
 async function renderBonus(genre, bookId, bonusId) {
   currentSiteId = bonusId;
   currentGenre = genre;
-  targetDiv = bonusId+'Top';
-  bonusData = await findDataById('bonus', bonusId);
+  targetDiv = bonusId + "Top";
+  bonusData = await findDataById("bonus", bonusId);
   renderBonusContent(targetDiv, bonusData);
   renderNav(bookId, `${bonusId}Nav`);
 }
 
 /**
-* renders of content based on bonusId
-* initializes rendering the bottom navigation based site parameters
-* @param {string} targetDiv - bonusId+'Top'
-* @param {json} bonusData - respective json
-*/
+ * renders of content based on bonusId
+ * initializes rendering the bottom navigation based site parameters
+ * @param {string} targetDiv - bonusId+'Top'
+ * @param {json} bonusData - respective json
+ */
 function renderBonusContent(targetDiv, bonusData) {
-    const languageData = bonusData[setLanguage];
-    const targetElement = document.getElementById(targetDiv);
-    targetElement.innerHTML = `<h2>${languageData.header}</h2>`;
-    targetElement.innerHTML += `<h3>${languageData.subheader}</h3>`;
-    targetElement.innerHTML += `<a href="${languageData.link}">${languageData.linkText}</a>`;
-    languageData.text.forEach(paragraph => {
-      targetElement.innerHTML += `<p>${paragraph}</p>`;
-    });
+  const languageData = bonusData[setLanguage];
+  const targetElement = document.getElementById(targetDiv);
+  targetElement.innerHTML = `<h2>${languageData.header}</h2>`;
+  targetElement.innerHTML += `<h3>${languageData.subheader}</h3>`;
+  targetElement.innerHTML += `<a href="${languageData.link}">${languageData.linkText}</a>`;
+  languageData.text.forEach((paragraph) => {
+    targetElement.innerHTML += `<p>${paragraph}</p>`;
+  });
 }

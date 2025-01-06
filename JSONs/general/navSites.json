@@ -227,6 +227,43 @@
         }
       },
       {
+        "siteId": "counts",
+        "languages": {
+          "de": {
+            "links": [
+              {
+                "text": "Zurück zur Homepage",
+                "url": "/index.html"
+              },
+              {
+                "text": "Zurück zu historischen Geschichten",
+                "url": "/historical.html"
+              },
+              {
+                "text": "Zurück zu Der Diener des Grafen",
+                "url": "/sites-html/booksites/counts-servant.html"
+              }
+            ]
+          },
+          "en": {
+            "links": [
+              {
+                "text": "Back to Homepage",
+                "url": "/index.html"
+              },
+              {
+                "text": "Back to historical novels",
+                "url": "/historical.html"
+              },
+              {
+                "text": "Back to The Count's Servant",
+                "url": "/sites-html/booksites/counts-servant.html"
+              }
+            ]
+          }
+        }
+      },
+      {
         "siteId": "children",
         "languages": {
           "de": {

@@ -470,5 +470,67 @@
         ]
       }
     }
+  },
+  {
+    "siteId": "counts",
+    "translationExists": "false",
+    "languages": {
+      "de": {
+        "title": "Der Diener des Grafen - Ein historischer Roman zu Zeiten des Barocks",
+        "paragraphs": [
+          "Mein fünfter historischer Roman und das erste 'Writing Month' Projekt, was ich jemals unternommen habe."
+        ],
+        "links": [
+          {
+            "text": "HintergrundInfo",
+            "url": "/sites-html/subsitesCounts/counts-background.html"
+          },
+          {
+            "text": "Bonuskapitel I: Das gestrichene Kapitel 2 - Wie Gabriel gefunden wurde",
+            "url": "/sites-html/subsitesCounts/counts-bonus-chapter2.html"
+          },
+          {
+            "text": "Bonuskapitel II: Rom - Hagen kommt zu Winsterburg und trifft auf Gabriel",
+            "url": "/sites-html/subsitesCounts/counts-bonus-rome.html"
+          },
+          {
+            "text": "Personenverzeichnis",
+            "url": "/sites-html/subsitesCounts/counts-persons.html"
+          },
+          {
+            "text": "Quellen",
+            "url": "/sites-html/subsitesCounts/counts-sources.html"
+          }
+        ]
+      },
+      "en": {
+        "title": "The Count's Servant - A historical novel set in the Baroque era",
+        "paragraphs": [
+          "My fifth historical novel and the first 'Writing Month' project I've ever undertaken."
+        ],
+        "links": [
+          {
+            "text": "Background info",
+            "url": "/sites-html/subsitesCounts/counts-background.html"
+          },
+          {
+            "text": "Bonus Chapter I: The deleted chapter 2 - How Gabriel was found",
+            "url": "/sites-html/subsitesCounts/counts-bonus-henri.html"
+          },
+          {
+            "text": "Bonus chapter II: Rome - Hagen comes to Winsterburg and meets Gabriel",
+            "url": "/sites-html/subsitesCounts/counts-bonus-curtius.html"
+          },
+          {
+            "text": "Personage",
+            "url": "/sites-html/subsitesCounts/counts-persons.html"
+          },
+          {
+            "text": "Sources",
+            "url": "/sites-html/subsitesCounts/counts-sources.html"
+          }
+        ]
+      }
+    }
   }
 ]

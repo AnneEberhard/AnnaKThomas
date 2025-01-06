@@ -287,5 +287,44 @@
         ]
       }
     }
+  },
+  {
+    "siteId": "countsPersons",
+    "languages": {
+      "de": {
+        "header": "Personen",
+        "subHeaders": [
+          {
+            "subHeaderText": "Erfundene Personen",
+            "subHeaderLink": "countsPersonsfictional"
+          },
+          {
+            "subHeaderText": "Historische Personen",
+            "subHeaderLink": "countsPersonshistorical"
+          }
+        ],
+        "paragraphs": [
+          "In der Reihenfolge des Erscheinens",
+          "Vorsicht! Enthält SPOILER!"
+        ]
+      },
+      "en": {
+        "header": "Personage",
+        "subHeaders": [
+          {
+            "subHeaderText": "Fictional Characters",
+            "subHeaderLink": "countsPersonsfictional"
+          },
+          {
+            "subHeaderText": "Historical Characters",
+            "subHeaderLink": "countsPersonshistorical"
+          }
+        ],
+        "paragraphs": [
+          "In order of appearance",
+          "Caution! Includes Spoilers!"
+        ]
+      }
+    }
   }
 ]

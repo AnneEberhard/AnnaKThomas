@@ -41,7 +41,7 @@
       {
         "bookId": "odyssey",
         "internalLink": "/sites-html/booksites/odyssey.html",
-        "translationExists": "false",
+        "translationExists": "true",
         "languages": {
           "de": "Irrfahrt ins Gelobte Land",
           "en": "Odyssey to the Promised Land"
@@ -72,6 +72,15 @@
         "languages": {
           "de": "Der Geist in Brand",
           "en": "The Mind on Fire"
+        }
+      },
+      {
+        "bookId": "counts",
+        "internalLink": "/sites-html/booksites/counts-servant.html",
+        "translationExists": "false",
+        "languages": {
+          "de": "Der Diener des Grafen",
+          "en": "The Count's Servant"
         }
       }
     ]

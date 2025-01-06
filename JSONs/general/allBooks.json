@@ -3,6 +3,38 @@
     "genre": "historical",
     "books": [
       {
+        "bookId": "counts",
+        "internalLink": "/sites-html/booksites/counts-servant.html",
+        "seriesId": "",
+        "translationExists": "false",
+        "languages": {
+          "de": {
+            "title": "Der Diener des Grafen",
+            "seriesTitle": "",
+            "imageURL": "/assets/img/covers/der-diener-des-grafen.jpg",
+            "externalLink": "https://mybook.to/DerDienerDesGrafen",
+            "externalLink2": "",
+            "paragraphs": [
+              "Gabriel Zurmühlen kennt seine Herkunft nicht – als Neugeborener fand man ihn einst im barocken Berlin, eingewickelt in ein Seidentuch mit einem mysteriösen Wappen. Von diesem Rätsel angetrieben ist er in den Diensten des skrupellosen Grafen von Winsterburg gelandet.",
+              "Im Auftrag seines Herrn taucht Gabriel in das glanzvolle, aber gefährliche Paris Ludwigs XIV. ein, verführt Männer und Frauen, gewinnt Freunde und Feinde, stiehlt, mordet und setzt dabei mehrfach sein Leben aufs Spiel.",
+              "Aber erst, als das Schicksal den Haushalt des Grafen zurück an die Spree führt, beginnt er, die Hintergründe seines Lebens besser zu verstehen – und damit sich selbst."
+              ]
+          },
+          "en": {
+            "title": "The Count's Servant",
+            "seriesTitle": "",
+            "imageURL": "/assets/img/covers/der-diener-des-grafen.jpg",
+            "externalLink": "https://mybook.to/DerDienerDesGrafen",
+            "externalLink2": "",
+            "paragraphs": [
+              "Gabriel Zurmühlen does not know his origins - as a newborn, he was found in baroque Berlin, wrapped in a silk scarf embroidered with a mysterious coat of arms. Driven by this mystery, he has ended up in the service of the unscrupulous Count of Winsterburg.",
+              "On behalf of his master, Gabriel immerses himself in the glamorous but dangerous Paris of Louis XIV, seduces men and women, wins friends and enemies, steals, murders and risks his life several times in the process.",
+              "But it is only when fate leads the Count's household back to the Spree that he begins to better understand the background to his life - and thus himself."
+              ]
+          }
+        }
+      },
+      {
         "bookId": "masks",
         "internalLink": "/sites-html/booksites/masks-of-florence.html",
         "seriesId": "",
