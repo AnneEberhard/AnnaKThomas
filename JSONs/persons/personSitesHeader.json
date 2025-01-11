@@ -304,8 +304,9 @@
           }
         ],
         "paragraphs": [
-          "In der Reihenfolge des Erscheinens",
-          "Vorsicht! Enthält SPOILER!"
+          "Bitte Spoiler beachten!",
+          "Fiktive Personen sind nach Gruppen strukturiert.",
+          "Historische Personen sind der Einfachheit halber alphabetisch nach ihrem in der Geschichte am häufigsten benutzten Titel oder Namen sortiert, obwohl das nicht immer historisch korrekt ist."
         ]
       },
       "en": {
@@ -321,8 +322,9 @@
           }
         ],
         "paragraphs": [
-          "In order of appearance",
-          "Caution! Includes Spoilers!"
+          "Please be aware of spoilers!",
+          "Fictional Characters are structured according to groups.",
+          "Historical Characters are sorted alphabetically by their in the story most frequently used title or name for the sake of simplicity, although this is not always historically correct."
         ]
       }
     }
