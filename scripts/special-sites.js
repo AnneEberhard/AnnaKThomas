@@ -366,11 +366,12 @@ async function generateFamilyTreeContent(bookId) {
  * @param {string} bookId - id for respective books such as masks
  */
 function renderSourcesSite(genre, bookId) {
+  console.log(bookId);
   currentSiteId = bookId + "Sources";
   currentGenre = genre;
-  const booksWithGlossaries = ["odyssey", "masks"];
+  const booksWithGlossaries = ["odyssey", "masks","counts"];
   const booksWithSources = ["odyssey", "masks", "alster", "mind"];
-  const booksWithSpecialSource = ["children"];
+  const booksWithSpecialSource = ["children","counts"];
   if (booksWithGlossaries.includes(bookId)) {
     renderGlossary(bookId);
   }
@@ -530,7 +531,7 @@ function generateSpecialSourcesContent(languageSourceData) {
     subsection.text.forEach((text) => {
       templateHTML += `<p>${text}</p>`;
     });
-    templateHTML += `<a href="${subsection.link}">${subsection.linktext}</a>`;
+    templateHTML += `<a href="${subsection.link}"target="_blank">${subsection.linktext}</a>`;
   });
   return templateHTML;
 }
