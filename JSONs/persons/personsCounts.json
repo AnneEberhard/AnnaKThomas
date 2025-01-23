@@ -142,7 +142,7 @@
       {
         "name": "Else",
         "de": "Nachbarstochter von Marie, hilft ihr in der Küche",
-        "en": "Neighbor's daughter of Marie, helps her in the kitchen"
+        "en": "Marie's neighbor's daughter, helps her in the kitchen"
       },
       {
         "name": "Pastor Lehmann",
@@ -395,6 +395,11 @@
       "name": "Lémery, Nicolas",
       "de": "französischer Chemiker und Mediziner",
       "en": "French chemist and physician."
+    },
+    {
+      "name": "Leopold I. (HRR)",
+      "de": "von 1658 bis 1705 Kaiser des Heiligen Römischen Reiches aus dem Haus Habsburg",
+      "en": "Emperor of the Holy Roman Empire from the House of Habsburg from 1658 to 1705"
     },
     {
       "name": "Lesage, Adam",
