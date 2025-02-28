@@ -36,7 +36,7 @@ const functionMap = {
 async function init() {
   await includeHTML();
   await loadGeneralData();
-  await checkBrowserLanguage();
+  setTimeout(checkBrowserLanguage, 100);
   //jsonify();
 }
 
