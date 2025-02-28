@@ -473,7 +473,7 @@
   },
   {
     "siteId": "counts",
-    "translationExists": "planned",
+    "translationExists": "true",
     "languages": {
       "de": {
         "title": "Der Diener des Grafen - Ein historischer Roman zu Zeiten des Barocks",
