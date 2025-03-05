@@ -1,13 +1,13 @@
 //for imprint and privacy policy
 
 /**
-* initializes rendering the bottom navigation based site parameters
-*/
+ * initializes rendering the bottom navigation based site parameters
+ */
 function renderImprint() {
-  currentSiteId = 'imprint';
-  currentGenre = 'support';
+  currentSiteId = "imprint";
+  currentGenre = "support";
   const targetElement = document.getElementById("imprint");
-  if (setLanguage== 'de') {
+  if (setLanguage == "de") {
     targetElement.innerHTML = generateImprintGerman();
   } else {
     targetElement.innerHTML = generateImprintEnglish();
@@ -15,13 +15,13 @@ function renderImprint() {
 }
 
 /**
-* initializes rendering the bottom navigation based site parameters
-*/
+ * initializes rendering the bottom navigation based site parameters
+ */
 function renderprivacyPolicy() {
-  currentSiteId = 'privacyPolice';
-  currentGenre = 'support';
+  currentSiteId = "privacyPolice";
+  currentGenre = "support";
   const targetElement = document.getElementById("privacyPolicy");
-  if (setLanguage== 'de') {
+  if (setLanguage == "de") {
     targetElement.innerHTML = generatePrivacyPolicyGerman();
   } else {
     targetElement.innerHTML = generatePrivacyPolicyEnglish();
@@ -29,21 +29,22 @@ function renderprivacyPolicy() {
 }
 
 /**
-* generates content of imprint in German
-* @returns {html} html code
-*/
+ * generates content of imprint in German
+ * @returns {html} html code
+ */
 function generateImprintGerman() {
-  return /*html*/`
+  return /*html*/ `
   <h1 >Impressum</h1>
   <h2 >Informationen nach § 5 TMG</h2>
-  <p >Anne Eberhard</p>
-  <p >Prühßstraße 24</p>
-  <p >12105 Berlin</p>
+  <p>Anna K. Thomas</p>
+  <p>c/o AutorenServices.de </p>
+  <p>Birkenallee 24</p>
+  <p>36037 Fulda </p>
   <p ></p>
   <h3 >Kontakt</h3>
   <p >E-Mail: annathomasautorin"&#64; "gmail.com</p>
   <h3 >Redaktionell verantwortlich</h3>
-  <p >Anne Eberhard</p>
+  <p >Anna K. Thomas</p>
   <h3 >EU-Streitbeilegung</h3>
   <p >Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (ODR) zur Verfügung:</p>
   <a href="https://ec.europa.eu/consumers/odr/.">https://ec.europa.eu/consumers/odr/.</a>
@@ -162,11 +163,11 @@ function generateImprintGerman() {
 }
 
 /**
-* generates content of imprint in English
-* @returns {html} html code
-*/
+ * generates content of imprint in English
+ * @returns {html} html code
+ */
 function generateImprintEnglish() {
-  return /*html*/`
+  return /*html*/ `
   <h1 >Imprint</h1>
 <h2 >Information according to § 5 TMG</h2>
 <p >Anne Eberhard</p>
@@ -296,11 +297,11 @@ function generateImprintEnglish() {
 }
 
 /**
-* generates content of privacy policy in German
-* @returns {html} html code
-*/
+ * generates content of privacy policy in German
+ * @returns {html} html code
+ */
 function generatePrivacyPolicyGerman() {
-    return /*html*/ `
+  return /*html*/ `
       <h2 ></h2>
   <h1 >Datenschutzbestimmungen</h1>
   <p >
@@ -494,11 +495,11 @@ function generatePrivacyPolicyGerman() {
 }
 
 /**
-* generates content of privacy policy in English
-* @returns {html} html code
-*/
+ * generates content of privacy policy in English
+ * @returns {html} html code
+ */
 function generatePrivacyPolicyEnglish() {
-    return /*html*/ `
+  return /*html*/ `
       <h2 ></h2>
   <h1 >Privacy policy</h1>
   <p >
