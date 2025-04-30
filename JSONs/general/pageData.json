@@ -105,9 +105,26 @@
         "bards",
         true
       ]
+    },
+    {
+      "path": "/sites-html/booksites/time-curves.html",
+      "params": [
+        "fantasy",
+        "time",
+        false
+      ]
     }
   ],
   "personSites": [
+    {
+      "path": "/sites-html/subsitesTime/time-persons.html",
+      "params": [
+        "fantasy",
+        "time",
+        "timePersons",
+        "personsTime"
+      ]
+    },
     {
       "path": "/sites-html/subsitesElves/elves-persons.html",
       "params": [
@@ -237,6 +254,13 @@
         "historical",
         "odyssey"
       ]
+    },
+    {
+      "path": "/sites-html/subsitesTime/time-background.html",
+      "params": [
+        "fantasy",
+        "time"
+      ]
     }
   ],
   "familyTreeSites": [
@@ -310,6 +334,13 @@
       "params": [
         "fantasy",
         "children"
+      ]
+    },
+    {
+      "path": "/sites-html/subsitesTime/time-sources.html",
+      "params": [
+        "fantasy",
+        "time"
       ]
     }
   ],

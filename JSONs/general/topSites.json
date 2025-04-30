@@ -532,5 +532,51 @@
         ]
       }
     }
+  },
+  {
+    "siteId": "time",
+    "translationExists": "true",
+    "languages": {
+      "de": {
+        "title": "Kurven der Zeit - Die Reise von Jules und Vera",
+        "paragraphs": [
+          "Entstanden aus einem Hashtag-Spiel auf Mastodon, einer alten Geschichte aus meiner Jugendzeit und einer seltsamen Inspiration - Jules und Vera erforscht das Genre der Zeitreise."
+               ],
+        "links": [
+          {
+            "text": "HintergrundInfo",
+            "url": "/sites-html/subsitesTime/time-background.html"
+          },
+          {
+            "text": "Personenverzeichnis",
+            "url": "/sites-html/subsitesTime/time-persons.html"
+          },
+          {
+            "text": "Glossar",
+            "url": "/sites-html/subsitesTime/time-sources.html"
+          }
+        ]
+      },
+      "en": {
+        "title": "Time Curves - The Travel of Jules and Vera",
+        "paragraphs": [
+          "Born out of a hashtag game on Mastodon, and old story from my teens and a weird inspiration - Jules and Vera explores the genre of time travel.."
+        ],
+        "links": [
+          {
+            "text": "Background info",
+            "url": "/sites-html/subsitesTime/time-background.html"
+          },
+          {
+            "text": "Personage",
+            "url": "/sites-html/subsitesTime/time-persons.html"
+          },
+          {
+            "text": "Glossary",
+            "url": "/sites-html/subsitesTime/time-sources.html"
+          }
+        ]
+      }
+    }
   }
 ]

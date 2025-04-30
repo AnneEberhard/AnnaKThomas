@@ -373,5 +373,42 @@
             ]
           }
         }
+      },
+      {
+        "siteId": "time",
+        "languages": {
+          "de": {
+            "links": [
+              {
+                "text": "Zurück zur Homepage",
+                "url": "/index.html"
+              },
+              {
+                "text": "Zurück zu Fantasy",
+                "url": "/fantasy.html"
+              },
+              {
+                "text": "Zurück zu Kurven der Zeit",
+                "url": "/sites-html/booksites/time-curves.html"
+              }
+            ]
+          },
+          "en": {
+            "links": [
+              {
+                "text": "Back to Homepage",
+                "url": "/index.html"
+              },
+              {
+                "text": "Back to Fantasy",
+                "url": "/fantasy.html"
+              },
+              {
+                "text": "Back to Time Curves",
+                "url": "/sites-html/booksites/time-curves.html"
+              }
+            ]
+          }
+        }
       }
     ]

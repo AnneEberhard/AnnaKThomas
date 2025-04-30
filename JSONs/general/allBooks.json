@@ -18,7 +18,7 @@
               "Gabriel Zurmühlen kennt seine Herkunft nicht – als Neugeborener fand man ihn einst im barocken Berlin, eingewickelt in ein Seidentuch mit einem mysteriösen Wappen. Von diesem Rätsel angetrieben ist er in den Diensten des skrupellosen Grafen von Winsterburg gelandet.",
               "Im Auftrag seines Herrn taucht Gabriel in das glanzvolle, aber gefährliche Paris Ludwigs XIV. ein, verführt Männer und Frauen, gewinnt Freunde und Feinde, stiehlt, mordet und setzt dabei mehrfach sein Leben aufs Spiel.",
               "Aber erst, als das Schicksal den Haushalt des Grafen zurück an die Spree führt, beginnt er, die Hintergründe seines Lebens besser zu verstehen – und damit sich selbst."
-              ]
+            ]
           },
           "en": {
             "title": "The Count's Servant",
@@ -30,7 +30,7 @@
               "Gabriel Zurmühlen does not know his origins - as a newborn, he was found in baroque Berlin, wrapped in a silk scarf embroidered with a mysterious coat of arms. Driven by this mystery, he has ended up in the service of the unscrupulous Count of Winsterburg.",
               "On behalf of his master, Gabriel immerses himself in the glamorous but dangerous Paris of Louis XIV, seduces men and women, wins friends and enemies, steals, murders and risks his life several times in the process.",
               "But it is only when fate leads the Count's household back to the Spree that he begins to better understand the background to his life - and thus himself."
-              ]
+            ]
           }
         }
       },
@@ -163,6 +163,41 @@
   {
     "genre": "fantasy",
     "books": [
+      {
+        "bookId": "time",
+        "internalLink": "/sites-html/booksites/time-curves.html",
+        "seriesId": "",
+        "translationExists": "yes",
+        "languages": {
+          "de": {
+            "title": "Kurven der Zeit",
+            "seriesTitle": "",
+            "imageURL": "/assets/img/covers/kurvenDerZeit.jpg",
+            "externalLink": "",
+            "externalLink2": "",
+            "paragraphs": [
+              "Als Vera die Leiche eines Jungen am Flussufer entdeckt, rechnet sie kaum damit, dass derselbe Junge kurz darauf quicklebendig neben ihr steht und sie um Hilfe bittet. Gegen jede Vernunft willigt Vera ein, Jules aus seiner misslichen Lage zu befreien. Sie ahnt nicht, dass sie dies in sein seltsames Leben hineinzieht, in dem er immer wieder stirbt, ins Zentrum der Zeit zu seiner verlorenen Schwester reist und zurückkehrt.",
+              "Offenbar ist Vera Jules in mehr als nur einer Hinsicht ähnlich.",
+              "Und so begeben sie sich gemeinsam auf eine Reise durch die Kurven der Zeit, entschlossen, ihre verschwundenen Angehörigen zu retten",
+              "Kurven der Zeit ist eine Geschichte über Zeitreisen für junge Erwachsene."
+            ]
+          },
+          "en": {
+            "title": "Time Curves",
+            "seriesTitle": "",
+            "imageURL": "/assets/img/covers/timeCurves.jpg",
+            "externalLink": "",
+            "externalLink2": "",
+            "paragraphs": [
+              "When Vera discovers the dead body of a boy her age by the riverside, she surely does not expect to find the same boy shortly after alive and next to her, begging her for help. Against all reason, Vera agrees to get Jules out of his predicament, not knowing that this will draw her into his strange life of repeated dying, traveling to the center of time where his lost sister resides, and reviving.",
+              "Turns out, Vera is very much like Jules, in more than one regard.",
+              "And thus, the pair embark on a journey through the time curves, determined to save their lost loved ones.",
+              "Time Curves is a story about time travel for young adults. ",
+              "Content Warning: Contains strong language."
+            ]
+          }
+        }
+      },
       {
         "bookId": "elvenWay",
         "internalLink": "/sites-html/booksites/bards-of-thuran.html",

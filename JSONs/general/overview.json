@@ -16,7 +16,7 @@
       {
         "bookId": "children",
         "internalLink": "/sites-html/booksites/children-of-angels.html",
-        "translationExists": "false",
+        "translationExists": "true",
         "languages": {
           "de": "Die Kinder der Engel Trilogie",
           "en": "Children of Angels Trilogy"
@@ -25,10 +25,19 @@
       {
         "bookId": "elves",
         "internalLink": "/sites-html/booksites/of-elves-and-wolves.html",
-        "translationExists": "false",
+        "translationExists": "true",
         "languages": {
           "de": "Von Elfen und Wölfen Trilogie",
           "en": "Of Elves and Wolves in three arcs"
+        }
+      },
+      {
+        "bookId": "time",
+        "internalLink": "/sites-html/booksites/time-curves.html",
+        "translationExists": "true",
+        "languages": {
+          "de": "Kurven der Zeit",
+          "en": "Time Curves"
         }
       }
     ]

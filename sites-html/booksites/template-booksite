@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AnnaKThomas - </title>
-    <script src="../scripts/books.js"></script>
-    <script src="../scripts/script.js"></script>
-    <script src="../scripts/template.js"></script>
-    <script src="../scripts/special-sites.js"></script>
-    <script src="../scripts/init.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/special-sites.js"></script>
+    <script src="/scripts/init.js"></script>
+    <script
+    src="https://js-de.sentry-cdn.com/c33733f03d9e6d2e13d1680a4b658e92.min.js"
+    crossorigin="anonymous"
+  ></script>
     <link
       rel="icon"
       type="image/png"
-      href="../assets/img/logo/Anna-reverse-transparent.png"
+      href="/assets/img/logo/Anna-reverse-transparent.png"
     />
-    <link rel="stylesheet" href="../styles/fonts.css" />
-    <link rel="stylesheet" href="../styles/styles-templates.css" />
-    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/styles-templates.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body onload="includeHTML(), init()">
     <div w3-include-html="../templates/header.html"></div>
