@@ -372,8 +372,12 @@ function renderSourcesSite(genre, bookId) {
   const booksWithGlossaries = ["odyssey", "masks","counts"];
   const booksWithSources = ["odyssey", "masks", "alster", "mind"];
   const booksWithSpecialSource = ["children","counts"];
+  const booksWithSpecialGlossary = ["time"];
   if (booksWithGlossaries.includes(bookId)) {
-    renderGlossary(bookId);
+    renderGlossary(bookId, "norm");
+  }
+  if (booksWithSpecialGlossary.includes(bookId)) {
+    renderGlossary(bookId, "special");
   }
   if (booksWithSources.includes(bookId)) {
     renderSources(bookId);
@@ -389,23 +393,30 @@ function renderSourcesSite(genre, bookId) {
 /**
  * initializes rendering of the glossary
  * @param {string} bookId - id for respective books such as masks
+ * @param {string} mode - whether normal (name is the same) or special (name changes with language)
  */
-async function renderGlossary(bookId) {
+async function renderGlossary(bookId, mode) {
   let glossary = await findDataById("glossary", bookId);
   let divId = bookId + "Glossary";
   let targetDiv = document.getElementById(divId);
   targetDiv.innerHTML = "";
-  targetDiv.innerHTML = generateGlossaryTemplate(glossary);
+  targetDiv.innerHTML = generateGlossaryTemplate(glossary, mode);
 }
 
 /**
  * renders overall template for glossary
  * @param {Object[]} glossary - respective glossary
+ * @param {string} mode - whether normal (name is the same) or special (name changes with language)
  * @returns {HTMLElement} html template
  */
-function generateGlossaryTemplate(glossary) {
+function generateGlossaryTemplate(glossary, mode) {
   let templateHTML = generateGlossaryHeader();
-  templateHTML += generateGlossaryTable(glossary);
+  if (mode == 'norm') {
+    templateHTML += generateGlossaryTable(glossary);
+  }
+  if (mode == 'special') {
+    templateHTML += generateSpecialGlossaryTable(glossary)
+  }
   return templateHTML;
 }
 
@@ -443,6 +454,29 @@ function generateGlossaryTable(glossary) {
       <tr>
         <td class="personageName">${term.name}</td> 
         <td>${term[setLanguage]}</td>
+      </tr>`;
+  }
+  templateHTML += `</table>`;
+  return templateHTML;
+}
+
+/**
+ * renders table glossary based on set language
+ * @param {Object[]} glossary - respective glossary
+ * @returns {HTMLElement} html template
+ */
+function generateSpecialGlossaryTable(glossary) {
+  let templateHTML = `
+    <table class="contentTable">
+      <tr>
+        <th class="personageName">Name</th>
+        <th>${setLanguage === "de" ? "Beschreibung" : "Description"}</th>
+      </tr>`;
+  for (let term of glossary) {
+    templateHTML += `
+      <tr>
+        <td class="personageName">${term.name[setLanguage]}</td> 
+        <td>${term.description[setLanguage]}</td>
       </tr>`;
   }
   templateHTML += `</table>`;
