@@ -196,7 +196,6 @@ async function renderPersonage(genre, navId, siteId, JsonId) {
  * @param {string} siteId - id for subsite such as masksPersons
  */
 function renderPersonageTop(siteId) {
-  console.log(siteId);
   let divId = siteId + "Top";
   let topDiv = document.getElementById(divId);
   if (topDiv) {
@@ -224,7 +223,6 @@ function renderPersonageTop(siteId) {
  * @param {Object[]} personageObject - loaded JSON
  */
 function renderPersonageBottom(siteId, personageObject) {
-  console.log(siteId);
   let divId = siteId + "Bottom";
   let bottomDiv = document.getElementById(divId);
   bottomDiv.innerHTML = "";
@@ -366,7 +364,6 @@ async function generateFamilyTreeContent(bookId) {
  * @param {string} bookId - id for respective books such as masks
  */
 function renderSourcesSite(genre, bookId) {
-  console.log(bookId);
   currentSiteId = bookId + "Sources";
   currentGenre = genre;
   const booksWithGlossaries = ["odyssey", "masks","counts"];

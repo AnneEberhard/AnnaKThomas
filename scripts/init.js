@@ -222,7 +222,6 @@ async function renderContentBasedOnPage() {
     let renderFunction;
     if (matchingEntry.path.includes("person")) {
       renderFunction = functionMap["persons"];
-      console.log(renderFunction);
     } else if (matchingEntry.path.includes("background")) {
       renderFunction = functionMap["background"];
     } else if (matchingEntry.path.includes("familytrees")) {
@@ -233,7 +232,6 @@ async function renderContentBasedOnPage() {
       renderFunction = functionMap["timeline"];
     }else if (matchingEntry.path.includes("bonus")) {
       renderFunction = functionMap["bonus"];
-      console.log(renderFunction);
     }else if (matchingEntry.path.includes("imprint")) {
       renderImprint();
     }else if (matchingEntry.path.includes("privacy-policy")) {

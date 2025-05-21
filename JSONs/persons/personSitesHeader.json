@@ -328,5 +328,42 @@
         ]
       }
     }
+  },
+  {
+    "siteId": "timePersons",
+    "languages": {
+      "de": {
+        "header": "Personen",
+        "subHeaders": [
+          {
+            "subHeaderText": "",
+            "subHeaderLink": ""
+          },
+          {
+            "subHeaderText": "",
+            "subHeaderLink": ""
+          }
+        ],
+        "paragraphs": [
+          "Vorsicht! Enthält gen Ende massive SPOILER!"
+        ]
+      },
+      "en": {
+        "header": "Personage",
+        "subHeaders": [
+          {
+            "subHeaderText": "",
+            "subHeaderLink": ""
+          },
+          {
+            "subHeaderText": "",
+            "subHeaderLink": ""
+          }
+        ],
+        "paragraphs": [
+          "Please be aware of massive spoilers near the end of the list!"
+        ]
+      }
+    }
   }
 ]
