@@ -345,7 +345,8 @@
           }
         ],
         "paragraphs": [
-          "Vorsicht! Enthält gen Ende massive SPOILER!"
+          "Vorsicht! Enthält gen Ende massive SPOILER!",
+          "Ein * markiert historische Persönlichkeiten."
         ]
       },
       "en": {
@@ -361,7 +362,8 @@
           }
         ],
         "paragraphs": [
-          "Please be aware of massive spoilers near the end of the list!"
+          "Please be aware of massive spoilers near the end of the list!",
+          "An * marks historical figures."
         ]
       }
     }
