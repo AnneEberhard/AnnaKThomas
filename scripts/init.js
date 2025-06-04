@@ -17,12 +17,12 @@ const functionMap = {
   "/novellas.html": renderNovellas,
   "/about-me.html": renderAboutMe,
   "/booksites": renderBookSite,
-  "persons": renderPersonage,
-  "background": renderBackground,
-  "familytrees": renderFamilyTrees,
-  "sources": renderSourcesSite,
-  "timeline": renderTimeline,
-  "bonus": renderBonus
+  persons: renderPersonage,
+  background: renderBackground,
+  familytrees: renderFamilyTrees,
+  sources: renderSourcesSite,
+  timeline: renderTimeline,
+  bonus: renderBonus,
 };
 
 /**
@@ -45,13 +45,13 @@ async function init() {
  * menuTitles, navSites, mainSites, overview, pageFunctions
  */
 async function loadGeneralData() {
-  allBooks = await fetchJSON('/JSONs/general/allBooks.json');
+  allBooks = await fetchJSON("/JSONs/general/allBooks.json");
   mainSites = await fetchJSON("/JSONs/general/mainSites.json");
   menuTitles = await fetchJSON("/JSONs/general/menuTitles.json");
   navSites = await fetchJSON("/JSONs/general/navSites.json");
   overview = await fetchJSON("/JSONs/general/overview.json");
   pageData = await fetchJSON("/JSONs/general/pageData.json");
-  topSites = await fetchJSON('/JSONs/general/topSites.json');
+  topSites = await fetchJSON("/JSONs/general/topSites.json");
 }
 
 /**
@@ -72,10 +72,10 @@ async function checkBrowserLanguage() {
  */
 function german() {
   setLanguage = "de";
-  document.getElementById('de').classList.add('bold');
-  document.getElementById('en').classList.remove('bold');
   renderContentBasedOnPage(); //CAVE First because of genre/site identification
   renderSharedContent();
+  document.getElementById("de").classList.add("bold");
+  document.getElementById("en").classList.remove("bold");
 }
 
 /**
@@ -83,10 +83,10 @@ function german() {
  */
 function english() {
   setLanguage = "en";
-  document.getElementById('en').classList.add('bold');
-  document.getElementById('de').classList.remove('bold');
   renderContentBasedOnPage(); //CAVE First because of genre/site identification
   renderSharedContent();
+  document.getElementById("en").classList.add("bold");
+  document.getElementById("de").classList.remove("bold");
 }
 
 /**
@@ -114,7 +114,6 @@ async function fetchJSON(path) {
     console.error("Fehler beim Laden der JSON Datei:", error);
   }
 }
-
 
 /**
  * renders the menu bar using the global variable menuTitles based on set language
@@ -209,14 +208,15 @@ async function renderContentBasedOnPage() {
     renderHomePage("home");
     return;
   }
-  let matchingEntry = pageData.mainSites.find(entry => path.includes(entry.path)) ||
-                      pageData.bookSites.find(entry => path.includes(entry.path)) ||
-                      pageData.personSites.find(entry => path.includes(entry.path)) ||
-                      pageData.backgroundSites.find(entry => path.includes(entry.path)) ||
-                      pageData.familyTreeSites.find(entry => path.includes(entry.path)) ||
-                      pageData.sourcesSites.find(entry => path.includes(entry.path)) ||
-                      pageData.timelineSites.find(entry => path.includes(entry.path)) ||
-                      pageData.bonusChapterSites.find(entry => path.includes(entry.path));
+  let matchingEntry =
+    pageData.mainSites.find((entry) => path.includes(entry.path)) ||
+    pageData.bookSites.find((entry) => path.includes(entry.path)) ||
+    pageData.personSites.find((entry) => path.includes(entry.path)) ||
+    pageData.backgroundSites.find((entry) => path.includes(entry.path)) ||
+    pageData.familyTreeSites.find((entry) => path.includes(entry.path)) ||
+    pageData.sourcesSites.find((entry) => path.includes(entry.path)) ||
+    pageData.timelineSites.find((entry) => path.includes(entry.path)) ||
+    pageData.bonusChapterSites.find((entry) => path.includes(entry.path));
 
   if (matchingEntry) {
     let renderFunction;
@@ -226,20 +226,21 @@ async function renderContentBasedOnPage() {
       renderFunction = functionMap["background"];
     } else if (matchingEntry.path.includes("familytrees")) {
       renderFunction = functionMap["familytrees"];
-    }else if (matchingEntry.path.includes("sources")) {
+    } else if (matchingEntry.path.includes("sources")) {
       renderFunction = functionMap["sources"];
-    }else if (matchingEntry.path.includes("timeline")) {
+    } else if (matchingEntry.path.includes("timeline")) {
       renderFunction = functionMap["timeline"];
-    }else if (matchingEntry.path.includes("bonus")) {
+    } else if (matchingEntry.path.includes("bonus")) {
       renderFunction = functionMap["bonus"];
-    }else if (matchingEntry.path.includes("imprint")) {
+    } else if (matchingEntry.path.includes("imprint")) {
       renderImprint();
-    }else if (matchingEntry.path.includes("privacy-policy")) {
+    } else if (matchingEntry.path.includes("privacy-policy")) {
       renderprivacyPolicy();
-    }else {
-      renderFunction = functionMap[matchingEntry.path] || functionMap["/booksites"];
+    } else {
+      renderFunction =
+        functionMap[matchingEntry.path] || functionMap["/booksites"];
     }
-    
+
     if (renderFunction) {
       renderFunction(...matchingEntry.params);
     }
