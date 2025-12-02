@@ -36,7 +36,7 @@ const functionMap = {
 async function init() {
   await includeHTML();
   await loadGeneralData();
-  setTimeout(checkBrowserLanguage, 100);
+  await setTimeout(checkBrowserLanguage, 100);
   //jsonify();
 }
 
@@ -52,7 +52,7 @@ async function loadGeneralData() {
   overview = await fetchJSON("/JSONs/general/overview.json");
   pageData = await fetchJSON("/JSONs/general/pageData.json");
   topSites = await fetchJSON("/JSONs/general/topSites.json");
-}
+;}
 
 /**
  * checks the browser language and sets language accordingly
