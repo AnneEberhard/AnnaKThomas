@@ -293,6 +293,9 @@ async function renderBackgroundContent(bookId) {
   let topDiv = document.getElementById(divId);
   topDiv.innerHTML = "";
   topDiv.innerHTML = await generateBackgroundContent(bookId);
+  if (bookId == "frida") {
+    await renderExtraBottomContent(bookId);
+  }
 }
 
 /**
@@ -305,6 +308,34 @@ async function generateBackgroundContent(bookId) {
   let backgroundInfo = await findDataInArray(bookId, backgroundInfoArray);
   let templateHTML = `<h2 class="personGroup">${backgroundInfo.headline}</h2>`;
   templateHTML += `<h3 class="personGroup">${backgroundInfo.subheader}</h3>`;
+  for (let paragraph of backgroundInfo.paragraphs) {
+    templateHTML += `<p>${paragraph}</p>`;
+  }
+  return templateHTML;
+}
+
+
+/**
+ * starts the rendering of additional info on a background site in the bottom div
+ * @param {string} bookId - id for respective books such as masks
+ */
+async function renderExtraBottomContent(bookId) {
+  let divId = bookId + "BackgroundBottom";
+  let bottomDiv = document.getElementById(divId);
+  bottomDiv.innerHTML = "";
+  bottomDiv.innerHTML = await generateExtraBottomContent(bookId);
+}
+
+/**
+ * generate extra content for bottom of background page after loading content from json file
+ * @param {string} bookId - id for respective books such as masks
+ * @returns {HTMLElement} html template
+ */
+async function generateExtraBottomContent(bookId) {
+  let backgroundInfoArray = await findDataById("background", "extraInfo");
+  let backgroundInfo = await findDataInArray(bookId, backgroundInfoArray);
+  let templateHTML = `<h3 class="personGroup">${backgroundInfo.headline}</h3>`;
+
   for (let paragraph of backgroundInfo.paragraphs) {
     templateHTML += `<p>${paragraph}</p>`;
   }
@@ -366,10 +397,11 @@ async function generateFamilyTreeContent(bookId) {
 function renderSourcesSite(genre, bookId) {
   currentSiteId = bookId + "Sources";
   currentGenre = genre;
-  const booksWithGlossaries = ["odyssey", "masks","counts"];
+  const booksWithGlossaries = ["odyssey", "masks", "counts"];
   const booksWithSources = ["odyssey", "masks", "alster", "mind"];
-  const booksWithSpecialSource = ["children","counts"];
+  const booksWithSpecialSource = ["children", "counts"];
   const booksWithSpecialGlossary = ["time"];
+  const booksWithMapsAndSources = ["frida"];
   if (booksWithGlossaries.includes(bookId)) {
     renderGlossary(bookId, "norm");
   }
@@ -382,7 +414,41 @@ function renderSourcesSite(genre, bookId) {
   if (booksWithSpecialSource.includes(bookId)) {
     renderSpecialSources(bookId);
   }
+  if (booksWithMapsAndSources.includes(bookId)) {
+    renderMapsAndSources(bookId);
+  }
   renderNav(bookId, `${bookId}SourcesNav`);
+}
+
+
+/**
+ * Renders the map section and the source section for a given book.
+ * @param {string} bookId - Identifier of the book used to locate the corresponding DOM elements and data.
+ */
+async function renderMapsAndSources(bookId) {
+  renderMaps(bookId);
+  renderSources(bookId);
+}
+
+// functions for maps 
+
+/**
+ * Loads map data for a book and renders a title and image into the corresponding DOM container.
+ * @param {string} bookId - Identifier of the book used to retrieve map data and target element.
+ */
+async function renderMaps(bookId) {
+  let sourceData = await findDataById("maps", bookId);
+  let divId = bookId + "Maps";
+  let targetDiv = document.getElementById(divId);
+  let title = sourceData.title[setLanguage];
+  let imgSrc = sourceData.links[setLanguage];
+    let template = `
+    <h2>${title}</h2>
+    <div class="maps">
+    <img class="map" src="${imgSrc}" alt="${title}">
+    </div>
+  `;
+  targetDiv.innerHTML = template;
 }
 
 // functions for glossary tables
@@ -408,11 +474,11 @@ async function renderGlossary(bookId, mode) {
  */
 function generateGlossaryTemplate(glossary, mode) {
   let templateHTML = generateGlossaryHeader();
-  if (mode == 'norm') {
+  if (mode == "norm") {
     templateHTML += generateGlossaryTable(glossary);
   }
-  if (mode == 'special') {
-    templateHTML += generateSpecialGlossaryTable(glossary)
+  if (mode == "special") {
+    templateHTML += generateSpecialGlossaryTable(glossary);
   }
   return templateHTML;
 }
@@ -606,7 +672,7 @@ async function generateTimelineHeader(bookId) {
   let headline;
   let timelineHeaders = await findDataById("timeline", "headers");
   let matchingHeader = timelineHeaders.find(
-    (header) => header.bookId === bookId
+    (header) => header.bookId === bookId,
   );
   if (matchingHeader) {
     headline = matchingHeader[setLanguage] || "";

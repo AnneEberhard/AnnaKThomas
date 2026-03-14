@@ -3,6 +3,44 @@
     "genre": "historical",
     "books": [
       {
+        "bookId": "frida",
+        "internalLink": "/sites-html/booksites/frida.html",
+        "seriesId": "",
+        "translationExists": "planned",
+        "languages": {
+          "de": {
+            "title": "Frida von Hameln",
+            "seriesTitle": "",
+            "imageURL": "/assets/img/covers/fridaVonHameln.jpg",
+            "externalLink": "https://mybook.to/FridaVonHameln",
+            "externalLink2": "",
+            "paragraphs": [
+              "Hameln, 1283/4 – Frida hat Mann und Kinder begraben. Nun klammert sie sich an das Einzige, was ihr geblieben ist: ihre Schuhmacherwerkstatt – bis man ihr Marek als Gesellen aufdrängt. Der junge Fremde sucht seine Wurzeln: Seine Mutter Svanhild verschwand einst bei Nacht und Nebel aus Hameln. Frida kann helfen – aber Mareks Onkel Dietrich reagiert mit einer Feindseligkeit, die beide verstört.",
+              "Während Frida langsam ins Leben zurückfindet und Marek um Anerkennung ringt, erscheint ein Dritter in der Stadt: Nikolaus von Spiegelberg wirbt für die Aussiedlung gen Osten.",
+              "Perfekt für Marek, findet Dietrich, zumal das Ansinnen bei den meisten Hamelnern auf wenig Interesse stößt.",
+              "Doch da greift Nikolaus von Spiegelberg zu einem Trick …",
+              "",
+              "Die Legende vom Rattenfänger von Hameln – neu erzählt: Kein Horror, keine Verschwörungstheorie, sondern eine bewegende Geschichte über Menschen, die damals wirklich gelebt haben könnten."
+            ]
+          },
+          "en": {
+            "title": "Frida of Hamelin",
+            "seriesTitle": "",
+            "imageURL": "/assets/img/covers/fridaOfHamelin.jpg",
+            "externalLink": "https://mybook.to/FridaOfHamelin",
+            "externalLink2": "",
+            "paragraphs": [
+              "Hamelin, 1283/4 – Frida has buried her husband and children. Now she clings to the only thing she has left: her shoemaker's workshop – until Marek is forced upon her as a journeyman.",
+              "The young stranger is searching for his roots: his mother Svanhild once disappeared from Hamelin under cover of night. Frida can help – but Marek's uncle Dietrich reacts with a hostility that unsettles them both.",
+              "While Frida slowly finds her way back to life and Marek struggles for acceptance, a third person appears in town: Nikolaus von Spiegelberg promotes resettlement to the east.",
+              "Perfect for Marek, Dietrich thinks, especially since most of Hamelin's residents show little interest in the idea.",
+              "But then Nikolaus von Spiegelberg resorts to a trick...",
+              "The legend of the Pied Piper of Hamelin – in a new outfit: no horror, no conspiracy theory, but a moving story about people who could have truly lived back then."
+            ]
+          }
+        }
+      },
+      {
         "bookId": "counts",
         "internalLink": "/sites-html/booksites/counts-servant.html",
         "seriesId": "",

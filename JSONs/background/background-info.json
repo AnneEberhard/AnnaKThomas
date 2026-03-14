@@ -251,5 +251,28 @@
         ]
       }
     }
+  },
+  {
+    "backgroundId": "frida",
+    "languages": {
+      "de": {
+        "headline": "Hintergrundinfo für Frida von Hameln",
+        "subheader": "2025 - 2026",
+        "paragraphs": [
+          "Die Idee kam mir morgens um halb fünf: Mal was etwas anderes, mal eine Heldin, die n icht erst am Anfang ihres Lebens stand, sondern schon so einiges überstanden hatte. Frida erwachte in meinem Kopf. Historisch sollte es sein – aber wann und wo? Irgendwie blieb ich beim Mittlealter hängen, dann sehr rasch bei meiner eigenen Heimatstadt, und schwups, beim Rattenfänger. Ich wollte die Geschichte des Rattenfängers historisch korrekt erzählen!", 
+          "Tja, hehre Ziele. Bei meiner intensiven Recherche wurde mir sehr bald bewusst, wie unfassbar dünn die historische Basis für die alte Sage war. Ich legte sehr schnell die Hoffnung beiseite (anders als manch ein ambitionierte und mit sehr viel mehr Fantasie als ich ausgestatteter Heimatforscher), dieses Rätsel lösen zu können. Stattdessen besann ich mich auf das, was ich kann: Eine Geschichte fiktiver Personen zu erzählen, gebettet in einem historischen Kontext. Und das habe ich getan.", 
+          "Es gibt keine wilden Verschwörungen, keine heidnischen Rituale, keine obskuren Tanz-Manien und auch keine tragischen Krankheiten. Es taucht genau eine Ratte in diesem Buch auf. Und alles andere, was ich an Hintergrundinformationen recherchiert habe, findet sich in meinem Nachwort, an dieser Stelle auch frei zugänglich."
+        ]
+      },
+      "en": {
+        "headline": "Background Information for Frida of Hamelin",
+        "subheader": "2025 - 2026",
+        "paragraphs": [
+          "The idea came to me at 4:30 in the morning: something a little different—a heroine who wasn’t just starting out in life, but had already been through quite a lot. Frida came to life in my mind. It had to be historical—but when and where? Somehow I settled on the Middle Ages, then very quickly on my own hometown, and before I knew it, on the Pied Piper. I wanted to tell the story of the Pied Piper historically accurately!", 
+          "Well, lofty goals. As I delved deeper into my research, I soon realized just how incredibly thin the historical basis for the old legend was. I quickly set aside any hope (unlike some ambitious local historians endowed with far more imagination than I) of being able to solve this mystery. Instead, I focused on what I do best: telling a story about fictional characters, set within a historical context. And that is what I did.",
+          "There are no wild conspiracies, no pagan rituals, no obscure dance manias, and no tragic illnesses. Exactly one rat appears in this book. And all the other background information I researched can be found in my afterword, which is also freely available here."
+        ]
+      }
+    }
   }
 ]

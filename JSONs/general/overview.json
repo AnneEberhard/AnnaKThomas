@@ -86,10 +86,19 @@
       {
         "bookId": "counts",
         "internalLink": "/sites-html/booksites/counts-servant.html",
-        "translationExists": "false",
+        "translationExists": "true",
         "languages": {
           "de": "Der Diener des Grafen",
           "en": "The Count's Servant"
+        }
+      },
+      {
+        "bookId": "frida",
+        "internalLink": "/sites-html/booksites/frida.html",
+        "translationExists": "planned",
+        "languages": {
+          "de": "Frida von Hameln",
+          "en": "Frida of Hamelin"
         }
       }
     ]

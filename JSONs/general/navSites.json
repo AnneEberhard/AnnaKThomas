@@ -263,6 +263,43 @@
           }
         }
       },
+       {
+        "siteId": "frida",
+        "languages": {
+          "de": {
+            "links": [
+              {
+                "text": "Zurück zur Homepage",
+                "url": "/index.html"
+              },
+              {
+                "text": "Zurück zu historischen Geschichten",
+                "url": "/historical.html"
+              },
+              {
+                "text": "Zurück zu Frida von Hameln",
+                "url": "/sites-html/booksites/frida.html"
+              }
+            ]
+          },
+          "en": {
+            "links": [
+              {
+                "text": "Back to Homepage",
+                "url": "/index.html"
+              },
+              {
+                "text": "Back to Historical Novels",
+                "url": "/historical.html"
+              },
+              {
+                "text": "Back to Frida of Hamelin",
+                "url": "/sites-html/booksites/frida.html"
+              }
+            ]
+          }
+        }
+      },
       {
         "siteId": "children",
         "languages": {

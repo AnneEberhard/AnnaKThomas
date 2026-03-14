@@ -578,5 +578,51 @@
         ]
       }
     }
+  },
+  {
+    "siteId": "frida",
+    "translationExists": "planned",
+    "languages": {
+      "de": {
+        "title": "Frida von Hameln",
+        "paragraphs": [
+          "Eine Geschichte aus meiner Heimatstadt, historisch so exakt wie möglich recherchiert."
+               ],
+        "links": [
+          {
+            "text": "HintergrundInfo",
+            "url": "/sites-html/subsitesFrida/frida-background.html"
+          },
+          {
+            "text": "Personenverzeichnis",
+            "url": "/sites-html/subsitesFrida/frida-persons.html"
+          },
+          {
+            "text": "Quellen und Karten",
+            "url": "/sites-html/subsitesFrida/frida-sources.html"
+          }
+        ]
+      },
+      "en": {
+        "title": "Frida von Hameln",
+        "paragraphs": [
+          "A story from my hometown, researched as accurately as possible from a historical perspective."
+        ],
+        "links": [
+          {
+            "text": "Background info",
+            "url": "/sites-html/subsitesFrida/frida-background.html"
+          },
+          {
+            "text": "Personage",
+            "url": "/sites-html/subsitesFrida/frida-persons.html"
+          },
+          {
+            "text": "Sources and maps",
+            "url": "/sites-html/subsitesFrida/frida-sources.html"
+          }
+        ]
+      }
+    }
   }
 ]

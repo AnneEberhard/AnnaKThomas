@@ -83,6 +83,14 @@
       ]
     },
     {
+      "path": "/sites-html/booksites/frida.html",
+      "params": [
+        "historical",
+        "frida",
+        false
+      ]
+    },
+    {
       "path": "/sites-html/booksites/children-of-angels.html",
       "params": [
         "fantasy",
@@ -116,6 +124,15 @@
     }
   ],
   "personSites": [
+    {
+      "path": "/sites-html/subsitesFrida/frida-persons.html",
+      "params": [
+        "fantasy",
+        "frida",
+        "fridaPersons",
+        "personsFrida"
+      ]
+    },
     {
       "path": "/sites-html/subsitesTime/time-persons.html",
       "params": [
@@ -199,6 +216,13 @@
     }
   ],
   "backgroundSites": [
+    {
+      "path": "/sites-html/subsitesFrida/frida-background.html",
+      "params": [
+        "historical",
+        "frida"
+      ]
+    },
     {
       "path": "/sites-html/subsitesAlster/alster-background.html",
       "params": [
@@ -294,6 +318,13 @@
     }
   ],
   "sourcesSites": [
+    {
+      "path": "/sites-html/subsitesFrida/frida-sources.html",
+      "params": [
+        "historical",
+        "frida"
+      ]
+    },
     {
       "path": "/sites-html/subsitesMasks/masks-sources.html",
       "params": [

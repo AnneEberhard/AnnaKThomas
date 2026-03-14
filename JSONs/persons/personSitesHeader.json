@@ -329,6 +329,43 @@
       }
     }
   },
+    {
+    "siteId": "fridaPersons",
+    "languages": {
+      "de": {
+        "header": "Personen",
+        "subHeaders": [
+          {
+            "subHeaderText": "Erfundene Personen",
+            "subHeaderLink": "countsPersonsfictional"
+          },
+          {
+            "subHeaderText": "Historische Personen",
+            "subHeaderLink": "countsPersonshistorical"
+          }
+        ],
+        "paragraphs": [
+          "Kleine Anmerkung vorab: Der Einfachheit halber habe ich Beinamen wie Familiennamen verwendet, obwohl dies um 1280 für den normalen Handwerker noch immer sehr ungewöhnlich war. Aber es macht die Zuordnung einfacher. Historische Personen sind mit einem * versehen."
+        ]
+      },
+      "en": {
+        "header": "Personage",
+        "subHeaders": [
+          {
+            "subHeaderText": "Fictional Characters",
+            "subHeaderLink": "countsPersonsfictional"
+          },
+          {
+            "subHeaderText": "Historical Characters",
+            "subHeaderLink": "countsPersonshistorical"
+          }
+        ],
+        "paragraphs": [
+          "A quick note before we begin: For the sake of simplicity, I have used nicknames as surnames, even though this was still very unusual for ordinary craftsmen around 1280. But it makes it easier to identify the individuals. Historical figures are marked with an *."
+        ]
+      }
+    }
+  },
   {
     "siteId": "timePersons",
     "languages": {
