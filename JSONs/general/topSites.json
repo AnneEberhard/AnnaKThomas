@@ -581,7 +581,7 @@
   },
   {
     "siteId": "frida",
-    "translationExists": "planned",
+    "translationExists": "true",
     "languages": {
       "de": {
         "title": "Frida von Hameln",
